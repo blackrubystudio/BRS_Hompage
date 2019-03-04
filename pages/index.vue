@@ -1,35 +1,56 @@
 <template>
   <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        blackruby
-      </h1>
-      <h2 class="subtitle">
-        blackrubyhomepage
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+    <!--검은 배경의 첫 화면, 한문장으로 표현-->
+    <div class="section1">
+      <head-bar />
+      <sec1 />
+      <div class="btn">
+        <div class="celebeebtn">
+          <a href="/celebee">
+          Celebee
+          </a>
+        </div>
+        <div class="beammebtn">
+          <a href="/beamme">
+          Beam me
+          </a>
+        </div>
       </div>
+    </div>
+    <!--FindBig5 -->
+    <div class="section2">
+      <find />
+    </div>
+
+    <!--Tech + History-->
+    <div class="section3">
+      
+      <History />
+    </div>
+
+    <!--footer-->
+    <div class="section4">
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import HeadBar from '~/components/HeadBar.vue';
+import Find from '~/components/Findbig5.vue';
+import Foot from '~/components/Footer.vue';
+import Tech from '~/components/Tech.vue';
+import Sec1 from '~/components/Section1.vue';
+import History from '~/components/History.vue';
 
 export default {
+  layout: 'default',
   components: {
-    Logo
+    HeadBar,
+    Find,
+    Tech,
+    History,
+    Foot,
+    Sec1,
   }
 }
 </script>
@@ -38,31 +59,44 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.section1 {
+  background-image: url('../assets/img/back1.png');
+  background-size: cover;
+  color: whitesmoke;
+  font-family: 'SCDream9';
+  font-size: 8vw;
+  width: 100vw;
+  height: 115vh;
+}
+
+.celebeebtn {
+  font-family: SCDream3;
   text-align: center;
+  width: 8vw;
+  height: 6.5vh;
+  font-size: 1.5vw;
+  line-height: 3vw;
+  border: 3px solid gray;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.beammebtn {
+  font-family: SCDream3;
+  text-align: center;
+  width: 8vw;
+  font-size: 1.5vw;
+  line-height: 3vw;
+  border: 3px solid gray;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.btn {
+  position: absolute;
+  margin-top: -15vh;
+  margin-left: 61vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2vw;
+  color: gray;
 }
 </style>
