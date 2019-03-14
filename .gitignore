@@ -67,4 +67,7 @@ dist
 docs/_book
 test/
 
+### vscode ###
+.vscode/
+
 # End of https://www.gitignore.io/api/sass,macos,linux,vuejs,nuxtjs
