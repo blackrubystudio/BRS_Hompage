@@ -1,102 +1,111 @@
 <template>
   <section class="container">
-    <!--검은 배경의 첫 화면, 한문장으로 표현-->
-    <div class="section1">
-      <head-bar />
-      <sec1 />
-      <div class="btn">
-        <div class="celebeebtn">
-          <a href="/celebee">
-          Celebee
-          </a>
-        </div>
-        <div class="beammebtn">
-          <a href="/beamme">
-          Beam me
-          </a>
-        </div>
-      </div>
-    </div>
-    <!--FindBig5 -->
-    <div class="section2">
-      <find />
-    </div>
+<headers></headers>
 
-    <!--Tech + History-->
-    <div class="section3">
-      
-      <History />
-    </div>
+<mains></mains>
 
-    <!--footer-->
-    <div class="section4">
-    </div>
+<div @click="fb5()"><button>Findbig5</button></div>
+<div @click="celebee()"><button>Celebee</button></div>
+<div @click="beamme()"><button>Beamme</button></div>
+
+<div v-show="isFB5">
+  <fb5-title></fb5-title>
+  <fb5-introduce></fb5-introduce>
+  <fb5-technology></fb5-technology>
+</div>
+
+<div v-show="isCelebee">
+  <celebee-title></celebee-title>
+  <celebee-introduce></celebee-introduce>
+  <celebee-technology></celebee-technology>
+</div>
+
+<div v-show="isBeamme">
+  <beamme-title></beamme-title>
+  <beamme-introduce></beamme-introduce>
+  <beamme-technology></beamme-technology>
+</div>
+
+<history></history>
+<footers></footers>
   </section>
 </template>
 
 <script>
-import HeadBar from '~/components/HeadBar.vue';
-import Find from '~/components/Findbig5.vue';
-import Foot from '~/components/Footer.vue';
-import Tech from '~/components/Tech.vue';
-import Sec1 from '~/components/Section1.vue';
-import History from '~/components/History.vue';
+// Import Default
+import Headers from "~/components/common/header.vue";
+import Footers from "~/components/common/footer.vue";
+import Mains from "~/components/main/basic/main.vue";
+import History from "~/components/main/basic/history.vue";
+
+// Import FindBig5
+import Fb5Title from "~/components/main/findbig5/title.vue";
+import Fb5Introduce from "~/components/main/findbig5/introduce.vue";
+import Fb5Technology from "~/components/main/findbig5/technology.vue";
+
+// Import Celebee
+import CelebeeTitle from "~/components/main/celebee/title.vue";
+import CelebeeIntroduce from "~/components/main/celebee/introduce.vue";
+import CelebeeTechnology from "~/components/main/celebee/technology.vue";
+
+// Import BEAMME
+import BeammeTitle from "~/components/main/beamme/title.vue";
+import BeammeIntroduce from "~/components/main/beamme/introduce.vue";
+import BeammeTechnology from "~/components/main/beamme/technology.vue";
+
 
 export default {
-  layout: 'default',
   components: {
-    HeadBar,
-    Find,
-    Tech,
+    // Common
+    Headers,
+    Footers,
+    Mains,
     History,
-    Foot,
-    Sec1,
+
+    // Project
+    Fb5Title,
+    Fb5Introduce,
+    Fb5Technology,
+    CelebeeTitle,
+    CelebeeIntroduce,
+    CelebeeTechnology,
+    BeammeTitle,
+    BeammeIntroduce,
+    BeammeTechnology
+  },
+
+
+  data(){
+    return{
+      isFB5: true,
+      isCelebee: false,
+      isBeamme: false,
+    }
+  },
+
+  methods:{
+    fb5(){
+      this.isFB5= true;
+      this.isCelebee= false;
+      this.isBeamme= false;
+    },
+
+    celebee(){
+      this.isFB5= false;
+      this.isCelebee= true;
+      this.isBeamme= false;
+    },
+
+    beamme(){
+      this.isFB5= false;
+      this.isCelebee= false;
+      this.isBeamme= true;
+    },
   }
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-}
 
-.section1 {
-  background-image: url('../assets/img/back1.png');
-  background-size: cover;
-  color: whitesmoke;
-  font-family: 'SCDream9';
-  font-size: 8vw;
-  width: 100vw;
-  height: 115vh;
-}
-
-.celebeebtn {
-  font-family: SCDream3;
-  text-align: center;
-  width: 8vw;
-  height: 6.5vh;
-  font-size: 1.5vw;
-  line-height: 3vw;
-  border: 3px solid gray;
-}
-
-.beammebtn {
-  font-family: SCDream3;
-  text-align: center;
-  width: 8vw;
-  font-size: 1.5vw;
-  line-height: 3vw;
-  border: 3px solid gray;
-}
-
-.btn {
-  position: absolute;
-  margin-top: -15vh;
-  margin-left: 61vw;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 2vw;
-  color: gray;
-}
 </style>
+
