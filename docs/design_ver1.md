@@ -1,4 +1,4 @@
-# Black Ruby studio Homepage Design (ver1.0)
+# Black Ruby studio Homepage Design (ver. 1)
 
 1차 버전이며 문구, 디자인 일부 변경 예정
 

@@ -22,7 +22,7 @@ BRS_homepage
 ㄴ assets // css 및 img 파일
   ㄴ CSS 
   ㄴ img
-ㄴ components
+ㄴ components // Component 구조
   ㄴ common
     ㄴ header.vue
     ㄴ footer.vue
@@ -52,6 +52,10 @@ BRS_homepage
     ㄴ profile1.vue
     ㄴ profile2.vue
     ㄴ contact.vue
+ㄴ pages // page 구조
+  ㄴ index.vue
+  ㄴ about.vue
+  ㄴ contact.vue
 ```
 
 ## 배포 방법
