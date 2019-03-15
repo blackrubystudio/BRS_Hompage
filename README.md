@@ -27,9 +27,7 @@ BRS_homepage
     ㄴ header.vue
     ㄴ footer.vue
   ㄴ main
-    ㄴ basic
-      ㄴ main.vue
-      ㄴ history.vue
+    ㄴ main.vue
     ㄴ findbig5
       ㄴ title.vue
       ㄴ introduce.vue
