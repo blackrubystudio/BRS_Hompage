@@ -1,0 +1,83 @@
+/* Define Font-family */
+
+@font-face {
+    font-family: "SCDream1";
+    src: url('./fonts/SCDream1.otf');
+}
+
+@font-face {
+    font-family: "SCDream2";
+    src: url('./fonts/SCDream2.otf');
+}
+
+@font-face {
+    font-family: "SCDream3";
+    src: url('./fonts/SCDream3.otf');
+}
+
+@font-face {
+    font-family: "SCDream4";
+    src: url('./fonts/SCDream4.otf');
+}
+
+@font-face {
+    font-family: "SCDream5";
+    src: url('./fonts/SCDream5.otf');
+}
+
+@font-face {
+    font-family: "SCDream6";
+    src: url('./fonts/SCDream7.otf');
+}
+
+@font-face {
+    font-family: "SCDream8";
+    src: url('./fonts/SCDream8.otf');
+}
+
+@font-face {
+    font-family: "SCDream9";
+    src: url('./fonts/SCDream9.otf');
+}
+
+@font-face {
+    font-family: "NotoBlack";
+    src: url('./fonts/NotoSerifCJKkr-Black.otf');
+}
+
+@font-face {
+    font-family: "NotoBold";
+    src: url('./fonts/NotoSerifCJKkr-Bold.otf');
+}
+
+@font-face {
+    font-family: "NotoExtraLight";
+    src: url('./fonts/NotoSerifCJKkr-ExtraLight.otf');
+}
+
+@font-face {
+    font-family: "NotoLight";
+    src: url('./fonts/NotoSerifCJKkr-Light.otf');
+}
+
+@font-face {
+    font-family: "NotoMedium";
+    src: url('./fonts/NotoSerifCJKkr-Medium.otf');
+}
+
+@font-face {
+    font-family: "NotoRegular";
+    src: url('./fonts/NotoSerifCJKkr-Regular.otf');
+}
+
+@font-face {
+    font-family: "NotoSemiBold";
+    src: url('./fonts/NotoSerifCJKkr-SemiBold.otf');
+}
+
+
+/* default font setting */
+
+* {
+    font-family: "SCDream1";
+}

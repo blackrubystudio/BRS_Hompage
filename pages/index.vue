@@ -3,10 +3,10 @@
 <headers></headers>
 
 <mains></mains>
-
-<div @click="fb5()"><button>Findbig5</button></div>
+<!-- 
+<div class="fix" @click="fb5()"><button>Findbig5</button></div>
 <div @click="celebee()"><button>Celebee</button></div>
-<div @click="beamme()"><button>Beamme</button></div>
+<div @click="beamme()"><button>Beamme</button></div> -->
 
 <div v-show="isFB5">
   <fb5-title></fb5-title>
@@ -34,7 +34,7 @@
 // Import Default
 import Headers from "~/components/common/header.vue";
 import Footers from "~/components/common/footer.vue";
-import Mains from "~/components/main/basic/main.vue";
+import Mains from "~/components/main/main.vue";
 
 // Import FindBig5
 import Fb5Title from "~/components/main/findbig5/title.vue";
@@ -102,7 +102,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.fix{
+  position: relative;
+  top: -100px;
+  z-index: 900;
+}
 
 </style>
 

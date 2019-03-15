@@ -34,5 +34,10 @@ module.exports = {
                 })
             }
         }
-    }
+    },
+
+    css: [
+        "@assets/css/reset.css", "@/assets/css/font.css"
+
+    ],
 }

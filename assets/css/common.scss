@@ -1,0 +1,40 @@
+// font
+$main-font: 'SCDream9';
+$main-sub-font: "NotoLight";
+// Screen size definitions
+$desktop-width: 1023px;
+$tablet-width: 767px;
+$mobile-width: 565px;
+$mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
+// media queries in SCSS
+@mixin sm {
+    @media (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+// Mobile landscape screen 모바일 가로 화면
+@mixin mls {
+    @media ($mobile-landscape-screen) {
+        @content;
+    }
+}
+
+// Custom devices
+@mixin rwd($width) {
+    @media (max-width: $width+"px") {
+        @content;
+    }
+}
