@@ -26,7 +26,6 @@
   <beamme-technology></beamme-technology>
 </div>
 
-<history></history>
 <footers></footers>
   </section>
 </template>
@@ -36,7 +35,6 @@
 import Headers from "~/components/common/header.vue";
 import Footers from "~/components/common/footer.vue";
 import Mains from "~/components/main/basic/main.vue";
-import History from "~/components/main/basic/history.vue";
 
 // Import FindBig5
 import Fb5Title from "~/components/main/findbig5/title.vue";
@@ -60,7 +58,6 @@ export default {
     Headers,
     Footers,
     Mains,
-    History,
 
     // Project
     Fb5Title,
