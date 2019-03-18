@@ -64,7 +64,6 @@ export default {
   grid-area: st;
   justify-self: end;
   text-align: right;
-  font-family: $main-sub-font;
   font-size: 15px;
   line-height: 20px;
 }

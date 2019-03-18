@@ -1,5 +1,11 @@
 <template>
-    <div>main</div>
+  <div class="about-main">
+    <div class="about-main-container">
+      <h1 class="about-main-title-1">BLACKRUBYSTUDIO</h1>
+      <h1 class="about-main-title-2">블랙루비<br>스튜디오</h1>
+      <h3 class="about-main-subtitle">-----팀과 함께<br>간단하고 효율적으로</h3>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -8,6 +14,53 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../assets/css/common.scss";
 
+.about-main{
+  background-image: url('../../assets/img/background/background_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  color: white;
+}
+
+.about-main-container{
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+  top: 100px;
+  display: grid;
+  grid-template-areas:
+  "tt1 bl1 bl2"
+  "tt1 tt2 bl3"
+  "bl4 bl5 sub";
+  grid-template-columns: 100px 450px 300px;
+  height: 600px;
+}
+
+.about-main-title-1{
+  grid-area: tt1;
+  font-family: $about-sub;
+  font-size: 25px;
+  transform: rotate(90deg);
+  justify-self: end;
+  padding-right: 40px;
+  }
+
+.about-main-title-2{
+  grid-area: tt2;
+  font-family: $main-font;
+  font-size: 100px;
+  align-self: end;
+  justify-self: end;
+}
+
+.about-main-subtitle{
+  grid-area: sub;
+  text-align: right;
+  font-size: 15px;
+  line-height: 20px;
+}
 </style>

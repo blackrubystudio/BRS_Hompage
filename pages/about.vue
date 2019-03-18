@@ -1,6 +1,7 @@
 <template>
 <div>
   <headers></headers>
+  <mains></mains> 
   <growth></growth>
   <study></study>
   <class></class>

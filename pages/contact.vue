@@ -1,6 +1,6 @@
 <template>
 <div>
-  <headers></headers>
+  <!-- <headers></headers> -->
   <profile1></profile1>
   <profile2></profile2>
   <contact></contact>

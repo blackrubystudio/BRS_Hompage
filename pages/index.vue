@@ -1,12 +1,8 @@
 <template>
   <section class="container">
-<headers></headers>
 
+<headers></headers>
 <mains></mains>
-<!-- 
-<div class="fix" @click="fb5()"><button>Findbig5</button></div>
-<div @click="celebee()"><button>Celebee</button></div>
-<div @click="beamme()"><button>Beamme</button></div> -->
 
 <div v-show="isFB5">
   <fb5-title></fb5-title>
@@ -103,11 +99,6 @@ export default {
 </script>
 
 <style scoped>
-.fix{
-  position: relative;
-  top: -100px;
-  z-index: 900;
-}
 
 </style>
 
