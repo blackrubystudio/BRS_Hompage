@@ -33,10 +33,7 @@ export default {
 }
 
 .class-study-container{
-  position: relative;
-  width: 1024px;
-  margin: 0 auto;
-  display: grid;
+  @extend %container;
   grid-template-areas:
   "bl1 img"
   "con img"
@@ -44,7 +41,6 @@ export default {
   grid-template-columns: 50% 45%;
   grid-template-rows: 25% 35% 40%;
   right: -100px;
-  height: 100%;
   margin-top: -50px;
   
 }

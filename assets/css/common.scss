@@ -9,6 +9,25 @@ $desktop-width: 1023px;
 $tablet-width: 767px;
 $mobile-width: 565px;
 $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
+// Setting Main Page
+%main-page {
+    background-image: url('../../assets/img/background/background_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    color: white;
+}
+
+// Default Conatainer
+%container {
+    position: relative;
+    display: grid;
+    width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+}
+
 // media queries in SCSS
 @mixin sm {
     @media (max-width: $mobile-width) {

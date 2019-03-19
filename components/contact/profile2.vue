@@ -52,19 +52,18 @@ export default {
 
 .contact-profile2{
   height: 700px;
+ 
 }
 
 .contact-profile2-container{
-  position: relative;
-  top: 300px;
-  width: 1024px;
-  margin:0 auto;
-  display: grid;
+  @extend %container;
   grid-template-areas:
   "tit img con";
   grid-template-columns: 0% 35% 65%;
   grid-gap: 2.5%;
-  height: 500px;
+  top: 170px;
+   z-index: 100;
+  
 }
 
 .contact-profile2-title{
@@ -72,9 +71,11 @@ export default {
   grid-area: tit;
   justify-self: center;
   align-self: start;
-  padding-top: 50px;
+  padding-top: 30px;
+  bottom: -170px;
   font-family: $main-font; 
   font-size: 100px;
+  letter-spacing: 10px;
   transform: rotate(90deg);  
 }
 
@@ -86,9 +87,10 @@ export default {
 .contact-profile2-img{
   grid-area: img;
   background-image: url('../../assets/img/contact/contact_prfofile_2.png');
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 170px;
 }
 
 .contact-profile2-content{
@@ -109,13 +111,13 @@ export default {
 }
 
 .contact-profile2-name{
-  font-family: SCDream5;
+  font-family: $profile-name;
   font-size: 30px;  
   letter-spacing: 10px;
 }
 
 .contact-profile2-sub{
-  font-family: SCDream4;
+  font-family: $profile-sub;
   font-size: 17px;  
   color: white;
   z-index: 100px;

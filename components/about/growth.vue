@@ -30,22 +30,17 @@ export default {
 @import "../../assets/css/common.scss";
 
 .about-growth{
-  position: relative;
   height: 800px;
 }
 
 .about-growth-container{
-  position: relative;
-  width: 1024px;
-  margin: 0 auto;
-  display: grid;
+  @extend %container;
   grid-template-areas:
   "lef bl1 bl2"
   "lef bl3 rgt"
   "bl4 bl5 rgt";
   grid-template-columns: 45% 10% 45%;
   grid-template-rows: 15% 60% 15%;
-  height: 100%;
   color: white;
 }
 

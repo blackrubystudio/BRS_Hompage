@@ -38,6 +38,9 @@ module.exports = {
 
     css: [
         "@assets/css/reset.css", "@/assets/css/font.css"
-
     ],
+
+    plugins: [
+        { src: "~/plugins/vue2-google-maps.js" }
+    ]
 }

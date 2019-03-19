@@ -33,10 +33,7 @@ export default {
 }
 
 .weekly-study-container{
-  position: relative;
-  width: 1024px;
-  margin: 0 auto;
-  display: grid;
+  @extend %container;
   grid-template-areas:
   "img bl1"
   "img con"

@@ -8,7 +8,8 @@
         <div>사업자 등록번호 3878800394</div>
         <div>서울특별시 강남구 학동로 47길 6, 일우빌딩 3층</div>
         <div>Tel: 02-6949-2133 | FAX: 02-6949-2135</div>
-        <div>아이콘 info blackrubystudio.com</div>
+        <div>        <a href="mailto:info@blackrubystudio.com">info@blackrubystudio.com</a>
+</div>
       </div>
     </div>
   </footer>
@@ -19,7 +20,6 @@ export default {
 
 }
 </script>
-
 <style lang="scss" scoped>
 @import "../../assets/css/common.scss";
 

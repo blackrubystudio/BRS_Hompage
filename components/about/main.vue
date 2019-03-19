@@ -18,25 +18,17 @@ export default {
 @import "../../assets/css/common.scss";
 
 .about-main{
-  background-image: url('../../assets/img/background/background_1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 800px;
-  color: white;
+  @extend %main-page;
 }
 
 .about-main-container{
-  position: relative;
-  width: 1024px;
-  margin: 0 auto;
-  top: 100px;
-  display: grid;
+  @extend %container;
   grid-template-areas:
   "tt1 bl1 bl2"
   "tt1 tt2 bl3"
   "bl4 bl5 sub";
   grid-template-columns: 100px 450px 300px;
+  top: 100px;
   height: 600px;
 }
 

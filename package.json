@@ -13,9 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "dotenv": "^7.0.0",
     "node-sass": "^4.11.0",
     "nuxt": "^2.0.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "vue2-google-maps": "^0.10.6"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

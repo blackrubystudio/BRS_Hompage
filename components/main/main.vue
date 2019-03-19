@@ -22,12 +22,7 @@ export default {
 @import "../../assets/css/common.scss";
 
 .main{
-  background-image: url('../../assets/img/background/background_1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 800px;
-  color: white;
+  @extend %main-page;
 }
 
 .main-container{
