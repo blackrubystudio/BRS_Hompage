@@ -12,12 +12,20 @@
        이제, 정보를 찾는 것에 시간을 낭비하지 마세요<br>
        그것은 저희의 몫입니다
      </p>
+      <div class="fb5-postit">
+        <div class="fb5-postit-container">
+          <h1 class="fb5-postit-title">FindBig5</h1>
+          <div class="fb5-postit-content">
+            <span>넘쳐나는 정보들</span><br>
+            <span>낭비되는 시간들,</span><br><br>
+            <span>저희가 도와드리겠습니다</span><br>
+            <span>쉽게 찾으세요.</span><br>
+          </div>
+        </div> 
+      </div>
+
    </div>
-<!-- <h1>FB5 TITLE - post</h1>
-<div>넘쳐나는 정보들</div>
-<div>낭비되는 시간들,</div>
-<div>저희가 도와드리겠습니다</div>
-<div>쉽게 찾으세요.</div>  -->
+
  </div>
 </template>
 
@@ -81,5 +89,25 @@ export default {
  grid-area: des;
 }
 
+.fb5-postit{
+  @extend %postit;
+}
+
+.fb5-postit-container{
+  color: white;
+}
+
+.fb5-postit-title{
+  font-size: 30px;
+  padding: 20px 0 0 20px;
+}
+
+.fb5-postit-content{
+  position: absolute;
+  bottom: 100px;
+  padding: 0 0 0 20px;
+  font-size: 20px;
+  line-height: 25px;
+}
 
 </style>
