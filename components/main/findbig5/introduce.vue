@@ -1,5 +1,6 @@
 <template>
 <div class="fb5">
+  <!-- <div class="practice"></div> -->
   <div class="fb5-container">
     <div class="fb5-title">
       <img class="fb5-logo" src="@/assets/img/findbig5/findbig5_logo.png" alt="FindBigFive Logo">
@@ -29,6 +30,15 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/css/common.scss";
 
+.practice{
+  // display: inline;
+  position: absolute;
+  top: 8px;
+  left: 40px;
+  width: 100px;
+  border-bottom: 1px solid black;
+}
+
 .fb5{
   position: relative;
   height: 800px;
@@ -39,7 +49,7 @@ export default {
   grid-template-areas:
   "tit hom"
   "des hom";
-  grid-template-rows: 60% 40%;
+  grid-template-rows: 50% 50%;
   grid-template-columns: 50% 60%;
   height: 600px;
   top: 100px;
@@ -74,21 +84,23 @@ export default {
 .fb5-desc{
   grid-area: des;
   text-align: center;
+  padding-left: 130px;
   line-height: 20px;
   z-index: 100;
+  font-size: 15px;
 }
 
 .fb5-home-img{
   grid-area: hom;
   width: 100%;
   align-self: center;
-  box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: -5px 10px 10px 5px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
 .fb5-background{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 1200px;
@@ -97,11 +109,11 @@ export default {
 .fb5-background-line{
   box-sizing: border-box;
   display: inline-block;
-  height: 350px;
-  width: 900px;
+  height: 380px;
+  width: 850px;
   border: 2px solid transparent;
   transform: rotate(165deg);
-  margin-left: 150px;
+  margin-left: 200px;
   border-image: linear-gradient(45deg, #7E57C2, #F06292) ;
   border-image-slice: 1;
 }

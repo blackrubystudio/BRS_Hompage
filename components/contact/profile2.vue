@@ -72,7 +72,7 @@ export default {
   justify-self: center;
   align-self: start;
   padding-top: 30px;
-  bottom: -170px;
+  bottom: -220px;
   font-family: $main-font; 
   font-size: 100px;
   letter-spacing: 10px;
@@ -102,6 +102,7 @@ export default {
   "bl2 ds2";
   grid-gap: 10px;
   grid-template-columns: 50% 40%;
+  grid-template-rows: 30% 42% 28%;
 }
 
 .contact-profile2-desc-1{

@@ -1,6 +1,7 @@
 <template>
   <div class="fb5-tech">
     <div class="fb5-tech-container">
+      <div class="fb5-tech-title">Technology</div>
         <!-- Container1 -->
         <div class="fb5-tech-container-1">
           <img class="fb5-tech-img-1" src="../../../assets/img/practice.png" alt="자동 정보 수집기">
@@ -59,14 +60,26 @@ export default {
 @import "../../../assets/css/common.scss";
 
 .fb5-tech{
-  height: 1000px;
+  height: 1100px;
 }
 
 .fb5-tech-container{
   @extend %container;
   grid-template-rows: 33.3% 33.3% 33.3%;
   grid-gap: 3%;
-  height: 850px;
+  top: 50px;
+  height: 900px;
+}
+
+.fb5-tech-title{
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 1024px;
+  text-align: right;
+  font-size: 40px;
+  font-family: SCDream3;
 }
 
 .fb5-tech-container-1{
@@ -175,7 +188,7 @@ export default {
   @extend %tech-line;
   position: absolute;
   width: 220px;
-  height: 435px;
+  height: 455px;
   left: 470px;
   border-image: linear-gradient(to right, black 0px 180px, white 180px 230px);
   border-image-slice: 1;
@@ -242,7 +255,7 @@ export default {
   @extend %tech-line;
   position: absolute;
   width: 430px;
-  height: 750px;
+  height: 800px;
   left: 200px;
   border-image: linear-gradient(to right, white 85px, black 85px 430px);
   border-image-slice: 1;

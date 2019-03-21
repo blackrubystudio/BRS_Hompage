@@ -12,7 +12,7 @@
 
 <script>
 // Import Default
-import Headers from "~/components/common/header.vue";
+import Headers from "~/components/common/header-white.vue";
 import Footers from "~/components/common/footer.vue";
 
 // Import About

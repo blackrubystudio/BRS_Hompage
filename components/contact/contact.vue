@@ -78,13 +78,14 @@ export default {
   margin-right: 20px;
   font-size: 70px;
   text-decoration: underline;
+  text-underline-position: under;
 }
 
 .contact-container-desc{
   grid-area: sub;
   justify-self: end;
   text-align: right;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-right: 20px;
   line-height: 20px;
 }

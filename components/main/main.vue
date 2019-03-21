@@ -5,8 +5,8 @@
       <h1 class="main-title-2">단순화</h1>
       <h3 class="main-subtitle">복잡한<br>삶속의<br>가치</h3>
       <div class="main-buttons">
-        <button class="main-button">Celebee</button>
-        <button class="main-button">BeamMe</button>
+        <button class="main-button" @click="isCelebee()">Celebee</button>
+        <button class="main-button" @click="isBeamme()">BeamMe</button>
       </div>
     </div>
   </div>
@@ -26,15 +26,12 @@ export default {
 }
 
 .main-container{
-  position: relative;
-  width: 1024px;
-  margin: 0 auto;
-  top: 200px;
-  display: grid;
+  @extend %container;
   grid-template-areas:
   "t1 t1"
   "st t2"
   "b1 bt";
+  top: 200px;
   grid-gap: 10px;
   height: 600px;
 }
@@ -45,14 +42,13 @@ export default {
   align-self: end;
   font-family: $main-font;
   font-size: 100px;
-  padding-right: 25%;
+  padding-right: 300px;
 }
 
 .main-title-2{
   grid-area: t2;
   font-family: $main-font;
   font-size: 100px;
-  
 }
 
 .main-subtitle{
@@ -65,20 +61,22 @@ export default {
 
 .main-buttons{
   grid-area: bt;
-  justify-self: center;
+  justify-self: end;
   align-self: end;
-  padding-left: 20%;
+  padding-right: 110px;
   padding-bottom: 80px;
 }
 
 .main-button{
+  font-family: $main-button-font;
   background: none;
-  color: white;
-  border: 1px solid white;
+  color: #FFFFFF;
+  border: 1.5px solid #FFFFFF;
   padding: 10px 15px;
   text-align: center;
   font-size: 15px;
   margin: 0 10px;
+  width: 100px;
 }
 
 </style>

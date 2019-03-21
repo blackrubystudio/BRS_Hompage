@@ -1,6 +1,6 @@
 <template>
 <div>
-  <!-- <headers></headers> -->
+  <headers></headers>
   <profile1></profile1>
   <profile2></profile2>
   <contact></contact>
@@ -10,7 +10,7 @@
 
 <script>
 // Import Default
-import Headers from "~/components/common/header.vue";
+import Headers from "~/components/common/header-black.vue";
 import Footers from "~/components/common/footer.vue";
 
 // Import Contact

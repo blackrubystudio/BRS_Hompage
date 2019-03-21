@@ -28,7 +28,7 @@
 
 <script>
 // Import Default
-import Headers from "~/components/common/header.vue";
+import Headers from "~/components/common/header-white.vue";
 import Footers from "~/components/common/footer.vue";
 import Mains from "~/components/main/main.vue";
 
@@ -70,9 +70,9 @@ export default {
 
   data(){
     return{
-      isFB5: true,
-      isCelebee: false,
-      isBeamme: false,
+      isFB5: false,
+      isCelebee: true,
+      isBeamme: true,
     }
   },
 
