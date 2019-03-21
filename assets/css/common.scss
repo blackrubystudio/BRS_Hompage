@@ -1,9 +1,10 @@
 // font
 $main-font: 'SCDream9';
+$main-button-font: 'SCDream4';
 $profile-name: "SCDream5";
 $profile-sub: "SCDream4";
 $about-sub: "NotoBlack";
-$footer-font:"SCDream1";
+$footer-font:"SCDream5";
 // Screen size definitions
 $desktop-width: 1023px;
 $tablet-width: 767px;
@@ -34,11 +35,11 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    top: -260px;
+    top: -160px;
     left: 640px;
-    width: 400px;
-    height: 700px;
-    box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 350px;
+    height: 650px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 %tech-line {
