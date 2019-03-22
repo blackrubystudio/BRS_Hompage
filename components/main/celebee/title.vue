@@ -14,7 +14,6 @@
         
       </div>  
       <img  class="celebee-title-img" src="../../../assets/img/celebee/celebee_mail.png" alt="celebee-search">
-     
       <div class="celebee-postit">
         <div class="celebee-postit-container">
           <h1 class="celebee-postit-title">Celebee</h1>
@@ -54,7 +53,7 @@ export default {
 }
 .celebee-container-title{
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30% 50%;
   font-size: 100px;
   margin-left: 100px;
 }
@@ -85,7 +84,7 @@ font-family: $main-font;
  top: 100px;
  left: 150px;
  transform: rotate(10deg);
- box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
+ box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);
 }
 
 

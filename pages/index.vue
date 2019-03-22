@@ -70,7 +70,7 @@ export default {
 
   data(){
     return{
-      isFB5: false,
+      isFB5: true,
       isCelebee: true,
       isBeamme: true,
     }

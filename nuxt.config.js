@@ -41,6 +41,7 @@ module.exports = {
     ],
 
     plugins: [
-        { src: "~/plugins/vue2-google-maps.js" }
+        { src: "~/plugins/vue2-google-maps.js" },
+        // { src: "~/plugins/vue-tiny-slider.js" },
     ]
 }

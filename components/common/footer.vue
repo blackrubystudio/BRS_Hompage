@@ -7,7 +7,7 @@
         <span class="footer-content">대표 소재우</span><br>
         <span class="footer-content">사업자 등록번호 3878800394</span><br>
         <span class="footer-content">서울특별시 강남구 학동로 47길 6, 일우빌딩 3층</span><br>
-        <span class="footer-content">Tel: 02-6949-2133 | FAX: 02-6949-2135</span><br>
+        <span class="footer-content">TEL: 02-6949-2133 | FAX: 02-6949-2135</span><br>
         <span><a class="footer-content" href="mailto:info@blackrubystudio.com">info@blackrubystudio.com</a></span>
       </div>
     </div>

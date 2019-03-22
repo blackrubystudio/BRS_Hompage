@@ -30,15 +30,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/css/common.scss";
 
-.practice{
-  // display: inline;
-  position: absolute;
-  top: 8px;
-  left: 40px;
-  width: 100px;
-  border-bottom: 1px solid black;
-}
-
 .fb5{
   position: relative;
   height: 800px;
