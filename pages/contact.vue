@@ -10,13 +10,13 @@
 
 <script>
 // Import Default
-import Headers from "~/components/common/header-black.vue";
-import Footers from "~/components/common/footer.vue";
+import Headers from "~/components/common/HeaderBlack.vue";
+import Footers from "~/components/common/Footer.vue";
 
 // Import Contact
-import Profile1 from "~/components/contact/profile1.vue";
-import Profile2 from "~/components/contact/profile2.vue";
-import Contact from "~/components/contact/contact.vue";
+import Profile1 from "~/components/contact/ProfilePark.vue";
+import Profile2 from "~/components/contact/ProfileSo.vue";
+import Contact from "~/components/contact/ContactUs.vue";
 
 export default {
   components: {

@@ -28,24 +28,24 @@
 
 <script>
 // Import Default
-import Headers from "~/components/common/header-white.vue";
-import Footers from "~/components/common/footer.vue";
-import Mains from "~/components/main/main.vue";
+import Headers from "~/components/common/HeaderWhite.vue";
+import Footers from "~/components/common/Footer.vue";
+import Mains from "~/components/main/Main.vue";
 
 // Import FindBig5
-import Fb5Title from "~/components/main/findbig5/title.vue";
-import Fb5Introduce from "~/components/main/findbig5/introduce.vue";
-import Fb5Technology from "~/components/main/findbig5/technology.vue";
+import Fb5Title from "~/components/main/findbig5/Title.vue";
+import Fb5Introduce from "~/components/main/findbig5/Introduce.vue";
+import Fb5Technology from "~/components/main/findbig5/Technology.vue";
 
 // Import Celebee
-import CelebeeTitle from "~/components/main/celebee/title.vue";
-import CelebeeIntroduce from "~/components/main/celebee/introduce.vue";
-import CelebeeTechnology from "~/components/main/celebee/technology.vue";
+import CelebeeTitle from "~/components/main/celebee/Title.vue";
+import CelebeeIntroduce from "~/components/main/celebee/Introduce.vue";
+import CelebeeTechnology from "~/components/main/celebee/Technology.vue";
 
 // Import BEAMME
-import BeammeTitle from "~/components/main/beamme/title.vue";
-import BeammeIntroduce from "~/components/main/beamme/introduce.vue";
-import BeammeTechnology from "~/components/main/beamme/technology.vue";
+import BeammeTitle from "~/components/main/beamme/Title.vue";
+import BeammeIntroduce from "~/components/main/beamme/Introduce.vue";
+import BeammeTechnology from "~/components/main/beamme/Technology.vue";
 
 
 export default {
