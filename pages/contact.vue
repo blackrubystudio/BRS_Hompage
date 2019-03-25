@@ -1,5 +1,7 @@
 <template>
 <div>
+  <!-- HACK : 헤더 컴포넌트를 2개 만들었다 (블랙, 화이트)
+  구조가 같기 때문에 데이터 바인딩 하는 형식으로 구현할 수 있을것 같다. -->
   <headers></headers>
   <profile1></profile1>
   <profile2></profile2>

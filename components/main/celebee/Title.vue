@@ -42,7 +42,7 @@ export default {
 
 .celebee-title{
  position: relative;
- height: 700px;
+ height: $basic-height;
 }
 
 .celebee-container{

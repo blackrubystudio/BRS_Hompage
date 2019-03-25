@@ -1,6 +1,6 @@
 <template>
   <nav class="header">
-    <img class="header-logo" src="../../assets/img/common/logo_name_black.svg" alt="Blackrubystrudio-logo" @click="home()">
+    <img class="header-logo" src="../../assets/img/common/logo_name_black.svg" alt="Blackrubystrudio-logo" @click="goHome()">
     <li class="header-about"><nuxt-link to="/about">about</nuxt-link></li>
     <li class="header-contact"><nuxt-link to="/contact">contact</nuxt-link></li>
   </nav>
@@ -9,7 +9,7 @@
 <script>
 export default {
 methods:{
-  home(){
+  goHome(){
     this.$router.push("/");
   }
 }

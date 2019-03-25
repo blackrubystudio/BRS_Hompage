@@ -26,7 +26,7 @@ export default {
 
 .beamme-introduce{
   position: relative;
-  height: 800px;
+  height: $basic-height + 100px;
 }
 
 .beamme-introduce-container{
@@ -66,22 +66,22 @@ export default {
 }
 
 .beamme-introduce-2{
-  padding-right: 10px;
+  @extend %padding-right-1;
 }
 
 .beamme-introduce-2{
-  padding-right: 20px;
+  @extend %padding-right-2;
 }
 
 .beamme-introduce-3{
-  padding-right: 30px;
+  @extend %padding-right-3;
 }
 
 .beamme-introduce-4{
-  padding-right: 40px;
+  @extend %padding-right-4;
 }
 
 .beamme-introduce-5{
-  padding-right: 50px;
+  @extend %padding-right-5;
 }
 </style>

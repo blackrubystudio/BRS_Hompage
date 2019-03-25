@@ -39,7 +39,7 @@ export default {
 
 .fb5-title{
  position: relative;
- height: 700px;
+ height: $basic-height;
 }
 
 .fb5-container{

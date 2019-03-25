@@ -31,7 +31,7 @@ export default {
 
 .fb5{
   position: relative;
-  height: 800px;
+  height: $basic-height + 100px;
 }
 
 .fb5-container{

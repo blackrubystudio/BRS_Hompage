@@ -4,12 +4,49 @@ $main-button-font: 'SCDream4';
 $profile-name: "SCDream5";
 $profile-sub: "SCDream4";
 $about-sub: "NotoBlack";
-$footer-font:"SCDream5";
+$font-footer:"SCDream5";
 // Screen size definitions
+$basic-height: 700px;
 $desktop-width: 1023px;
 $tablet-width: 767px;
 $mobile-width: 565px;
 $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
+// Font (main)
+%font-main {
+    font-family: $main-font;
+    font-size: 100px;
+}
+
+// Padding right (letter spacing)
+$num: 5;
+@while $num>0 {
+    %padding-right-#{$num} {
+        padding-right: 10px * $num;
+    }
+    $num: $num - 1;
+}
+
+// Padding left (letter spacing)
+$num: 3;
+@while $num>0 {
+    %padding-left-#{$num} {
+        padding-left: 10px * $num;
+    }
+    $num: $num - 1;
+}
+
+%background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%about-desc {
+    position: relative;
+    background: #FEFEFE;
+    line-height: 20px;
+}
+
 // Setting Main Page
 %main-page {
     background-image: url('../../assets/img/background/background_1.png');
@@ -17,7 +54,7 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     background-position: center;
     background-repeat: no-repeat;
     height: 800px;
-    color: white;
+    color: #FEFEFE;
 }
 
 // Default Conatainer
@@ -29,6 +66,7 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     height: 100%;
 }
 
+// Main Postit
 %postit {
     position: absolute;
     background-image: url('../../../assets/img/background/background_3.png');

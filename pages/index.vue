@@ -71,8 +71,8 @@ export default {
   data(){
     return{
       isFB5: true,
-      isCelebee: true,
-      isBeamme: true,
+      isCelebee: false,
+      isBeamme: false,
     }
   },
 

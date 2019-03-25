@@ -25,7 +25,7 @@ export default {
 
 .celebee-introduce{
   position: relative;
-  height: 800px;
+  height: $basic-height + 100px;
 }
 
 .celebee-introduce-container{

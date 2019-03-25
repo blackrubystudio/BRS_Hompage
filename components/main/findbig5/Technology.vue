@@ -59,7 +59,7 @@ export default {
 <style lang="scss" scoped>
 
 .fb5-tech{
-  height: 1100px;
+  height: $basic-height + 400px;
 }
 
 .fb5-tech-container{

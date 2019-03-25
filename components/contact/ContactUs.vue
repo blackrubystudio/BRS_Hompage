@@ -1,27 +1,27 @@
 <template>
-  <div class="contact">
-    <div class="contact-container">
-      <div class="contact-container-title">CONTACT US</div>
-      <div class="contact-container-desc">
+  <div class="contactus">
+    <!-- Contactus Container -->
+    <div class="contactus-container">
+      <!-- Contactus Title 시작 -->
+      <div class="contactus-container-title">CONTACT US</div>
+      <!-- // Contactus Title 끝 -->
+      <!-- Contactus Description 시작 -->
+      <div class="contactus-container-desc">
         블랙루비스튜디오<br>
         서울특별시 강남구 학동로 47길 6, 일우빌딩 3층<br>
         <div><a href="mailto:info@blackrubystudio.com">info@blackrubystudio.com</a></div>
       </div>
-    <GmapMap class="map"
-      v-bind:center="center" 
-      v-bind:zoom="16"
-      >
-      <GmapMarker
-        v-for="(item, index) in markers"
-        v-bind:key="index"
-        v-bind:position="item.position"
-        v-bind:clickable="true"
-        v-bind:draggable="true"
-        @click="center=item.position"
-      />
-    </GmapMap>
+      <!-- // Contactus Description 끝 -->
+      <!-- Google 지도 시작 -->
+      <GmapMap class="contacus-container-map" v-bind:center="center" v-bind:zoom="16">
+        <GmapMarker
+          v-bind:position="marker.position"
+          v-bind:clickable="true"
+          v-bind:draggable="true"/>
+      </GmapMap>
+      <!-- // Google 지도 끝 -->
     </div>
-
+    <!-- // Contactus Container 끝 -->
   </div>
 </template>
 
@@ -31,9 +31,7 @@ export default {
     return {
       center: { lat: 37.517190, lng: 127.038939 },
       mapTypeId: "terrain",
-      markers: [
-        { position: { lat: 37.517190, lng: 127.038939 } },
-      ]
+      marker: { position: { lat: 37.517190, lng: 127.038939 } }
     };
   }
 };
@@ -42,23 +40,15 @@ export default {
 
 <style lang="scss" scoped>
 
-.map {
-  grid-area: map;
-  height: 400px;
-  width: 445px;
-  margin-left: 74px;
-}
-.contact{
+.contactus{
+  @extend %background;
   position: relative;
   background-image: url('../../assets/img/background/background_2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 1000px;
+  height: $basic-height + 200px;
   margin-top: -250px;
 }
 
-.contact-container{
+.contactus-container{
   @extend %container;
   grid-template-areas:
   "tit map"
@@ -70,7 +60,7 @@ export default {
   height: 500px;
 }
 
-.contact-container-title{
+.contactus-container-title{
   grid-area: tit;
   align-self: end;
   justify-self: end;
@@ -81,12 +71,19 @@ export default {
   text-underline-position: under;
 }
 
-.contact-container-desc{
+.contactus-container-desc{
   grid-area: sub;
   justify-self: end;
   text-align: right;
   margin-top: 20px;
   margin-right: 20px;
   line-height: 20px;
+}
+
+.contacus-container-map {
+  grid-area: map;
+  height: 400px;
+  width: 445px;
+  margin-left: 74px;
 }
 </style>

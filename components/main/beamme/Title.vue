@@ -35,7 +35,7 @@ export default {
 
 .beamme-title{
   position: relative;
-  height: 700px;
+  height: $basic-height;
 }
 
 .beamme-container{
