@@ -48,7 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/css/common.scss";
 
 .contact-profile2{
   height: 700px;

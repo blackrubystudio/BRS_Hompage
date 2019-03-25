@@ -22,7 +22,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../assets/css/common.scss";
 
 .celebee-introduce{
   position: relative;

@@ -26,7 +26,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/css/common.scss";
 
 .class-study{
   height: 700px;

@@ -35,9 +35,19 @@ module.exports = {
             }
         }
     },
+    modules: [
+        '@nuxtjs/style-resources'
+    ],
+
+    styleResources: {
+        sass: [
+            '@assets/css/common.scss'
+        ]
+    },
 
     css: [
-        "@assets/css/reset.css", "@/assets/css/font.css"
+        "@assets/css/reset.css",
+        "@/assets/css/font.css"
     ],
 
     plugins: [

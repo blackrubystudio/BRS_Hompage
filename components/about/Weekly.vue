@@ -26,7 +26,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/css/common.scss";
 
 .weekly-study{
   height: 750px;

@@ -20,7 +20,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "../../assets/css/common.scss";
 
 .footer{
   background-image: url('../../assets/img/background/background_2.png');

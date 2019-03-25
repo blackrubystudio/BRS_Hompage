@@ -27,7 +27,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/css/common.scss";
 
 .about-growth{
   height: 800px;
