@@ -33,6 +33,7 @@ components
 ├── common // 여러 페이지 및 컴포넌트에 사용
 │   ├── Footer.vue
 │   ├── Header.vue
+│   ├── Postit.vue
 │   └── Technology.vue
 ├── contact // Contanct Us
 │   ├── ContactUs.vue
