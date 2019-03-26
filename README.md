@@ -19,41 +19,34 @@
 
 ```json
 BRS_homepage
-ㄴ assets // css 및 img 파일
-  ㄴ CSS 
-  ㄴ img
-ㄴ components // Component 구조
-  ㄴ common
-    ㄴ header.vue
-    ㄴ footer.vue
-  ㄴ main
-    ㄴ main.vue
-    ㄴ findbig5
-      ㄴ title.vue
-      ㄴ introduce.vue
-      ㄴ technology.vue
-    ㄴ celebee
-      ㄴ title.vue
-      ㄴ introduce.vue
-      ㄴ technology.vue
-    ㄴ beamme
-      ㄴ title.vue
-      ㄴ introduce.vue
-      ㄴ technology.vue
-  ㄴ about
-    ㄴ main.vue
-    ㄴ growth.vue
-    ㄴ study.vue
-    ㄴ class.vue
-    ㄴ weekly.vue
-  ㄴ contact
-    ㄴ profile1.vue
-    ㄴ profile2.vue
-    ㄴ contact.vue
-ㄴ pages // page 구조
-  ㄴ index.vue
-  ㄴ about.vue
-  ㄴ contact.vue
+
+Assets // CSS & IMG
+├── css
+├── img
+components
+├── about // Directory 구조 변경 예정
+│   ├── Class.vue
+│   ├── Growth.vue
+│   ├── Main.vue
+│   ├── Study.vue
+│   └── Weekly.vue
+├── common // 여러 페이지 및 컴포넌트에 사용
+│   ├── Footer.vue
+│   ├── Header.vue
+│   └── Technology.vue
+├── contact // Contanct Us
+│   ├── ContactUs.vue
+│   ├── ProfilePark.vue
+│   └── ProfileSo.vue
+├── main // Main Page
+│   ├── Main.vue
+│   ├── FindBig5.vue 
+│   ├── Celebee.vue   
+│   └── Beamme.vue
+pages // Pages
+├── about.vue
+├── contact.vue
+└── index.vue
 ```
 
 ## 배포 방법
