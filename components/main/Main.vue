@@ -40,8 +40,6 @@ export default {
   grid-area: t1;
   justify-self: center;
   align-self: end;
-  font-family: $main-font;
-  font-size: 100px;
   padding-right: 300px;
 }
 
@@ -69,8 +67,8 @@ export default {
 .main-button{
   font-family: $main-button-font;
   background: none;
-  color: #FFFFFF;
-  border: 1.5px solid #FFFFFF;
+  color: #FEFEFE;
+  border: 1.5px solid #FEFEFE;
   padding: 10px 15px;
   text-align: center;
   font-size: 15px;

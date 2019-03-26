@@ -1,35 +1,40 @@
 <template>
-  <section class="container">
-  <headers :img=header.img :color=header.color></headers>
-<mains></mains>
+<div id="main">
+  <!-- Header -->
+  <common-header :img=header.img :color=header.color></common-header>
+  <!-- Main Page -->
+  <main-page></main-page>
 
-<div v-show="isFB5">
-  <fb5-title></fb5-title>
-  <fb5-introduce></fb5-introduce>
-  <fb5-technology></fb5-technology>
-</div>
+  <!-- FB5 (Default) -->
+  <div v-show="isFB5">
+    <fb5-title></fb5-title>
+    <fb5-introduce></fb5-introduce>
+    <fb5-technology></fb5-technology>
+  </div>
 
-<div v-show="isCelebee">
-  <celebee-title></celebee-title>
-  <celebee-introduce></celebee-introduce>
-  <celebee-technology></celebee-technology>
-</div>
+  <!-- Celebee(If Click Celebee Button) -->
+  <div v-show="isCelebee">
+    <celebee-title></celebee-title>
+    <celebee-introduce></celebee-introduce>
+    <celebee-technology></celebee-technology>
+  </div>
 
-<div v-show="isBeamme">
-  <beamme-title></beamme-title>
-  <beamme-introduce></beamme-introduce>
-  <beamme-technology></beamme-technology>
-</div>
+  <!-- BeamMe (If Click BeamMe Button) -->
+  <div v-show="isBeamme">
+    <beamme-title></beamme-title>
+    <beamme-introduce></beamme-introduce>
+    <beamme-technology></beamme-technology>
+  </div>
+  
+  <!-- Footer -->
+  <common-footer></common-footer>
 
-<footers></footers>
-  </section>
+ </div>
 </template>
 
 <script>
-// Import Default
-import Headers from "~/components/common/Header.vue";
-import Footers from "~/components/common/Footer.vue";
-import Mains from "~/components/main/Main.vue";
+// Import Main page
+import MainPage from "~/components/main/Main.vue";
 
 // Import FindBig5
 import Fb5Title from "~/components/main/findbig5/Title.vue";
@@ -49,12 +54,7 @@ import BeammeTechnology from "~/components/main/beamme/Technology.vue";
 
 export default {
   components: {
-    // Common
-    Headers,
-    Footers,
-    Mains,
-
-    // Project
+    MainPage,
     Fb5Title,
     Fb5Introduce,
     Fb5Technology,
