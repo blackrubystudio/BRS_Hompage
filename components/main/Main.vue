@@ -4,10 +4,6 @@
       <h1 class="main-title-1">경험의</h1>
       <h1 class="main-title-2">단순화</h1>
       <h3 class="main-subtitle">복잡한<br>삶속의<br>가치</h3>
-      <div class="main-button-group">
-        <button class="main-button" @click="isCelebee()">Celebee</button>
-        <button class="main-button" @click="isBeamme()">BeamMe</button>
-      </div>
     </div>
   </div>
 </template>
@@ -28,9 +24,8 @@ export default {
   @extend %container;
   grid-template-areas:
   "t1 t1"
-  "st t2"
-  "b1 bt";
-  top: 200px;
+  "st t2";
+  top: 100px;
   grid-gap: 10px;
   height: 600px;
 }
@@ -56,24 +51,5 @@ export default {
   line-height: 20px;
 }
 
-.main-button-group{
-  grid-area: bt;
-  justify-self: end;
-  align-self: end;
-  padding-right: 110px;
-  padding-bottom: 80px;
-}
-
-.main-button{
-  font-family: $main-button-font;
-  background: none;
-  color: #FEFEFE;
-  border: 1.5px solid #FEFEFE;
-  padding: 10px 15px;
-  text-align: center;
-  font-size: 15px;
-  margin: 0 10px;
-  width: 100px;
-}
 
 </style>

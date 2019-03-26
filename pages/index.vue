@@ -1,107 +1,102 @@
 <template>
 <div id="main">
-  <!-- Header -->
+  <!-- 1. Header -->
   <common-header :img=header.img :color=header.color></common-header>
-  <!-- Main Page -->
+  <!-- 2. Main Page -->
   <main-page></main-page>
-
-  <!-- FB5 (Default) -->
-  <div v-show="isFB5">
-    <fb5-title></fb5-title>
-    <fb5-introduce></fb5-introduce>
-    <fb5-technology></fb5-technology>
+  <!-- 3. Button & PostIt IMG (Absolute) -->
+  <div class="main-absolute">
+    <div class="main-button-group">
+      <button class="main-button" @click="component = 'celebee'">Celebee</button>
+      <button class="main-button" @click="component = 'beamme'">BeamMe</button>
+    </div>
+    <div class="main-postit"></div>
   </div>
-
-  <!-- Celebee(If Click Celebee Button) -->
-  <div v-show="isCelebee">
-    <celebee-title></celebee-title>
-    <celebee-introduce></celebee-introduce>
-    <celebee-technology></celebee-technology>
+  <!-- 4. Project (FB5 Default) -->
+  <div>
+    <component :is="component"></component>
   </div>
-
-  <!-- BeamMe (If Click BeamMe Button) -->
-  <div v-show="isBeamme">
-    <beamme-title></beamme-title>
-    <beamme-introduce></beamme-introduce>
-    <beamme-technology></beamme-technology>
-  </div>
-  
-  <!-- Footer -->
+  <!-- 5. Footer -->
   <common-footer></common-footer>
-
  </div>
 </template>
 
 <script>
 // Import Main page
-import MainPage from "~/components/main/Main.vue";
+import MainPage from "@/components/main/Main.vue";
 
-// Import FindBig5
-import Fb5Title from "~/components/main/findbig5/Title.vue";
-import Fb5Introduce from "~/components/main/findbig5/Introduce.vue";
-import Fb5Technology from "~/components/main/findbig5/Technology.vue";
-
-// Import Celebee
-import CelebeeTitle from "~/components/main/celebee/Title.vue";
-import CelebeeIntroduce from "~/components/main/celebee/Introduce.vue";
-import CelebeeTechnology from "~/components/main/celebee/Technology.vue";
-
-// Import BEAMME
-import BeammeTitle from "~/components/main/beamme/Title.vue";
-import BeammeIntroduce from "~/components/main/beamme/Introduce.vue";
-import BeammeTechnology from "~/components/main/beamme/Technology.vue";
-
+// Import Project
+import FindBig5 from "@/components/main/FindBig5.vue";
+import Celebee from "@/components/main/Celebee.vue"
+import Beamme from "@/components/main/Beamme.vue"
 
 export default {
   components: {
     MainPage,
-    Fb5Title,
-    Fb5Introduce,
-    Fb5Technology,
-    CelebeeTitle,
-    CelebeeIntroduce,
-    CelebeeTechnology,
-    BeammeTitle,
-    BeammeIntroduce,
-    BeammeTechnology
+    "findbig5" : FindBig5,
+    "celebee" : Celebee,
+    "beamme" : Beamme
   },
 
 
   data(){
     return{
-      isFB5: true,
-      isCelebee: false,
-      isBeamme: false,
-
       header:{
         img: require('"../../../assets/img/common/logo_name_white.svg'),
-        color: "color:#FEFEFE" },
+        color: "color:#FEFEFE" 
+      },
+
+      component: 'findbig5'
     }
   },
 
   methods:{
-    fb5(){
-      this.isFB5= true;
-      this.isCelebee= false;
-      this.isBeamme= false;
-    },
-
-    celebee(){
-      this.isFB5= false;
-      this.isCelebee= true;
-      this.isBeamme= false;
-    },
-
-    beamme(){
-      this.isFB5= false;
-      this.isCelebee= false;
-      this.isBeamme= true;
-    },
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.main-absolute{
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+}
+
+.main-button-group{
+  position: absolute;
+  top: -120px;
+  right: 200px;
+  z-index: 100;
+  
+}
+
+.main-button{
+  font-family: $main-button-font;
+  background: none;
+  color: #FEFEFE;
+  border: 1.5px solid #FEFEFE;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 10px;
+  width: 100px;
+  z-index: 100;
+}
+
+
+.main-postit{
+  @extend %background;
+  position: absolute;
+  background-image: url('../assets/img/background/background_3.png');
+  top: -60px;
+  right: 120px;
+  width: 350px;
+  height: 650px;
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+}
 
 </style>
 

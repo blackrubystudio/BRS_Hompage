@@ -16,7 +16,7 @@
           <span><a class="footer-content" href="mailto:info@blackrubystudio.com">info@blackrubystudio.com</a></span>
         </p>
       </div>
-      <!-- //Footer Content 끝 -->
+      <!-- // Footer Content 끝 -->
     </div>
   </footer>
 </template>
@@ -30,9 +30,11 @@ export default {
 
 .footer{
   @extend %background;
+  position: relative;
   background-image: url('../../assets/img/background/background_2.png');
   height: 150px;
   padding: 0 50px;
+  bottom: 0;
   
 }
 
