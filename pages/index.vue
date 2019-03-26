@@ -1,7 +1,6 @@
 <template>
   <section class="container">
-
-<headers></headers>
+  <headers :img=header.img :color=header.color></headers>
 <mains></mains>
 
 <div v-show="isFB5">
@@ -28,7 +27,7 @@
 
 <script>
 // Import Default
-import Headers from "~/components/common/HeaderWhite.vue";
+import Headers from "~/components/common/Header.vue";
 import Footers from "~/components/common/Footer.vue";
 import Mains from "~/components/main/Main.vue";
 
@@ -73,6 +72,10 @@ export default {
       isFB5: true,
       isCelebee: false,
       isBeamme: false,
+
+      header:{
+        img: require('"../../../assets/img/common/logo_name_white.svg'),
+        color: "color:#FEFEFE" },
     }
   },
 
