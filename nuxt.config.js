@@ -1,7 +1,4 @@
 module.exports = {
-    /*
-     ** Headers of the page
-     */
     head: {
         title: 'BLACKRUBY STUDIO',
         meta: [
@@ -9,21 +6,14 @@ module.exports = {
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'Black Ruby Studio Hompage' }
         ],
+
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }
         ]
     },
-    /*
-     ** Customize the progress bar color
-     */
     loading: { color: '#3B8070' },
-    /*
-     ** Build configuration
-     */
+
     build: {
-        /*
-         ** Run ESLint on save
-         */
         extend(config, { isDev, isClient }) {
             if (isDev && isClient) {
                 config.module.rules.push({
@@ -35,6 +25,7 @@ module.exports = {
             }
         }
     },
+
     modules: [
         '@nuxtjs/style-resources'
     ],
@@ -51,7 +42,8 @@ module.exports = {
     ],
 
     plugins: [
-        { src: "~/plugins/vue2-google-maps.js" },
-        { src: "~/plugins/global-component.js" },
+        { src: "~/plugins/globalComponent.js" },
+        { src: "~/plugins/googleMap.js" },
+
     ]
 }
