@@ -13,9 +13,9 @@
     <div class="main-postit"></div>
   </div>
   <!-- 4. Project (FB5 Default) -->
-  <div>
-    <component :is="component"></component>
-  </div>
+    <transition name="fade">
+      <component :is="component" transition="fade" transition-mode="out-in"></component>
+    </transition>
   <!-- 5. Footer -->
   <common-footer></common-footer>
  </div>
@@ -97,6 +97,11 @@ export default {
   box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 100;
 }
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
 
