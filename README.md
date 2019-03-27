@@ -25,20 +25,18 @@ Assets // CSS & IMG
 ├── img
 components
 ├── about // Directory 구조 변경 예정
-│   ├── Class.vue
-│   ├── Growth.vue
 │   ├── Main.vue
-│   ├── Study.vue
-│   └── Weekly.vue
+│   └── Growth.vue
 ├── common // 여러 페이지 및 컴포넌트에 사용
-│   ├── Footer.vue
 │   ├── Header.vue
+│   ├── Footer.vue
 │   ├── Postit.vue
-│   └── Technology.vue
+│   ├── Technology.vue
+│   └── Activity.vue
 ├── contact // Contanct Us
-│   ├── ContactUs.vue
 │   ├── ProfilePark.vue
-│   └── ProfileSo.vue
+│   ├── ProfileSo.vue
+│   └── ContactUs.vue
 ├── main // Main Page
 │   ├── Main.vue
 │   ├── FindBig5.vue 

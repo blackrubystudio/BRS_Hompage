@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    props: ['title', 'desc']
+  props: ['title', 'desc']
 }
 </script>
 

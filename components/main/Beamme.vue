@@ -9,7 +9,7 @@
           <h1>빠르게</h1>
       </div>  
       <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
-      <postit :title=post.title :desc=post.desc></postit>
+      <common-postit :title=post.title :desc=post.desc></common-postit>
    </div>
   </section>
   <!-- // Section1. Title 끝 -->
