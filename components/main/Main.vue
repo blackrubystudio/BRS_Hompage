@@ -26,7 +26,8 @@ export default {
   "t1 t1"
   "st t2";
   top: 100px;
-  grid-gap: 10px;
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
   height: 600px;
 }
 
@@ -35,7 +36,7 @@ export default {
   grid-area: t1;
   justify-self: center;
   align-self: end;
-  padding-right: 300px;
+  padding-right: 260px;
 }
 
 .main-title-2{

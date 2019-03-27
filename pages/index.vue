@@ -42,7 +42,7 @@ export default {
   data(){
     return{
       header:{
-        img: require('"../../../assets/img/common/logo_name_white.svg'),
+        img: require('@/assets/img/common/logo_name_white.svg'),
         color: "color:#FEFEFE" 
       },
 
@@ -60,14 +60,14 @@ export default {
 .main-absolute{
   position: relative;
   margin: 0 auto;
-  width: 1200px;
+  width: 1024px;
   height: 100%;
 }
 
 .main-button-group{
   position: absolute;
-  top: -120px;
-  right: 200px;
+  top: -100px;
+  right: 120px;
   z-index: 100;
   
 }
@@ -82,21 +82,23 @@ export default {
   font-size: 15px;
   margin: 0 10px;
   width: 100px;
+  height: 40px;
+  line-height: 20px;
   z-index: 100;
 }
-
 
 .main-postit{
   @extend %background;
   position: absolute;
   background-image: url('../assets/img/background/background_3.png');
-  top: -60px;
-  right: 120px;
+  top: -40px;
+  right: 40px;
   width: 350px;
-  height: 650px;
-  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 645px;
+  box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.4);
   z-index: 100;
 }
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }

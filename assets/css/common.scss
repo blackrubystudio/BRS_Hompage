@@ -17,6 +17,48 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     font-size: 100px;
 }
 
+%font-postit-title {
+    font-family: "SCDream1";
+    font-size: 20px;
+}
+
+// Connection(답을 찾다 & 기술혁신)
+%main-connection {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+%main-connection-content {
+    width: 70px;
+    height: 100%;
+    transform: rotate(90deg);
+    font-size: 14px;
+}
+
+%main-connection-line {
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 50px;
+    transform: rotate(90deg);
+    border-bottom: 0.5px solid #212121;
+    opacity: .7;
+}
+
+%main-project-button {
+    width: 100px;
+    height: 25px;
+    line-height: 27px;
+    margin-bottom: 80px;
+    font-family: "SCDream2";
+    font-size: 15px;
+    border: 1px solid black;
+    background: none;
+    align-self: end;
+    text-align: center;
+    z-index: 100;
+}
+
 // Padding right (letter spacing)
 $num: 5;
 @while $num>0 {
@@ -27,7 +69,7 @@ $num: 5;
 }
 
 // Padding left (letter spacing)
-$num: 3;
+$num: 4;
 @while $num>0 {
     %padding-left-#{$num} {
         padding-left: 10px * $num;

@@ -3,28 +3,34 @@
   <!-- Section1. Title 시작-->
   <section class="beamme-title">
     <div class="beamme-title-container">
+      <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
       <div class="beamme-title-main">
           <h1>언제</h1>
           <h1>어디서든</h1>  
-          <h1>빠르게</h1>
+          <h1 class="beamme-title-indexup">빠르게</h1>
       </div>  
-      <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
-      <common-postit :title=post.title :desc=post.desc></common-postit>
+      <common-postit class="beamme-postit" :title=post.title :desc=post.desc></common-postit>
    </div>
   </section>
   <!-- // Section1. Title 끝 -->
-
+  <!-- Connection1. 답을 찾다 시작 -->
+  <div class="beamme-connection1">
+    <div class="beamme-connenction1-content">답을 찾다</div>
+    <div class="beamme-connection1-line"></div>
+  </div>
+  <!-- // Connection1. 답을 찾다 끝 -->
   <!-- Section2. Introduce 시작 -->
   <section class="beamme-introduce">
     <div class="beamme-introduce-container">
       <img class="beamme-introduce-img-logo" src="@/assets/img/beamme/beamme_logo.png" alt="빔미 로고">
       <div class="beamme-introduce-desc">
         <p>
-          <span class="beamme-introduce-1">클라우드 PC서비스를 통해</span><br>
-          <span class="beamme-introduce-2">다양한 디바이스를 지원하고</span><br>
-          <span class="beamme-introduce-3">게임 뿐 아니라 고사양 PC가 필요한</span><br>
-          <span class="beamme-introduce-4">3D, 영상, 음악 작업 등에도</span><br>
-          <span class="beamme-introduce-5">사용할 수 있습니다.</span>
+          클라우드 PC서비스를 통해<br>
+          <span class="beamme-introduce-1">다양한 디바이스를 지원하고</span><br>
+          <span class="beamme-introduce-2">게임 뿐 아니라 고사양 PC가 필요한</span><br>
+          <span class="beamme-introduce-3">3D, 영상, 음악 작업 등에도</span><br>
+          <span class="beamme-introduce-4">사용할 수 있습니다</span><br>
+          <a class="button beamme-introduce-button" href="https://beamme.io" target="_blank" >자세히 보기</a>
         </p>
       </div>
       <img class="beamme-introduce-img-homepage" src="@/assets/img/beamme/beamme_homepage.png" alt="빔미 홈페이지">
@@ -34,7 +40,7 @@
 
   <!-- Section3. Technology 시작 -->
   <section>
-    <technology
+    <common-technology v-on:scroll="scrollFunction"
     :title11 = tech.title11
     :title12 = tech.title12
     :title21 = tech.title21
@@ -44,7 +50,7 @@
     :desc1 = tech.desc1
     :desc3 = tech.desc3
     >
-    </technology>
+    </common-technology>
   </section>
   <!-- Section3. Technology 끝 -->
  </div>
@@ -70,15 +76,13 @@ export default {
         desc3: "<p>형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라<br>문서의 역가중치를 계싼하여 문서간 중요도를 분석하는 엔진을 제공합니다<br>토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다<br>또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다</p>"
       }
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-
 .beamme{
   position: relative;
-  height: 100%;
 }
 
 .beamme-title{
@@ -96,57 +100,44 @@ export default {
   display: grid;
   grid-template-rows: 20% 20% 20%;
   justify-self: center;
+  margin-top: 50px;
   margin-right: 120px;
-  font-size: 100px;
+  font-size: 90px;
   text-align: right;
-  z-index: 100;
 }
 
 h1{
   font-family: $main-font;
 }
 
+.beamme-title-indexup{
+  z-index: 200;
+}
+
 .beamme-title-img-wave{
   position: absolute;
-  height: 220px;
-  top: 150px;
-  left: -100px;
-  transform: rotate(10deg);
-}
-
-.beamme-title-postit{
-  @extend %postit;
-}
-
-.beamme-title-postit-container{
-  color: white;
-}
-
-.beamme-title-postit-title{
-  position: absolute;
-  top: 20px;
-  padding-left: 40px;
-  font-size: 30px;
-  z-index: 200;
-}
-
-.beamme-title-postit-content{
-  position: absolute;
-  bottom: 50px;
-  padding-left: 40px;
-  font-size: 20px;
-  line-height: 25px;
-  z-index: 200;
-}
-
-.beamme-title-line{
-  text-decoration:  underline;
-  text-underline-position: under;
+  height: 200px;
+  top: 200px;
+  left: -50px;
+  z-index: 100;
 }
 
 .beamme-introduce{
   position: relative;
-  height: $basic-height + 100px;
+  height: $basic-height;
+  margin: -50px 0 50px 0;
+}
+
+.beamme-connection1{
+  @extend %main-connection;
+}
+
+.beamme-connenction1-content{
+  @extend %main-connection-content;
+}
+
+.beamme-connection1-line{
+  @extend %main-connection-line;
 }
 
 .beamme-introduce-container{
@@ -154,7 +145,7 @@ h1{
   grid-template-areas:
   "log hom"
   "des hom";
-  grid-template-rows: 45% 55%;
+  grid-template-rows: 37% 63%;
   grid-template-columns: 35% 55%;
   height: 600px;
   top: 100px;
@@ -162,9 +153,9 @@ h1{
 
 .beamme-introduce-img-logo{
   grid-area: log;
-  margin-top: 120px;
-  margin-left: -50px;
-  height: 140px;
+  margin-top: 70px;
+  margin-left: 30px;
+  height: 120px;
   z-index: 100;
   box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.2);
 }
@@ -181,7 +172,7 @@ h1{
 
 .beamme-introduce-img-homepage{
   grid-area: hom;
-  height: 80%;
+  width: 700px;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
 }
 
@@ -201,7 +192,15 @@ h1{
   @extend %padding-right-4;
 }
 
-.beamme-introduce-5{
-  @extend %padding-right-5;
+.beamme-introduce-button{
+  @extend %main-project-button;
+  font-size: 12px;
+  padding: 2px 10px;
+  margin-right: 70px;
 }
+
+a{
+  color: #212121;
+}
+
 </style>

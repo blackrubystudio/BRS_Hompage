@@ -6,7 +6,7 @@
       <div class="celebee-title-main">
         <div class="celebee-title-container-title-1">
           <h1 class="celebee-title-downfont">매</h1>
-          <h1>일</h1>
+          <h1 class="celebee-title-space">일</h1>
           <h1 class="celebee-title-downfont">전해받는</h1>  
         </div>
         <div class="celebee-title-container-title-2">
@@ -15,10 +15,16 @@
         </div>
       </div>  
       <img  class="celebee-title-img-mail" src="@/assets/img/celebee/celebee_mail.png" alt="celebee-search">
-      <postit :title=post.title :desc=post.desc></postit>
+      <common-postit class="celebee-postit" :title=post.title :desc=post.desc></common-postit>
     </div>
   </section>
   <!-- // Section1. Title 끝 -->
+  <!-- Connection1. 답을 찾다 시작 -->
+  <div class="celebee-connection1">
+    <div class="celebee-connenction1-content">답을 찾다</div>
+    <div class="celebee-connection1-line"></div>
+  </div>
+  <!-- // Connection1. 답을 찾다 끝 -->
   <!-- Section2. Introduce 시작 -->
   <section class="celebee-introduce">
     <div class="celebee-introduce-container">
@@ -29,15 +35,18 @@
         <p>좋아하는 아이돌을 입력하기만 하면<br>
           매주 월요일, 당신이 좋아하는 아이돌의 스케쥴과<br>
           영상을 메세지로 보내드립니다<br><br>
-          셀레비가 여러분을 찾아갑니다</p>
+          셀레비가 여러분을 찾아갑니다<br><br>
+        </p>
+        <a class="button celebee-introduce-button" href="https://celebee.io" target="_blank" >자세히 보기</a>
       </div>
       <img class="celebee-introduce-img-effect" src="@/assets/img/celebee/celebee_effect.png" alt="셀레비 효과">
     </div>
   </section>
     <!-- Section2. Introduce 끝 -->
+
   <!-- Section3. Technology 시작 -->
   <section>
-    <technology
+    <common-technology
     :title11 = tech.title11
     :title12 = tech.title12
     :title21 = tech.title21
@@ -47,7 +56,7 @@
     :desc1 = tech.desc1
     :desc3 = tech.desc3
     >
-    </technology>
+    </common-technology>
   </section>
   <!-- Section3. Technology 끝 -->
 </div>
@@ -81,7 +90,6 @@ export default {
 
 .celebee{
   position: relative;
-  height: 100%;
 }
 
 .celebee-title{
@@ -94,15 +102,16 @@ export default {
  top: 100px;
  height: 500px;
 }
+
 .celebee-title-main{
   display: grid;
   grid-template-rows: 30% 50%;
-  font-size: 100px;
-  margin-left: 100px;
+  font-size: 90px;
+  margin-left: 140px;
 }
 
 h1{
-font-family: $main-font;
+  font-family: $main-font;
 }
 
 .celebee-title-downfont{
@@ -111,7 +120,7 @@ font-family: $main-font;
 
 .celebee-title-container-title-1{
   display: grid;
-  grid-template-columns: 10% 10% 80%;
+  grid-template-columns: 9% 12% 75%;
 }
 
 .celebee-title-container-title-2{
@@ -122,49 +131,34 @@ font-family: $main-font;
 
 .celebee-title-img-mail{
   position: absolute;
- height: 320px;
- top: 100px;
- left: 150px;
- transform: rotate(10deg);
- box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);
+  height: 290px;
+  top: 85px;
+  left: 200px;
+  transform: rotate(10deg);
+  box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);
 }
 
+.celebee-postit{
+  text-align: right !important;
+} 
 
-.celebee-title-postit{
-  @extend %postit;
+.celebee-connection1{
+  @extend %main-connection;
 }
 
-.celebee-title-postit-container{
-  color: white;
+.celebee-connenction1-content{
+  @extend %main-connection-content;
 }
 
-.celebee-title-postit-title{
-  position: absolute;
-  top: 20px;
-  padding-left: 40px;
-  font-size: 30px;
-  z-index: 200;
+.celebee-connection1-line{
+  @extend %main-connection-line
 }
 
-.celebee-title-postit-content{
-  width: 350px;
-  text-align: right;
-  position: absolute;
-  bottom: 50px;
-  padding: 0 20px 0 0px;
-  font-size: 20px;
-  line-height: 25px;
-  z-index: 200;
-}
-
-.celebee-title-line{
-  text-decoration:  underline;
-  text-underline-position: under;
-}
 
 .celebee-introduce{
   position: relative;
-  height: $basic-height + 100px;
+  height: $basic-height;
+  margin: -50px 0 50px 0;
 }
 
 .celebee-introduce-container{
@@ -182,35 +176,48 @@ font-family: $main-font;
 .celebee-introduce-img-homepage1{
   grid-area: hom1;
   width: 100%;
-  margin-left: -100px;
+  margin-left: -50px;
 }
 
 .celebee-introduce-img-homepage2{
   grid-area: hom2;
   width: 90%;
-  margin-left: -100px;
+  margin-left: -50px;
 }
 
 .celebee-introduce-img-logo{
   grid-area: logo;
-  width: 250px;
+  width: 270px;
   margin-left: 250px;
-  margin-top: -5px;
+  margin-top: 20px;
   
 }
 
 .celebee-introduce-desc{
   justify-self: start;
   text-align: right;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
-  margin-left: 100px;
+  margin-left: 50px;
+  z-index: 100;
+}
+
+.celebee-introduce-button{
+  @extend %main-project-button;
+  font-size: 12px;
+  padding: 2px 10px;
+}
+
+a{
+  color: #212121;
 }
 
 .celebee-introduce-img-effect{
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 65%;
   height: 350px;
 }
+
+
 </style>

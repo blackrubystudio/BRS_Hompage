@@ -99,7 +99,7 @@ export default {
     "bl1 img"
     "con img"
     "bl2 img";
-    grid-template-columns: 50% 45%;
+    grid-template-columns: 55% 45%;
     grid-template-rows: 25% 35% 40%;
     left: 100px;
     margin-top: -50px;
@@ -130,6 +130,10 @@ export default {
     @extend %padding-right-3;
   }
 
+  a{
+    color: #212121;
+  }
+
 }
 
 .about-weekly {
@@ -139,6 +143,7 @@ export default {
     margin-left: -40px;
   } 
 }
+
 </style>
 
 

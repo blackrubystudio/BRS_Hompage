@@ -33,7 +33,7 @@ export default {
   "img bl1"
   "img con"
   "img bl2";
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 45% 55%;
   grid-template-rows: 25% 35% 40%;
   left: -100px;
 }

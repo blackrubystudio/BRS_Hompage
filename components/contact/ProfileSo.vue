@@ -58,7 +58,7 @@ export default {
   "tit img con";
   grid-template-columns: 0% 35% 65%;
   grid-gap: 2.5%;
-  top: 170px;
+  top: 100px;
    z-index: 100;
   
 }

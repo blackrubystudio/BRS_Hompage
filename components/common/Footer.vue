@@ -3,7 +3,7 @@
     <!-- Footer Container 시작 -->
     <div class="footer-container">
       <!-- Footer Logo 시작 -->
-      <img class="footer-logo" src="../../assets/img/common/logo_name_white.svg" alt="Blackrubystrudio-logo">
+      <img class="footer-logo" src="@/assets/img/common/logo_name_white.svg" alt="Blackrubystrudio-logo">
       <!-- // Footer Logo 끝 -->
       <!-- Footer Content 시작 -->
       <div class="footer-content-group">
