@@ -1,6 +1,6 @@
 <template>
 
-<div id="findbig5" class="fb5">
+<div class="fb5">
   <!-- Section1. Title 시작-->
   <section class="fb5-title">
     <div class="fb5-title-container">
@@ -51,8 +51,8 @@
   </div>
   <!-- // Connection2. 기술 혁신 끝 -->
   <!-- Section3. Technology 시작 -->
-  <section ref="tech">
-    <common-technology class="fb5-technology"
+ <section>
+     <common-technology class="fb5-technology"
     :title11 = tech.title11
     :title12 = tech.title12
     :title21 = tech.title21
@@ -60,7 +60,14 @@
     :title31 = tech.title31
     :title32 = tech.title32
     :desc1 = tech.desc1
+    :desc2 = tech.desc2
     :desc3 = tech.desc3
+    :img1 = tech.img1
+    :img2 = tech.img2
+    :img3 = tech.img3
+    :alt1 = tech.alt1
+    :alt2 = tech.alt2
+    :alt3 = tech.alt3
     >
     </common-technology>
   </section>
@@ -72,33 +79,11 @@
 <script>
 
 export default {
-  mounted(){
-    window.addEventListener("scroll",  this.scrollDown);
-  },
-
-  methods: {
-    scrollDown(){
-        var findbig5 = document.getElementById("findbig5")
-        console.log(window)
-        var y = window.scrollY;
-        if(y < 1529){
-          findbig5.className = "fb5-technology"
-          console.log(this.$refs)
-      } else{
-          findbig5.className = "fb5-technology hide"
-      }
-    },
-
-  },
-  data(){
+ data(){
     return{
-      
       post:{
-        title: "FindBig5",
-        desc: "넘쳐나는 정보들<br>\
-               낭비되는 시간들,<br><br>\
-               저희가 도와드리겠습니다<br>\
-               <div class='fb5-title-line'>쉽게 찾으세요.</div>"
+        title: "Beam Me",
+        desc: "클릭 한번으로 만나는<br>당신의 고사양 PC<br>컴퓨터 구입한다고 고민하지 말고<br>BEAMME 하세요<br><br>우리집 노트북을 최신컴으로"
       },
 
       tech:{
@@ -108,13 +93,52 @@ export default {
         title22: "엔진",
         title31: "자연어처리",
         title32: "AI",
-        desc1: "<p>오늘날 많은 정보들은 결정하고 판단하는 일을 복잡하게 만듭니다<br>진흙 속에서 진주를 찾았을 때에는 이미 온몸이 흙 투성이지요<br>이제, 정보를 찾는 것에 시간을 낭비하지 마세요<br>그것은 저희의 몫입니다</p>",
-        desc3: "<p>형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라<br>문서의 역가중치를 계싼하여 문서간 중요도를 분석하는 엔진을 제공합니다<br>토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다<br>또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다</p>"
+        img1: require("@/assets/img/findbig5/findbig5_tech_1.png"),
+        img2: require("@/assets/img/findbig5/findbig5_tech_2.png"),
+        img3: require("@/assets/img/findbig5/findbig5_tech_3.png"),
+        alt1: '첫번째 이미지',
+        alt2: '두번째 이미지',
+        alt3: '세번째 이미지',
+        desc1: "<span class='tech-desc-right-2'>Forbes, NewYorkTimes 등 일반 뉴스미디어와</span><br>\
+                <span class='tech-desc-right-1'>TechCrunchm, TheNextWeb등 IT 전문미디어 등 30여개 해외 언론사에서</span><br>\
+                IT기사를 실시간으로 수집합니다. 2016년 이후 기사들을 자유롭게 찾아볼 수 있습니다",
+        desc2:"<span class='tech-desc-left-2'>검색을 통해 사용자가 원하는 기사를 빠르게 찾을 수 있습니다</span><br>\
+               <span class='tech-desc-left-1'>유저들의 검색어 기록을 학습, 중요도에 반영하여 사용자 별 맞춤 검색기능이 가능하고</span><br>\
+               기사들을 유사 기사로 묶어 내용이 비슷한 기사를 다시 보지 않을 수 있습니다",
+        desc3:"<span class='tech-desc-right-3'>형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라</span><br>\
+               <span class='tech-desc-right-2'>문서의 역 가중치를 계산하여 문서 간 중요도를 분석하는 엔진을 제공합니다</span><br>\
+               <span class='tech-desc-right-1'>토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다</span><br>\
+               또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다"
       }
     }
-  }
+  },
 }
 </script>
+
+<style lang="scss">
+.fb5-technology{
+  
+  .tech-desc-right-1{
+    @extend %padding-right-1;
+  }
+
+  .tech-desc-right-2{
+    @extend %padding-right-2;
+  }
+
+  .tech-desc-right-3{
+    @extend %padding-right-3;
+  }
+
+  .tech-desc-left-1{
+    @extend %padding-left-1;
+  }
+
+  .tech-desc-left-2{
+    @extend %padding-left-2;
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 // Section1. Title
@@ -122,10 +146,8 @@ export default {
   position: relative;
   height: 100%;
 }
-
-.hide{
-  color: red;
-  display: grid;
+.tech-desc-right-2{
+  padding: 100px;
 }
 
 .fb5-title{
@@ -216,7 +238,6 @@ export default {
   opacity: .7;
 }
 
-
 .fb5-introduce{
   position: relative;
   height: $basic-height;
@@ -274,7 +295,6 @@ export default {
   @extend %padding-left-2;
 }
 
-
 .fb5-introduce-desc-3{
   @extend %padding-left-3;
 }
@@ -304,5 +324,4 @@ export default {
 a{
   color: #212121;
 }
-
 </style>

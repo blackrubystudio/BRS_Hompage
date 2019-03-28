@@ -16,6 +16,11 @@
     <transition name="fade">
       <component :is="component" transition="fade" transition-mode="out-in"></component>
     </transition>
+
+
+  <div class="main-scrollup">
+    <img class="main-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
+  </div>
   <!-- 5. Footer -->
   <common-footer></common-footer>
  </div>
@@ -51,7 +56,14 @@ export default {
   },
 
   methods:{
-  }
+    scrollUp(){
+      document.getElementById("main").style.transition = "all 5s";
+      document.getElementById("main").scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      // document.documentElement.style.transition = "all 5s";
+      
+    }
+  },
 }
 </script>
 
@@ -104,6 +116,20 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.main-scrollup{
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+  margin-bottom: 20px;
+  transition: 3s;
+}
+
+.main-scrollup-button{
+  width: 50px;
+  cursor: pointer;
+  transition: 3s;
 }
 </style>
 

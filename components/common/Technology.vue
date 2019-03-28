@@ -4,41 +4,33 @@
       <div class="tech-title">Technology</div>
         <!-- Container1 -->
         <div class="tech-container-1">
-          <img class="tech-img-1" src="../../assets/img/practice.png" alt="자동 정보 수집기">
-          <div class="tech-content-1">
+          <img id="tech-img-1" class="tech-img-1" :src="img1" :alt="alt1">
+          <div id="tech-text-1" class="tech-content-1">
             <h1 class="tech-title-1-1">{{title11}}</h1>
             <h1 class="tech-title-1-2">{{title12}}</h1>
-            <div class="tech-desc-1" v-html="desc1">
-              
-            </div>
+            <div class="tech-desc-1"><p v-html="desc1"></p></div>
           </div>
         </div>
-        <div class="tech-line-1"></div>
+        <div id="tech-line-1" class="tech-line-1"></div>
 
         <!-- Container2 -->
         <div class="tech-container-2">
-          <div class="tech-content-2">
+          <div id="tech-text-2" class="tech-content-2">
             <h1 class="tech-title-2-1">{{title21}}</h1> 
             <h1 class="tech-title-2-2">{{title22}}</h1>
-            <div class="tech-desc-2">
-              <p>검색을 통해 사용자가 원하는 기사를 빠르게 찾을 수 있습니다</p>
-              <p>유저들의 검색어 기록을 학습, 중요도에 반영하여 사용자 별 맞춤 검색기능이 가능하고,</p>
-              <p>기사들을 유사 기사로 묶어 내용이 비슷한 기사를 다시 보지 않을 수 있습니다</p>
-            </div>
+            <div class="tech-desc-2"><p v-html="desc2"></p></div>
           </div>
-          <img class="tech-img-2" src="../../assets/img/practice.png" alt="자동 정보 수집기">
+          <img id="tech-img-2" class="tech-img-2" :src="img2" :alt="alt2">
         </div>
         <div class="tech-line-2"></div>
 
         <!-- Container3 -->
         <div class="tech-container-3">
-          <img class="tech-img-3" src="../../assets/img/practice.png" alt="자동 정보 수집기">
-          <div class="tech-content-3">
+          <img id="tech-img-3" class="tech-img-3" :src="img3" :alt="alt3">
+          <div id="tech-text-3" class="tech-content-3">
             <h1 class="tech-title-3-1">{{title31}}</h1>
             <h1 class="tech-title-3-2">{{title32}}</h1>
-            <div class="tech-desc-3" v-html="desc3">
-
-            </div>
+            <div class="tech-desc-3"><p v-html="desc3"></p></div>
           </div>
         </div>
         <div class="tech-line-3"></div>
@@ -48,22 +40,106 @@
 
 <script>
 export default {
-  props: ['title11', 'title12', 'title21', 'title22', 'title31', 'title32', 'desc1', 'desc3']
+  props: ['title11', 'title12', 'title21', 'title22', 'title31', 'title32', 
+          'img1', 'img2', 'img3', 'alt1', 'alt2', 'alt3', 'desc1', 'desc2', 'desc3'],
+
+  mounted(){
+    window.addEventListener("scroll",  this.scrollDown);
+  },
+
+  methods: {
+    scrollDown(){
+        var tech1 = document.getElementById("tech-img-1")
+        var tech2 = document.getElementById("tech-img-2")
+        var tech3 = document.getElementById("tech-img-3")
+        var text1 = document.getElementById("tech-text-1")
+        var text2 = document.getElementById("tech-text-2")
+        var text3 = document.getElementById("tech-text-3")
+        // var line1 = document.getElementById("tech-line-1")
+        // console.log(window)
+        var y = window.scrollY;
+        if(y < 1650){
+          tech1.className = "tech-img-1"
+          tech2.className = "tech-img-2"
+          tech3.className = "tech-img-3"
+          text1.className = "tech-content-1"
+          text2.className = "tech-content-2"
+          text3.className = "tech-content-3"
+          // line1.className = "tech-content-1"
+        } else if(y < 2000){
+          tech1.className = "tech-img-1 animation-left-to-right"
+          text1.className = "tech-content-1 animation-show-text"
+          // line1.className = "tech-content-1 animation-show-line"
+        } else if(y <2350){
+          tech2.className = "tech-img-2 animation-right-to-left"
+          text2.className = "tech-content-2 animation-show-text"         
+        } else{
+          tech3.className = "tech-img-3 animation-left-to-right"
+          text3.className = "tech-content-3 animation-show-text"
+        }
+    },
+
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.animation-left-to-right{
+  animation-name: left-to-right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.animation-right-to-left{
+  animation-name: right-to-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.animation-show-text{
+  animation-name: show-text;
+  animation-duration: 3s;
+  animation-fill-mode: forwards
+}
+
+@keyframes left-to-right{
+  0%{
+    left: 0px;
+  }
+  100% {
+    left: 670px;
+  }
+}
+
+
+@keyframes right-to-left{
+  0%{
+    left: 670px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes show-text{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 .tech{
-  height: $basic-height + 400px;
+  height: $basic-height + 500px;
 }
 
 .tech-container{
   @extend %container;
-  grid-template-rows: 33.3% 33.3% 33.3%;
-  grid-gap: 3%;
+  grid-template-rows: 300px 300px 300px;
+  grid-gap: 50px;
   top: 50px;
-  height: 900px;
+  height: 1000px;
 }
 
 .tech-title{
@@ -73,20 +149,16 @@ export default {
   transform: translate(-50%, 50%);
   width: 1024px;
   text-align: right;
-  font-size: 40px;
-  font-family: SCDream3;
-}
-
-.tech-container-1{
-  position: relative;
-  display: grid;
-  grid-template-columns: 30% 50%;
+  font-size: 30px;
+  font-family: $font-tech;
 }
 
 .tech-img-1{
-  height: 100%;
-  justify-self: right;
-  transition: all 5s linear;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  height: 350px;
+
 }
 
 .tech-content-1{
@@ -95,33 +167,38 @@ export default {
   grid-template-areas:
   "tt11 tt12"
   "des1 des1";
-  grid-template-columns: 55% 50%;
-  grid-template-rows: 100px 100px;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 150px 150px;
+  z-index: 100;
+
 }
 
 .tech-title-1-1{
   grid-area: tt11;
+  justify-self: end;
+  align-self: center;
+  padding-right: 20px;
   font-family: $main-font;
-  font-size: 70px;
+  font-size: 90px;
   letter-spacing: -5px;
 }
 
 .tech-title-1-2{
   grid-area: tt12;
   font-family: $main-font;
-  font-size: 70px;
+  align-self: end;
+  font-size: 90px;
   letter-spacing: -5px;
-  padding-top: 20px;
 }
 
 .tech-desc-1{
-  display: none;
   grid-area: des1;
-  padding-top: 30px;
-  align-self: end;
-  justify-self: end;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-right:85px;
+  justify-self: center;
   text-align: right;
-  margin-right: 70px;
+  margin-right:80px;
   width: 600px;
   line-height: 20px;
 }
@@ -129,95 +206,82 @@ export default {
 .tech-line-1{
   @extend %tech-line;
   position: absolute;
-  width: 400px;
-  height: 135px;
+  width: 540px;
+  height: 140px;
   left: 200px;
-  border-image: linear-gradient(to right, white 85px, black 85px 430px);
+  border-image: linear-gradient(to right, white 140px, black 140px 540px);
   border-image-slice: 1;
 }
-
-.tech-img-1:hover + .tech-content-1 > .tech-desc-1{
-  display: grid;
-}
-
 
 .tech-container-2{
   position: relative;
   display: grid;
-  grid-template-columns: 60% 30%;
 }
 
 .tech-img-2{
-  height: 100%;
-  justify-self: center;
+  position: absolute;
+  top: -50px;
+  left: 660px;
+  height: 350px;
 }
 
-
 .tech-content-2{
- align-self: center;
+  align-self: center;
   display: grid;
   grid-template-areas:
   "tt21 tt22"
   "des2 des2";
-  grid-template-columns: 75% 50%;
-  grid-template-rows: 100px 100px;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 150px 150px;
+  z-index: 100;
 }
 
 .tech-title-2-1{
   grid-area: tt21;
   justify-self: end;
   font-family: $main-font;
-  font-size: 70px;
+  font-size: 90px;
   letter-spacing: -5px;
-  padding-top: 20px;
+  align-self: center;
 }
 
 .tech-title-2-2{
   grid-area: tt22;
   font-family: $main-font;
-  font-size: 70px;
+  font-size: 90px;
   letter-spacing: -5px;
 }
 
 .tech-line-2{
   @extend %tech-line;
   position: absolute;
-  width: 220px;
-  height: 455px;
+  width: 320px;
+  height: 460px;
   left: 470px;
-  border-image: linear-gradient(to right, black 0px 180px, white 180px 230px);
+  border-image: linear-gradient(to right, black 0px 200px, white 200px 320px);
   border-image-slice: 1;
 }
 
 .tech-desc-2{
-  display: none;
   grid-area: des2;
-  padding-top: 30px;
-  align-self: end;
   justify-self: end;
-  margin-right: -170px;
+  margin-top: -10px;
+  margin-right: 80px;
   width: 600px;
+  font-size: 14px;
   line-height: 20px;
-}
-
-
-.tech-img-2:hover + .tech-content-2 > .tech-desc-2{
-  display: grid;
 }
 
 .tech-container-3{
   position: relative;
   display: grid;
-  grid-template-columns: 30% 50%;
 }
 
 .tech-img-3{
-  height: 100%;
-  justify-self: right;
-}
-
-.tech-img-3:hover + .tech-content-3 > .tech-desc-3{
-  display: grid;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  height: 350px;
 }
 
 .tech-content-3{
@@ -225,47 +289,46 @@ export default {
   display: grid;
   grid-template-areas:
   "tt31 tt32"
-  "des3 des3";
-  grid-template-columns: 65% 30%;
-  grid-template-rows: 100px 100px;
+  "des3 b1";
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 150px 150px;
+  z-index: 100;
 }
 
 .tech-title-3-1{
-  align-self: center;
   grid-area: tt31;
+  justify-self: end;
+  align-self: center;
   font-family: $main-font;
-  font-size: 70px;
+  font-size: 90px;
   letter-spacing: -5px;
 }
 
 .tech-title-3-2{
   grid-area: tt32;
+  align-self: end;
   font-family: $main-font;
-  font-size: 70px;
+  font-size: 90px;
   letter-spacing: -5px;
-  padding-top: 30px;
+}
+
+.tech-desc-3{
+  grid-area: des3;
+  justify-self: end;
+  text-align: right;
+  margin-right: 80px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .tech-line-3{
   @extend %tech-line;
   position: absolute;
-  width: 430px;
-  height: 800px;
+  width: 555px;
+  height: 835px;
   left: 200px;
-  border-image: linear-gradient(to right, white 85px, black 85px 430px);
+  border-image: linear-gradient(to right, white 140px, black 140px 555px);
   border-image-slice: 1;
-}
-
-.tech-desc-3{
-  display: none;
-  grid-area: des3;
-  padding-top: 30px;
-  align-self: end;
-  justify-self: end;
-  text-align: right;
-  margin-right: 90px;
-  width: 620px;
-  line-height: 20px;
 }
 
 </style>

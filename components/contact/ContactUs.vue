@@ -47,7 +47,7 @@ export default {
   @extend %background;
   position: relative;
   background-image: url('../../assets/img/background/background_2.png');
-  height: $basic-height + 250px;
+  height: $basic-height + 300px;
   margin-top: -320px;
 
 }
