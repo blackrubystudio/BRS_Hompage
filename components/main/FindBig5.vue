@@ -71,8 +71,8 @@ export default {
  data(){
     return{
       post:{
-        title: "Beam Me",
-        desc: "클릭 한번으로 만나는<br>당신의 고사양 PC<br>컴퓨터 구입한다고 고민하지 말고<br>BEAMME 하세요<br><br>우리집 노트북을 최신컴으로"
+        title: "FindBig5",
+        desc: "넘쳐나는 정보들<br>낭비되는 시간들<br><br>저희가 도와드리겠습니다<br>쉽게 찾으세요"
       },
 
       tech:{
@@ -113,13 +113,12 @@ export default {
 
 .fb5-title-container{
   @extend %project-title-container;
-  height: 500px;
   grid-template-areas:
   "img tl1"
   "tl2 tl2"
   "des des";
-  grid-template-rows: 55% 25% 20%;
-  grid-template-columns: 400px auto;
+  grid-template-rows: 275px 125px 100px;
+  grid-template-columns: 400px 624px;
 }
 
 .fb5-title-img{
@@ -146,6 +145,7 @@ export default {
  justify-self: center;
  font-family: $main-font;
  font-size: 120px;
+ margin-top: -10px;
  padding-right: 135px;
  margin-bottom: 100px;
 }
@@ -170,7 +170,6 @@ export default {
   "des hom";
   grid-template-rows: 45% 55%;
   grid-template-columns: 50% 60%;
-  height: 600px;
 }
 
 .fb5-introduce-background{

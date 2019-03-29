@@ -15,6 +15,7 @@ export default {
   props: ['img', 'color'],
   methods:{
     goHome(){
+      // location.reload(true);
       this.$router.push("/");
     }
   }

@@ -1,7 +1,5 @@
 <template>
-  <div class="contactus">
-    <!-- Contactus Container -->
-   
+  <div class="contactus">  
     <div class="contactus-container">
       <!-- Contactus Title 시작 -->
       <div class="contactus-container-title">CONTACT US</div>
@@ -48,8 +46,7 @@ export default {
   position: relative;
   background-image: url('../../assets/img/background/background_2.png');
   height: $basic-height + 300px;
-  margin-top: -320px;
-
+  margin-top: -370px;
 }
 
 .contactus-container{
@@ -61,8 +58,7 @@ export default {
   grid-template-rows: 30% 70%;
   top: 450px;
   color: white;
-  height: 500px;
-  
+  height: 500px; 
 }
 
 .contactus-container-title{
@@ -96,21 +92,21 @@ export default {
 
 .contactus-line{
   position: absolute;
-  top: -220px;
+  top: -190px;
   width: 10px;
-  height: 380px;
-  border-left: 2px solid #FEFEFE;
+  height: 350px;
+  border-left: 0.5px solid #FEFEFE;
 }
 
 .contactus-background{
-  // @extend %background;
   position: absolute;
   background: url('../../assets/img/background/background_3.png') transparent center center no-repeat;
-  top: 110px;
+  top: 120px;
   left: 295px;
   width: 280px;
   height: 180px;
 }
+
 a{
   color: #FEFEFE;
 }

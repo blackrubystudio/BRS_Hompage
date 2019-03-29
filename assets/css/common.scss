@@ -6,6 +6,7 @@ $profile-sub: "SCDream4";
 $about-sub: "NotoBlack";
 $font-footer:"SCDream5";
 $font-tech: "SCDream3";
+$font-contact-ceo: "SCDream1";
 // Screen size definitions
 $basic-height: 700px;
 $desktop-width: 1023px;
@@ -53,13 +54,19 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
 }
 
 %project-title-container {
-    @extend %container;
+    position: relative;
+    display: grid;
+    width: 1024px;
+    margin: 0 auto;
     top: 100px;
     height: 500px;
 }
 
 %project-introduce-container {
-    @extend %container;
+    position: relative;
+    display: grid;
+    width: 1024px;
+    margin: 0 auto;
     top: 100px;
     height: 600px;
 }

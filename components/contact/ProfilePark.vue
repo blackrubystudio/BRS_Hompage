@@ -10,7 +10,9 @@
         <div class="contact-profilePark-title">CEO</div>
         <!-- ProfilePark 약력 파트 1 시작 -->
         <div class="contact-profilePark-desc-1">
-          <span class="contact-profilePark-name">박진호</span><br>
+          <span class="contact-profilePark-name">박진호</span>
+          <span class="contact-ceo">CEO</span>
+          <br>
           <div class="contact-profilePark-desc-1-1"> Skills-Develop<br>서버 구축<br>금융 관련 인공지능 챗봇 서버</div>
           <span class="contact-profilePark-sub">게임</span><br>
           <div class="contact-profilePark-desc-1-2">
@@ -99,6 +101,10 @@ export default {
 font-family: $profile-name;
 font-size: 30px;  
 letter-spacing: 10px;
+}
+
+.contact-ceo{
+  font-family: $font-contact-ceo;
 }
 
 .contact-profilePark-sub{

@@ -10,7 +10,9 @@
       <div class="contact-profileSo-content">
         <!-- ProfileSo 약력 파트 1 시작 -->
         <div class="contact-profileSo-desc-1">
-          <span class="contact-profileSo-name">소재우</span><br>
+          <span class="contact-profileSo-name">소재우</span>
+          <span class="contact-ceo">CEO & Developer</span>
+          <br>
           <div class="contact-profileSo-desc-1-1">Skills-Develop<br>서버 구축<br>금융 관련 인공지능 챗봇 서버</div>
           <span class="contact-profileSo-sub">게임</span><br>
           <div class="contact-profileSo-desc-1-2">
@@ -58,25 +60,27 @@ export default {
   "tit img con";
   grid-template-columns: 0% 35% 65%;
   grid-gap: 2.5%;
-  top: 100px;
+  top: 50px;
    z-index: 100;
   
 }
 
 .contact-profileSo-title{
   @extend %font-main;
+  font-size: 120px;
   position: relative;
   grid-area: tit;
   justify-self: center;
   align-self: start;
   padding-top: 30px;
-  bottom: -220px;
+  bottom: -200px;
   letter-spacing: 10px;
   transform: rotate(90deg);  
 }
 
 .contact-profileSo-white{
   @extend %font-main;
+  font-size: 120px;
   color: white;
 }
 
@@ -85,7 +89,7 @@ export default {
   grid-area: img;
   background-image: url('../../assets/img/contact/contact_prfofile_2.png');
   background-size: 100%;
-  margin-bottom: 170px;
+  margin-bottom: 50px;
 }
 
 .contact-profileSo-content{
@@ -110,6 +114,10 @@ export default {
   font-family: $profile-name;
   font-size: 30px;  
   letter-spacing: 10px;
+}
+
+.contact-ceo{
+  font-family: $font-contact-ceo;
 }
 
 .contact-profileSo-sub{
