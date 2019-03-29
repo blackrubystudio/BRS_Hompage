@@ -33,10 +33,3 @@ export default {
 }
 </script>
 
-<style scoped>
-a[data-v-e05ef4b4]{
-  color: black !important;
-}
-
-</style>
-

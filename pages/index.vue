@@ -60,8 +60,6 @@ export default {
       document.getElementById("main").style.transition = "all 5s";
       document.getElementById("main").scrollTop = 0;
       document.documentElement.scrollTop = 0;
-      // document.documentElement.style.transition = "all 5s";
-      
     }
   },
 }
@@ -119,6 +117,7 @@ export default {
 }
 
 .main-scrollup{
+  height: 50px;
   width: 1200px;
   margin: 0 auto;
   text-align: right;
@@ -127,9 +126,27 @@ export default {
 }
 
 .main-scrollup-button{
+  position: relative;
   width: 50px;
   cursor: pointer;
-  transition: 3s;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  animation-name: scrollup-button;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  
+}
+
+@keyframes scrollup-button{
+  0%{
+    padding-top: 0px;
+  }
+  50%{
+    padding-top: 5px;
+  }
+  100%{
+    padding-top: 0px;
+  }
 }
 </style>
 

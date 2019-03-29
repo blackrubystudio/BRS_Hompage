@@ -23,6 +23,30 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     font-size: 20px;
 }
 
+// Header & Footer 
+%hf-container {
+    display: grid;
+    grid-template-areas: "log con";
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+// 
+%hf-logo {
+    grid-area: log;
+    height: 100%;
+    cursor: pointer;
+    height: 80px;
+    align-self: center;
+}
+
+%hf-content-group {
+    grid-area: con;
+    text-align: right;
+    list-style-type: none;
+}
+
 // Connection(답을 찾다 & 기술혁신)
 %main-connection {
     width: 1024px;
