@@ -3,9 +3,10 @@
 
   <!-- 1. Header -->
   <common-header :img=header.img :color=header.color></common-header>
-
+ 
   <!-- 2. Main Page -->
   <main-page></main-page>
+
 
   <!-- 3. Button & PostIt IMG (Absolute) -->
   <div class="main-absolute">
@@ -29,22 +30,26 @@
   <!-- 5. Footer -->
   <common-footer></common-footer>
 
-    <!-- Connection1. 답을 찾다 시작 -->
-    <!-- <div class="fb5-connection1">
-      <div class="fb5-connenction1-content">답을 찾다</div>
-      <div class="fb5-connection1-line"></div>
-    </div> -->
-    <!-- // Connection1. 답을 찾다 끝 -->
+  <!-- 6. Connection -->
+  <!-- Connection1. 답을 찾다 시작 -->
+  <div class="main-connection1">
+    <div class="main-connection1-container">
+      <div class="main-connenction1-content">답을 찾다</div>
+      <div class="main-connection1-line"></div>
+    </div>
+  </div>
+  <!-- // Connection1. 답을 찾다 끝 -->
 
-    <!-- Connection2. 기술 혁신 시작 -->
-    <!-- <div class="fb5-connection2">
-      <div class="fb5-connenction2-content">기술 혁신</div>
-      <div class="fb5-connection2-line"></div>
-    </div> -->
-    <!-- // Connection2. 기술 혁신 끝 -->
+  <!-- Connection2. 기술 혁신 시작 -->
+  <div class="main-connection2">
+    <div class="main-connection2-container">
+      <div class="main-connenction2-content">기술 혁신</div>
+      <div class="main-connection2-line"></div>
+    </div>
+  </div>
+  <!-- // Connection2. 기술 혁신 끝 -->
 
  </div>
-
 </template>
 
 <script>
@@ -165,43 +170,41 @@ export default {
   }
 }
 
-
-
-
-
-.fb5-connection1{
+.main-connection1{
   @extend %main-connection;
+  top: 1400px;
 }
 
-.fb5-connenction1-content{
+.main-connection1-container{
+  @extend %main-connection-container;
+}
+
+.main-connenction1-content{
   @extend %main-connection-content;
 }
 
-.fb5-connection1-line{
-  @extend %main-connection-line
-}
-
-.fb5-connection2{
-  width: 1024px;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.fb5-connenction2-content{
-  // transform-origin: 100% 100%;
-  width: 70px;
-  height: 100%;
-  transform: rotate(90deg);
-  font-size: 14px;
-}
-
-.fb5-connection2-line{
-  width: 50px;
+.main-connection1-line{
+  @extend %main-connection-line;
   margin-left: 10px;
-  margin-top: 50px;
-  transform: rotate(90deg);
-  border-bottom: 0.5px solid #212121;
-  opacity: .7;
+}
+
+.main-connection2{
+  @extend %main-connection;
+  top: 2110px;
+}
+
+.main-connection2-container{
+  @extend %main-connection-container;
+}
+
+.main-connenction2-content{
+  @extend %main-connection-content;
+  margin-left: 1000px;
+}
+
+.main-connection2-line{
+  @extend %main-connection-line;
+  margin-left: 1010px;
 }
 </style>
 

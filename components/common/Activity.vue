@@ -64,16 +64,4 @@ export default {
   left: -130px;
   padding: 20px 0 20px 10px;
 }
-
-.about-activity-desc-2{
-  @extend %padding-left-1;
-}
-
-.about-activity-desc-3{
-  @extend %padding-left-2;
-}
-
-.about-activity-desc-4{
-  @extend %padding-left-3;
-}
 </style>
