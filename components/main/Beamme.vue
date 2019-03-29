@@ -1,65 +1,62 @@
 <template>
-<div class="beamme">
-  <!-- Section1. Title 시작-->
-  <section class="beamme-title">
-    <div class="beamme-title-container">
-      <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
-      <div class="beamme-title-main">
-          <h1>언제</h1>
-          <h1>어디서든</h1>  
-          <h1 class="beamme-title-indexup">빠르게</h1>
-      </div>  
-      <common-postit class="beamme-postit" :title=post.title :desc=post.desc></common-postit>
-   </div>
-  </section>
-  <!-- // Section1. Title 끝 -->
-  <!-- Connection1. 답을 찾다 시작 -->
-  <div class="beamme-connection1">
-    <div class="beamme-connenction1-content">답을 찾다</div>
-    <div class="beamme-connection1-line"></div>
-  </div>
-  <!-- // Connection1. 답을 찾다 끝 -->
-  <!-- Section2. Introduce 시작 -->
-  <section class="beamme-introduce">
-    <div class="beamme-introduce-container">
-      <img class="beamme-introduce-img-logo" src="@/assets/img/beamme/beamme_logo.png" alt="빔미 로고">
-      <div class="beamme-introduce-desc">
-        <p>
-          클라우드 PC서비스를 통해<br>
-          <span class="beamme-introduce-1">다양한 디바이스를 지원하고</span><br>
-          <span class="beamme-introduce-2">게임 뿐 아니라 고사양 PC가 필요한</span><br>
-          <span class="beamme-introduce-3">3D, 영상, 음악 작업 등에도</span><br>
-          <span class="beamme-introduce-4">사용할 수 있습니다</span><br>
-          <a class="button beamme-introduce-button" href="https://beamme.io" target="_blank" >자세히 보기</a>
-        </p>
-      </div>
-      <img class="beamme-introduce-img-homepage" src="@/assets/img/beamme/beamme_homepage.png" alt="빔미 홈페이지">
+  <div class="beamme">
+    
+    <!-- Section1. Title 시작-->
+    <section class="beamme-title">
+      <div class="beamme-title-container">
+        <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
+        <div class="beamme-title-main">
+            <h1>언제</h1>
+            <h1>어디서든</h1>  
+            <h1 class="beamme-title-indexup">빠르게</h1>
+        </div>  
+        <common-postit class="beamme-postit" :title=post.title :desc=post.desc></common-postit>
     </div>
-  </section>
-  <!-- Section2. Introduce 끝 -->
+    </section>
+    <!-- // Section1. Title 끝 -->
 
-  <section>
-     <common-technology class="beamme-technology"
-    :title11 = tech.title11
-    :title12 = tech.title12
-    :title21 = tech.title21
-    :title22 = tech.title22
-    :title31 = tech.title31
-    :title32 = tech.title32
-    :desc1 = tech.desc1
-    :desc2 = tech.desc2
-    :desc3 = tech.desc3
-    :img1 = tech.img1
-    :img2 = tech.img2
-    :img3 = tech.img3
-    :alt1 = tech.alt1
-    :alt2 = tech.alt2
-    :alt3 = tech.alt3
-    >
-    </common-technology>
-  </section>
+    <!-- Section2. Introduce 시작 -->
+    <section class="beamme-introduce">
+      <div class="beamme-introduce-container">
+        <img class="beamme-introduce-img-logo" src="@/assets/img/beamme/beamme_logo.png" alt="빔미 로고">
+        <div class="beamme-introduce-desc">
+          <p>
+            클라우드 PC서비스를 통해<br>
+            <span class="beamme-introduce-1">다양한 디바이스를 지원하고</span><br>
+            <span class="beamme-introduce-2">게임 뿐 아니라 고사양 PC가 필요한</span><br>
+            <span class="beamme-introduce-3">3D, 영상, 음악 작업 등에도</span><br>
+            <span class="beamme-introduce-4">사용할 수 있습니다</span><br>
+            <a class="button beamme-introduce-button" href="https://beamme.io" target="_blank" >자세히 보기</a>
+          </p>
+        </div>
+        <img class="beamme-introduce-img-homepage" src="@/assets/img/beamme/beamme_homepage.png" alt="빔미 홈페이지">
+      </div>
+    </section>
+    <!-- Section2. Introduce 끝 -->
 
- </div>
+    <!-- Section3. Technology 시작 -->
+    <section>
+      <common-technology class="beamme-technology"
+      :title11 = tech.title11
+      :title12 = tech.title12
+      :title21 = tech.title21
+      :title22 = tech.title22
+      :title31 = tech.title31
+      :title32 = tech.title32
+      :desc1 = tech.desc1
+      :desc2 = tech.desc2
+      :desc3 = tech.desc3
+      :img1 = tech.img1
+      :img2 = tech.img2
+      :img3 = tech.img3
+      :alt1 = tech.alt1
+      :alt2 = tech.alt2
+      :alt3 = tech.alt3>
+      </common-technology>
+    </section>
+    <!-- Section3. Technology 끝 -->
+
+  </div>
 </template>
 
 <script>
@@ -100,45 +97,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.beamme-technology{
-  
-  .tech-desc-right-1{
-    @extend %padding-right-1;
-  }
 
-  .tech-desc-right-2{
-    @extend %padding-right-2;
-  }
-
-  .tech-desc-right-3{
-    @extend %padding-right-3;
-  }
-
-  .tech-desc-left-1{
-    @extend %padding-left-1;
-  }
-
-  .tech-desc-left-2{
-    @extend %padding-left-2;
-  }
-}
-</style>
 
 <style lang="scss" scoped>
-.beamme{
-  position: relative;
-}
 
+// Section1. Title
 .beamme-title{
-  position: relative;
-  height: $basic-height;
+  @extend %project-section-height;
 }
 
 .beamme-title-container{
-  @extend %container;
-  top: 100px;
-  height: 500px;
+  @extend %project-title-container;
 }
 
 .beamme-title-main{
@@ -167,33 +136,19 @@ h1{
   z-index: 100;
 }
 
+// Section2. Introduce
 .beamme-introduce{
-  position: relative;
-  height: $basic-height;
+  @extend %project-section-height;
   margin: -50px 0 50px 0;
 }
 
-.beamme-connection1{
-  @extend %main-connection;
-}
-
-.beamme-connenction1-content{
-  @extend %main-connection-content;
-}
-
-.beamme-connection1-line{
-  @extend %main-connection-line;
-}
-
 .beamme-introduce-container{
-  @extend %container;
+  @extend %project-introduce-container;
   grid-template-areas:
   "log hom"
   "des hom";
   grid-template-rows: 37% 63%;
   grid-template-columns: 35% 55%;
-  height: 600px;
-  top: 100px;
 }
 
 .beamme-introduce-img-logo{
@@ -248,4 +203,25 @@ a{
   color: #212121;
 }
 
+</style>
+
+<style lang="scss">
+// For technology Custom
+.beamme-technology{
+  .tech-desc-right-1{
+    @extend %padding-right-1;
+  }
+  .tech-desc-right-2{
+    @extend %padding-right-2;
+  }
+  .tech-desc-right-3{
+    @extend %padding-right-3;
+  }
+  .tech-desc-left-1{
+    @extend %padding-left-1;
+  }
+  .tech-desc-left-2{
+    @extend %padding-left-2;
+  }
+}
 </style>

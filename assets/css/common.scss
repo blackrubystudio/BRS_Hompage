@@ -32,7 +32,6 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     margin: 0 auto;
 }
 
-// 
 %hf-logo {
     grid-area: log;
     height: 100%;
@@ -45,6 +44,24 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
     grid-area: con;
     text-align: right;
     list-style-type: none;
+}
+
+// Project (FB5, Celebee, BeamMe)
+%project-section-height {
+    position: relative;
+    height: 700px
+}
+
+%project-title-container {
+    @extend %container;
+    top: 100px;
+    height: 500px;
+}
+
+%project-introduce-container {
+    @extend %container;
+    top: 100px;
+    height: 600px;
 }
 
 // Connection(답을 찾다 & 기술혁신)
