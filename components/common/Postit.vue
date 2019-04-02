@@ -1,7 +1,11 @@
+// Postit : 메인페이지에 있는 보라색 포스트잇 내용에 관한 컴포넌트
+// 특징 : 보라색 이미지는 메인에 고정되어 있고 title과 desc에 관한 것만 지정되어 있음
+// 메인 페이지로 props를 넘겨주는 것이 아닌 각 프로젝트 컴포넌트(FindBig5,  Celebee, Beamme)에 넘겨줌
+
 <template>
   <div class="postit">
     <div class="postit-container">
-      <h1 class="postit-title">{{title}}</h1>
+      <h1 class="postit-title" v-text="title"></h1>
       <p class="postit-content" v-html="desc"></p>
     </div> 
   </div>

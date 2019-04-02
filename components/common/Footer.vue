@@ -1,3 +1,5 @@
+// Footer: 모든 페이지에서 공통적으로 사용하는 하단 Footer 컴포넌트
+
 <template>
   <footer class="footer">
     <div class="footer-container">

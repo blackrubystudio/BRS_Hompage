@@ -1,7 +1,8 @@
+// Contact 페이지
+// Header / ProfilePark / ProfileSo / ContacUs / Footer로 구성
+
 <template>
   <div id="contact">
-    <!-- HACK : 헤더 컴포넌트를 2개 만들었다 (블랙, 화이트)
-    구조가 같기 때문에 데이터 바인딩 하는 형식으로 구현할 수 있을것 같다. -->
     <common-header :img=header.img :color=header.color></common-header>
     <contact-profile-park></contact-profile-park>
     <contact-profile-so></contact-profile-so>

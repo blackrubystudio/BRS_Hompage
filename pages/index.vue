@@ -1,3 +1,7 @@
+// Index 페이지
+// Header / Main / Project[FindBig5, DeokUs, Beamme] / Footer로 구성
+// Project는 Title / Introduce / Technology로 구성
+
 <template>
 <div id="main">
 
@@ -7,11 +11,10 @@
   <!-- 2. Main Page -->
   <main-page></main-page>
 
-
   <!-- 3. Button & PostIt IMG (Absolute) -->
   <div class="main-absolute">
     <div class="main-button-group">
-      <button class="main-button" @click="component = 'celebee'">Celebee</button>
+      <button class="main-button" @click="component = 'deokus'">DeokUs</button>
       <button class="main-button" @click="component = 'beamme'">BeamMe</button>
     </div>
     <div class="main-postit"></div>
@@ -55,14 +58,14 @@
 <script>
 import MainPage from "@/components/main/Main.vue";
 import FindBig5 from "@/components/main/FindBig5.vue";
-import Celebee from "@/components/main/Celebee.vue"
+import Deokus from "@/components/main/Deokus.vue"
 import Beamme from "@/components/main/Beamme.vue"
 
 export default {
   components: {
     MainPage,
     "findbig5" : FindBig5,
-    "celebee" : Celebee,
+    "deokus" : Deokus,
     "beamme" : Beamme
   },
 

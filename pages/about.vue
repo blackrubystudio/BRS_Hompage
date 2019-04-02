@@ -1,3 +1,6 @@
+// About 페이지
+// Header / Main / Growth / Study / Python / Weekly / Footer로 구성
+
 <template>
   <div id="about">
     <!-- 1. Header -->

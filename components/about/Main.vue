@@ -1,20 +1,17 @@
+// Main: About 페이지의 메인 페이지
+
 <template>
   <div class="about-main">
-    <!-- Main Container 시작 -->
     <div class="about-main-container">
       <h1 class="about-main-title-1">BLACKRUBYSTUDIO</h1>
       <h1 class="about-main-title-2">블랙루비<br>스튜디오</h1>
       <h3 class="about-main-subtitle"><div class="about-main-line"></div>팀과 함께<br>간단하고 효율적으로</h3>
-      
     </div>
-    <!-- // Main Container 끝 -->
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

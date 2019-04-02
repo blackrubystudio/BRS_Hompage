@@ -1,3 +1,6 @@
+// FindBig5: FindBig5 프로젝트에 관한 컴포넌트, 섹션은 총 3개로 구분 (Title, Introduce, Technology)
+// Title의 Postit 부분과, Technology에 관한 부분은 props를 받아와 처리 (내용은 data 메소드에 저장)
+
 <template>
   <div class="fb5">
 
@@ -127,27 +130,27 @@ export default {
 }
 
 .fb5-title-img-search{
- height: 295px;
- padding-left: 194px;
- margin-top: 35px;
- align-self: end;
+  height: 295px;
+  padding-left: 194px;
+  margin-top: 35px;
+  align-self: end;
 }
 
 .fb5-title-1{
- grid-area: tl1;
- font-family: $main-font;
- font-size: 120px;
- align-self: center;
+  grid-area: tl1;
+  font-family: $main-font;
+  font-size: 120px;
+  align-self: center;
 }
 
 .fb5-title-2{
- grid-area: tl2;
- justify-self: center;
- font-family: $main-font;
- font-size: 120px;
- margin-top: -10px;
- padding-right: 135px;
- margin-bottom: 100px;
+  grid-area: tl2;
+  justify-self: center;
+  font-family: $main-font;
+  font-size: 120px;
+  margin-top: -10px;
+  padding-right: 135px;
+  margin-bottom: 100px;
 }
 
 .fb5-title-desc{

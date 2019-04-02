@@ -1,14 +1,11 @@
+// ProfilePark: 박진호 대표님 약력에 관한 컴포넌트
+
 <template>
   <div class="contact-profilePark">
-    <!-- ProfilePark Container 시작 -->
     <div class="contact-profilePark-container">
-      <!-- ProfilePark Img 시작 -->
       <div class="contact-profilePark-img"></div>
-      <!-- // ProfilePark Img 끝 -->
-      <!-- ProfilePark Content 시작 -->
       <div class="contact-profilePark-content">
         <div class="contact-profilePark-title">CEO</div>
-        <!-- ProfilePark 약력 파트 1 시작 -->
         <div class="contact-profilePark-desc-1">
           <span class="contact-profilePark-name">박진호</span>
           <span class="contact-ceo">CEO</span>
@@ -22,8 +19,6 @@
             BRS PLAY - 인디음악을 활용한 액션형 리듬게임
           </div>
         </div>
-        <!-- // ProfilePark 약력 파트 1 끝 -->
-        <!-- ProfilePark 약력 파트 2 시작 -->
         <div class="contact-profilePark-desc-2">
           <span class="contact-profilePark-sub">웹 개발</span><br>
           <div class="contact-profilePark-desc-2-1">반복되는 서류를 자동으로 분석, 완성하는<br>웹앱 프론트<br>이어폰 리싸이클링 쇼핑몰 구축</div>
@@ -34,18 +29,13 @@
             1인 가구를 위한 청소 관련 소셜벤처 어플 개발
           </div>
         </div>
-        <!-- // ProfilePark 약력 파트 2 끝 -->
       </div>
-      <!-- // ProfilePark Content 끝 -->
     </div>
-    <!-- // ProfilePark Container 끝 -->
   </div>
 </template>
 
 <script>
-export default {
-
-}  
+export default {}  
 </script>
 
 <style lang="scss" scoped>

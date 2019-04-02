@@ -1,48 +1,51 @@
+// DeokUs: Deok-Us 프로젝트에 관한 컴포넌트, 섹션은 총 3개로 구분 (Title, Introduce, Technology)
+// Title의 Postit 부분과, Technology에 관한 부분은 props를 받아와 처리 (내용은 data 메소드에 저장)
+
 <template>
-  <div class="celebee">
+  <div class="deokus">
 
     <!-- Section1. Title 시작 -->
-    <section class="celebee-title">
-      <div class="celebee-title-container">
-        <div class="celebee-title-main">
-          <div class="celebee-title-container-title-1">
-            <h1 class="celebee-title-downfont">매</h1>
-            <h1 class="celebee-title-space">일</h1>
-            <h1 class="celebee-title-downfont">전해받는</h1>  
+    <section class="deokus-title">
+      <div class="deokus-title-container">
+        <div class="deokus-title-main">
+          <div class="deokus-title-container-title-1">
+            <h1 class="deokus-title-downfont">매</h1>
+            <h1 class="deokus-title-space">일</h1>
+            <h1 class="deokus-title-downfont">전해받는</h1>  
           </div>
-          <div class="celebee-title-container-title-2">
+          <div class="deokus-title-container-title-2">
             <h1>내</h1>
-            <h1 class="celebee-title-downfont">아이돌 소식</h1>
+            <h1 class="deokus-title-downfont">아이돌 소식</h1>
           </div>
         </div>  
-        <img  class="celebee-title-img-mail" src="@/assets/img/celebee/celebee_mail.png" alt="celebee-search">
-        <common-postit class="celebee-postit" :title=post.title :desc=post.desc></common-postit>
+        <img  class="deokus-title-img-mail" src="@/assets/img/deokus/deokus_mail.png" alt="deokus-search">
+        <common-postit class="deokus-postit" :title=post.title :desc=post.desc></common-postit>
       </div>
     </section>
     <!-- // Section1. Title 끝 -->
 
     <!-- Section2. Introduce 시작 -->
-    <section class="celebee-introduce">
-      <div class="celebee-introduce-container">
-        <img class="celebee-introduce-img-homepage1" src="@/assets/img/celebee/celebee_homepage1.png" alt="셀레비 랜딩페이지 메인">
-        <img class="celebee-introduce-img-homepage2" src="@/assets/img/celebee/celebee_homepage2.png" alt="셀레비 랜딩페이지 서브">
-        <img class="celebee-introduce-img-logo" src="@/assets/img/celebee/celebee_logo.png" alt="셀레비 로고">
-        <div class="celebee-introduce-desc">
+    <section class="deokus-introduce">
+      <div class="deokus-introduce-container">
+        <img class="deokus-introduce-img-homepage1" src="@/assets/img/deokus/deokus_homepage1.png" alt="셀레비 랜딩페이지 메인">
+        <img class="deokus-introduce-img-homepage2" src="@/assets/img/deokus/deokus_homepage2.png" alt="셀레비 랜딩페이지 서브">
+        <img class="deokus-introduce-img-logo" src="@/assets/img/deokus/deokus_logo.png" alt="셀레비 로고">
+        <div class="deokus-introduce-desc">
           <p>좋아하는 아이돌을 입력하기만 하면<br>
             매주 월요일, 당신이 좋아하는 아이돌의 스케쥴과<br>
             영상을 메세지로 보내드립니다<br><br>
-            셀레비가 여러분을 찾아갑니다<br><br>
+            더거스가 여러분을 찾아갑니다<br><br>
           </p>
-          <a class="button celebee-introduce-button" href="https://celebee.io" target="_blank" >자세히 보기</a>
+          <a class="button deokus-introduce-button" href="https://deokus.io" target="_blank" >자세히 보기</a>
         </div>
-        <img class="celebee-introduce-img-effect" src="@/assets/img/celebee/celebee_effect.png" alt="셀레비 효과">
+        <img class="deokus-introduce-img-effect" src="@/assets/img/deokus/deokus_effect.png" alt="셀레비 효과">
       </div>
     </section>
     <!-- Section2. Introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
     <section ref="tech">
-      <common-technology class="celebee-technology"
+      <common-technology class="deokus-technology"
       :title11 = tech.title11
       :title12 = tech.title12
       :title21 = tech.title21
@@ -71,8 +74,8 @@ export default {
   data(){
     return{
       post:{
-        title: "Celebee",
-        desc: "매일 전해받는<br>내 아이돌 소식<br>From. 셀레비<br><br>이제 좋아하는 아이돌을<br>빠짐없이 만나보세요"
+        title: "DeokUs",
+        desc: "매일 전해받는<br>내 아이돌 소식<br>From. 더거스<br><br>이제 좋아하는 아이돌을<br>빠짐없이 만나보세요"
       },
 
       tech:{
@@ -82,9 +85,9 @@ export default {
         title22: "엔진",
         title31: "자연어처리",
         title32: "AI",
-        img1: require("@/assets/img/celebee/celebee_tech_1.png"),
-        img2: require("@/assets/img/celebee/celebee_tech_2.png"),
-        img3: require("@/assets/img/celebee/celebee_tech_3.png"),
+        img1: require("@/assets/img/deokus/deokus_tech_1.png"),
+        img2: require("@/assets/img/deokus/deokus_tech_2.png"),
+        img3: require("@/assets/img/deokus/deokus_tech_3.png"),
         alt1: '첫번째 이미지',
         alt2: '두번째 이미지',
         alt3: '세번째 이미지',
@@ -107,15 +110,15 @@ export default {
 <style lang="scss" scoped>
 
 // Section1. Title
-.celebee-title{
+.deokus-title{
   @extend %project-section-height;
 }
 
-.celebee-title-container{
+.deokus-title-container{
  @extend %project-title-container;
 }
 
-.celebee-title-main{
+.deokus-title-main{
   display: grid;
   grid-template-rows: 30% 50%;
   font-size: 90px;
@@ -126,22 +129,22 @@ h1{
   font-family: $main-font;
 }
 
-.celebee-title-downfont{
+.deokus-title-downfont{
   padding-top: 30px;
 }
 
-.celebee-title-container-title-1{
+.deokus-title-container-title-1{
   display: grid;
   grid-template-columns: 9% 12% 75%;
 }
 
-.celebee-title-container-title-2{
+.deokus-title-container-title-2{
   display: grid;
   grid-template-columns: 10% 90%;
   z-index: 100;
 }
 
-.celebee-title-img-mail{
+.deokus-title-img-mail{
   position: absolute;
   height: 290px;
   top: 85px;
@@ -151,12 +154,12 @@ h1{
 }
 
 // Section2. Introduce
-.celebee-introduce{
+.deokus-introduce{
   @extend %project-section-height;
   margin: -50px 0 50px 0;
 }
 
-.celebee-introduce-container{
+.deokus-introduce-container{
   @extend %project-introduce-container;
   grid-template-areas:
   "hom1 logo"
@@ -165,26 +168,26 @@ h1{
   grid-template-columns: 40% 55%;
 }
 
-.celebee-introduce-img-homepage1{
+.deokus-introduce-img-homepage1{
   grid-area: hom1;
   width: 100%;
   margin-left: -50px;
 }
 
-.celebee-introduce-img-homepage2{
+.deokus-introduce-img-homepage2{
   grid-area: hom2;
   width: 90%;
   margin-left: -50px;
 }
 
-.celebee-introduce-img-logo{
+.deokus-introduce-img-logo{
   grid-area: logo;
   width: 270px;
   margin-left: 250px;
   margin-top: 20px;
 }
 
-.celebee-introduce-desc{
+.deokus-introduce-desc{
   justify-self: start;
   text-align: right;
   font-size: 14px;
@@ -193,7 +196,7 @@ h1{
   z-index: 100;
 }
 
-.celebee-introduce-button{
+.deokus-introduce-button{
   @extend %main-project-button;
   font-size: 12px;
   padding: 2px 10px;
@@ -203,7 +206,7 @@ a{
   color: #212121;
 }
 
-.celebee-introduce-img-effect{
+.deokus-introduce-img-effect{
   position: absolute;
   top: 20%;
   left: 65%;
@@ -213,7 +216,7 @@ a{
 
 <style lang="scss">
 // For technology Custom
-.celebee-technology{
+.deokus-technology{
   .tech-desc-right-1{
     @extend %padding-right-1;
   }

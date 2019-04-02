@@ -1,3 +1,6 @@
+// Beamme: BEAMME 프로젝트에 관한 컴포넌트, 섹션은 총 3개로 구분 (Title, Introduce, Technology)
+// Title의 Postit 부분과, Technology에 관한 부분은 props를 받아와 처리 (내용은 data 메소드에 저장)
+
 <template>
   <div class="beamme">
     

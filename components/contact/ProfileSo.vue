@@ -1,14 +1,11 @@
+// ProfileSo: 소재우 대표님 약력에 관한 컴포넌트
+
 <template>
   <div class="contact-profileSo">
-    <!-- ProfileSo Conttainer 시작 -->
     <div class="contact-profileSo-container">
       <div class="contact-profileSo-title">Co.<span class="contact-profileSo-white">CEO</span></div>
-      <!-- ProfileSo Img 시작 -->
       <div class="contact-profileSo-img"></div>
-      <!-- // ProfileSo Img 끝 -->
-      <!-- ProfileSo Content 시작 -->
       <div class="contact-profileSo-content">
-        <!-- ProfileSo 약력 파트 1 시작 -->
         <div class="contact-profileSo-desc-1">
           <span class="contact-profileSo-name">소재우</span>
           <span class="contact-ceo">CEO & Developer</span>
@@ -22,8 +19,6 @@
             BRS PLAY - 인디음악을 활용한 액션형 리듬게임
           </div>
         </div>
-        <!-- // ProfileSo 약력 파트 1 끝 -->
-        <!-- ProfileSo 약력 파트 2 시작-->
         <div class="contact-profileSo-desc-2">
           <span class="contact-profileSo-sub">웹 개발</span><br>
           <div class="contact-profileSo-desc-2-1">반복되는 서류를 자동으로 분석, 완성하는<br>웹앱 프론트<br>이어폰 리싸이클링 쇼핑몰 구축</div>
@@ -34,18 +29,13 @@
             1인 가구를 위한 청소 관련 소셜벤처 어플 개발
           </div>
         </div>
-        <!-- // ProfileSo 약력 파트 2 끝 -->
       </div>
-      <!-- // ProfileSo Content 끝 -->
     </div>
-    <!-- // ProfileSo Container 끝 -->
   </div>
 </template>
 
 <script>
-export default {
-
-}  
+export default {}  
 </script>
 
 <style lang="scss" scoped>

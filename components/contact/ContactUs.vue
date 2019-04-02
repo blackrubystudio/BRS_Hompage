@@ -1,28 +1,24 @@
+// ContacUs: Contact 페이지의 하단 부분 (주소 및 지도 표시)
+// 특징: 구글맵을 표시할 때 플러그인을 사용 (googleMap.js)
+
 <template>
   <div class="contactus">  
     <div class="contactus-container">
-      <!-- Contactus Title 시작 -->
       <div class="contactus-container-title">CONTACT US</div>
-      <!-- // Contactus Title 끝 -->
-      <!-- Contactus Description 시작 -->
       <div class="contactus-container-desc">
         블랙루비스튜디오<br>
         서울특별시 강남구 학동로 47길 6, 일우빌딩 3층<br>
         <div><a href="mailto:info@blackrubystudio.com">info@blackrubystudio.com</a></div>
       </div>
-      <!-- // Contactus Description 끝 -->
-      <!-- Google 지도 시작 -->
       <GmapMap class="contacus-container-map" v-bind:center="center" v-bind:zoom="16">
         <GmapMarker
           v-bind:position="marker.position"
           v-bind:clickable="true"
           v-bind:draggable="true"/>
       </GmapMap>
-      <!-- // Google 지도 끝 -->
        <div class="contactus-line"></div>
        <div class="contactus-background"></div>
     </div>
-    <!-- // Contactus Container 끝 -->
   </div>
 </template>
 

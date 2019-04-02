@@ -1,18 +1,15 @@
+// Activity: About 페이지에 블랙루비 활동을 소개해주는 Study, Class, Weekly의 뼈대가 되는 컴포넌트
+// 특징: img url, img alt, title, desc를 props에 넘겨줌
+
 <template>
   <div class="about-activity">
-    <!-- Activity Container 시작 -->
     <div class="about-activity-container">
-      <!-- Activity Img 시작 -->
       <img class="about-activity-img" :src="src" :alt="alt">
-      <!-- // Activity Img 끝 -->
-      <!-- Activity Conent 시작 -->
       <div class="about-activity-content">
         <div class="about-activity-title" v-html="title"></div>
         <div class="about-activity-desc" v-html="desc"></div>
       </div>
-      <!-- // Activity Content 끝 -->
     </div>
-    <!-- // Activity Container 끝 -->
   </div>
 </template>
 

@@ -1,3 +1,5 @@
+// Main: Index 페이지의 메인페이지
+
 <template>
   <div class="main">
     <div class="main-container">
@@ -9,9 +11,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -51,6 +51,5 @@ export default {
   font-size: 15px;
   line-height: 20px;
 }
-
 
 </style>

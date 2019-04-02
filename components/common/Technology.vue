@@ -1,3 +1,8 @@
+// Technology: 각 프로젝트에서 사용했던 기술을 소개하는 컴포넌트
+// 특징 : 3개의 Container로 구성 (3개의 프로젝트 기술 나열 예정)
+// 각 img src, img alt, Title, Desc를 props로 넘겨줌
+// 메인 페이지로 props를 넘겨주는 것이 아닌 각 프로젝트 컴포넌트(FindBig5,  Celebee, Beamme)에 넘겨줌
+
 <template>
   <div class="tech">
     <div class="tech-container">
@@ -6,8 +11,8 @@
         <div class="tech-container-1">
           <img id="tech-img-1" class="tech-img-1" :src="img1" :alt="alt1">
           <div id="tech-text-1" class="tech-content-1">
-            <h1 class="tech-title-1-1">{{title11}}</h1>
-            <h1 class="tech-title-1-2">{{title12}}</h1>
+            <h1 class="tech-title-1-1" v-text="title11"></h1>
+            <h1 class="tech-title-1-2" v-text="title12"></h1>
             <div class="tech-desc-1"><p v-html="desc1"></p></div>
           </div>
         </div>
@@ -16,8 +21,8 @@
         <!-- Container2 -->
         <div class="tech-container-2">
           <div id="tech-text-2" class="tech-content-2">
-            <h1 class="tech-title-2-1">{{title21}}</h1> 
-            <h1 class="tech-title-2-2">{{title22}}</h1>
+            <h1 class="tech-title-2-1" v-text="title21"></h1> 
+            <h1 class="tech-title-2-2" v-text="title22"></h1>
             <div class="tech-desc-2"><p v-html="desc2"></p></div>
           </div>
           <img id="tech-img-2" class="tech-img-2" :src="img2" :alt="alt2">
@@ -28,8 +33,8 @@
         <div class="tech-container-3">
           <img id="tech-img-3" class="tech-img-3" :src="img3" :alt="alt3">
           <div id="tech-text-3" class="tech-content-3">
-            <h1 class="tech-title-3-1">{{title31}}</h1>
-            <h1 class="tech-title-3-2">{{title32}}</h1>
+            <h1 class="tech-title-3-1" v-text="title31"></h1>
+            <h1 class="tech-title-3-2" v-text="title32"></h1>
             <div class="tech-desc-3"><p v-html="desc3"></p></div>
           </div>
         </div>

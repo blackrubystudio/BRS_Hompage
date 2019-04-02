@@ -1,3 +1,5 @@
+// Growth: About 페이지에서 동반 성장을 표시해주는 컴포넌트
+
 <template>
   <div class="about-growth">
     <!-- Growth Container 시작 -->
@@ -26,9 +28,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
