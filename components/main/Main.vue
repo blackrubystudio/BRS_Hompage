@@ -18,6 +18,10 @@ export default {}
 
 .main{
   @extend %main-page;
+
+  @include sm{
+    height: 400px;
+  }
 }
 
 .main-container{
@@ -29,6 +33,23 @@ export default {}
   grid-column-gap: 0px;
   grid-row-gap: 10px;
   height: 600px;
+
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+    grid-template-columns: 45% 55%;
+  }
+  @include md{
+    width: 550px;
+    grid-template-columns: 40% 60%;
+  }
+  @include sm{
+    top: -100px;
+    width: 300px;
+    grid-template-columns: 40% 60%;
+  }
 }
 
 .main-title-1{
@@ -37,11 +58,28 @@ export default {}
   justify-self: center;
   align-self: end;
   padding-right: 260px;
+  @include lg{
+    padding-right: 50px;
+  }
+  @include md{
+    font-size: 80px;
+    padding-right: 130px;
+  }
+  @include sm{
+    font-size: 50px;
+    padding-right: 70px;
+  }
 }
 
 .main-title-2{
   @extend %font-main;
   grid-area: t2;
+  @include md{
+    font-size: 80px;
+  }
+  @include sm{
+    font-size: 50px;
+  }
 }
 
 .main-subtitle{
@@ -50,6 +88,11 @@ export default {}
   text-align: right;
   font-size: 15px;
   line-height: 20px;
+  
+  @include sm{
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 </style>

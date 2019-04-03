@@ -36,7 +36,7 @@
             영상을 메세지로 보내드립니다<br><br>
             더거스가 여러분을 찾아갑니다<br><br>
           </p>
-          <a class="button deokus-introduce-button" href="https://deokus.io" target="_blank" >자세히 보기</a>
+          <a class="button deokus-introduce-button" href="https://deok-us.com" target="_blank" >자세히 보기</a>
         </div>
         <img class="deokus-introduce-img-effect" src="@/assets/img/deokus/deokus_effect.png" alt="셀레비 효과">
       </div>
@@ -44,7 +44,7 @@
     <!-- Section2. Introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
-    <section ref="tech">
+    <!-- <section ref="tech">
       <common-technology class="deokus-technology"
       :title11 = tech.title11
       :title12 = tech.title12
@@ -62,7 +62,7 @@
       :alt2 = tech.alt2
       :alt3 = tech.alt3>
       </common-technology>
-    </section>
+    </section> -->
     <!-- Section3. Technology 끝 -->
 
   </div>
@@ -112,36 +112,78 @@ export default {
 // Section1. Title
 .deokus-title{
   @extend %project-section-height;
+  @include md{
+    height: 550px;
+  }
 }
 
 .deokus-title-container{
  @extend %project-title-container;
+ @include lg{
+   width: 760px;
+ }
+ @include md{
+   width: 550px;
+ }
+ @include sm{
+   width: 300px;
+    margin-top: -70px;
+ }
 }
 
 .deokus-title-main{
   display: grid;
   grid-template-rows: 30% 50%;
-  font-size: 90px;
   margin-left: 140px;
+  font-size: 90px;
+  @include lg{
+    margin-left: 20px;
+    font-size: 40px;
+    letter-spacing: -5px;
+  }
+  @include sm{
+    letter-spacing: 0px;
+    grid-template-rows: 15% 50%;
+  }
+
 }
 
 h1{
   font-family: $main-font;
+  @include lg{
+    font-size: 80px;
+  }
+  @include md{
+    font-size: 60px;
+  }
+  @include sm{
+    font-size: 40px;
+    color: #FEFEFE;
+  }
 }
 
 .deokus-title-downfont{
   padding-top: 30px;
+  @include sm{
+    padding-top: 15px;
+  }
 }
 
 .deokus-title-container-title-1{
   display: grid;
   grid-template-columns: 9% 12% 75%;
+  @include sm{
+    z-index: 200;
+  }
 }
 
 .deokus-title-container-title-2{
   display: grid;
   grid-template-columns: 10% 90%;
   z-index: 100;
+  @include sm{
+    z-index: 300;;
+  }
 }
 
 .deokus-title-img-mail{
@@ -151,12 +193,30 @@ h1{
   left: 200px;
   transform: rotate(10deg);
   box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);
+  @include lg{
+    height: 230px;
+    left: 80px;
+    top: 75px;
+  }
+  @include md{
+    height: 200px;
+    left: 40px;
+    top: 65px;
+  }
+  @include sm{
+    z-index: 200;
+    height: 130px;
+    top: 40px;
+  }
 }
 
 // Section2. Introduce
 .deokus-introduce{
   @extend %project-section-height;
   margin: -50px 0 50px 0;
+  @include sm{
+    height: 500px;
+  }
 }
 
 .deokus-introduce-container{
@@ -166,12 +226,33 @@ h1{
   "hom2 desc";
   grid-template-rows: 45% 45%;
   grid-template-columns: 40% 55%;
+  @include lg{
+    width: 760px;
+    grid-template-rows: 40% 60%;
+  }
+  @include md{
+    width: 550px;
+    grid-template-columns: 40% 55%;
+  }
+  @include sm{
+    top: 50px;
+    width: 300px;
+    height: 500px;
+    grid-template-columns: 50% 50%;
+  }
 }
 
 .deokus-introduce-img-homepage1{
   grid-area: hom1;
   width: 100%;
   margin-left: -50px;
+  @include lg{
+    align-self: center;
+  }
+  @include md{
+    align-self: end;
+    padding-bottom: 20px;
+  }
 }
 
 .deokus-introduce-img-homepage2{
@@ -185,6 +266,21 @@ h1{
   width: 270px;
   margin-left: 250px;
   margin-top: 20px;
+  @include lg{
+    width: 220px;
+    margin-left: 200px;
+  }
+  @include md{
+    margin-top: 50px;
+    width: 180px;
+    margin-left: 140px;
+  }
+  @include sm{
+    margin-top: 200px;
+    width: 110px;
+    margin-left: -20px;
+    
+  }
 }
 
 .deokus-introduce-desc{
@@ -194,12 +290,37 @@ h1{
   line-height: 20px;
   margin-left: 50px;
   z-index: 100;
+  @include lg{
+    margin-left: 0px;
+  }
+  @include md{
+    font-size: 10px; 
+  }
+  @include sm{
+    margin-top: 90px;
+    font-size: 9px !important;
+    margin-left: -100px;
+    line-height: 15px;
+  }
+}
+
+p{
+  @include md{
+    font-size: 10px;
+  }
+  @include sm{
+    font-size: 9px;
+  }
 }
 
 .deokus-introduce-button{
   @extend %main-project-button;
   font-size: 12px;
   padding: 2px 10px;
+  @include sm{
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 a{
@@ -211,6 +332,35 @@ a{
   top: 20%;
   left: 65%;
   height: 350px;
+  @include lg{
+    height: 300px;
+    left: 60%;
+    top: 21%;
+  }
+  @include md{
+    height: 250px;
+    top: 30%;
+    left: 55%;
+  }
+  @include sm{
+    height: 180px;
+    top: 10%;
+    left: 45%;
+    transform: rotateY(180deg);
+  }
+}
+
+.deokus-postit{
+  @include lg{
+    width: 250px;
+  }
+  @include md{
+    width: 200px;
+  }
+  @include sm{
+    width: 0;
+
+  }
 }
 </style>
 

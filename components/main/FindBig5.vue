@@ -44,7 +44,7 @@
     <!-- Section2. introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
-    <section>
+    <!-- <section>
       <common-technology class="fb5-technology"
       :title11 = tech.title11
       :title12 = tech.title12
@@ -62,7 +62,7 @@
       :alt2 = tech.alt2
       :alt3 = tech.alt3>
       </common-technology>
-    </section>
+    </section> -->
     <!-- Section3. Technology 끝 -->
 
   </div>
@@ -112,6 +112,9 @@ export default {
 // Section1. Title
 .fb5-title{
   @extend %project-section-height;
+  @include md{
+    height: 550px;
+  }
 }
 
 .fb5-title-container{
@@ -122,11 +125,35 @@ export default {
   "des des";
   grid-template-rows: 275px 125px 100px;
   grid-template-columns: 400px 624px;
+
+  @include lg{
+    width: 760px;
+    grid-template-columns: 250px 510px;
+    grid-template-rows: 225px 110px 100px;
+  }
+  @include md{
+    width: 550px;
+    top: 50px;
+    grid-template-columns: 170px 380px;
+  }
+  @include sm{
+  grid-template-areas:
+  "img tl1"
+  "tl2 tl2";
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 130px 170px;
+    margin-top: -40px;
+    left: 0;
+    width: 300px;
+  }
 }
 
 .fb5-title-img{
   grid-area: img;
   z-index: 100;
+  @include sm{
+    z-index: 200;
+  }
 }
 
 .fb5-title-img-search{
@@ -134,6 +161,21 @@ export default {
   padding-left: 194px;
   margin-top: 35px;
   align-self: end;
+  @include lg{
+    height: 250px;
+    padding-left: 103px;
+    margin-top: 20px;
+  }
+  @include md{
+    height: 200px;
+    padding-left: 40px;
+    margin-top: 55px;
+  }
+  @include sm{
+    margin-top: 18px;
+    height: 150px;
+    padding-left: 33px;
+  }
 }
 
 .fb5-title-1{
@@ -141,6 +183,19 @@ export default {
   font-family: $main-font;
   font-size: 120px;
   align-self: center;
+  @include lg{
+    font-size: 100px;
+  }
+  @include md{
+    padding-top: 20px;
+    font-size: 80px;
+  }
+  @include sm{
+    font-size: 55px;
+    color: #FEFEFE;
+    z-index: 100;
+
+  }
 }
 
 .fb5-title-2{
@@ -151,6 +206,20 @@ export default {
   margin-top: -10px;
   padding-right: 135px;
   margin-bottom: 100px;
+  @include lg{
+    font-size: 100px;
+  }
+  @include md{
+    font-size: 80px;
+  }
+  @include sm{
+    font-size: 55px;
+    width: 100%;
+    padding-right: 0;
+    z-index: 300;
+    text-align: center;
+    color: #FEFEFE;
+  }
 }
 
 .fb5-title-desc{
@@ -158,12 +227,27 @@ export default {
  padding-left: 220px;
  font-size: 14px;
  line-height: 18px;
+ @include lg{
+   padding-left: 120px;
+   font-size: 11px;
+   line-height: 15px;
+ }
+ @include md{
+   padding-left: 50px;
+   font-size: px;
+ }
+ @include sm{
+   display: none;
+ }
 }
 
 // Section2. Introduce
 .fb5-introduce{
   @extend %project-section-height;
   margin: -50px 0 50px 0;
+  @include sm{
+    height: 500px;
+  }
 }
 
 .fb5-introduce-container{
@@ -173,6 +257,24 @@ export default {
   "des hom";
   grid-template-rows: 45% 55%;
   grid-template-columns: 50% 60%;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    top: 0;
+    width: 300px;
+    grid-template-areas:
+    "tit"
+    "des"
+    "hom";
+    height: 500px;
+    grid-template-rows: 35% 35% 30%;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
 }
 
 .fb5-introduce-background{
@@ -180,11 +282,25 @@ export default {
   width: 720px !important;
   left: 42% !important;
   z-index: 100;
+  @include lg{
+    width: 600px !important;
+    left: 41.8% !important;
+    top: 40% !important;
+  }
+  @include md{
+    width: 500px !important;
+    top: 44.5% !important;
+    left: 44% !important;
+  }
+  @include sm{
+    display: none;
+  }
+
 } 
 
 .fb5-introduce-title{
-  grid-area: tit;
   display: grid;
+  grid-area: tit;
   grid-template-columns: 80% 20%;
   margin-right: 100px;
 }
@@ -192,10 +308,32 @@ export default {
 .fb5-introduce-img-logo{
   width:100%;
   align-self: end;
+  @include lg{
+    width: 90%;
+  }
+  @include md{
+    margin-left: 0px;
+    width: 93%;
+  }
+  @include sm{
+    width: 200px;
+    margin-right: -100px;
+  }
 }
 
 .fb5-introduce-button{
-  @extend %main-project-button
+  @extend %main-project-button;
+  @include lg{
+   margin-bottom: 50px;
+  }
+  @include md{
+    margin-bottom: 30px;
+    width: 80px;
+    font-size: 13px;
+  }
+  @include sm{
+    display: none;
+  }
 }
 
 .fb5-introduce-desc{
@@ -204,23 +342,48 @@ export default {
   line-height: 20px;
   z-index: 100;
   font-size: 14px;
+  @include lg{
+    padding-left: 50px;
+    font-size: 12px;
+  }
+  @include md{
+    padding-left: 10px;
+    font-size: 10px;
+  }
+  @include sm{
+    line-height: 15px;
+    text-align: center;
+    
+  }
 }
 
 .fb5-introduce-desc-1{
   @extend %padding-left-1;
+  @include sm{
+    padding-left: 0;
+  }
 }
 
 .fb5-introduce-desc-2{
   @extend %padding-left-2;
+  @include sm{
+    padding-left: 0;
+  }
 }
 
 .fb5-introduce-desc-3{
   @extend %padding-left-3;
+  @include sm{
+    padding-left: 0;
+  }
 }
 
 
 .fb5-introduce-desc-4{
   @extend %padding-left-4;
+  @include sm{
+    padding-left: 0;
+  }
 }
 
 .fb5-introduce-img-homepage{
@@ -230,6 +393,13 @@ export default {
   box-shadow: -5px 10px 10px 5px rgba(0, 0, 0, 0.2);
   z-index: 100;
   margin-left: -30px;
+  @include xl{
+    width: 85%;
+  }
+  @include sm{
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .fb5-introduce-background{
@@ -242,6 +412,19 @@ export default {
 
 a{
   color: #212121;
+}
+
+.fb5-postit{
+  @include lg{
+    width: 200px;
+  }
+  @include md{
+    width: 200px;
+  }
+  @include sm{
+    width: 0;
+
+  }
 }
 </style>
 
@@ -264,4 +447,5 @@ a{
     @extend %padding-left-2;
   }
 }
+
 </style>

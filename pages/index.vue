@@ -26,30 +26,30 @@
     </transition>
 
   <!-- 4.5 Scroll Up button -->
-  <div class="main-scrollup">
+  <!-- <div class="main-scrollup">
     <img class="main-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
-  </div>
+  </div> -->
 
   <!-- 5. Footer -->
   <common-footer></common-footer>
 
   <!-- 6. Connection -->
   <!-- Connection1. 답을 찾다 시작 -->
-  <div class="main-connection1">
+  <!-- <div class="main-connection1">
     <div class="main-connection1-container">
       <div class="main-connenction1-content">답을 찾다</div>
       <div class="main-connection1-line"></div>
     </div>
-  </div>
+  </div> -->
   <!-- // Connection1. 답을 찾다 끝 -->
 
   <!-- Connection2. 기술 혁신 시작 -->
-  <div class="main-connection2">
+  <!-- <div class="main-connection2">
     <div class="main-connection2-container">
       <div class="main-connenction2-content">기술 혁신</div>
       <div class="main-connection2-line"></div>
     </div>
-  </div>
+  </div> -->
   <!-- // Connection2. 기술 혁신 끝 -->
 
  </div>
@@ -76,7 +76,7 @@ export default {
         color: "color:#FEFEFE" 
       },
       // Default Component(Dynamic Component)
-      component: 'findbig5'
+      component: 'deokus'
     }
   },
 
@@ -96,6 +96,18 @@ export default {
   margin: 0 auto;
   width: 1024px;
   height: 100%;
+
+  @include lg{
+    width: 760px;
+  }
+
+  @include md{
+    width: 550px;
+  }
+
+  @include sm{
+    width: 300px;
+  }
 }
 
 .main-button-group{
@@ -103,6 +115,20 @@ export default {
   top: -100px;
   right: 120px;
   z-index: 100;
+  @include lg{
+    right: 50px;
+  }
+
+  @include md{
+    top: -80px;
+    right: 0px;
+  }
+
+  @include sm{
+    top: -70px;
+    right: 0;
+    left: 75px;
+  }
 }
 
 .main-button{
@@ -118,6 +144,21 @@ export default {
   height: 40px;
   line-height: 20px;
   z-index: 100;
+  @include md{
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+    line-height: 10px;
+    border: 1px solid #FEFEFE;
+  }
+  @include sm{
+    font-size: 10px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    width: 60px;
+    height: 25px;
+    line-height: 15px;
+  }
 }
 
 .main-postit{
@@ -130,6 +171,21 @@ export default {
   height: 645px;
   box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.4);
   z-index: 100;
+  @include lg{
+    width: 300px;
+    right: 20px;
+  }
+  @include md{
+    width: 230px;
+    height: 550px;
+    right: 0px;
+  }
+  @include sm{
+    top: -30px;
+    left: 0;
+    width: 300px;
+    height: 450px;
+  }
 }
 
 // Transition For Dynamic component

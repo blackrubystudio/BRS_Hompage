@@ -28,14 +28,36 @@ export default {}
   background-image: url('../../assets/img/background/background_2.png');
   height: 150px;
   bottom: 0;
+
+  @include sm{
+    height: 100px;
+  }
 }
 
 .footer-container{
   @extend %hf-container;
+
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    width: 100%;
+  }
 }
 
 .footer-logo{
   @extend %hf-logo;
+
+    @include sm{
+    padding-left: 20px;
+    height: 40px;
+  }
 
 }
 
@@ -46,6 +68,16 @@ export default {}
    height: 100%;
    padding-top: 25px;
   
+  @include md{
+    font-size: 12px;
+    padding-top: 30px;
+  }
+  @include sm{
+    padding-top: 17px;
+    font-size: 9px;
+    line-height: 7px;
+    padding-right: 10px;
+  }
 }
 
 .footer-content{

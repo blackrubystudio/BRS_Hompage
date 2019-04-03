@@ -33,22 +33,47 @@ export default {
   top: 50px;
   width: 100%;
   height: 80px;
+
+  @include sm{
+    top: 0;
+    height: 40px;
+  }
 }
 
 .header-container{
   @extend %hf-container;
-  height: 80px;
-  
+
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    width: 100%;
+  }
 }
 
 .header-logo{
   @extend %hf-logo;
+
+  @include sm{
+    padding-left: 20px;
+    height: 40px;
+  }
 }
 
 .header-content-group{
   @extend %hf-content-group;
   justify-self: end;
   align-self: center;
+
+  @include sm{
+    display: none;
+  }
 }
 
 </style>

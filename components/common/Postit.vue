@@ -20,6 +20,16 @@ export default {
 <style lang="scss" scoped>
 .postit{
   @extend %postit;
+
+  @include lg{
+    left: 450px;
+  }
+  @include md{
+    left: 310px;
+  }
+  @include sm{
+    width: 300px;
+  }
 }
 
 .postit-container{
@@ -32,6 +42,16 @@ export default {
   top: 40px;
   padding-left: 30px;
   z-index: 200;
+  @include md{
+    top: 50px;
+    font-size: 15px;
+  }
+  @include sm{
+    padding-left: 0px;
+    left: -190px;
+    top: 120px;
+    font-size: 15px;
+  }
 }
 
 .postit-content{
@@ -42,6 +62,23 @@ export default {
   font-size: 18px;
   line-height: 30px;
   z-index: 200;
+  @include lg{
+    font-size: 17px;
+    padding: 0 30px ;
+  }
+  @include md{
+    font-size: 12.5px;
+    line-height: 20px;
+    bottom: 100px;
+  }
+  @include sm{
+    bottom: 150px;
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 50px;
+    width: 270px;
+    margin-left: -280px;
+  }
 }
 
 </style>

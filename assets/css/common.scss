@@ -1,4 +1,4 @@
-// font
+// Font
 $main-font: 'SCDream9';
 $main-button-font: 'SCDream4';
 $profile-name: "SCDream5";
@@ -7,12 +7,14 @@ $about-sub: "NotoBlack";
 $font-footer:"SCDream5";
 $font-tech: "SCDream3";
 $font-contact-ceo: "SCDream1";
-// Screen size definitions
-$basic-height: 700px;
+// Screen Size (Media Query)
+$wide-width: 1300px;
 $desktop-width: 1023px;
 $tablet-width: 767px;
 $mobile-width: 565px;
 $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
+// Component Height Definition
+$basic-height: 700px;
 // Font (main)
 %font-main {
     font-family: $main-font;
@@ -35,9 +37,8 @@ $mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
 
 %hf-logo {
     grid-area: log;
-    height: 100%;
-    cursor: pointer;
     height: 80px;
+    cursor: pointer;
     align-self: center;
 }
 
@@ -192,6 +193,12 @@ $num: 4;
 
 @mixin lg {
     @media (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width: $wide-width) {
         @content;
     }
 }

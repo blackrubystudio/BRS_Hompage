@@ -38,7 +38,7 @@
     <!-- Section2. Introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
-    <section>
+    <!-- <section>
       <common-technology class="beamme-technology"
       :title11 = tech.title11
       :title12 = tech.title12
@@ -56,7 +56,7 @@
       :alt2 = tech.alt2
       :alt3 = tech.alt3>
       </common-technology>
-    </section>
+    </section> -->
     <!-- Section3. Technology 끝 -->
 
   </div>
@@ -107,10 +107,23 @@ export default {
 // Section1. Title
 .beamme-title{
   @extend %project-section-height;
+  @include md{
+    height: 550px;
+  }
 }
 
 .beamme-title-container{
   @extend %project-title-container;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    width: 300px;
+    margin-top: -70px;
+  }
 }
 
 .beamme-title-main{
@@ -121,6 +134,23 @@ export default {
   margin-right: 120px;
   font-size: 90px;
   text-align: right;
+  @include lg{
+    font-size: 80px;
+    margin-right: 180px;
+  }
+  @include md{
+    font-size: 60px;
+    grid-template-rows: 14% 14% 14%;
+  }
+  @include sm{
+    font-size: 40px;
+    color: #FEFEFE;
+    z-index: 100;
+    width: 300px;
+    padding-right: 90px;
+    grid-template-rows: 9% 9% 9%;
+    margin-top: 10px;
+  }
 }
 
 h1{
@@ -137,12 +167,29 @@ h1{
   top: 200px;
   left: -50px;
   z-index: 100;
+  @include lg{
+    height: 150px;
+  }
+  @include md{
+    height: 110px;
+    top: 180px;
+  }
+  @include sm{
+    top: 80px;
+    left: 0;
+  }
 }
 
 // Section2. Introduce
 .beamme-introduce{
   @extend %project-section-height;
   margin: -50px 0 50px 0;
+  @include md{
+    height: 550px;
+  }
+    @include sm{
+    height: 500px;
+  }
 }
 
 .beamme-introduce-container{
@@ -152,6 +199,28 @@ h1{
   "des hom";
   grid-template-rows: 37% 63%;
   grid-template-columns: 35% 55%;
+   @include lg{
+    width: 760px;
+    height: 550px;
+    grid-template-rows: 25% 55%;
+    grid-template-columns: 45% 55%;
+  }
+  @include md{
+    width: 550px;
+    grid-template-rows: 20% 55%;
+  }
+  @include sm{
+    top: 50px;
+    width: 300px;
+    height: 500px;
+    display: grid;
+    grid-template-areas:
+    "log"
+    "des"
+    "hom";
+    grid-template-rows: 100px, 100px, 300px !important;
+    grid-template-columns: 100%;
+  }
 }
 
 .beamme-introduce-img-logo{
@@ -161,6 +230,21 @@ h1{
   height: 120px;
   z-index: 100;
   box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.2);
+  @include lg{
+    height: 80px;
+    margin-top: 40px;
+    margin-left: 120px;
+  }
+  @include md{
+    height: 50px;
+    margin-top: 30px;
+  }
+  @include sm{
+    width: 250px;
+    height: auto;
+    margin-left: 0;
+    margin-left: 25px;
+  }
 }
 
 .beamme-introduce-desc{
@@ -171,12 +255,43 @@ h1{
   margin-right: -50px;
   line-height: 25px;
   font-size: 15px;
+  @include lg{
+    margin-right: -50px;
+  }
+  @include sm{
+    padding-top: 30px;
+    margin-right: 0;
+  }
 }
 
 .beamme-introduce-img-homepage{
   grid-area: hom;
   width: 700px;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
+  @include lg{
+    width: 410px;
+  }
+  @include md{
+    width: 310px;
+  }
+  @include sm{
+    // z-index: 200;
+    width: 300px;
+    margin-top: -120px;
+  }
+}
+
+p{
+  @include lg{
+    font-size: 14px;
+  }
+  @include md{
+    font-size: 11px;
+    line-height: 15px;
+  }
+  @include sm{
+    font-size: 10px;
+  }
 }
 
 .beamme-introduce-1{
@@ -206,6 +321,18 @@ a{
   color: #212121;
 }
 
+.beamme-postit{
+  @include lg{
+    width: 310px;
+  }
+  @include md{
+    width: 250px;
+  }
+  @include sm{
+    width: 0;
+
+  }
+}
 </style>
 
 <style lang="scss">
