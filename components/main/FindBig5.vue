@@ -133,7 +133,7 @@ export default {
   }
   @include md{
     width: 550px;
-    top: 50px;
+    top: 100px;
     grid-template-columns: 170px 380px;
   }
   @include sm{

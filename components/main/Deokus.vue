@@ -44,7 +44,7 @@
     <!-- Section2. Introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
-    <!-- <section ref="tech">
+    <section ref="tech">
       <common-technology class="deokus-technology"
       :title11 = tech.title11
       :title12 = tech.title12
@@ -62,7 +62,7 @@
       :alt2 = tech.alt2
       :alt3 = tech.alt3>
       </common-technology>
-    </section> -->
+    </section>
     <!-- Section3. Technology 끝 -->
 
   </div>
