@@ -35,21 +35,21 @@
 
   <!-- 6. Connection -->
   <!-- Connection1. 답을 찾다 시작 -->
-  <!-- <div class="main-connection1">
+  <div class="main-connection1">
     <div class="main-connection1-container">
       <div class="main-connenction1-content">답을 찾다</div>
       <div class="main-connection1-line"></div>
     </div>
-  </div> -->
+  </div>
   <!-- // Connection1. 답을 찾다 끝 -->
 
   <!-- Connection2. 기술 혁신 시작 -->
-  <!-- <div class="main-connection2">
+  <div class="main-connection2">
     <div class="main-connection2-container">
       <div class="main-connenction2-content">기술 혁신</div>
       <div class="main-connection2-line"></div>
     </div>
-  </div> -->
+  </div>
   <!-- // Connection2. 기술 혁신 끝 -->
 
  </div>
@@ -76,7 +76,7 @@ export default {
         color: "color:#FEFEFE" 
       },
       // Default Component(Dynamic Component)
-      component: 'deokus'
+      component: 'findbig5'
     }
   },
 
@@ -232,10 +232,20 @@ export default {
 .main-connection1{
   @extend %main-connection;
   top: 1400px;
+  @include lg{
+    top: 1300px;
+  }
 }
 
 .main-connection1-container{
   @extend %main-connection-container;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    display: none;
+  }
+
 }
 
 .main-connenction1-content{
@@ -245,25 +255,43 @@ export default {
 .main-connection1-line{
   @extend %main-connection-line;
   margin-left: 10px;
+  @include lg{
+    margin-top: 45px;
+    margin-left: 10px;
+  }
 }
 
 .main-connection2{
   @extend %main-connection;
-  top: 2110px;
+  top: 1900px;
 }
 
 .main-connection2-container{
   @extend %main-connection-container;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    display: none;
+  }
 }
 
 .main-connenction2-content{
   @extend %main-connection-content;
-  margin-left: 1000px;
+  margin-top: 210px;
+  margin-left: 950px;
+  @include lg{
+    margin-top: 60px;
+    margin-left: 700px;
+  }
 }
 
 .main-connection2-line{
   @extend %main-connection-line;
-  margin-left: 1010px;
+  margin-left: 960px;
+  @include lg{
+    margin-left: 710px;
+  }
 }
 </style>
 

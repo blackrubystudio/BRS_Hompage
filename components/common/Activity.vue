@@ -22,6 +22,15 @@ export default {
 <style lang="scss" scoped>
 .about-activity{
   height: $basic-height;
+  @include lg{
+    height: 650px;
+  }
+  @include md{
+    height: 500px;
+  }
+  @include sm{
+    height: 250px;
+  }
 }
 
 .about-activity-container{
@@ -33,6 +42,22 @@ export default {
   grid-template-columns: 45% 55%;
   grid-template-rows: 25% 35% 40%;
   left: -100px;
+  @include xl{
+    left: 0px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+    left: -10px;
+    // grid-template-columns: 50% 50%;
+  }
+  @include sm{
+    width: 280px;
+    height: 200px;
+    grid-template-columns: 120px 150px;
+  }
 }
 
 .about-activity-img{  
@@ -49,16 +74,31 @@ export default {
   @extend %font-main;
   position: relative;
   left: -130px;
-}
-
-.about-activity-white{
-  @extend %font-main;
-  color: #FEFEFE;  
+  @include md{
+    font-size: 80px;
+    left: -110px;
+  }
+  @include sm{
+    // display: none;
+    font-size: 40px;
+    left: -60px;
+  }
 }
 
 .about-activity-desc{
   @extend %about-desc;
   left: -130px;
   padding: 20px 0 20px 10px;
+  @include md{
+    width: 370px;
+    left: -110px;
+  }
+  @include sm{
+    // display: none;
+    width: 180px;
+    left: 0px;
+    line-height: 7px;
+    padding: 10px 0 10px 5px;
+  }
 }
 </style>

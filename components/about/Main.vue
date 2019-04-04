@@ -17,6 +17,15 @@ export default {}
 <style lang="scss" scoped>
 .about-main{
   @extend %main-page;
+  @include lg{
+    height: 650px;
+  }
+  @include md{
+    height: 550px;
+  }
+  @include sm{
+    height: 400px;
+  }
 }
 
 .about-main-container{
@@ -28,6 +37,26 @@ export default {}
   grid-template-columns: 100px 450px 300px;
   top: 100px;
   height: 600px;
+
+  @include xl{
+    width: 1000px;
+    grid-template-columns: 200px 450px 180px;
+  }
+  @include lg{
+    width: 760px;
+    height: 550px;
+    grid-template-columns: 100px 450px 150px;
+  }
+  @include md{
+    width: 550px;
+    height: 450px;
+    grid-template-columns: 20px 360px 120px;
+  }
+  @include sm{
+    width: 300px;
+    height: 350px;
+    grid-template-columns: 50px 200px 0px;
+  }
 }
 
 .about-main-title-1{
@@ -37,6 +66,16 @@ export default {}
   transform: rotate(90deg);
   justify-self: end;
   padding-right: 40px;
+  @include lg{
+    padding-right: 10px;
+  }
+  @include md{
+    font-size: 20px;
+  }
+  @include sm{
+    font-size: 14px;
+    padding-right: 100px;
+  }
   }
 
 .about-main-title-2{
@@ -44,6 +83,13 @@ export default {}
   grid-area: tt2;
   align-self: end;
   justify-self: end;
+  @include md{
+    font-size: 80px;
+  }
+  @include sm{
+    font-size: 50px;
+    align-self: start;
+  }
 }
 
 .about-main-subtitle{
@@ -51,6 +97,12 @@ export default {}
   text-align: right;
   font-size: 15px;
   line-height: 20px;
+  @include md{
+    font-size: 13px;
+  }
+  @include sm{
+    display: none;
+  }
 }
 
 .about-main-line{
@@ -59,5 +111,15 @@ export default {}
   right: 240px;
   width: 50px;
   border-bottom: 0.5px solid #FEFEFE;
+  @include lg{
+    border-bottom: 1px solid #FEFEFE;
+    right: 130px;
+  }
+  @include md{ 
+    right: 110px;
+  }
+  @include sm{
+    display: none;
+  }
 }
 </style>

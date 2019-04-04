@@ -18,7 +18,12 @@ export default {}
 
 .main{
   @extend %main-page;
-
+  @include lg{
+    height: 650px;
+  }
+  @include md{
+    height: 550px;
+  }
   @include sm{
     height: 400px;
   }
@@ -38,10 +43,12 @@ export default {}
     width: 1000px;
   }
   @include lg{
+    top: 50px;
     width: 760px;
     grid-template-columns: 45% 55%;
   }
   @include md{
+    top: 0;
     width: 550px;
     grid-template-columns: 40% 60%;
   }

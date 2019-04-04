@@ -44,7 +44,7 @@
     <!-- Section2. introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
-    <!-- <section>
+    <section>
       <common-technology class="fb5-technology"
       :title11 = tech.title11
       :title12 = tech.title12
@@ -62,7 +62,7 @@
       :alt2 = tech.alt2
       :alt3 = tech.alt3>
       </common-technology>
-    </section> -->
+    </section>
     <!-- Section3. Technology 끝 -->
 
   </div>

@@ -54,6 +54,7 @@ export default {
   }
   @include sm{
     width: 100%;
+    padding-top: 10px;
   }
 }
 

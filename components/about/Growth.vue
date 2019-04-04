@@ -35,6 +35,15 @@ export default {}
 
 .about-growth{
   height: $basic-height + 100px;
+  @include lg{
+    height: 650px;
+  }
+  @include md{
+    height: 600px;
+  }
+  @include sm{
+    height: 350px;
+  }
 }
 
 .about-growth-container{
@@ -47,6 +56,17 @@ export default {}
   grid-template-rows: 15% 60% 15%;
   grid-column-gap: 10%;
   color: white;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    width: 300px;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+  }
 }
 
 .about-growth-left{
@@ -63,22 +83,55 @@ export default {}
   top: 200px;
   text-align: right;
   right: -15px;
+  @include lg{
+    top: 150px;
+  }
+  @include md{
+    font-size: 80px;
+  }
+  @include sm{
+    top: 80px;
+    font-size: 50px;
+    right: -10px;
+  }
 }
 
 .about-growth-left-content{
   position: relative;
   top: 320px;
   padding-left: 50px;
+  @include lg{
+    top: 250px;
+  }
+  @include md{
+    top: 200px;
+    padding-left: 20px;
+  }
+  @include sm{
+    top: 100px;
+    padding-left: 10px;
+  }
 }
 
 .about-growth-left-subtitle{
-  font-family: $about-sub
+  font-family: $about-sub;
+  @include sm{
+    font-size: 13px;
+  }
 }
 
 .about-growth-left-desc{
   position: relative;
   top: 50px;
   line-height: 20px;
+  @include md{
+    top: 30px;
+    font-size: 11px;
+  }
+  @include sm{
+    font-size: 8px;
+    line-height: 15px;
+  }
 }
 
 .about-growth-right{
@@ -93,6 +146,17 @@ export default {}
   position: relative;
   top: 150px;
   left: -25px;
+  @include lg{
+    top: 100px;
+  }
+  @include md{
+  font-size: 80px;
+  }
+  @include sm{
+  top: 30px;
+  font-size: 50px;
+  left: -15px;
+  }
 }
 
 .about-growth-right-content{
@@ -100,15 +164,37 @@ export default {}
   top: 220px;
   padding-right: 50px;
   text-align: right;
+  @include lg{
+    top: 150px;
+  }
+  @include md{
+    top: 130px;
+    padding-right: 20px;
+  }
+  @include sm{
+    top: 60px;
+    padding-right: 10px;
+  }
 }
 
 .about-growth-right-subtitle{
-  font-family: $about-sub
+  font-family: $about-sub;
+    @include sm{
+    font-size: 13px;
+  }
 }
 
 .about-growth-right-desc{
   position: relative;
   top: 50px;
   line-height: 20px;
+    @include md{
+    top: 30px;
+    font-size: 11px;
+  }
+    @include sm{
+    font-size: 8px;
+    line-height: 15px;
+  }
 }
 </style>

@@ -40,6 +40,58 @@
         </div>
         <div class="tech-line-3"></div>
     </div>
+    <div class="tech-container-mobile">
+      <div class="tech-container-mobile-title1">
+        <span class="tech-container-mobile-title1-1">자동정보</span><br>
+        <span class="tech-container-mobile-title1-2">수집기</span>
+      </div>
+      <img class="tech-container-mobile-img1" src="@/assets/img/findbig5/findbig5_tech_1.png" alt="">
+      <div class="tech-container-mobile-desc1">
+        Forbes, NewYorTimes등<br>
+        일반 뉴스 미디어와<br>
+        TechCrunch, TheNextWeb등<br>
+        IT전문 미디어 등 30여개 해외 언론사에서<br>
+        IT기사를 실시간으로 수집합니다<br>
+        2016년 이후 기사들을<br>
+        자유롭게 찾아 볼 수 있습니다
+      </div>
+
+      <div class="tech-container-mobile-desc2">
+        검색을 통해 사용자가 원하는<br>
+        기사를 빠르게 찾을 수 있습니다<br>
+        유저들의 검색어 기록을<br>
+        학습, 중요도에 반영하여<br>
+        사용자별 맞춤 검색기능이 가능하고,<br>
+        기사들을 유저 기사로 묶어 내용이<br>
+        비슷한 기사를 다시 보지 않을 수 있습니다
+      </div>
+      <img class="tech-container-mobile-img2" src="@/assets/img/findbig5/findbig5_tech_2.png" alt="">
+      <div class="tech-container-mobile-title2">
+        <span class="tech-container-mobile-title2-1">검색</span><br>
+        <span class="tech-container-mobile-title2-2">엔진</span>
+      </div>
+
+       <div class="tech-container-mobile-title3">
+        <span class="tech-container-mobile-title3-1">자연어</span><br>
+        <span class="tech-container-mobile-title3-2">처리AI</span>
+      </div>
+      <img class="tech-container-mobile-img3" src="@/assets/img/findbig5/findbig5_tech_3.png" alt="">
+      <div class="tech-container-mobile-desc3">
+        형태소 분석을 기반으로 하여<br>
+        문서 내 중요단어 분석 뿐 아니라<br>
+        문서의 역가중치를 계산하여 문서 간<br>
+        중요도를 분석하는 엔진을 제공합니다<br>
+        토픽 추출의 정확도를 위하여<br>
+        LDA와 LSI 두 모델을 결합한<br>
+        튜닝모델을 활용하고 있습니다<br>
+        또한 기사 400자 요약 이내 요약기능으로<br>
+        사용자에게 전문을 읽는<br>
+        부담을 줄이고 있습니다
+      </div>
+    </div>
+    <div class="tech-container-mobile-bg">
+      <img src="@/assets/img/common/technology.png" alt="" class="tech-container-mobile-bg-img">
+    </div>
   </div>
 </template>
 
@@ -116,12 +168,47 @@ export default {
   }
 }
 
-
 @keyframes right-to-left{
   0%{
     left: 670px;
   }
   100% {
+    left: 0px;
+  }
+}
+
+@keyframes left-to-right-lg{
+  0%{
+    left: 0
+  }
+  100%{
+    left: 500px;
+  }
+}
+
+@keyframes right-to-left-lg{
+  0%{
+    left: 500px;
+  }
+  100%{
+    left: 0px;
+  }
+}
+
+@keyframes left-to-right-md{
+  0%{
+    left: 0px;
+  }
+  100%{
+    left: 370px;
+  }
+}
+
+@keyframes right-to-left-md{
+  0%{
+    left: 370px
+  }
+  100%{
     left: 0px;
   }
 }
@@ -137,6 +224,15 @@ export default {
 
 .tech{
   height: $basic-height + 500px;
+  @include lg{
+    height: 1000px;
+  }
+  @include md{
+    height: 900px;
+  }
+  @include sm{
+    height: 350px;
+  }
 }
 
 .tech-container{
@@ -145,6 +241,18 @@ export default {
   grid-gap: 50px;
   top: 50px;
   height: 1000px;
+  @include lg{
+    width: 760px;
+    grid-template-rows: 250px 250px 250px;
+    height: 850px;
+  }
+  @include md{
+    width: 550px;
+    grid-template-rows: 200px 200px 200px;
+  }
+  @include sm{
+    display: none;
+  }
 }
 
 .tech-title{
@@ -155,7 +263,16 @@ export default {
   width: 1024px;
   text-align: right;
   font-size: 30px;
+  padding-right: 50px;
   font-family: $font-tech;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
 }
 
 .tech-img-1{
@@ -163,7 +280,19 @@ export default {
   top: -50px;
   left: 0px;
   height: 350px;
-
+  @include lg{
+    height: 250px;
+    animation-name: left-to-right-lg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  @include md{
+    height: 180px;
+    animation-name: left-to-right-md;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    top: -20px;
+  }
 }
 
 .tech-content-1{
@@ -175,7 +304,12 @@ export default {
   grid-template-columns: 70% 30%;
   grid-template-rows: 150px 150px;
   z-index: 100;
-
+  @include lg{
+    grid-template-rows: 120px 180px;
+  }
+  @include md{
+    width: 550px;
+  }
 }
 
 .tech-title-1-1{
@@ -186,6 +320,14 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
+  @include lg{
+    margin-bottom: 30px;
+    font-size: 70px;
+  }
+  @include md{
+    font-size: 50px;
+    margin-bottom: 0;
+  }
 }
 
 .tech-title-1-2{
@@ -194,6 +336,14 @@ export default {
   align-self: end;
   font-size: 90px;
   letter-spacing: -5px;
+  @include lg{
+    margin-bottom: 20px;
+    font-size: 70px;
+    z-index: 100;
+  }
+  @include md{
+    font-size: 50px;
+  }
 }
 
 .tech-desc-1{
@@ -206,6 +356,17 @@ export default {
   margin-right:80px;
   width: 600px;
   line-height: 20px;
+  @include lg{
+    padding-top: 0;
+    margin-right: 130px;
+    font-size: 13px;
+  }
+  @include md{
+    font-size: 10px;
+    line-height: 15px;
+    margin-right: 180px;
+    margin-top: -10px;
+  }
 }
 
 .tech-line-1{
@@ -216,6 +377,20 @@ export default {
   left: 200px;
   border-image: linear-gradient(to right, white 140px, black 140px 540px);
   border-image-slice: 1;
+  @include lg{
+    height: 100px;
+    left: 150px;
+    width: 385px;
+    border-image: linear-gradient(to right, white 100px, black 100px 385px);
+    border-image-slice: 1;
+  }
+  @include md{
+    height: 95px;
+    width: 300px;
+    left: 100px;
+    border-image: linear-gradient(to right, white 75px, black 75px 385px);
+    border-image-slice: 1;
+  }
 }
 
 .tech-container-2{
@@ -228,6 +403,21 @@ export default {
   top: -50px;
   left: 660px;
   height: 350px;
+  @include lg{
+    left: 530px;
+    height: 250px;
+    animation-name: right-to-left-lg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  @include md{
+    left: 370px;
+    height: 180px;
+    animation-name: right-to-left-md;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    top: -20px;
+  }
 }
 
 .tech-content-2{
@@ -239,6 +429,13 @@ export default {
   grid-template-columns: 45% 55%;
   grid-template-rows: 150px 150px;
   z-index: 100;
+  @include lg{
+     grid-template-rows: 130px 150px;
+  }
+  @include md{
+    grid-template-rows: 120px 120px;
+    width: 550px;
+  }
 }
 
 .tech-title-2-1{
@@ -248,6 +445,12 @@ export default {
   font-size: 90px;
   letter-spacing: -5px;
   align-self: center;
+  @include lg{
+    font-size: 70px;
+  }
+  @include md{
+    font-size: 50px;
+  }
 }
 
 .tech-title-2-2{
@@ -255,6 +458,13 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
+  @include lg{
+    font-size: 70px;
+  }
+  @include md{
+    font-size: 50px;
+    padding-top: 15px;
+  }
 }
 
 .tech-line-2{
@@ -265,6 +475,19 @@ export default {
   left: 470px;
   border-image: linear-gradient(to right, black 0px 200px, white 200px 320px);
   border-image-slice: 1;
+  @include lg{
+    height: 390px;
+    left: 350px;
+    border-image: linear-gradient(to right, black 0px 180px, white 180px 320px);
+    border-image-slice: 1;
+  }
+  @include md{
+    width: 180px;
+    height: 330px;
+    left: 250px;
+    border-image: linear-gradient(to right, black 0px 120px, white 120px 180px);
+    border-image-slice: 1;
+  }
 }
 
 .tech-desc-2{
@@ -275,6 +498,17 @@ export default {
   width: 600px;
   font-size: 14px;
   line-height: 20px;
+  @include lg{
+    margin-right: 10px;
+    width: 530px;
+    font-size: 13px;
+  }
+  @include md{
+    margin-top: -20px;
+    padding-left: 150px;
+    font-size: 10px;
+    line-height: 15px;
+  }
 }
 
 .tech-container-3{
@@ -287,6 +521,19 @@ export default {
   top: -50px;
   left: 0px;
   height: 350px;
+  @include lg{
+    height: 250px;
+    animation-name: left-to-right-lg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+    @include md{
+    top: -20px;
+    height: 180px;
+    animation-name: left-to-right-md;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
 }
 
 .tech-content-3{
@@ -296,7 +543,7 @@ export default {
   "tt31 tt32"
   "des3 b1";
   grid-template-columns: 75% 25%;
-  grid-template-rows: 150px 150px;
+  grid-template-rows: 130px 150px;
   z-index: 100;
 }
 
@@ -307,6 +554,12 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
+  @include lg{
+    font-size: 70px;
+  }
+  @include md{
+    font-size: 50px;
+  }
 }
 
 .tech-title-3-2{
@@ -315,6 +568,13 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
+  @include lg{
+    font-size: 70px;
+  }
+  @include md{
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
 }
 
 .tech-desc-3{
@@ -324,6 +584,16 @@ export default {
   margin-right: 80px;
   font-size: 14px;
   line-height: 20px;
+  @include lg{
+    margin-right: 20px;
+    font-size: 13px;
+  }
+  @include md{
+    font-size: 10px;
+    line-height: 15px;
+    margin-right: 10px;
+    margin-top: -15px;
+  }
 }
 
 .tech-line-3{
@@ -334,6 +604,184 @@ export default {
   left: 200px;
   border-image: linear-gradient(to right, white 140px, black 140px 555px);
   border-image-slice: 1;
+  @include lg{
+    height: 710px;
+    width: 430px;
+    left: 135px;
+    border-image: linear-gradient(to right, white 110px, black 110px 555px);
+    border-image-slice: 1;
+  }
+  @include md{
+    height: 600px;
+    width: 300px;
+    left: 110px;
+    border-image: linear-gradient(to right, white 65px, black 65px 300px);
+    border-image-slice: 1;
+  }
 }
 
+
+
+.tech-container-mobile{
+  display: none;
+  @include sm{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "tit1 img1 des1"
+    "des2 img2 tit2"
+    "tit3 img3 des3";
+    grid-template-columns: 125px 50px 125px;
+    grid-row-gap: 10px;
+    align-items: center;
+  }
+}
+.tech-container-mobile-title1{
+  display: none;
+  @include sm{
+  display: grid;
+  text-align: right;
+  padding: 0 5px;
+  }
+}
+
+.tech-container-mobile-title1-1{
+  display: none;
+  @include sm{
+  display: grid;
+  font-family: $main-font;
+  font-size: 25px;
+  padding-right: 5px;
+  }
+}
+
+.tech-container-mobile-title1-2{
+  display: none;
+  @include sm{
+  display: grid;
+  font-family: $main-font;
+  font-size: 25px;
+  }
+}
+
+.tech-container-mobile-title2{
+  display: none;
+  @include sm{
+  display: grid;
+  padding: 0 5px;
+  }
+}
+
+.tech-container-mobile-title2-1{
+  display: none;
+  @include sm{
+    display: grid;
+  font-family: $main-font;
+  font-size: 25px;
+  }
+}
+
+.tech-container-mobile-title2-2{
+  display: none;
+  @include sm{
+  display: grid;
+  font-family: $main-font;
+  font-size: 25px;
+  padding-left: 10px;
+  }
+}
+
+.tech-container-mobile-title3{
+  display: none;
+  @include sm{
+  display: grid;
+  text-align: right;
+  padding: 0 5px;
+  }
+}
+
+.tech-container-mobile-title3-1{
+  display: none;
+  @include sm{
+  display: grid;
+  font-family: $main-font;
+  font-size: 25px;
+  padding-right: 10px;
+  }
+}
+
+.tech-container-mobile-title3-2{
+  display: none;
+  @include sm{
+  display: grid;
+  font-family: $main-font;
+  font-size: 25px;
+  }
+}
+
+.tech-container-mobile-img1, .tech-container-mobile-img2, .tech-container-mobile-img3{
+  display: none;
+  @include sm{
+  display: grid;
+  height: 50px;
+  justify-self: center;
+  z-index: 100;
+  }
+}
+
+.tech-container-mobile-img1{
+  display: none;
+  @include sm{
+  display: grid;
+  margin-top: -2px;
+  }
+}
+
+.tech-container-mobile-img2{
+  display: none;
+  @include sm{
+  display: grid;
+  margin-top: 18px;
+  }
+}
+
+.tech-container-mobile-img3{
+  display: none;
+  @include sm{
+  display: grid;
+  margin-top: -8px;
+  }
+}
+
+.tech-container-mobile-desc1, .tech-container-mobile-desc2, .tech-container-mobile-desc3{
+  display: none;
+  @include sm{
+  display: grid;
+  font-size: 6.4px;
+  padding: 0 5px;
+  line-height: 10px;
+  }
+}
+
+.tech-container-mobile-bg{
+  display: none;
+  @include sm{
+  display: grid;
+  width: 300px;
+  margin: 0 auto;
+  }
+}
+
+.tech-container-mobile-bg-img{
+  display: none;
+  @include sm{
+  background: lightblue;
+  width: 60px;
+  margin-left: 120px;
+  margin-top: -340px;
+  // box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);  
+  }
+}
 </style>
