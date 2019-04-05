@@ -28,7 +28,7 @@ export default {
   data(){
     return{
       header:{
-        img: require('"../../../assets/img/common/logo_name_black.svg'),
+        img: require('@/assets/img/common/logo_name_black.svg'),
         color: "color:#212121" 
       },
       color: "color: #FEFEFE",
