@@ -28,7 +28,12 @@ export default {}
   background-image: url('../../assets/img/background/background_2.png');
   height: 150px;
   bottom: 0;
-
+  @include lg{
+    height: 130px;
+  }
+  @include md{
+    height: 110px;
+  }
   @include sm{
     height: 100px;
   }
@@ -53,7 +58,12 @@ export default {}
 
 .footer-logo{
   @extend %hf-logo;
-
+  @include lg{
+    height: 70px;
+  }
+  @include md{
+    height: 60px;
+  }
     @include sm{
     padding-left: 20px;
     height: 40px;
@@ -68,9 +78,12 @@ export default {}
    height: 100%;
    padding-top: 25px;
   
+  @include lg{
+    padding-top: 15px;
+  }
   @include md{
-    font-size: 12px;
-    padding-top: 30px;
+    font-size: 10px;
+    padding-top: 15px;
   }
   @include sm{
     padding-top: 17px;

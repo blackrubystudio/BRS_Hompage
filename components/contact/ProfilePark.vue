@@ -42,6 +42,12 @@ export default {}
 
 .contact-profilePark{
   height: $basic-height;
+  @include lg{
+    height: 650px;
+  }
+  @include md{
+    height: 600px;
+  }
 }
 
 .contact-profilePark-container{
@@ -55,6 +61,22 @@ export default {}
   grid-template-columns: 35% 65%;
   grid-gap: 5%;
   height: 500px;
+  @include xl{
+    width: 1000px;
+    grid-template-columns: 38% 58%;
+    grid-gap: 3%;
+  }
+  @include lg{
+    width: 760px;
+    height: 400px;
+  }
+  @include md{
+    width: 550px;
+    height: 350px;
+  }
+  @include sm{
+    width: 300px;
+  }
 }
 
 .contact-profilePark-img{
@@ -71,7 +93,13 @@ export default {}
   "ds1 ds2"
   "bl1 ds2";
   grid-gap: 10px;
-  grid-template-columns: 50% 40%;
+  grid-template-columns: 46% 46%;
+  @include xl{
+    grid-template-columns: 50% 40%; 
+  }
+  @include lg{
+    grid-template-columns: 50% 38%;
+  }
 }
 
 .contact-profilePark-title{
@@ -79,40 +107,118 @@ export default {}
   grid-area: tit;
   justify-self: end;
   margin-right: -100px;
+  @include xl{
+    margin-right: -30px;
+  }
+  @include lg{
+    font-size: 80px;
+    margin-right: -30px;
+  }
+  @include md{
+    font-size: 60px;
+    margin-right: -40px;
+  }
 }
 
 .contact-profilePark-desc-1{
   grid-area: ds1;
   align-self: end; 
-  
+
 }
 
 .contact-profilePark-name{
-font-family: $profile-name;
-font-size: 30px;  
-letter-spacing: 10px;
+  font-family: $profile-name;
+  font-size: 30px;  
+  letter-spacing: 10px;
+  @include lg{
+    font-size: 25px;
+  }
+  @include md{
+    font-size: 18px;
+  }
 }
 
 .contact-ceo{
   font-family: $font-contact-ceo;
+  @include lg{
+    font-size: 15px;
+  }
+  @include md{
+    font-size: 10px;
+  }
 }
 
 .contact-profilePark-sub{
-font-family: $profile-sub;
-font-size: 17px;  
-
+  font-family: $profile-sub;
+  font-size: 17px;  
+  @include lg{
+    font-size: 15px;
+  }
+  @include md{
+    font-size: 13px;
+  }
 }
 
 .contact-profilePark-desc-1-1, .contact-profilePark-desc-2-1{
   padding: 20px 0 50px 0;
   font-size: 13px;
   line-height: 20px;
+@include lg{
+  font-size: 12px;
+}
+@include md{
+  font-size: 10px;
+  line-height: 13px;
+}
 }
 
 .contact-profilePark-desc-1-2, .contact-profilePark-desc-2-2{
   padding: 10px 0;
   font-size: 13px;
   line-height: 20px;
+  @include lg{
+  font-size: 12px;
+}
+@include md{
+  font-size: 10px;
+  line-height: 13px;
+}
+}
+
+.contact-profilePark-desc-1-1{
+  @include lg{
+    height: 120px;
+  }
+  @include md{
+    height: 100px;
+  }
+}
+
+.contact-profilePark-desc-1-2{
+  @include lg{
+  height: 100px;
+  }
+  @include md{
+    height: 90px;
+  }
+}
+
+.contact-profilePark-desc-2-1{
+  @include lg{
+  height: 130px;
+  }
+  @include md{
+    height: 100px;
+  }
+}
+
+.contact-profilePark-desc-2-2{
+  @include lg{
+    height: 110px;
+  }
+  @include md{
+    height: 100px;
+  }
 }
 
 .contact-profilePark-desc-2{

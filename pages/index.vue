@@ -26,9 +26,9 @@
     </transition>
 
   <!-- 4.5 Scroll Up button -->
-  <!-- <div class="main-scrollup">
+  <div class="main-scrollup">
     <img class="main-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
-  </div> -->
+  </div>
 
   <!-- 5. Footer -->
   <common-footer></common-footer>
@@ -203,6 +203,16 @@ export default {
   margin: 0 auto;
   text-align: right;
   margin-bottom: 20px;
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    margin-bottom: 10px;
+    width: 550px;
+  }
 }
 
 .main-scrollup-button{
@@ -214,7 +224,12 @@ export default {
   animation-name: scrollup-button;
   animation-iteration-count: infinite;
   animation-duration: 1s;
-  
+  @include lg{
+    width: 40px;
+  }
+  @include md{
+    width: 30px;
+  }
 }
 
 @keyframes scrollup-button{

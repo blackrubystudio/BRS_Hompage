@@ -33,6 +33,10 @@ export default {
   top: 50px;
   width: 100%;
   height: 80px;
+  z-index: 100;
+  @include lg{
+    top: 30px;
+  }
 
   @include sm{
     top: 0;
@@ -60,7 +64,12 @@ export default {
 
 .header-logo{
   @extend %hf-logo;
-
+  @include lg{
+    height: 70px;
+  }
+  @include md{
+    height: 60px;
+  }
   @include sm{
     padding-left: 20px;
     height: 40px;
@@ -71,7 +80,12 @@ export default {
   @extend %hf-content-group;
   justify-self: end;
   align-self: center;
-
+  @include lg{
+    font-size: 15px;
+  }
+  @include md{
+    font-size: 13px;
+  }
   @include sm{
     display: none;
   }

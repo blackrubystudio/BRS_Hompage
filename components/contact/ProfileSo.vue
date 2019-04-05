@@ -42,6 +42,12 @@ export default {}
 
 .contact-profileSo{
   height: $basic-height;
+  @include lg{
+    height: 600px;
+  }
+  @include md{
+    height: 550px;
+  }
 }
 
 .contact-profileSo-container{
@@ -51,8 +57,24 @@ export default {}
   grid-template-columns: 0% 35% 65%;
   grid-gap: 2.5%;
   top: 50px;
-   z-index: 100;
-  
+  z-index: 100;
+  @include xl{
+    width: 1000px;
+    grid-template-columns: 0% 35% 60%;
+    grid-gap: 3%;
+  }
+  @include lg{
+    width: 760px;
+    height: 400px;
+    grid-gap: 2%;
+  }
+  @include md{
+    width: 550px;
+    height: 350px;
+  }
+  @include sm{
+    width: 300px;
+  }
 }
 
 .contact-profileSo-title{
@@ -65,13 +87,31 @@ export default {}
   padding-top: 30px;
   bottom: -200px;
   letter-spacing: 10px;
-  transform: rotate(90deg);  
+  transform: rotate(90deg); 
+  @include xl{
+    right: -60px;
+  } 
+  @include lg{
+    font-size: 80px;
+    top: 100px;
+    right: -40px;
+  }
+  @include md{
+    font-size: 65px;
+    top: 50px;
+  }
 }
 
 .contact-profileSo-white{
   @extend %font-main;
   font-size: 120px;
   color: white;
+  @include lg{
+    font-size: 80px;
+  }
+  @include md{
+    font-size: 60px;
+  }
 }
 
 .contact-profileSo-img{
@@ -92,22 +132,42 @@ export default {}
   grid-gap: 10px;
   grid-template-columns: 50% 40%;
   grid-template-rows: 30% 42% 28%;
+  @include xl{
+    grid-template-rows: 33% 42% 25%;
+  }
+  @include lg{
+    grid-template-columns: 50% 38%;
+  }
 }
 
 .contact-profileSo-desc-1{
   grid-area: ds1;
   align-self: end; 
-  
+  @include lg{
+    color: black;
+  }
 }
 
 .contact-profileSo-name{
   font-family: $profile-name;
   font-size: 30px;  
   letter-spacing: 10px;
+  @include lg{
+    font-size: 25px;
+  }
+  @include md{
+    font-size: 18px;
+  }
 }
 
 .contact-ceo{
   font-family: $font-contact-ceo;
+  @include lg{
+    font-size: 15px;
+  }
+  @include md{
+    font-size: 10px;
+  }
 }
 
 .contact-profileSo-sub{
@@ -115,6 +175,12 @@ export default {}
   font-size: 17px;  
   color: white;
   z-index: 100px;
+  @include lg{
+    font-size: 15px;
+  }
+  @include md{
+    font-size: 13px;
+  }
 
 }
 
@@ -123,6 +189,13 @@ export default {}
   font-size: 13px;
   line-height: 20px;
   color: white;
+   @include lg{
+  font-size: 12px;
+  }
+  @include md{
+    font-size: 10px;
+    line-height: 13px;
+  }
 }
 
 .contact-profileSo-desc-1-2, .contact-profileSo-desc-2-2{
@@ -130,6 +203,51 @@ export default {}
   font-size: 13px;
   line-height: 20px;
   color: white;
+   @include lg{
+  font-size: 12px;
+}
+@include md{
+  font-size: 10px;
+  line-height: 13px;
+}
+}
+
+.contact-profileSo-desc-1-1{
+  @include lg{
+    height: 100px;
+    align-self: end;
+  }
+  @include md{
+    height: 100px;
+  }
+}
+
+.contact-profileSo-desc-1-2{
+  @include lg{
+  height: 80px;
+  }
+  @include md{
+    height: 90px;
+  }
+}
+
+.contact-profileSo-desc-2-1{
+  @include lg{
+  height: 110px;
+  }
+  @include md{
+    // margin-top: -50px;
+    height: 100px;
+  }
+}
+
+.contact-profileSo-desc-2-2{
+  @include lg{
+    height: 130px;
+  }
+  @include md{
+    height: 100px;
+  }
 }
 
 .contact-profileSo-desc-2{

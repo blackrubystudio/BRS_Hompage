@@ -43,6 +43,13 @@ export default {
   background-image: url('../../assets/img/background/background_2.png');
   height: $basic-height + 300px;
   margin-top: -370px;
+  @include lg{
+    height: 800px;
+    margin-top: -430px;
+  }
+  @include md{
+    height: 700px;
+  }
 }
 
 .contactus-container{
@@ -55,6 +62,24 @@ export default {
   top: 450px;
   color: white;
   height: 500px; 
+  @include xl{
+    width: 1000px;
+    grid-template-columns: 450px 450px;
+  }
+  @include lg{
+    top: 400px;
+    grid-template-columns: 400px 320px;
+    width: 760px;
+  }
+  @include md{
+    top: 350px;
+    grid-template-columns: 280px 250px;
+    width: 550px;
+    height: 300px;
+  }
+  @include sm{
+    width: 300px;
+  }
 }
 
 .contactus-container-title{
@@ -66,6 +91,19 @@ export default {
   text-decoration: underline;
   text-underline-position: under;
   z-index: 100;
+  @include xl{
+    font-size: 60px;
+    justify-self: end;
+  }
+  @include lg{
+    font-size: 50px;
+    justify-self: start;
+    padding-left: 40px;
+  }
+  @include md{
+    font-size: 35px;
+    padding-left: 30px;
+  }
 }
 
 .contactus-container-desc{
@@ -76,6 +114,11 @@ export default {
   margin-right: 40px;
   line-height: 20px;
   z-index: 100;
+  @include md{
+    font-size: 12px;
+    margin-right: 20px;
+    line-height: 17px;
+  }
 }
 
 .contacus-container-map {
@@ -84,6 +127,15 @@ export default {
   width: 445px;
   margin-left: 74px;
   z-index: 100;
+  @include lg{
+    width: 320px;
+    height: 280px;
+    margin-left: 0;
+  }
+  @include md{
+    width: 260px;
+    height: 200px;
+  }
 }
 
 .contactus-line{
@@ -92,6 +144,20 @@ export default {
   width: 10px;
   height: 350px;
   border-left: 0.5px solid #FEFEFE;
+  @include xl{
+    top: -200px;
+    height: 360px;
+    left: 55px;
+  }
+  @include lg{
+    left: 40px;
+    height: 350px;
+    top: -195px;
+  }
+  @include md{
+    left: 30px;
+    height: 290px;
+  }
 }
 
 .contactus-background{
@@ -101,6 +167,17 @@ export default {
   left: 295px;
   width: 280px;
   height: 180px;
+  @include lg{
+    top: 100px;
+    left: 250px;
+    width: 200px;
+    height: 140px;
+  }
+  @include md{
+    top: 50px;
+    left: 200px;
+    height: 120px;
+  }
 }
 
 a{
