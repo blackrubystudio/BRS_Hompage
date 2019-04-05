@@ -13,6 +13,8 @@
     <common-activity class="about-study" :title=study.title :desc=study.desc :src=study.src :alt=study.alt></common-activity>
     <common-activity class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity>
     <common-activity class="about-weekly" :title=weekly.title :desc=weekly.desc :src=weekly.src :alt=weekly.alt></common-activity>
+
+    <common-menumobile :color="color"></common-menumobile>
     <!-- 5. Footer -->
     <common-footer></common-footer>
   </div>
@@ -21,6 +23,7 @@
 <script>
 import AboutMain from "@/components/about/Main.vue";
 import AboutGrowth from "@/components/about/Growth.vue";
+
 
 export default {
   components: {
@@ -33,8 +36,9 @@ export default {
       // Header white
       header:{
         img: require('@/assets/img/common/logo_name_white.svg'),
-        color: "color:#FEFEFE" },
-
+        color: "color:#FEFEFE"
+      },
+      color: "color: #212121",
       // Activity component content
       study:{
         title: "<span class='about-activity-white'>ST</span>UDY",

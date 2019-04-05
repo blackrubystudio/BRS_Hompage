@@ -23,17 +23,18 @@ BRS_homepage
 Assets // CSS & IMG
 ├── css
 ├── img
-components
-├── about // Directory 구조 변경 예정
+components // 각 컴포넌트
+├── about // About Page
 │   ├── Main.vue
 │   └── Growth.vue
-├── common // 여러 페이지 및 컴포넌트에 사용
+├── common // 공통 컴포넌트
 │   ├── Header.vue
 │   ├── Footer.vue
 │   ├── Postit.vue
 │   ├── Technology.vue
-│   └── Activity.vue
-├── contact // Contanct Us
+│   ├── Activity.vue  
+│   └── MenuMobile.vue
+├── contact // ContanctUs Page
 │   ├── ProfilePark.vue
 │   ├── ProfileSo.vue
 │   └── ContactUs.vue
@@ -42,7 +43,7 @@ components
 │   ├── FindBig5.vue 
 │   ├── Celebee.vue   
 │   └── Beamme.vue
-pages // Pages
+pages // Pages (link)
 ├── about.vue
 ├── contact.vue
 └── index.vue

@@ -29,6 +29,8 @@
   <div class="main-scrollup">
     <img class="main-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
   </div>
+  
+  <common-menumobile :color="color"></common-menumobile>
 
   <!-- 5. Footer -->
   <common-footer></common-footer>
@@ -75,8 +77,10 @@ export default {
         img: require('@/assets/img/common/logo_name_white.svg'),
         color: "color:#FEFEFE" 
       },
+      color: "color: #212121",
       // Default Component(Dynamic Component)
-      component: 'findbig5'
+      component: 'findbig5',
+      isDropdown: false
     }
   },
 
@@ -213,6 +217,9 @@ export default {
     margin-bottom: 10px;
     width: 550px;
   }
+  @include sm{
+    display: none;
+  }
 }
 
 .main-scrollup-button{
@@ -308,5 +315,6 @@ export default {
     margin-left: 710px;
   }
 }
+
 </style>
 

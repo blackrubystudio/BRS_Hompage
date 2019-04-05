@@ -4,9 +4,11 @@ import CommonFooter from "@/components/common/Footer.vue";
 import CommonPostit from "@/components/common/Postit.vue";
 import CommonActivity from "@/components/common/Activity.vue";
 import CommonTechnology from "@/components/common/Technology.vue"
+import CommonMenumobile from "@/components/common/MenuMobile.vue"
 
 Vue.component("commonHeader", CommonHeader)
 Vue.component("commonFooter", CommonFooter)
 Vue.component("commonPostit", CommonPostit)
 Vue.component("commonActivity", CommonActivity)
 Vue.component("commonTechnology", CommonTechnology)
+Vue.component("commonMenumobile", CommonMenumobile)

@@ -234,7 +234,7 @@ export default {
  }
  @include md{
    padding-left: 50px;
-   font-size: px;
+   font-size: 13px;
  }
  @include sm{
    display: none;
