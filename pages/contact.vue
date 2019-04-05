@@ -14,9 +14,9 @@
 
 <script>
 // Import Contact
-import ContactProfilePark from "~/components/contact/ProfilePark.vue";
-import ContactProfileSo from "~/components/contact/ProfileSo.vue";
-import ContactUs from "~/components/contact/ContactUs.vue";
+import ContactProfilePark from "@/components/contact/ProfilePark.vue";
+import ContactProfileSo from "@/components/contact/ProfileSo.vue";
+import ContactUs from "@/components/contact/ContactUs.vue";
 
 export default {
   components: {

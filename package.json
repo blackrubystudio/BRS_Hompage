@@ -1,30 +1,31 @@
 {
-  "name": "brs_hompage",
-  "version": "1.0.0",
-  "description": "Black Ruby Studio Hompage",
-  "author": "Black Ruby Studio",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
-  },
-  "dependencies": {
-    "dotenv": "^7.0.0",
-    "node-sass": "^4.11.0",
-    "nuxt": "^2.0.0",
-    "sass-loader": "^7.1.0",
-    "vue2-google-maps": "^0.10.6"
-  },
-  "devDependencies": {
-    "@nuxtjs/style-resources": "^0.1.2",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^4.19.1",
-    "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^4.0.0"
-  }
+    "name": "brs_hompage",
+    "version": "1.0.0",
+    "description": "Black Ruby Studio Hompage",
+    "author": "Black Ruby Studio",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "deploy": "npm run generate && aws s3 cp dist/ s3://blackruby.studio --recursive",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+        "precommit": "npm run lint"
+    },
+    "dependencies": {
+        "dotenv": "^7.0.0",
+        "node-sass": "^4.11.0",
+        "nuxt": "^2.0.0",
+        "sass-loader": "^7.1.0",
+        "vue2-google-maps": "^0.10.6"
+    },
+    "devDependencies": {
+        "@nuxtjs/style-resources": "^0.1.2",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^4.19.1",
+        "eslint-friendly-formatter": "^4.0.1",
+        "eslint-loader": "^2.1.1",
+        "eslint-plugin-vue": "^4.0.0"
+    }
 }
