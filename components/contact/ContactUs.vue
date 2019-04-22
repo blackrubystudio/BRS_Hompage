@@ -16,7 +16,7 @@
           v-bind:clickable="true"
           v-bind:draggable="true"/>
       </GmapMap>
-       <div class="contactus-line"></div>
+       <!-- <div class="contactus-line"></div> -->
        <div class="contactus-background"></div>
     </div>
   </div>
@@ -41,14 +41,13 @@ export default {
   @extend %background;
   position: relative;
   background-image: url('../../assets/img/background/background_2.png');
-  height: $basic-height + 300px;
-  margin-top: -370px;
+  height:100vh;
   @include lg{
-    height: 800px;
-    margin-top: -430px;
+    // height: 800px;
+    // margin-top: -430px;
   }
   @include md{
-    height: 700px;
+    // height: 700px;
   }
 }
 
@@ -59,7 +58,7 @@ export default {
   "sub map";
   grid-template-columns:  500px 500px;
   grid-template-rows: 30% 70%;
-  top: 450px;
+  top: 30vh;
   color: white;
   height: 500px; 
   @include xl{
@@ -67,17 +66,16 @@ export default {
     grid-template-columns: 450px 450px;
   }
   @include lg{
-    top: 400px;
     grid-template-columns: 400px 320px;
     width: 760px;
   }
   @include md{
-    top: 350px;
     grid-template-columns: 280px 250px;
     width: 550px;
     height: 300px;
   }
   @include sm{
+    grid-template-columns: 150px 150px;
     width: 300px;
   }
 }
@@ -104,6 +102,10 @@ export default {
     font-size: 35px;
     padding-left: 30px;
   }
+  @include sm{
+    font-size: 20px;
+    padding-left: 0;
+  }
 }
 
 .contactus-container-desc{
@@ -118,6 +120,10 @@ export default {
     font-size: 12px;
     margin-right: 20px;
     line-height: 17px;
+  }
+  @include sm{
+    font-size: 9px;
+    line-height: 12px;
   }
 }
 
@@ -135,6 +141,12 @@ export default {
   @include md{
     width: 260px;
     height: 200px;
+  }
+  @include sm{
+    width: 150px;
+    height: 100px;
+    margin-top: 60px;
+
   }
 }
 
@@ -177,6 +189,12 @@ export default {
     top: 50px;
     left: 200px;
     height: 120px;
+  }
+  @include sm{
+    top: 80px;
+    width: 80px;
+    left: 100px;
+    height: 60px;
   }
 }
 

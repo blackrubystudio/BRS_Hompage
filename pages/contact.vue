@@ -4,10 +4,10 @@
 <template>
   <div id="contact">
     <common-header :img=header.img :color=header.color></common-header>
-    <contact-profile-park></contact-profile-park>
-    <contact-profile-so></contact-profile-so>
+    <!-- <contact-profile-park></contact-profile-park> -->
+    <!-- <contact-profile-so></contact-profile-so> -->
     <contact-us></contact-us>
-    <common-menumobile :color="color"></common-menumobile>
+    <!-- <common-menumobile :color="color"></common-menumobile> -->
     <common-footer></common-footer>
   </div>
 </template>
@@ -28,8 +28,8 @@ export default {
   data(){
     return{
       header:{
-        img: require('@/assets/img/common/logo_name_black.svg'),
-        color: "color:#212121" 
+        img: require('@/assets/img/common/logo_name_white.svg'),
+        color: "color:#FEFEFE"
       },
       color: "color: #FEFEFE",
     }
