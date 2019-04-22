@@ -14,7 +14,7 @@
   <!-- 3. Button & PostIt IMG (Absolute) -->
   <div class="main-absolute">
     <div class="main-button-group">
-      <button class="main-button" @click="component = 'deokus'">DeokUs</button>
+      <button class="main-button" @click="component = 'fanrep'">Fanrep</button>
       <button class="main-button" @click="component = 'beamme'">BeamMe</button>
     </div>
     <div class="main-postit"></div>
@@ -60,14 +60,14 @@
 <script>
 import MainPage from "@/components/main/Main.vue";
 import FindBig5 from "@/components/main/FindBig5.vue";
-import Deokus from "@/components/main/Deokus.vue"
+import Fanrep from "@/components/main/Fanrep.vue"
 import Beamme from "@/components/main/Beamme.vue"
 
 export default {
   components: {
     MainPage,
     "findbig5" : FindBig5,
-    "deokus" : Deokus,
+    "fanrep" : Fanrep,
     "beamme" : Beamme
   },
 

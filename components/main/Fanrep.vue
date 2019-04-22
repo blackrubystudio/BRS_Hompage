@@ -2,50 +2,50 @@
 // Title의 Postit 부분과, Technology에 관한 부분은 props를 받아와 처리 (내용은 data 메소드에 저장)
 
 <template>
-  <div class="deokus">
+  <div class="fanrep">
 
     <!-- Section1. Title 시작 -->
-    <section class="deokus-title">
-      <div class="deokus-title-container">
-        <div class="deokus-title-main">
-          <div class="deokus-title-container-title-1">
-            <h1 class="deokus-title-downfont">매</h1>
-            <h1 class="deokus-title-space">일</h1>
-            <h1 class="deokus-title-downfont">전해받는</h1>  
+    <section class="fanrep-title">
+      <div class="fanrep-title-container">
+        <div class="fanrep-title-main">
+          <div class="fanrep-title-container-title-1">
+            <h1 class="fanrep-title-downfont">매</h1>
+            <h1 class="fanrep-title-space">일</h1>
+            <h1 class="fanrep-title-downfont">전해받는</h1>  
           </div>
-          <div class="deokus-title-container-title-2">
+          <div class="fanrep-title-container-title-2">
             <h1>내</h1>
-            <h1 class="deokus-title-downfont">아이돌 소식</h1>
+            <h1 class="fanrep-title-downfont">아이돌 소식</h1>
           </div>
         </div>  
-        <img  class="deokus-title-img-mail" src="@/assets/img/deokus/deokus_mail.png" alt="deokus-search">
-        <common-postit class="deokus-postit" :title=post.title :desc=post.desc></common-postit>
+        <img  class="fanrep-title-img-mail" src="@/assets/img/fanrep/fanrep_mail.png" alt="fanrep-search">
+        <common-postit class="fanrep-postit" :title=post.title :desc=post.desc></common-postit>
       </div>
     </section>
     <!-- // Section1. Title 끝 -->
 
     <!-- Section2. Introduce 시작 -->
-    <section class="deokus-introduce">
-      <div class="deokus-introduce-container">
-        <img class="deokus-introduce-img-homepage1" src="@/assets/img/deokus/deokus_homepage1.png" alt="셀레비 랜딩페이지 메인">
-        <img class="deokus-introduce-img-homepage2" src="@/assets/img/deokus/deokus_homepage2.png" alt="셀레비 랜딩페이지 서브">
-        <img class="deokus-introduce-img-logo" src="@/assets/img/deokus/deokus_logo.png" alt="셀레비 로고">
-        <div class="deokus-introduce-desc">
+    <section class="fanrep-introduce">
+      <div class="fanrep-introduce-container">
+        <img class="fanrep-introduce-img-homepage1" src="@/assets/img/fanrep/fanrep_homepage1.png" alt="팬랩 랜딩페이지 메인">
+        <img class="fanrep-introduce-img-homepage2" src="@/assets/img/fanrep/fanrep_homepage2.png" alt="팬랩 랜딩페이지 서브">
+        <img class="fanrep-introduce-img-logo" src="@/assets/img/fanrep/fanrep_logo.png" alt="팬랩 로고">
+        <div class="fanrep-introduce-desc">
           <p>좋아하는 아이돌을 입력하기만 하면<br>
             매주 월요일, 당신이 좋아하는 아이돌의 스케쥴과<br>
             영상을 메세지로 보내드립니다<br><br>
-            더거스가 여러분을 찾아갑니다<br><br>
+            팬랩이 여러분을 찾아갑니다<br><br>
           </p>
-          <a class="button deokus-introduce-button" href="https://deok-us.com" target="_blank" >자세히 보기</a>
+          <a class="button fanrep-introduce-button" href="https://fan-rep.com" target="_blank" >자세히 보기</a>
         </div>
-        <img class="deokus-introduce-img-effect" src="@/assets/img/deokus/deokus_effect.png" alt="셀레비 효과">
+        <img class="fanrep-introduce-img-effect" src="@/assets/img/fanrep/fanrep_effect.png" alt="팬랩 효과">
       </div>
     </section>
     <!-- Section2. Introduce 끝 -->
 
     <!-- Section3. Technology 시작 -->
     <section ref="tech">
-      <common-technology class="deokus-technology"
+      <common-technology class="fanrep-technology"
       :title11 = tech.title11
       :title12 = tech.title12
       :title21 = tech.title21
@@ -85,9 +85,9 @@ export default {
         title22: "엔진",
         title31: "자연어처리",
         title32: "AI",
-        img1: require("@/assets/img/deokus/deokus_tech_1.png"),
-        img2: require("@/assets/img/deokus/deokus_tech_2.png"),
-        img3: require("@/assets/img/deokus/deokus_tech_3.png"),
+        img1: require("@/assets/img/fanrep/fanrep_tech_1.png"),
+        img2: require("@/assets/img/fanrep/fanrep_tech_2.png"),
+        img3: require("@/assets/img/fanrep/fanrep_tech_3.png"),
         alt1: '첫번째 이미지',
         alt2: '두번째 이미지',
         alt3: '세번째 이미지',
@@ -110,14 +110,14 @@ export default {
 <style lang="scss" scoped>
 
 // Section1. Title
-.deokus-title{
+.fanrep-title{
   @extend %project-section-height;
   @include md{
     height: 550px;
   }
 }
 
-.deokus-title-container{
+.fanrep-title-container{
  @extend %project-title-container;
  @include lg{
    width: 760px;
@@ -131,7 +131,7 @@ export default {
  }
 }
 
-.deokus-title-main{
+.fanrep-title-main{
   display: grid;
   grid-template-rows: 30% 50%;
   margin-left: 140px;
@@ -162,14 +162,14 @@ h1{
   }
 }
 
-.deokus-title-downfont{
+.fanrep-title-downfont{
   padding-top: 30px;
   @include sm{
     padding-top: 15px;
   }
 }
 
-.deokus-title-container-title-1{
+.fanrep-title-container-title-1{
   display: grid;
   grid-template-columns: 9% 12% 75%;
   @include sm{
@@ -177,7 +177,7 @@ h1{
   }
 }
 
-.deokus-title-container-title-2{
+.fanrep-title-container-title-2{
   display: grid;
   grid-template-columns: 10% 90%;
   z-index: 100;
@@ -186,7 +186,7 @@ h1{
   }
 }
 
-.deokus-title-img-mail{
+.fanrep-title-img-mail{
   position: absolute;
   height: 290px;
   top: 85px;
@@ -211,7 +211,7 @@ h1{
 }
 
 // Section2. Introduce
-.deokus-introduce{
+.fanrep-introduce{
   @extend %project-section-height;
   margin: -50px 0 50px 0;
   @include sm{
@@ -219,7 +219,7 @@ h1{
   }
 }
 
-.deokus-introduce-container{
+.fanrep-introduce-container{
   @extend %project-introduce-container;
   grid-template-areas:
   "hom1 logo"
@@ -242,7 +242,7 @@ h1{
   }
 }
 
-.deokus-introduce-img-homepage1{
+.fanrep-introduce-img-homepage1{
   grid-area: hom1;
   width: 100%;
   margin-left: -50px;
@@ -255,13 +255,13 @@ h1{
   }
 }
 
-.deokus-introduce-img-homepage2{
+.fanrep-introduce-img-homepage2{
   grid-area: hom2;
   width: 90%;
   margin-left: -50px;
 }
 
-.deokus-introduce-img-logo{
+.fanrep-introduce-img-logo{
   grid-area: logo;
   width: 270px;
   margin-left: 250px;
@@ -283,7 +283,7 @@ h1{
   }
 }
 
-.deokus-introduce-desc{
+.fanrep-introduce-desc{
   justify-self: start;
   text-align: right;
   font-size: 14px;
@@ -313,7 +313,7 @@ p{
   }
 }
 
-.deokus-introduce-button{
+.fanrep-introduce-button{
   @extend %main-project-button;
   font-size: 12px;
   padding: 2px 10px;
@@ -327,7 +327,7 @@ a{
   color: #212121;
 }
 
-.deokus-introduce-img-effect{
+.fanrep-introduce-img-effect{
   position: absolute;
   top: 20%;
   left: 65%;
@@ -350,7 +350,7 @@ a{
   }
 }
 
-.deokus-postit{
+.fanrep-postit{
   @include lg{
     width: 250px;
   }
@@ -366,7 +366,7 @@ a{
 
 <style lang="scss">
 // For technology Custom
-.deokus-technology{
+.fanrep-technology{
   .tech-desc-right-1{
     @extend %padding-right-1;
   }
