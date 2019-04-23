@@ -239,19 +239,20 @@ h1{
 
 .beamme-introduce-img-logo{
   grid-area: log;
-  margin-top: 70px;
+  margin-top: 80px;
   margin-left: 30px;
-  height: 120px;
+  height: 95px;
   z-index: 100;
+  background: #FEFEFE;
   box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.2);
   @include lg{
-    height: 80px;
+    height: 60px;
     margin-top: 40px;
     margin-left: 120px;
   }
   @include md{
-    height: 50px;
-    margin-top: 30px;
+    height: 35px;
+    margin-top: 40px;
   }
   @include sm{
     width: 250px;
