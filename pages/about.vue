@@ -48,7 +48,7 @@ export default {
                  <span class='about-activity-desc-3'>강의를 진행하며, 팀원들의 융합적 사고를 도모하고 있습니다</span><br><br>\
                  <span class='about-activity-desc'>2017년 2월부터 매주 1회 진행하고 있습니다</span><br>\
               </p>",
-        src: require("@/assets/img/background/background_1.png"),
+        src: require("@/assets/img/about/study.jpg"),
         alt: "블랙루비 스터디 사진"
       },
 
@@ -61,7 +61,7 @@ export default {
                   <span class='about-activity-desc-3'>무료 프로그램입니다</span><br><br>\
                   <span class='about-activity-desc'>재미그래밍 / <a href='https://fungramming.github.io/class-list/' target='_blank'>https://fungramming.github.io/class-list/</a></span><br>\
                 </p>",
-        src: require("@/assets/img/background/background_1.png"),
+        src: require("@/assets/img/about/class.jpg"),
         alt: "블랙루비 파이썬 클래스 사진"
       },
 
@@ -74,7 +74,7 @@ export default {
                   <span class='about-activity-desc'>매주 주간동향이라는 이름으로 팀별 진행상황을 발표하고</span><br>\
                   <span class='about-activity-desc-1'>질의 응답 및 피드백 시간을 가지고 있습니다</span><br>\
                 </p>",
-        src: require("@/assets/img/background/background_1.png"),
+        src: require("@/assets/img/about/weekly.jpg"),
         alt: "블랙루비 주간동향 사진"
       }
     }

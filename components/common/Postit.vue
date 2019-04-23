@@ -65,6 +65,7 @@ export default {
   @include lg{
     font-size: 17px;
     padding: 0 30px ;
+    width: 250px;
   }
   @include md{
     font-size: 12.5px;

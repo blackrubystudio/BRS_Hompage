@@ -45,20 +45,20 @@ export default {
 
 @keyframes mobile-button{
   0%{
-   bottom: 100px;
+   bottom: 0px;
   }
   50%{
-    bottom: 105px;
+    bottom: 5px;
   }
   100%{
-    bottom: 100px;
+    bottom: 0px;
   }
 }
 
 .main-header-mobile-button{
   width: 30px;
   height: 30px;
-  background: linear-gradient(to right, #EEEEEE, #757575);
+  background: linear-gradient(to right, #EEEEEE, #212121);
   border-radius: 50%;
   opacity: .5;
 }

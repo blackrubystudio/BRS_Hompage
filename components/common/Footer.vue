@@ -10,7 +10,13 @@
           <li class="footer-content">사업자 등록번호 3878800394</li><br>
           <li class="footer-content">서울특별시 강남구 학동로 47길 6, 일우빌딩 3층</li><br>
           <li class="footer-content">TEL: 02-6949-2133 | FAX: 02-6949-2135</li><br>
-          <a href="mailto:info@blackrubystudio.com"><li class="footer-content mail">info@blackrubystudio.com</li></a>
+          <li class="footer-mail">
+            <div><a class="footer-icon" href="https://medium.com/@rubyblack" target="_blank"><img class="footer-icon" src="@/assets/img/footer/medium.png" alt="BlackRubyStudo 미디엄"></a></div>
+            <div><a class="footer-icon" href="https://blog.naver.com/PostList.nhn?blogId=blackruby_studio" target="_blank"><img class="footer-icon" src="@/assets/img/footer/blog.png" alt="BlackRubyStudo 블로그"></a></div>
+            <div><a class="footer-icon" href="https://www.youtube.com/channel/UCekGq0aZVTYTzfHfLQuWuAg" target="_blank"><img class="footer-icon" src="@/assets/img/footer/youtube.png" alt="BlackRubyStudo 유투브"></a></div>
+            <div><a href="mailto:info@blackrubystudio.com"><li class="footer-content mail">info@blackrubystudio.com</li></a></div>
+          
+          </li>
       </div>
     </div>
   </footer>
@@ -98,5 +104,35 @@ export default {}
   line-height: 5px;
   color: #FEFEFE;
   opacity: .7;
+}
+
+.footer-mail{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: right;
+  // grid-template-columns: 150px 50px;
+}
+
+.mail{
+  line-height: 25px;
+  @include md{
+    line-height: 15px;
+  }
+  @include sm{
+    line-height: 10px;
+  }
+}
+
+.footer-icon{
+  height: 20px;
+  opacity: .9;
+  padding-right: 20px;
+  @include md{
+  height: 15px;
+  padding-right: 15px;
+  }@include sm{
+  height: 10px;
+  padding-right: 10px;
+}
 }
 </style>

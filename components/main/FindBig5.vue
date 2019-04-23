@@ -52,6 +52,9 @@
       :title22 = tech.title22
       :title31 = tech.title31
       :title32 = tech.title32
+      :title1_mobile = tech.title1_mobile
+      :title2_mobile = tech.title2_mobile
+      :title3_mobile = tech.title3_mobile
       :desc1 = tech.desc1
       :desc2 = tech.desc2
       :desc3 = tech.desc3
@@ -60,7 +63,10 @@
       :img3 = tech.img3
       :alt1 = tech.alt1
       :alt2 = tech.alt2
-      :alt3 = tech.alt3>
+      :alt3 = tech.alt3
+      :desc1_mobile = tech.desc1_mobile
+      :desc2_mobile = tech.desc2_mobile
+      :desc3_mobile = tech.desc3_mobile>
       </common-technology>
     </section>
     <!-- Section3. Technology 끝 -->
@@ -85,12 +91,15 @@ export default {
         title22: "엔진",
         title31: "자연어처리",
         title32: "AI",
+        title1_mobile: '자동정보<br>수집기',
+        title2_mobile: '검색<br>엔진',
+        title3_mobile: '자연어<br>처리 AI',
         img1: require("@/assets/img/findbig5/findbig5_tech_1.png"),
         img2: require("@/assets/img/findbig5/findbig5_tech_2.png"),
         img3: require("@/assets/img/findbig5/findbig5_tech_3.png"),
-        alt1: '첫번째 이미지',
-        alt2: '두번째 이미지',
-        alt3: '세번째 이미지',
+        alt1: 'findbig5 자동정보 수집기 이미지',
+        alt2: 'findbig5 검색엔진 이미지',
+        alt3: 'findbit5 자연어 처리 이미지',
         desc1: "<span class='tech-desc-right-2'>Forbes, NewYorkTimes 등 일반 뉴스미디어와</span><br>\
                 <span class='tech-desc-right-1'>TechCrunchm, TheNextWeb등 IT 전문미디어 등 30여개 해외 언론사에서</span><br>\
                 IT기사를 실시간으로 수집합니다. 2016년 이후 기사들을 자유롭게 찾아볼 수 있습니다",
@@ -100,7 +109,32 @@ export default {
         desc3:"<span class='tech-desc-right-3'>형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라</span><br>\
                <span class='tech-desc-right-2'>문서의 역 가중치를 계산하여 문서 간 중요도를 분석하는 엔진을 제공합니다</span><br>\
                <span class='tech-desc-right-1'>토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다</span><br>\
-               또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다"
+               또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다",
+        desc1_mobile: " 검색을 통해 사용자가 원하는<br>\
+                        기사를 빠르게 찾을 수 있습니다<br>\
+                        유저들의 검색어 기록을<br>\
+                        학습, 중요도에 반영하여<br>\
+                        사용자별 맞춤 검색기능이 가능하고,<br>\
+                        기사들을 유저 기사로 묶어 내용이<br>\
+                        비슷한 기사를 다시 보지 않을 수 있습니다",
+        desc2_mobile: " Forbes, NewYorTimes등<br>\
+                        일반 뉴스 미디어와<br>\
+                        TechCrunch, TheNextWeb등<br>\
+                        IT전문 미디어 등 30여개 해외 언론사에서<br>\
+                        IT기사를 실시간으로 수집합니다<br>\
+                        2016년 이후 기사들을<br>\
+                        자유롭게 찾아 볼 수 있습니다",
+        desc3_mobile: " 형태소 분석을 기반으로 하여<br>\
+                        문서 내 중요단어 분석 뿐 아니라<br>\
+                        문서의 역가중치를 계산하여 문서 간<br>\
+                        중요도를 분석하는 엔진을 제공합니다<br>\
+                        토픽 추출의 정확도를 위하여<br>\
+                        LDA와 LSI 두 모델을 결합한<br>\
+                        튜닝모델을 활용하고 있습니다<br>\
+                        또한 기사 400자 요약 이내 요약기능으로<br>\
+                        사용자에게 전문을 읽는<br>\
+                        부담을 줄이고 있습니다",
+
       },
     }
   },

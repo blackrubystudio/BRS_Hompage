@@ -46,6 +46,9 @@
       :title22 = tech.title22
       :title31 = tech.title31
       :title32 = tech.title32
+      :title1_mobile = tech.title1_mobile
+      :title2_mobile = tech.title2_mobile
+      :title3_mobile = tech.title3_mobile
       :desc1 = tech.desc1
       :desc2 = tech.desc2
       :desc3 = tech.desc3
@@ -54,7 +57,10 @@
       :img3 = tech.img3
       :alt1 = tech.alt1
       :alt2 = tech.alt2
-      :alt3 = tech.alt3>
+      :alt3 = tech.alt3
+      :desc1_mobile = tech.desc1_mobile
+      :desc2_mobile = tech.desc2_mobile
+      :desc3_mobile = tech.desc3_mobile>
       </common-technology>
     </section>
     <!-- Section3. Technology 끝 -->
@@ -72,28 +78,34 @@ export default {
       },
 
       tech:{
-        title11: "자동 정보",
-        title12: "수집기",
-        title21: "검색",
-        title22: "엔진",
-        title31: "자연어처리",
-        title32: "AI",
+        title11: "클라우드",
+        title12: "PC",
+        title21: "모든",
+        title22: "디바이스",
+        title31: "다양한",
+        title32: "프로그램",
+        title1_mobile: '클라우드<br>PC',
+        title2_mobile: '모든<br>디바이스',
+        title3_mobile: '다양한<br>프로그램',
         img1: require("@/assets/img/beamme/beamme_tech_1.png"),
         img2: require("@/assets/img/beamme/beamme_tech_2.png"),
         img3: require("@/assets/img/beamme/beamme_tech_3.png"),
-        alt1: '첫번째 이미지',
-        alt2: '두번째 이미지',
-        alt3: '세번째 이미지',
-        desc1: "<span class='tech-desc-right-2'>Forbes, NewYorkTimes 등 일반 뉴스미디어와</span><br>\
-                <span class='tech-desc-right-1'>TechCrunchm, TheNextWeb등 IT 전문미디어 등 30여개 해외 언론사에서</span><br>\
-                IT기사를 실시간으로 수집합니다. 2016년 이후 기사들을 자유롭게 찾아볼 수 있습니다",
-        desc2:"<span class='tech-desc-left-2'>검색을 통해 사용자가 원하는 기사를 빠르게 찾을 수 있습니다</span><br>\
-               <span class='tech-desc-left-1'>유저들의 검색어 기록을 학습, 중요도에 반영하여 사용자 별 맞춤 검색기능이 가능하고</span><br>\
-               기사들을 유사 기사로 묶어 내용이 비슷한 기사를 다시 보지 않을 수 있습니다",
-        desc3:"<span class='tech-desc-right-3'>형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라</span><br>\
-               <span class='tech-desc-right-2'>문서의 역 가중치를 계산하여 문서 간 중요도를 분석하는 엔진을 제공합니다</span><br>\
-               <span class='tech-desc-right-1'>토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다</span><br>\
-               또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다"
+        alt1: 'Beamme 클라우드PC 이미지',
+        alt2: 'Beamme 모든 디바이스 이미지',
+        alt3: 'Beamme 다양한 프로그램 이미지',
+        desc1: "<span class='tech-desc-right-2'>초당 60프레임 이상, 지연시간 0.08초 이하의</span><br>\
+                <span class='tech-desc-right-1'>고사양 PC 스트리밍을 제공합니다</span><br>",
+        desc2:"<span class='tech-desc-left-2'>노트북, 태블릿, 핸드폰 등</span><br>\
+               <span class='tech-desc-left-1'>어떠한 기기든지 서비스 이용이 가능해집니다.</span><br>",
+        desc3:"<span class='tech-desc-right-3'>영상/음향 작업, 3D CAD 등 영상, 디자인, 음악 프로그램도</span><br>\
+               <span class='tech-desc-right-2'>저장공간 걱정없이 이용 가능합니다</span>",
+        desc1_mobile:"초당 60프레임 이상, 지연시간 0.08초<br>\
+                      이하의 고사양 PC 스트리밍을 제공합니다<br>",
+        desc2_mobile:"노트북, 태블릿, 핸드폰 등 어떠한<br>\
+                      기기든지 서비스 이용이 가능해집니다.<br>",
+        desc3_mobile:"영상/음향 작업, 3D CAD 등<br>\
+                      영상, 디자인, 음악 프로그램도<br>\
+                      저장공간 걱정없이 이용 가능합니다"
       }
     }
   },
@@ -185,9 +197,11 @@ h1{
   @extend %project-section-height;
   margin: -50px 0 50px 0;
   @include md{
+    margin: 50px 0 -50px 0;
     height: 550px;
   }
     @include sm{
+    margin: -50px 0 50px 0;
     height: 500px;
   }
 }
@@ -352,6 +366,90 @@ a{
   }
   .tech-desc-left-2{
     @extend %padding-left-2;
+  }
+
+  .tech-content-3{
+  grid-template-columns: 65% 35%;
+  grid-column-gap: 10px;
+  }
+
+  .tech-desc-3{
+    margin-right: -20px;
+    @include lg{
+      margin-right: -30px;
+    }
+    @include md{
+      margin-right: -50px;
+    }
+  }
+  .tech-line-1{
+  @extend %tech-line;
+  position: absolute;
+  width: 540px;
+  height: 130px;
+  left: 170px;
+  border-image: linear-gradient(to right, white 200px, black 200px 540px);
+  border-image-slice: 1;
+  @include lg{
+    height: 90px;
+    left: 140px;
+    width: 385px;
+    border-image: linear-gradient(to right, white 130px, black 130px 385px);
+    border-image-slice: 1;
+  }
+  @include md{
+    height: 90px;
+    width: 300px;
+    left: 80px;
+    border-image: linear-gradient(to right, white 110px, black 110px 385px);
+    border-image-slice: 1;
+  }
+  }
+  .tech-line-2{
+    @extend %tech-line;
+    position: absolute;
+    width: 320px;
+    height: 460px;
+    left: 470px;
+    border-image: linear-gradient(to right, black 0px 320px);
+    border-image-slice: 1;
+    @include lg{
+      height: 390px;
+      left: 350px;
+      border-image: linear-gradient(to right, black 0px 240px, white 240px 320px);
+      border-image-slice: 1;
+    }
+    @include md{
+      width: 180px;
+      height: 330px;
+      left: 250px;
+      border-image: linear-gradient(to right, black 0px 170px, white 170px 180px);
+      border-image-slice: 1;
+    }
+  }
+
+  .tech-line-3{
+    @extend %tech-line;
+    position: absolute;
+    width: 555px;
+    height: 825px;
+    left: 120px;
+    border-image: linear-gradient(to right, white 300px, black 300px 555px);
+    border-image-slice: 1;
+    @include lg{
+      height: 720px;
+      width: 430px;
+      left: 70px;
+      border-image: linear-gradient(to right, white 230px, black 230px 430px);
+      border-image-slice: 1;
+    }
+    @include md{
+      height: 605px;
+      width: 300px;
+      left: 65px;
+      border-image: linear-gradient(to right, white 165px, black 165px 300px);
+      border-image-slice: 1;
+    }
   }
 }
 </style>

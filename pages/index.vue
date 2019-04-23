@@ -14,7 +14,8 @@
   <!-- 3. Button & PostIt IMG (Absolute) -->
   <div class="main-absolute">
     <div class="main-button-group">
-      <button class="main-button" @click="component = 'fanrep'">Fanrep</button>
+      <button class="main-button" v-show='is_fanrep' @click="component = 'fanrep', is_fb5=true, is_fanrep=false">Fanrep.</button>
+      <button class="main-button" v-show='is_fb5' @click="component = 'findbig5', is_fb5=false, is_fanrep=true">FindBig5</button>
       <button class="main-button" @click="component = 'beamme'">BeamMe</button>
     </div>
     <div class="main-postit"></div>
@@ -80,7 +81,9 @@ export default {
       color: "color: #212121",
       // Default Component(Dynamic Component)
       component: 'findbig5',
-      isDropdown: false
+      isDropdown: false,
+      is_fanrep: true,
+      is_fb5: false,
     }
   },
 

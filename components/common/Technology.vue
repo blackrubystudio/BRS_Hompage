@@ -41,53 +41,17 @@
         <div class="tech-line-3"></div>
     </div>
     <div class="tech-container-mobile">
-      <div class="tech-container-mobile-title1">
-        <span class="tech-container-mobile-title1-1">자동정보</span><br>
-        <span class="tech-container-mobile-title1-2">수집기</span>
-      </div>
-      <img class="tech-container-mobile-img1" src="@/assets/img/findbig5/findbig5_tech_1.png" alt="">
-      <div class="tech-container-mobile-desc1">
-        Forbes, NewYorTimes등<br>
-        일반 뉴스 미디어와<br>
-        TechCrunch, TheNextWeb등<br>
-        IT전문 미디어 등 30여개 해외 언론사에서<br>
-        IT기사를 실시간으로 수집합니다<br>
-        2016년 이후 기사들을<br>
-        자유롭게 찾아 볼 수 있습니다
-      </div>
+      <div class="tech-container-mobile-title1" v-html="title1_mobile"></div>
+      <img class="tech-container-mobile-img1" :src="img1" :alt="alt1">
+      <div class="tech-container-mobile-desc1" v-html="desc1_mobile"></div>
 
-      <div class="tech-container-mobile-desc2">
-        검색을 통해 사용자가 원하는<br>
-        기사를 빠르게 찾을 수 있습니다<br>
-        유저들의 검색어 기록을<br>
-        학습, 중요도에 반영하여<br>
-        사용자별 맞춤 검색기능이 가능하고,<br>
-        기사들을 유저 기사로 묶어 내용이<br>
-        비슷한 기사를 다시 보지 않을 수 있습니다
-      </div>
-      <img class="tech-container-mobile-img2" src="@/assets/img/findbig5/findbig5_tech_2.png" alt="">
-      <div class="tech-container-mobile-title2">
-        <span class="tech-container-mobile-title2-1">검색</span><br>
-        <span class="tech-container-mobile-title2-2">엔진</span>
-      </div>
+      <div class="tech-container-mobile-desc2"  v-html="desc2_mobile"></div>
+      <img class="tech-container-mobile-img2" :src="img2" :alt="alt2">
+      <div class="tech-container-mobile-title2" v-html="title2_mobile"></div>
 
-       <div class="tech-container-mobile-title3">
-        <span class="tech-container-mobile-title3-1">자연어</span><br>
-        <span class="tech-container-mobile-title3-2">처리AI</span>
-      </div>
-      <img class="tech-container-mobile-img3" src="@/assets/img/findbig5/findbig5_tech_3.png" alt="">
-      <div class="tech-container-mobile-desc3">
-        형태소 분석을 기반으로 하여<br>
-        문서 내 중요단어 분석 뿐 아니라<br>
-        문서의 역가중치를 계산하여 문서 간<br>
-        중요도를 분석하는 엔진을 제공합니다<br>
-        토픽 추출의 정확도를 위하여<br>
-        LDA와 LSI 두 모델을 결합한<br>
-        튜닝모델을 활용하고 있습니다<br>
-        또한 기사 400자 요약 이내 요약기능으로<br>
-        사용자에게 전문을 읽는<br>
-        부담을 줄이고 있습니다
-      </div>
+      <div class="tech-container-mobile-title3" v-html="title3_mobile"></div>
+      <img class="tech-container-mobile-img3" :src="img3" :alt="alt3">
+      <div class="tech-container-mobile-desc3"  v-html="desc3_mobile"></div>
     </div>
     <div class="tech-container-mobile-bg">
       <img src="@/assets/img/common/technology.png" alt="" class="tech-container-mobile-bg-img">
@@ -98,7 +62,9 @@
 <script>
 export default {
   props: ['title11', 'title12', 'title21', 'title22', 'title31', 'title32', 
-          'img1', 'img2', 'img3', 'alt1', 'alt2', 'alt3', 'desc1', 'desc2', 'desc3'],
+          'img1', 'img2', 'img3', 'alt1', 'alt2', 'alt3', 'desc1', 'desc2', 'desc3',
+          'title1_mobile', 'title2_mobile', 'title3_mobile',
+          'desc1_mobile', 'desc2_mobile', 'desc3_mobile'],
 
   mounted(){
     window.addEventListener("scroll",  this.scrollDown);
@@ -280,14 +246,19 @@ export default {
   top: -50px;
   left: 0px;
   height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  opacity: .5;
   @include lg{
     height: 250px;
+    width: 250px;
     animation-name: left-to-right-lg;
     animation-duration: 2s;
     animation-fill-mode: forwards;
   }
   @include md{
     height: 180px;
+    width: 180px;
     animation-name: left-to-right-md;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -403,9 +374,13 @@ export default {
   top: -50px;
   left: 660px;
   height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  opacity: .5;
   @include lg{
     left: 530px;
     height: 250px;
+    width: 250px;
     animation-name: right-to-left-lg;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -413,6 +388,7 @@ export default {
   @include md{
     left: 370px;
     height: 180px;
+    width: 180px;
     animation-name: right-to-left-md;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -506,7 +482,7 @@ export default {
   @include md{
     margin-top: -20px;
     padding-left: 150px;
-    font-size: 10px;
+    font-size: 10px !important;
     line-height: 15px;
   }
 }
@@ -521,8 +497,12 @@ export default {
   top: -50px;
   left: 0px;
   height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  opacity: .5;
   @include lg{
     height: 250px;
+    width: 250px;
     animation-name: left-to-right-lg;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -530,6 +510,7 @@ export default {
     @include md{
     top: -20px;
     height: 180px;
+    width: 180px;
     animation-name: left-to-right-md;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -620,8 +601,6 @@ export default {
   }
 }
 
-
-
 .tech-container-mobile{
   display: none;
   @include sm{
@@ -644,25 +623,10 @@ export default {
   display: grid;
   text-align: right;
   padding: 0 5px;
-  }
-}
-
-.tech-container-mobile-title1-1{
-  display: none;
-  @include sm{
-  display: grid;
   font-family: $main-font;
   font-size: 25px;
   padding-right: 5px;
-  }
-}
-
-.tech-container-mobile-title1-2{
-  display: none;
-  @include sm{
-  display: grid;
-  font-family: $main-font;
-  font-size: 25px;
+  line-height: 30px;
   }
 }
 
@@ -671,25 +635,10 @@ export default {
   @include sm{
   display: grid;
   padding: 0 5px;
-  }
-}
-
-.tech-container-mobile-title2-1{
-  display: none;
-  @include sm{
-    display: grid;
   font-family: $main-font;
   font-size: 25px;
-  }
-}
-
-.tech-container-mobile-title2-2{
-  display: none;
-  @include sm{
-  display: grid;
-  font-family: $main-font;
-  font-size: 25px;
-  padding-left: 10px;
+  padding-right: 5px;
+  line-height: 30px;
   }
 }
 
@@ -699,25 +648,10 @@ export default {
   display: grid;
   text-align: right;
   padding: 0 5px;
-  }
-}
-
-.tech-container-mobile-title3-1{
-  display: none;
-  @include sm{
-  display: grid;
   font-family: $main-font;
   font-size: 25px;
-  padding-right: 10px;
-  }
-}
-
-.tech-container-mobile-title3-2{
-  display: none;
-  @include sm{
-  display: grid;
-  font-family: $main-font;
-  font-size: 25px;
+  padding-right: 5px;
+  line-height: 30px;
   }
 }
 
@@ -726,6 +660,8 @@ export default {
   @include sm{
   display: grid;
   height: 50px;
+  width: 50px;
+  border-radius: 50%;
   justify-self: center;
   z-index: 100;
   }

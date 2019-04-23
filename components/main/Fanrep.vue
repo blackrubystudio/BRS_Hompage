@@ -52,6 +52,9 @@
       :title22 = tech.title22
       :title31 = tech.title31
       :title32 = tech.title32
+      :title1_mobile = tech.title1_mobile
+      :title2_mobile = tech.title2_mobile
+      :title3_mobile = tech.title3_mobile
       :desc1 = tech.desc1
       :desc2 = tech.desc2
       :desc3 = tech.desc3
@@ -60,7 +63,10 @@
       :img3 = tech.img3
       :alt1 = tech.alt1
       :alt2 = tech.alt2
-      :alt3 = tech.alt3>
+      :alt3 = tech.alt3
+      :desc1_mobile = tech.desc1_mobile
+      :desc2_mobile = tech.desc2_mobile
+      :desc3_mobile = tech.desc3_mobile>
       </common-technology>
     </section>
     <!-- Section3. Technology 끝 -->
@@ -74,33 +80,52 @@ export default {
   data(){
     return{
       post:{
-        title: "DeokUs",
-        desc: "매일 전해받는<br>내 아이돌 소식<br>From. 더거스<br><br>이제 좋아하는 아이돌을<br>빠짐없이 만나보세요"
+        title: "FanRep.",
+        desc: "매일 전해받는<br>내 아이돌 소식<br>From. 팬랩<br><br>이제 좋아하는 아이돌을<br>빠짐없이 만나보세요"
       },
 
       tech:{
-        title11: "자동 기사",
-        title12: "수집기",
-        title21: "검색",
-        title22: "엔진",
-        title31: "자연어처리",
-        title32: "AI",
+        title11: "자동수집 및",
+        title12: "분류",
+        title21: "실시간",
+        title22: "컨텐츠 제공",
+        title31: "빅데이터",
+        title32: "분석",
+        title1_mobile: '자동수집<br>및 분류',
+        title2_mobile: '실시간<br>컨텐츠',
+        title3_mobile: '빅데이터<br>분석',
         img1: require("@/assets/img/fanrep/fanrep_tech_1.png"),
         img2: require("@/assets/img/fanrep/fanrep_tech_2.png"),
         img3: require("@/assets/img/fanrep/fanrep_tech_3.png"),
-        alt1: '첫번째 이미지',
-        alt2: '두번째 이미지',
-        alt3: '세번째 이미지',
-        desc1: "<span class='tech-desc-right-2'>Osen, 스타뉴스 등 일반 언론미디어와</span><br>\
-                <span class='tech-desc-right-1'>KBS, MBC, SBS 방송 및 라디오 등 각 미디어를 통해</span><br>\
-                실시간으로 수집한 아이돌의 스케쥴을 받아 볼 수 있습니다",
-        desc2:"<span class='tech-desc-left-2'>검색을 통해 사용자가 원하는 기사를 빠르게 찾을 수 있습니다</span><br>\
-               <span class='tech-desc-left-1'>유저들의 검색어 기록을 학습, 중요도에 반영하여 사용자 별 맞춤 검색기능이 가능하고</span><br>\
-               기사들을 유사 기사로 묶어 내용이 비슷한 기사를 다시 보지 않을 수 있습니다",
-        desc3:"<span class='tech-desc-right-3'>형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라</span><br>\
-               <span class='tech-desc-right-2'>문서의 역 가중치를 계산하여 문서 간 중요도를 분석하는 엔진을 제공합니다</span><br>\
-               <span class='tech-desc-right-1'>토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다</span><br>\
-               또한 기사 400자 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다"
+        alt1: 'fanrep 자동수집 및 분류 이미지',
+        alt2: 'fanrep 실시간 컨텐츠 제공 이미지',
+        alt3: 'fanrep 빅데이터 분석 이미지',
+        desc1: "<span class='tech-desc-right-2'>다양한 인터넷 뉴스부터</span><br>\
+                <span class='tech-desc-right-1'>방송 및 라디오 스케쥴과 각종 SNS까지</span><br>\
+                아이돌의 모든 자료를 자동으로 수집해 분류합니다",
+        desc2:"<span class='tech-desc-left-2'>다양한 채널의 동일한 자료를 선별하여 하나의 스케쥴로 제작합니다.</span><br>\
+               <span class='tech-desc-left-1'>정확한 스케쥴 컨텐츠를 팬들에게 실시간으로 제공하며</span><br>\
+               원하는 시간에 알림을 받아 볼 수 있도록 합니다",
+        desc3:"<span class='tech-desc-right-3'>빅데이터 대시보드와 이상 수치 알림 시스템을 구축하여</span><br>\
+               <span class='tech-desc-right-2'>지속적으로 AI를 개선하고 더 좋은 스케쥴 컨텐츠를 제공하고자 합니다</span><br>\
+               <span class='tech-desc-right-1'>축적된 팬들의 빅데이터를 분석하여 팬들에게 최적의 스케쥴을 제공하고자 합니다",
+        desc1_mobile:"다양한 인터넷 뉴스부터<br>\
+                      방송 및 라디오 스케쥴과 각종 SNS까지<br>\
+                      아이돌의 모든 자료를<br>\
+                      자동으로 수집해 분류합니다",
+        desc2_mobile:"다양한 채널의 동일한 자료를 선별하여<br>\
+                      하나의 스케쥴로 제작합니다.<br>\
+                      정확한 스케쥴 컨텐츠를 팬들에게<br>\
+                      실시간으로 제공하며<br>\
+                      원하는 시간에 알림을 받아<br>\
+                      볼 수 있도록 합니다",
+        desc3_mobile:"빅데이터 대시보드와 이상 수치<br>\
+                      알림 시스템을 구축하여<br>\
+                      지속적으로 AI를 개선하고 더 좋은<br>\
+                      스케쥴 컨텐츠를 제공하고자 합니다<br>\
+                      축적된 팬들의 빅데이터를 분석하여<br>\
+                      팬들에게 최적의 스케쥴을 제공하고자 합니다",
+
       },
     }
   }
@@ -382,5 +407,79 @@ a{
   .tech-desc-left-2{
     @extend %padding-left-2;
   }
+  .tech-content-2{
+    grid-column-gap: 10px;
+  }
+  .tech-line-1{
+  @extend %tech-line;
+  position: absolute;
+  width: 540px;
+  height: 140px;
+  left: 180px;
+  border-image: linear-gradient(to right, white 90px, black 90px 540px);
+  border-image-slice: 1;
+  @include lg{
+    height: 90px;
+    left: 140px;
+    width: 385px;
+    border-image: linear-gradient(to right, white 50px, black 50px 385px);
+    border-image-slice: 1;
+  }
+  @include md{
+    height: 95px;
+    width: 300px;
+    left: 80px;
+    border-image: linear-gradient(to right, white 60px, black 60px 385px);
+    border-image-slice: 1;
+  }
+}
+.tech-line-2{
+  @extend %tech-line;
+  position: absolute;
+  width: 430px;
+  height: 460px;
+  left: 470px;
+  border-image: linear-gradient(to right, black 0px 430px);
+  border-image-slice: 1;
+  @include lg{
+    width: 330px;
+    height: 390px;
+    left: 350px;
+    border-image: linear-gradient(to right, black 0px 330px);
+    border-image-slice: 1;
+  }
+  @include md{
+    width: 230px;
+    height: 330px;
+    left: 250px;
+    border-image: linear-gradient(to right, black 0px 230px);
+    border-image-slice: 1;
+  }
+}
+.tech-line-3{
+  @extend %tech-line;
+  position: absolute;
+  width: 555px;
+  height: 835px;
+  left: 200px;
+  border-image: linear-gradient(to right, white 240px, black 240px 555px);
+  border-image-slice: 1;
+  @include lg{
+    height: 710px;
+    width: 430px;
+    left: 135px;
+    border-image: linear-gradient(to right, white 170px, black 170px 555px);
+    border-image-slice: 1;
+  }
+  @include md{
+    height: 600px;
+    width: 300px;
+    left: 110px;
+    border-image: linear-gradient(to right, white 130px, black 130px 300px);
+    border-image-slice: 1;
+  }
+
+}
+  
 }
 </style>
