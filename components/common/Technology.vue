@@ -85,9 +85,7 @@ export default {
       var text1 = document.getElementById("tech-text-1")
       var text2 = document.getElementById("tech-text-2")
       var text3 = document.getElementById("tech-text-3")
-      console.log(this.getScrollPercent())
-      var y = this.getScrollPercent();
-      console.log(y)
+      var y = this.getScrollPercent()
       if(y<55){
         tech1.className = "tech-img-1 animation-right-to-left"
       }else if(y < 70){
