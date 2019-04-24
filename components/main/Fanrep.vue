@@ -29,6 +29,8 @@
       <div class="fanrep-introduce-container">
         <img class="fanrep-introduce-img-homepage1" src="@/assets/img/fanrep/fanrep_homepage1.png" alt="팬랩 랜딩페이지 메인">
         <img class="fanrep-introduce-img-homepage2" src="@/assets/img/fanrep/fanrep_homepage2.png" alt="팬랩 랜딩페이지 서브">
+        <img class="fanrep-introduce-img-homepage1-mobile" src="@/assets/img/fanrep/fanrep_homepage1_mobile.png" alt="팬랩 랜딩페이지 메인">
+        <img class="fanrep-introduce-img-homepage2-mobile" src="@/assets/img/fanrep/fanrep_homepage2_mobile.png" alt="팬랩 랜딩페이지 서브">
         <img class="fanrep-introduce-img-logo" src="@/assets/img/fanrep/fanrep_logo.png" alt="팬랩 로고">
         <div class="fanrep-introduce-desc">
           <p>좋아하는 아이돌을 입력하기만 하면<br>
@@ -199,6 +201,7 @@ h1{
   grid-template-columns: 9% 12% 75%;
   @include sm{
     z-index: 200;
+    padding-left: 25px;
   }
 }
 
@@ -207,7 +210,8 @@ h1{
   grid-template-columns: 10% 90%;
   z-index: 100;
   @include sm{
-    z-index: 300;;
+    z-index: 300;
+    padding-left: 25px;
   }
 }
 
@@ -232,6 +236,7 @@ h1{
     z-index: 200;
     height: 130px;
     top: 40px;
+    padding-left: 25px;
   }
 }
 
@@ -262,8 +267,8 @@ h1{
   @include sm{
     top: 50px;
     width: 300px;
-    height: 500px;
-    grid-template-columns: 50% 50%;
+    height: 400px;
+    grid-template-columns: 60% 40%;
   }
 }
 
@@ -278,12 +283,39 @@ h1{
     align-self: end;
     padding-bottom: 20px;
   }
+  @include sm{
+    display: none;
+  }
 }
 
 .fanrep-introduce-img-homepage2{
   grid-area: hom2;
   width: 90%;
   margin-left: -50px;
+  @include sm{
+    display: none;
+  }
+}
+
+.fanrep-introduce-img-homepage1-mobile{
+  display: none;
+  @include sm{
+    align-self: end;
+    display: grid;
+    grid-area: hom1;
+    width: 70%;
+    height: auto;
+  }
+}
+
+.fanrep-introduce-img-homepage2-mobile{
+  display: none;
+  @include sm{
+    padding-top: 10px;
+    display: grid;
+    grid-area: hom2;
+    width: 50%;
+  }
 }
 
 .fanrep-introduce-img-logo{

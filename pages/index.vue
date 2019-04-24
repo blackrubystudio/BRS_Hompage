@@ -31,7 +31,7 @@
     <img class="main-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
   </div>
   
-  <common-menumobile :color="color"></common-menumobile>
+  <!-- <common-menumobile :color="color"></common-menumobile> -->
 
   <!-- 5. Footer -->
   <common-footer></common-footer>

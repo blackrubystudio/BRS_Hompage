@@ -21,6 +21,7 @@
     <!-- Section2. Introduce 시작 -->
     <section class="beamme-introduce">
       <div class="beamme-introduce-container">
+        <img class="beamme-introduce-img-icon" src="@/assets/img/beamme/beamme_icon.png" alt="빔미 아이콘" >
         <img class="beamme-introduce-img-logo" src="@/assets/img/beamme/beamme_logo.png" alt="빔미 로고">
         <div class="beamme-introduce-desc">
           <p>
@@ -234,6 +235,17 @@ h1{
     "hom";
     grid-template-rows: 100px, 100px, 300px !important;
     grid-template-columns: 100%;
+  }
+}
+
+.beamme-introduce-img-icon{
+  display: none;
+  @include sm{
+    display: inline-block;
+    position: absolute;
+    top: 230px;
+    left: -10px;
+    height: 45px;
   }
 }
 

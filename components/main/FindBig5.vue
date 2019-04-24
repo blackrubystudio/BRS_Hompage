@@ -176,7 +176,7 @@ export default {
   "tl2 tl2";
     grid-template-rows: 150px 150px;
     grid-template-columns: 130px 170px;
-    margin-top: -40px;
+    margin-top: -70px;
     left: 0;
     width: 300px;
   }

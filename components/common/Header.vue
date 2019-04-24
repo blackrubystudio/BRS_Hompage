@@ -9,6 +9,16 @@
       <div class="header-content-group">
       <li class="header-about"><nuxt-link to="/about"  :style="color">about</nuxt-link></li>
       <li class="header-contact"><nuxt-link to="/contact"  :style="color">contact</nuxt-link></li>
+      <div>
+        <img class="header-menu" src="@/assets/img/header/menu.png" alt="블랙루비 홈페이지 메뉴" @click="isDropdown =! isDropdown">
+        <transition name="header-transition">
+          <div class="main-header-mobile-menu" v-if="isDropdown">
+            <li class="main-header-mobile-main"><nuxt-link to="/" :style="color">main</nuxt-link></li>
+            <li class="main-header-mobile-about"><nuxt-link to="/about" :style="color">about</nuxt-link></li>
+            <li class="main-header-mobile-contact"><nuxt-link to="/contact" :style="color">contact</nuxt-link></li>
+          </div>
+        </transition>
+      </div>
       </div>
     </div>
   </nav>
@@ -22,7 +32,12 @@ export default {
       // location.reload(true);
       this.$router.push("/");
     }
-  }
+  },
+  data(){
+    return{
+      isDropdown: false
+    }
+  },
 }
 </script>
 
@@ -86,9 +101,52 @@ export default {
   @include md{
     font-size: 13px;
   }
+}
+
+.header-about{
   @include sm{
     display: none;
   }
 }
 
+.header-contact{
+  @include sm{
+    display: none;
+  }
+}
+
+.header-menu{
+  display: none;
+  @include sm{
+    display: grid;
+    height: 20px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+}
+
+.header-transition-enter-active,
+.header-transition-leave-active {
+  transition: opacity 0.3s;
+}
+.header-transition-enter,
+.header-transition-leave-to {
+  opacity: 0;
+}
+
+.main-header-mobile-menu{
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  font-size: 11px;
+  line-height: 15px;
+
+  // width: 60px;
+  // font-size: 10px;
+  // margin-left: 0px;
+  // list-style-type: none;
+  // line-height: 15px;
+  // margin-bottom: 5px;
+  color: white;
+}
 </style>

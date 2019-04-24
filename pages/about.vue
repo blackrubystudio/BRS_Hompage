@@ -14,7 +14,7 @@
     <common-activity class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity>
     <common-activity class="about-weekly" :title=weekly.title :desc=weekly.desc :src=weekly.src :alt=weekly.alt></common-activity>
 
-    <common-menumobile :color="color"></common-menumobile>
+    <!-- <common-menumobile :color="color"></common-menumobile> -->
     <!-- 5. Footer -->
     <common-footer></common-footer>
   </div>
