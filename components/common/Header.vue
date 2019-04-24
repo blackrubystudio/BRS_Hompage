@@ -95,6 +95,7 @@ export default {
   @extend %hf-content-group;
   justify-self: end;
   align-self: center;
+  line-height: 20px;
   @include lg{
     font-size: 15px;
   }

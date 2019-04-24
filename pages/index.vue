@@ -14,9 +14,9 @@
   <!-- 3. Button & PostIt IMG (Absolute) -->
   <div class="main-absolute">
     <div class="main-button-group">
-      <button class="main-button" v-show='is_fanrep' @click="component = 'fanrep', is_fb5=true, is_fanrep=false">Fanrep.</button>
-      <button class="main-button" v-show='is_fb5' @click="component = 'findbig5', is_fb5=false, is_fanrep=true">FindBig5</button>
-      <button class="main-button" @click="component = 'beamme'">BeamMe</button>
+      <button class="main-button" v-show='is_fanrep' @click="component = 'fanrep', is_fb5=true, is_fanrep=false , is_beamme= true">Fanrep.</button>
+      <button class="main-button" v-show='is_fb5' @click="component = 'findbig5', is_fb5=false, is_fanrep=true , is_beamme= true">FindBig5</button>
+      <button class="main-button" v-show='is_beamme' @click="component = 'beamme', is_fb5=true, is_fanrep=true , is_beamme= false">BeamMe</button>
     </div>
     <div class="main-postit"></div>
   </div>
@@ -84,6 +84,7 @@ export default {
       isDropdown: false,
       is_fanrep: true,
       is_fb5: false,
+      is_beamme: true,
     }
   },
 
@@ -288,6 +289,7 @@ export default {
 
 .main-connection2{
   @extend %main-connection;
+  z-index: -10;
   top: 1900px;
 }
 

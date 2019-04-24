@@ -18,7 +18,7 @@ module.exports = {
             {
                 hid: "description",
                 name: "description",
-                content: "AI, 블록체인, 자연어처리, 검색엔진, 빅데이터 분석 등을 진행하는 스튜디오"
+                content: "AI, 블록체인 엔진 전문 개발 스튜디오"
             },
             {
                 property: "og:type",
@@ -30,7 +30,7 @@ module.exports = {
             },
             {
                 property: "og:description",
-                content: "AI, 블록체인, 자연어처리, 검색엔진, 빅데이터 분석 등을 진행하는 스튜디오"
+                content: "AI, 블록체인 엔진 전문 개발 스튜디오"
             },
             {
                 property: "og:url",
@@ -38,7 +38,7 @@ module.exports = {
             },
             {
                 property: "og:image",
-                content: "https://s3.ap-northeast-2.amazonaws.com/blackruby.studio/img/blackruby.svg"
+                content: "https://s3.ap-northeast-2.amazonaws.com/blackruby.studio/img/blackrubystudio.png"
             },
             {
                 name: "twitter:card",
@@ -54,11 +54,11 @@ module.exports = {
             },
             {
                 property: "twitter:description",
-                content: "AI, 블록체인, 자연어처리, 검색엔진, 빅데이터 분석 등을 진행하는 스튜디오"
+                content: "AI, 블록체인 엔진 전문 개발 스튜디오"
             },
             {
                 property: "twitter:image",
-                content: "https://s3.ap-northeast-2.amazonaws.com/blackruby.studio/img/blackruby.svg"
+                content: "https://s3.ap-northeast-2.amazonaws.com/blackruby.studio/img/blackrubystudio.png"
             }
         ],
 

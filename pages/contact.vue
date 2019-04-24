@@ -18,6 +18,7 @@
 import ContactUs from "@/components/contact/ContactUs.vue";
 
 export default {
+
   components: {
     // ContactProfilePark,
     // ContactProfileSo,

@@ -338,6 +338,7 @@ p{
   font-size: 12px;
   padding: 2px 10px;
   margin-right: 70px;
+  z-index: 500;
 }
 
 a{

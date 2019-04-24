@@ -616,7 +616,7 @@ export default {
     "des2 img2 tit2"
     "tit3 img3 des3";
     grid-template-columns: 125px 50px 125px;
-    grid-row-gap: 10px;
+    // grid-row-gap: 10px;
     align-items: center;
   }
 }
@@ -658,11 +658,13 @@ export default {
   }
 }
 
+
+
 .tech-container-mobile-img1{
   display: none;
   @include sm{
   display: grid;
-  margin-top: -2px;
+  margin-top: 50px;
   }
 }
 
@@ -670,7 +672,7 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  margin-top: 18px;
+  margin-top: 15px;
   }
 }
 
@@ -678,7 +680,7 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  margin-top: -8px;
+  margin-bottom: 90px;
   }
 }
 
@@ -708,10 +710,11 @@ export default {
 .tech-container-mobile-bg-img{
   display: none;
   @include sm{
-  background: lightblue;
-  width: 60px;
-  margin-left: 120px;
-  margin-top: -340px;
+  display: block;
+  width: 70px;
+  height: auto;
+  margin-left: 115px;
+  margin-top: -345px;
   // box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);  
   }
 }

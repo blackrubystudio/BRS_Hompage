@@ -35,6 +35,10 @@ import AboutGrowth from "@/components/about/Growth.vue";
 
 
 export default {
+  mounted(){
+    this.$router.push('/about')
+  },
+
   components: {
     AboutMain, 
     AboutGrowth,

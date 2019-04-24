@@ -33,7 +33,7 @@
         </div>
         <div class="fb5-introduce-desc">
           <span>전 세계 언론사에서 IT 관련 정보를 실시간 수집하여</span><br>
-          <span class="fb5-introduce-desc-1">일일 HOT TOPIC을 제공해 드립니다.</span><br><br>
+          <span class="fb5-introduce-desc-1">일일 HOT TOPIC을 제공해 드립니다</span><br><br>
           <span class="fb5-introduce-desc-2">AI를 활용한 쉽고 섬세한 분류 및 검색기능,</span><br>
           <span class="fb5-introduce-desc-3">모든 기사를 400자 이내로 요약까지</span><br><br>
           <span class="fb5-introduce-desc-4">시간은 너무나도 소중하니까요</span>
@@ -116,7 +116,7 @@ export default {
         desc2_mobile: " Forbes, NewYorTimes등 일반 뉴스 미디어와 TechCrunch, TheNextWeb등 IT전문 미디어 등 30여개 해외 언론사에서 IT기사를 실시간으로 수집합니다.\
                         2016년 이후 기사들을 자유롭게 찾아 볼 수 있습니다",
         desc3_mobile: " 형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라 문서의 역가중치를 계산하여 문서 간 중요도를 분석하는 엔진을 제공합니다\
-                        토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다.\
+                        토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다\
                         또한 기사 400자 요약 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다",
 
       },

@@ -30,6 +30,10 @@ export default {
       mapTypeId: "terrain",
       marker: { position: { lat: 37.517190, lng: 127.038939 } }
     };
+  },
+
+  beforeMount(){
+    this.$router.push('/contact')
   }
 };
 </script>
