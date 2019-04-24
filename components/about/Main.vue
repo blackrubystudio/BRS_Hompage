@@ -55,7 +55,7 @@ export default {}
   @include sm{
     width: 300px;
     height: 350px;
-    grid-template-columns: 50px 200px 0px;
+    grid-template-columns: 50px 220px 0px;
   }
 }
 
@@ -89,6 +89,7 @@ export default {}
   @include sm{
     font-size: 50px;
     align-self: start;
+    width: 210px;
   }
 }
 

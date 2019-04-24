@@ -93,7 +93,7 @@ export default {}
   }
   @include sm{
     padding-top: 17px;
-    font-size: 9px;
+    font-size: 8px;
     line-height: 7px;
     padding-right: 10px;
   }

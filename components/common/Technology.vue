@@ -71,35 +71,37 @@ export default {
   },
 
   methods: {
+    getScrollPercent() {
+      var h = document.documentElement, 
+          b = document.body,
+          st = 'scrollTop',
+          sh = 'scrollHeight';
+      return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+    },
     scrollDown(){
-        var tech1 = document.getElementById("tech-img-1")
-        var tech2 = document.getElementById("tech-img-2")
-        var tech3 = document.getElementById("tech-img-3")
-        var text1 = document.getElementById("tech-text-1")
-        var text2 = document.getElementById("tech-text-2")
-        var text3 = document.getElementById("tech-text-3")
-        // var line1 = document.getElementById("tech-line-1")
-        // console.log(window)
-        var y = window.scrollY;
-        if(y < 1650){
-          tech1.className = "tech-img-1"
-          tech2.className = "tech-img-2"
-          tech3.className = "tech-img-3"
-          text1.className = "tech-content-1"
-          text2.className = "tech-content-2"
-          text3.className = "tech-content-3"
-          // line1.className = "tech-content-1"
-        } else if(y < 2000){
-          tech1.className = "tech-img-1 animation-left-to-right"
-          text1.className = "tech-content-1 animation-show-text"
-          // line1.className = "tech-content-1 animation-show-line"
-        } else if(y <2350){
-          tech2.className = "tech-img-2 animation-right-to-left"
-          text2.className = "tech-content-2 animation-show-text"         
-        } else{
-          tech3.className = "tech-img-3 animation-left-to-right"
-          text3.className = "tech-content-3 animation-show-text"
-        }
+      var tech1 = document.getElementById("tech-img-1")
+      var tech2 = document.getElementById("tech-img-2")
+      var tech3 = document.getElementById("tech-img-3")
+      var text1 = document.getElementById("tech-text-1")
+      var text2 = document.getElementById("tech-text-2")
+      var text3 = document.getElementById("tech-text-3")
+      console.log(this.getScrollPercent())
+      var y = this.getScrollPercent();
+      console.log(y)
+      if(y<55){
+        tech1.className = "tech-img-1 animation-right-to-left"
+      }else if(y < 70){
+        tech1.className = "tech-img-1 animation-left-to-right"
+        text1.className = "tech-content-1 animation-show-text"
+        tech2.className = "tech-img-2 animation-left-to-right" 
+      }else if(y < 80){
+        tech2.className = "tech-img-2 animation-right-to-left" 
+        text2.className = "tech-content-2 animation-show-text" 
+        tech3.className = "tech-img-3 animation-right-to-left"
+      }else if(y < 90){
+        tech3.className = "tech-img-3 animation-left-to-right" 
+        text3.className = "tech-content-3 animation-show-text"
+      }
     },
 
   }
@@ -197,7 +199,7 @@ export default {
     height: 900px;
   }
   @include sm{
-    height: 350px;
+    height: 450px;
   }
 }
 
@@ -605,7 +607,7 @@ export default {
   display: none;
   @include sm{
     width: 300px;
-    height: 300px;
+    height: 400px;
     margin: 0 auto;
     display: grid;
     grid-template-areas:
@@ -617,7 +619,7 @@ export default {
     align-items: center;
   }
 }
-.tech-container-mobile-title1{
+.tech-container-mobile-title1, .tech-container-mobile-title3{
   display: none;
   @include sm{
   display: grid;
@@ -625,7 +627,7 @@ export default {
   padding: 0 5px;
   font-family: $main-font;
   font-size: 25px;
-  padding-right: 5px;
+  padding-right: 10px;
   line-height: 30px;
   }
 }
@@ -637,23 +639,11 @@ export default {
   padding: 0 5px;
   font-family: $main-font;
   font-size: 25px;
-  padding-right: 5px;
+  padding-left: 10px;
   line-height: 30px;
   }
 }
 
-.tech-container-mobile-title3{
-  display: none;
-  @include sm{
-  display: grid;
-  text-align: right;
-  padding: 0 5px;
-  font-family: $main-font;
-  font-size: 25px;
-  padding-right: 5px;
-  line-height: 30px;
-  }
-}
 
 .tech-container-mobile-img1, .tech-container-mobile-img2, .tech-container-mobile-img3{
   display: none;
@@ -695,9 +685,9 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  font-size: 6.4px;
+  font-size: 10px;
   padding: 0 5px;
-  line-height: 10px;
+  line-height: 13px;
   }
 }
 

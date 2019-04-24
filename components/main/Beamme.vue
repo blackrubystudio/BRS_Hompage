@@ -100,13 +100,9 @@ export default {
                <span class='tech-desc-left-1'>어떠한 기기든지 서비스 이용이 가능해집니다.</span><br>",
         desc3:"<span class='tech-desc-right-3'>영상/음향 작업, 3D CAD 등 영상, 디자인, 음악 프로그램도</span><br>\
                <span class='tech-desc-right-2'>저장공간 걱정없이 이용 가능합니다</span>",
-        desc1_mobile:"초당 60프레임 이상, 지연시간 0.08초<br>\
-                      이하의 고사양 PC 스트리밍을 제공합니다<br>",
-        desc2_mobile:"노트북, 태블릿, 핸드폰 등 어떠한<br>\
-                      기기든지 서비스 이용이 가능해집니다.<br>",
-        desc3_mobile:"영상/음향 작업, 3D CAD 등<br>\
-                      영상, 디자인, 음악 프로그램도<br>\
-                      저장공간 걱정없이 이용 가능합니다"
+        desc1_mobile:"초당 60프레임 이상, 지연시간 0.08초 이하의 고사양 PC 스트리밍을 제공합니다",
+        desc2_mobile:"노트북, 태블릿, 핸드폰 등 어떠한 기기든지 서비스 이용이 가능해집니다.",
+        desc3_mobile:"영상/음향 작업, 3D CAD 등 영상, 디자인, 음악 프로그램도 저장공간 걱정없이 이용 가능합니다"
       }
     }
   },
