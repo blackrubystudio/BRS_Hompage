@@ -7,21 +7,20 @@
     <!-- <contact-profile-park></contact-profile-park> -->
     <!-- <contact-profile-so></contact-profile-so> -->
     <contact-us></contact-us>
-    <!-- <common-menumobile :color="color"></common-menumobile> -->
     <common-footer></common-footer>
   </div>
 </template>
 
 <script>
 // Import Contact
-import ContactProfilePark from "@/components/contact/ProfilePark.vue";
-import ContactProfileSo from "@/components/contact/ProfileSo.vue";
+// import ContactProfilePark from "@/components/contact/ProfilePark.vue";
+// import ContactProfileSo from "@/components/contact/ProfileSo.vue";
 import ContactUs from "@/components/contact/ContactUs.vue";
 
 export default {
   components: {
-    ContactProfilePark,
-    ContactProfileSo,
+    // ContactProfilePark,
+    // ContactProfileSo,
     ContactUs,
   },
 
@@ -31,7 +30,6 @@ export default {
         img: require('@/assets/img/common/logo_name_white.svg'),
         color: "color:#FEFEFE"
       },
-      color: "color: #FEFEFE",
     }
   }
 }

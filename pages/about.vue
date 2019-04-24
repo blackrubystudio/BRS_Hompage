@@ -18,6 +18,12 @@
     <common-activity class="about-python-mb" :title=python.title :desc=python.desc_mb :src=python.src :alt=python.alt></common-activity>
     <common-activity class="about-weekly-mb" :title=weekly.title :desc=weekly.desc_mb :src=weekly.src :alt=weekly.alt></common-activity>
     <!-- <common-menumobile :color="color"></common-menumobile> -->
+
+      <!-- 4.5 Scroll Up button -->
+    <div class="about-scrollup">
+      <img class="about-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
+    </div>
+
     <!-- 5. Footer -->
     <common-footer></common-footer>
   </div>
@@ -33,7 +39,14 @@ export default {
     AboutMain, 
     AboutGrowth,
   },
-  
+
+  methods:{
+    scrollUp(){
+      document.getElementById("about").scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  },
+
   data(){
     return{
       // Header white
@@ -41,7 +54,7 @@ export default {
         img: require('@/assets/img/common/logo_name_white.svg'),
         color: "color:#FEFEFE"
       },
-      color: "color: #212121",
+      // color: "color: #212121",
       // Activity component content
       study:{
         title: "<span class='about-activity-white'>ST</span>UDY",
@@ -105,6 +118,56 @@ export default {
 </script>
 
 <style lang="scss">
+.about-scrollup{
+  height: 50px;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+  margin-bottom: 20px;
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    margin-bottom: 10px;
+    width: 550px;
+  }
+  @include sm{
+    display: none;
+  }
+}
+
+.about-scrollup-button{
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  animation-name: scrollup-button;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  @include lg{
+    width: 40px;
+  }
+  @include md{
+    width: 30px;
+  }
+}
+
+@keyframes scrollup-button{
+  0%{
+    padding-top: 0px;
+  }
+  50%{
+    padding-top: 5px;
+  }
+  100%{
+    padding-top: 0px;
+  }
+}
+
 .about-activity-white{
   @extend %font-main;
   color: #FEFEFE;
