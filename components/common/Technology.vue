@@ -72,6 +72,7 @@ export default {
 
   methods: {
     getScrollPercent() {
+      // 전체페이지의 스크롤 위치를 퍼센트로 변경
       var h = document.documentElement, 
           b = document.body,
           st = 'scrollTop',
@@ -79,6 +80,7 @@ export default {
       return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
     },
     scrollDown(){
+      // 스크롤 위치에 따른 move애니메이션
       var tech1 = document.getElementById("tech-img-1")
       var tech2 = document.getElementById("tech-img-2")
       var tech3 = document.getElementById("tech-img-3")
@@ -86,6 +88,7 @@ export default {
       var text2 = document.getElementById("tech-text-2")
       var text3 = document.getElementById("tech-text-3")
       var y = this.getScrollPercent()
+      // console.log(y)
       if(y<55){
         tech1.className = "tech-img-1 animation-right-to-left"
       }else if(y < 70){
@@ -687,6 +690,10 @@ export default {
   padding: 0 5px;
   line-height: 13px;
   }
+}
+
+.tech-container-mobile-desc2{
+  text-align: right;
 }
 
 .tech-container-mobile-bg{

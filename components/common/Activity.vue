@@ -56,7 +56,7 @@ export default {
   @include sm{
     width: 280px;
     height: 200px;
-    grid-template-columns: 120px 150px;
+    grid-template-columns: 40% 60%;
   }
 }
 
