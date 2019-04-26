@@ -105,12 +105,14 @@ export default {
 }
 
 .header-about{
+  padding: 2px 0;
   @include sm{
     display: none;
   }
 }
 
 .header-contact{
+  padding: 2px 0;
   @include sm{
     display: none;
   }
