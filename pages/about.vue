@@ -238,68 +238,78 @@ export default {
     grid-template-areas:
     "bl1 img"
     "con img"
-    "bl2 img";
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 25% 35% 40%;
-    left: 100px;
-    margin-top: -50px;
+    "bl2 img" !important;
+    grid-template-columns: 55% 45% !important;;
+    grid-template-rows: 25% 35% 40% !important;;
+    left: 100px !important;; 
+    margin-top: -50px !important;;
     @include xl{
-      left: 0px;
+      left: 0px !important;;
     }
     @include md{
-      left: 10px;
+      left: 10px !important;;
+    }
+    @include sm{
+     grid-template-areas:
+    "bl1 img"
+    "con img"
+    "bl2 img" !important;
     }
   }
 
   .about-activity-content{
-    text-align: right;
+    text-align: right !important;
   }
 
   .about-activity-title{
-    left: 130px;
+    left: 130px !important;
     @include md{
-      top: -30px;
-      left: 100px;
+      top: -30px !important;
+      left: 100px !important;
     }
   }
 
   .about-activity-desc{
-    left: 130px;
-    padding: 20px 10px 20px 0;
+    left: 180px !important;
+    padding: 20px 10px 20px 0 !important;
+
+    @include lg{
+      left: 40px !important;
+    }
     @include md{
-      top: -30px;
-      left: 70px;
+      top: -20px !important;
+      left: 30px !important;
     }
     @include sm{
-      left: -40px;
-      padding: 10px 0px 10px 0;
-      width: 190px;
+      left: -40px !important;
+      padding: 10px 0px 10px 0 !important;
+      width: 190px !important;
     }
   }
 
   .about-activity-desc-1{
     @extend %padding-right-1;
     @include sm{
-      padding-right: 3px;
+      padding-right: 3px !important;
     }
   }
 
   .about-activity-desc-2{
     @extend %padding-right-2;
     @include sm{
-      padding-right: 6px;
+      padding-right: 6px !important;
     }
   }
 
   .about-activity-desc-3{
     @extend %padding-right-3;
       @include sm{
-      padding-right: 9px;
+      padding-right: 9px !important;
     }
   }
 
   a{
-    color: #212121;
+    color: #212121 !important;
   }
 
 }
