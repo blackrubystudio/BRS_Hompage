@@ -4,7 +4,7 @@
 
 <template>
 <div id="main">
-
+<div>
   <!-- 1. Header -->
   <common-header :img=header.img :color=header.color></common-header>
  
@@ -38,23 +38,23 @@
 
   <!-- 6. Connection -->
   <!-- Connection1. 답을 찾다 시작 -->
-  <!-- <div class="main-connection1">
+  <div class="main-connection1">
     <div class="main-connection1-container">
       <div class="main-connenction1-content">답을 찾다</div>
       <div class="main-connection1-line"></div>
     </div>
-  </div> -->
+  </div>
   <!-- // Connection1. 답을 찾다 끝 -->
 
   <!-- Connection2. 기술 혁신 시작 -->
-  <!-- <div class="main-connection2">
+  <div class="main-connection2">
     <div class="main-connection2-container">
       <div class="main-connenction2-content">기술 혁신</div>
       <div class="main-connection2-line"></div>
     </div>
-  </div> -->
+  </div>
   <!-- // Connection2. 기술 혁신 끝 -->
-
+</div>
  </div>
 </template>
 
