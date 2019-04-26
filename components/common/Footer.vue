@@ -15,7 +15,6 @@
             <div><a class="footer-icon" href="https://blog.naver.com/PostList.nhn?blogId=blackruby_studio" target="_blank"><img class="footer-icon" src="@/assets/img/footer/blog.png" alt="BlackRubyStudo 블로그"></a></div>
             <div><a class="footer-icon" href="https://www.youtube.com/channel/UCekGq0aZVTYTzfHfLQuWuAg" target="_blank"><img class="footer-icon" src="@/assets/img/footer/youtube.png" alt="BlackRubyStudo 유투브"></a></div>
             <div><a href="mailto:info@blackrubystudio.com"><li class="footer-content mail">info@blackrubystudio.com</li></a></div>
-          
           </li>
       </div>
     </div>

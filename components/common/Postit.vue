@@ -28,7 +28,7 @@ export default {
     left: 310px;
   }
   @include sm{
-    width: 300px;
+    width: 0px;
   }
 }
 

@@ -440,8 +440,7 @@ a{
     width: 200px;
   }
   @include sm{
-    width: 0;
-
+    width: 0 !important;
   }
 }
 </style>

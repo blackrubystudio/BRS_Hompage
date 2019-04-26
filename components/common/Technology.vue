@@ -88,7 +88,6 @@ export default {
       var text2 = document.getElementById("tech-text-2")
       var text3 = document.getElementById("tech-text-3")
       var y = this.getScrollPercent()
-      // console.log(y)
       if(y<55){
         tech1.className = "tech-img-1 animation-right-to-left"
         tech2.className = "tech-img-2 animation-left-to-right" 
@@ -96,11 +95,9 @@ export default {
       }else if(y < 70){
         tech1.className = "tech-img-1 animation-left-to-right"
         text1.className = "tech-content-1 animation-show-text"
-        // tech2.className = "tech-img-2 animation-left-to-right" 
       }else if(y < 80){
         tech2.className = "tech-img-2 animation-right-to-left" 
         text2.className = "tech-content-2 animation-show-text" 
-        // tech3.className = "tech-img-3 animation-right-to-left"
       }else if(y < 90){
         tech3.className = "tech-img-3 animation-left-to-right" 
         text3.className = "tech-content-3 animation-show-text"
@@ -609,17 +606,19 @@ export default {
 .tech-container-mobile{
   display: none;
   @include sm{
+    position: relative;
     width: 300px;
-    height: 400px;
+    height: 450px;
     margin: 0 auto;
+    // padding-bottom: 550px;
     display: grid;
     grid-template-areas:
     "tit1 img1 des1"
     "des2 img2 tit2"
     "tit3 img3 des3";
-    grid-template-columns: 125px 50px 125px;
-    // grid-row-gap: 10px;
+    grid-template-columns: 110px 80px 110px;
     align-items: center;
+    grid-template-rows: 130px 130px 190px;
   }
 }
 .tech-container-mobile-title1, .tech-container-mobile-title3{
@@ -627,13 +626,14 @@ export default {
   @include sm{
   display: grid;
   text-align: right;
-  padding: 0 5px;
+  padding: 0 10px;
   font-family: $main-font;
-  font-size: 25px;
+  font-size: 20px;
   padding-right: 10px;
   line-height: 30px;
   }
 }
+
 
 .tech-container-mobile-title2{
   display: none;
@@ -641,7 +641,7 @@ export default {
   display: grid;
   padding: 0 5px;
   font-family: $main-font;
-  font-size: 25px;
+  font-size: 20px;
   padding-left: 10px;
   line-height: 30px;
   }
@@ -657,6 +657,7 @@ export default {
   border-radius: 50%;
   justify-self: center;
   z-index: 100;
+  opacity: .5;
   }
 }
 
@@ -666,7 +667,7 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  margin-top: 50px;
+  margin-top: 40px;
   }
 }
 
@@ -674,7 +675,7 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  margin-top: 15px;
+  margin-top: 2px;
   }
 }
 
@@ -682,7 +683,7 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  margin-bottom: 90px;
+  margin-bottom: 110px;
   }
 }
 
@@ -690,10 +691,15 @@ export default {
   display: none;
   @include sm{
   display: grid;
-  font-size: 10px;
-  padding: 0 5px;
+  font-size: 9px;
+  padding: 0px;
   line-height: 13px;
   }
+}
+
+.tech-container-mobile-title3{
+  align-self: start;
+  margin-top: 30px;
 }
 
 .tech-container-mobile-desc2{
@@ -713,11 +719,10 @@ export default {
   display: none;
   @include sm{
   display: block;
-  width: 70px;
-  height: auto;
-  margin-left: 115px;
-  margin-top: -345px;
-  // box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);  
+  justify-self: center;
+  width: auto;
+  height: 300px;
+  margin-top: -400px;
   }
 }
 </style>
