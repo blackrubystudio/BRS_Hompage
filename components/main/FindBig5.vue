@@ -95,7 +95,7 @@ export default {
         title2_mobile: '검색<br>엔진',
         title3_mobile: '자연어<br>처리 AI',
         img1: require("@/assets/img/findbig5/findbig5_tech_1.png"),
-        img2: require("@/assets/img/findbig5/findbig5_tech_2.png"),
+        img2: require("@/assets/img/findbig5/findbig5_tech_2.jpeg"),
         img3: require("@/assets/img/findbig5/findbig5_tech_3.png"),
         alt1: 'findbig5 자동정보 수집기 이미지',
         alt2: 'findbig5 검색엔진 이미지',
