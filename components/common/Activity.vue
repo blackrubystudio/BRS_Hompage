@@ -64,7 +64,7 @@ export default {
   grid-area: img;
   width: 100%;
   height: 100%;
-  opacity: .5;
+  opacity: .7;
 }
 
 .about-activity-content{

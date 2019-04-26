@@ -107,17 +107,21 @@ export default {}
 }
 
 .about-main-line{
-  position: absolute;
+  position: relative;
+  top: 10px; 
   margin-top: 10px;
-  right: 240px;
+  right: -180px;
   width: 50px;
   border-bottom: 0.5px solid #FEFEFE;
+  @include xl{
+    right: -60px;
+  }
   @include lg{
+    right: -25px;
     border-bottom: 1px solid #FEFEFE;
-    right: 130px;
   }
   @include md{ 
-    right: 110px;
+    right: -10px;
   }
   @include sm{
     display: none;
