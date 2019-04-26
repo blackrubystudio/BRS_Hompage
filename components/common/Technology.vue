@@ -91,14 +91,16 @@ export default {
       // console.log(y)
       if(y<55){
         tech1.className = "tech-img-1 animation-right-to-left"
+        tech2.className = "tech-img-2 animation-left-to-right" 
+        tech3.className = "tech-img-3 animation-right-to-left"
       }else if(y < 70){
         tech1.className = "tech-img-1 animation-left-to-right"
         text1.className = "tech-content-1 animation-show-text"
-        tech2.className = "tech-img-2 animation-left-to-right" 
+        // tech2.className = "tech-img-2 animation-left-to-right" 
       }else if(y < 80){
         tech2.className = "tech-img-2 animation-right-to-left" 
         text2.className = "tech-content-2 animation-show-text" 
-        tech3.className = "tech-img-3 animation-right-to-left"
+        // tech3.className = "tech-img-3 animation-right-to-left"
       }else if(y < 90){
         tech3.className = "tech-img-3 animation-left-to-right" 
         text3.className = "tech-content-3 animation-show-text"
