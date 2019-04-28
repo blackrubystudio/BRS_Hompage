@@ -243,52 +243,49 @@ export default {
     grid-template-areas:
     "bl1 img"
     "con img"
-    "bl2 img";
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 25% 35% 40% ;
-    left: 100px ; 
-    margin-top: -50px ;
+    "bl2 img" !important;
+    grid-template-columns: 55% 45% !important;
+    grid-template-rows: 25% 35% 40% !important;
+    left: 100px !important; 
+    margin-top: -50px !important;
     @include xl{
-      left: 0px;
+      left: 0px !important;
     }
     @include md{
-      left: 10px;
+      left: 10px !important;
     }
     @include sm{
-     grid-template-areas:
-    "bl1 img"
-    "con img"
-    "bl2 img" ;
+     left: 10px !important;
     }
   }
 
   .about-activity-content{
-    text-align: right;
+    text-align: right !important;
   }
 
   .about-activity-title{
-    left: 130px;
+    left: 130px !important;
     @include md{
-      top: -30px;
-      left: 100px;
+      top: -30px !important;
+      left: 100px !important;
     }
   }
 
   .about-activity-desc{
-    left: 180px;
-    padding: 20px 0px 20px 0;
+    left: 180px !important;
+    padding: 20px 0px !important;
 
     @include lg{
-      left: 40px;
+      left: 40px !important;
     }
     @include md{
-      top: -20px;
-      left: 30px;
+      top: -20px !important;
+      left: 30px !important;
     }
     @include sm{
-      left: -40px;
-      padding: 10px 0px;
-      width: 190px;
+      left: -40px !important;
+      padding: 10px 0px !important;
+      width: 190px !important;
     }
   }
 
