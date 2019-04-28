@@ -75,7 +75,7 @@ export default {
     return{
       post:{
         title: "Beam Me",
-        desc: "클릭 한번으로 만나는<br>당신의 고사양 PC<br>컴퓨터 구입한다고 고민하지 말고<br>BEAMME 하세요<br><br>우리집 노트북을 최신컴으로"
+        desc: "클릭 한번으로 만나는<br>당신의 고사양 PC<br><br>고민하지 말고<br>BEAMME 하세요"
       },
 
       tech:{
