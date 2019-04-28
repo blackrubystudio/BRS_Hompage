@@ -28,5 +28,5 @@
 
 ## Contact
 <p align="center">
-<img src="./contact.png" align="center" width="700">
+<img src="./ver2/contact.png" align="center" width="700">
 </p>
