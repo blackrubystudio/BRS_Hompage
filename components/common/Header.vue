@@ -101,6 +101,7 @@ export default {
   }
   @include md{
     font-size: 13px;
+    line-height: 15px;
   }
 }
 

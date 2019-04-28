@@ -188,6 +188,7 @@ h1{
 .fanrep-title-container-title-1{
   display: grid;
   grid-template-columns: 9% 12% 75%;
+  grid-gap: 10px;
   @include sm{
     z-index: 200;
     padding-left: 25px;

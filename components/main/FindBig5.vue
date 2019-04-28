@@ -29,7 +29,7 @@
         <img class="fb5-introduce-background" src="@/assets/img/findbig5/findbig5_background.png" alt="FindBig5 배경라인">
         <div class="fb5-introduce-title">
           <img class="fb5-introduce-img-logo" src="@/assets/img/findbig5/findbig5_logo.png" alt="FindBigFive 로고">
-          <a class="button fb5-introduce-button" href="https://www.findbig5.com/main" target="_blank" >자세히 보기</a>
+          <a class="button fb5-introduce-button" href="https://www.findbig5.com" target="_blank" >자세히 보기</a>
         </div>
         <div class="fb5-introduce-desc">
           <span>전 세계 언론사에서 IT 관련 정보를 실시간 수집하여</span><br>
@@ -252,10 +252,12 @@ export default {
  }
  @include md{
    padding-left: 50px;
-   font-size: 13px;
  }
  @include sm{
    display: none;
+ }
+ @include mls{
+   font-size: 9px;
  }
 }
 

@@ -206,7 +206,7 @@ $num: 4;
 
 // Mobile landscape screen 모바일 가로 화면
 @mixin mls {
-    @media ($mobile-landscape-screen) {
+    @media ( max-height: 500px) and ( min-width: 321px) {
         @content;
     }
 }

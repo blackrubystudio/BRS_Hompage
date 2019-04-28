@@ -3,29 +3,31 @@
 
 <template>
   <div id="about">
-    <!-- 1. Header -->
-    <common-header :img=header.img :color=header.color></common-header>
-    <!-- 2. Main -->
-    <about-main></about-main> 
-    <!-- 3. Growth -->
-    <about-growth></about-growth>
-    <!-- 4. Activity (Study, Python-Class, Weekly-Meeting) -->
-    <common-activity class="about-study" :title=study.title :desc=study.desc :src=study.src :alt=study.alt></common-activity>
-    <common-activity class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity>
-    <common-activity class="about-weekly" :title=weekly.title :desc=weekly.desc :src=weekly.src :alt=weekly.alt></common-activity>
+    <div>
+      <!-- 1. Header -->
+      <common-header :img=header.img :color=header.color></common-header>
+      <!-- 2. Main -->
+      <about-main></about-main> 
+      <!-- 3. Growth -->
+      <about-growth></about-growth>
+      <!-- 4. Activity (Study, Python-Class, Weekly-Meeting) -->
+      <common-activity class="about-study" :title=study.title :desc=study.desc :src=study.src :alt=study.alt></common-activity>
+      <common-activity class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity>
+      <common-activity class="about-weekly" :title=weekly.title :desc=weekly.desc :src=weekly.src :alt=weekly.alt></common-activity>
 
-    <common-activity class="about-study-mb" :title=study.title :desc=study.desc_mb :src=study.src :alt=study.alt></common-activity>
-    <common-activity class="about-python-mb" :title=python.title :desc=python.desc_mb :src=python.src :alt=python.alt></common-activity>
-    <common-activity class="about-weekly-mb" :title=weekly.title :desc=weekly.desc_mb :src=weekly.src :alt=weekly.alt></common-activity>
-    <!-- <common-menumobile :color="color"></common-menumobile> -->
+      <common-activity class="about-study-mb" :title=study.title :desc=study.desc_mb :src=study.src :alt=study.alt></common-activity>
+      <common-activity class="about-python-mb" :title=python.title :desc=python.desc_mb :src=python.src :alt=python.alt></common-activity>
+      <common-activity class="about-weekly-mb" :title=weekly.title :desc=weekly.desc_mb :src=weekly.src :alt=weekly.alt></common-activity>
+      <!-- <common-menumobile :color="color"></common-menumobile> -->
 
-      <!-- 4.5 Scroll Up button -->
-    <div class="about-scrollup">
-      <img class="about-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
+        <!-- 4.5 Scroll Up button -->
+      <div class="about-scrollup">
+        <img class="about-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
+      </div>
+
+      <!-- 5. Footer -->
+      <common-footer></common-footer>
     </div>
-
-    <!-- 5. Footer -->
-    <common-footer></common-footer>
   </div>
 </template>
 
@@ -82,10 +84,10 @@ export default {
       python:{
         title: "PYTH<span class='about-activity-white'>ON</span>\
                 CLA<span class='about-activity-white'>SS</span>",
-        desc: "<p><span class='about-activity-desc'>블랙루비 주관의 '재미그래밍'프로그램은</span><br>\
-                  <span class='about-activity-desc-1'>개발에 관심있는 모든이와 함께 진행하는 열린 교육 프로그램으로</span><br>\
-                  <span class='about-activity-desc-2'>기초 프로그패밍 공부를 통해 개발 전반에 대한 이해를 돕는</span><br>\
-                  <span class='about-activity-desc-3'>무료 프로그램입니다</span><br><br>\
+        desc: "<p><span class='about-activity-desc-1'>블랙루비 주관의 '재미그래밍'프로그램은</span><br>\
+                  <span class='about-activity-desc-2'>개발에 관심있는 모든이와 함께 진행하는 열린 교육 프로그램으로</span><br>\
+                  <span class='about-activity-desc-3'>기초 프로그패밍 공부를 통해 개발 전반에 대한 이해를 돕는</span><br>\
+                  <span class='about-activity-desc-4'>무료 프로그램입니다</span><br><br>\
                 </p>",
         desc_mb: "<p><span class='about-activity-desc'>블랙루비 주관의 '재미그래밍'프로그램은</span><br><br>\
                   <span class='about-activity-desc-1'>개발에 관심있는 모든이와 함께 진행하는 </span><br><br>\
@@ -227,6 +229,9 @@ export default {
 
 .about-activity-desc-4{
   @extend %padding-left-4;
+    @include md{
+    font-size: 12px;
+    }
     @include sm{
     font-size: 8px;
     padding-left: 12px;
@@ -238,78 +243,89 @@ export default {
     grid-template-areas:
     "bl1 img"
     "con img"
-    "bl2 img" !important;
-    grid-template-columns: 55% 45% !important;;
-    grid-template-rows: 25% 35% 40% !important;;
-    left: 100px !important;; 
-    margin-top: -50px !important;;
+    "bl2 img";
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 25% 35% 40% ;
+    left: 100px ; 
+    margin-top: -50px ;
     @include xl{
-      left: 0px !important;;
+      left: 0px;
     }
     @include md{
-      left: 10px !important;;
+      left: 10px;
     }
     @include sm{
      grid-template-areas:
     "bl1 img"
     "con img"
-    "bl2 img" !important;
+    "bl2 img" ;
     }
   }
 
   .about-activity-content{
-    text-align: right !important;
+    text-align: right;
   }
 
   .about-activity-title{
-    left: 130px !important;
+    left: 130px;
     @include md{
-      top: -30px !important;
-      left: 100px !important;
+      top: -30px;
+      left: 100px;
     }
   }
 
   .about-activity-desc{
-    left: 180px !important;
-    padding: 20px 10px 20px 0 !important;
+    left: 180px;
+    padding: 20px 0px 20px 0;
 
     @include lg{
-      left: 40px !important;
+      left: 40px;
     }
     @include md{
-      top: -20px !important;
-      left: 30px !important;
+      top: -20px;
+      left: 30px;
     }
     @include sm{
-      left: -40px !important;
-      padding: 10px 0px 10px 0 !important;
-      width: 190px !important;
+      left: -40px;
+      padding: 10px 0px;
+      width: 190px;
     }
   }
 
   .about-activity-desc-1{
-    @extend %padding-right-1;
+    padding: 0;
+    padding-right: 10px;
     @include sm{
-      padding-right: 3px !important;
+      padding-right: 3px;
     }
   }
 
   .about-activity-desc-2{
-    @extend %padding-right-2;
+    padding: 0;
+    padding-right: 20px;
     @include sm{
-      padding-right: 6px !important;
+      padding-right: 6px;
     }
   }
 
   .about-activity-desc-3{
-    @extend %padding-right-3;
-      @include sm{
-      padding-right: 9px !important;
+    padding: 0;
+    padding-right: 30px;
+    @include sm{
+      padding-right: 9px;
+    }
+  }
+
+  .about-activity-desc-4{
+    padding: 0;
+    padding-right: 40px;
+    @include sm{
+      padding-right: 12px;
     }
   }
 
   a{
-    color: #212121 !important;
+    color: #212121;
   }
 
 }
@@ -439,5 +455,3 @@ p{
   }
 }
 </style>
-
-

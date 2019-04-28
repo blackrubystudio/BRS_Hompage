@@ -13,7 +13,7 @@
           <div id="tech-text-1" class="tech-content-1">
             <h1 class="tech-title-1-1" v-text="title11"></h1>
             <h1 class="tech-title-1-2" v-text="title12"></h1>
-            <div id="tech-desc-1" class="desc-none tech-desc-1"><p v-html="desc1"></p></div>
+            <div id="tech-desc-1" class="desc-none tech-desc-1"><span v-html="desc1"></span></div>
           </div>
         </div>
         <div id="tech-line-1" class="tech-line-1"></div>
@@ -23,7 +23,7 @@
           <div id="tech-text-2" class="tech-content-2">
             <h1 class="tech-title-2-1" v-text="title21"></h1> 
             <h1 class="tech-title-2-2" v-text="title22"></h1>
-            <div id="tech-desc-2" class="desc-none tech-desc-2"><p v-html="desc2"></p></div>
+            <div id="tech-desc-2" class="desc-none tech-desc-2"><span v-html="desc2"></span></div>
           </div>
           <img id="tech-img-2" class="tech-img-2" :src="img2" :alt="alt2">
         </div>
@@ -35,7 +35,7 @@
           <div id="tech-text-3" class="tech-content-3">
             <h1 class="tech-title-3-1" v-text="title31"></h1>
             <h1 class="tech-title-3-2" v-text="title32"></h1>
-            <div id="tech-desc-3" class="desc-none tech-desc-3"><p v-html="desc3"></p></div>
+            <div id="tech-desc-3" class="desc-none tech-desc-3"><span v-html="desc3"></span></div>
           </div>
         </div>
         <div class="tech-line-3"></div>
@@ -66,7 +66,7 @@ export default {
           'title1_mobile', 'title2_mobile', 'title3_mobile',
           'desc1_mobile', 'desc2_mobile', 'desc3_mobile'],
 
-  mounted(){
+  beforeMount(){
     window.addEventListener("scroll",  this.scrollDown);
   },
 
@@ -95,13 +95,13 @@ export default {
         text1.className = "tech-desc-1 desc-none"
         text2.className = "tech-desc-2 desc-none"
         text3.className = "tech-desc-3 desc-none"
-      }else if(y < 75){
+      }else if(y < 70){
         tech1.className = "tech-img-1 animation-left-to-right"
         text1.className = "tech-desc-1 animation-show-text"
-      }else if(y < 85){
+      }else if(y < 80){
         tech2.className = "tech-img-2 animation-right-to-left" 
         text2.className = "tech-desc-2 animation-show-text" 
-      }else if(y < 95){
+      }else if(y < 90){
         tech3.className = "tech-img-3 animation-left-to-right" 
         text3.className = "tech-desc-3 animation-show-text"
       }
@@ -227,6 +227,7 @@ export default {
   @include sm{
     display: none;
   }
+  
 }
 
 .tech-title{
@@ -372,6 +373,9 @@ export default {
     border-image: linear-gradient(to right, white 75px, black 75px 385px);
     border-image-slice: 1;
   }
+  @include mls{
+    display: none;
+  }
 }
 
 .tech-container-2{
@@ -475,6 +479,9 @@ export default {
     left: 250px;
     border-image: linear-gradient(to right, black 0px 120px, white 120px 180px);
     border-image-slice: 1;
+  }
+  @include mls{
+    display: none;
   }
 }
 
@@ -610,6 +617,9 @@ export default {
     left: 110px;
     border-image: linear-gradient(to right, white 65px, black 65px 300px);
     border-image-slice: 1;
+  }
+  @include mls{
+    display: none;
   }
 }
 
