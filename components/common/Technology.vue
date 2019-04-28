@@ -13,7 +13,7 @@
           <div id="tech-text-1" class="tech-content-1">
             <h1 class="tech-title-1-1" v-text="title11"></h1>
             <h1 class="tech-title-1-2" v-text="title12"></h1>
-            <div class="tech-desc-1"><p v-html="desc1"></p></div>
+            <div id="tech-desc-1" class="desc-none tech-desc-1"><p v-html="desc1"></p></div>
           </div>
         </div>
         <div id="tech-line-1" class="tech-line-1"></div>
@@ -23,7 +23,7 @@
           <div id="tech-text-2" class="tech-content-2">
             <h1 class="tech-title-2-1" v-text="title21"></h1> 
             <h1 class="tech-title-2-2" v-text="title22"></h1>
-            <div class="tech-desc-2"><p v-html="desc2"></p></div>
+            <div id="tech-desc-2" class="desc-none tech-desc-2"><p v-html="desc2"></p></div>
           </div>
           <img id="tech-img-2" class="tech-img-2" :src="img2" :alt="alt2">
         </div>
@@ -35,7 +35,7 @@
           <div id="tech-text-3" class="tech-content-3">
             <h1 class="tech-title-3-1" v-text="title31"></h1>
             <h1 class="tech-title-3-2" v-text="title32"></h1>
-            <div class="tech-desc-3"><p v-html="desc3"></p></div>
+            <div id="tech-desc-3" class="desc-none tech-desc-3"><p v-html="desc3"></p></div>
           </div>
         </div>
         <div class="tech-line-3"></div>
@@ -84,23 +84,26 @@ export default {
       var tech1 = document.getElementById("tech-img-1")
       var tech2 = document.getElementById("tech-img-2")
       var tech3 = document.getElementById("tech-img-3")
-      var text1 = document.getElementById("tech-text-1")
-      var text2 = document.getElementById("tech-text-2")
-      var text3 = document.getElementById("tech-text-3")
+      var text1 = document.getElementById("tech-desc-1")
+      var text2 = document.getElementById("tech-desc-2")
+      var text3 = document.getElementById("tech-desc-3")
       var y = this.getScrollPercent()
       if(y<55){
         tech1.className = "tech-img-1 animation-right-to-left"
         tech2.className = "tech-img-2 animation-left-to-right" 
         tech3.className = "tech-img-3 animation-right-to-left"
-      }else if(y < 70){
+        text1.className = "tech-desc-1 desc-none"
+        text2.className = "tech-desc-2 desc-none"
+        text3.className = "tech-desc-3 desc-none"
+      }else if(y < 75){
         tech1.className = "tech-img-1 animation-left-to-right"
-        text1.className = "tech-content-1 animation-show-text"
-      }else if(y < 80){
+        text1.className = "tech-desc-1 animation-show-text"
+      }else if(y < 85){
         tech2.className = "tech-img-2 animation-right-to-left" 
-        text2.className = "tech-content-2 animation-show-text" 
-      }else if(y < 90){
+        text2.className = "tech-desc-2 animation-show-text" 
+      }else if(y < 95){
         tech3.className = "tech-img-3 animation-left-to-right" 
-        text3.className = "tech-content-3 animation-show-text"
+        text3.className = "tech-desc-3 animation-show-text"
       }
     },
 
@@ -109,6 +112,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.desc-none{
+  display: none;
+}
 .animation-left-to-right{
   animation-name: left-to-right;
   animation-duration: 2s;
@@ -124,7 +130,7 @@ export default {
 .animation-show-text{
   animation-name: show-text;
   animation-duration: 3s;
-  animation-fill-mode: forwards
+  animation-fill-mode: forwards;
 }
 
 @keyframes left-to-right{
@@ -293,6 +299,7 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
+  z-index: 100;
   @include lg{
     margin-bottom: 30px;
     font-size: 70px;
@@ -309,6 +316,7 @@ export default {
   align-self: end;
   font-size: 90px;
   letter-spacing: -5px;
+   z-index: 100;
   @include lg{
     margin-bottom: 20px;
     font-size: 70px;
@@ -423,6 +431,7 @@ export default {
   font-size: 90px;
   letter-spacing: -5px;
   align-self: center;
+  z-index: 100;
   @include lg{
     font-size: 70px;
   }
@@ -436,6 +445,7 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
+  z-index: 100;
   @include lg{
     font-size: 70px;
   }
