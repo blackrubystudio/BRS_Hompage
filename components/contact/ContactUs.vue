@@ -28,7 +28,8 @@ export default {
     return {
       center: { lat: 37.517190, lng: 127.038939 },
       mapTypeId: "terrain",
-      marker: { position: { lat: 37.517190, lng: 127.038939 } }
+      marker: { position: { lat: 37.517190, lng: 127.038939 } },
+      optimized: false,
     };
   },
 

@@ -91,6 +91,7 @@ export default {
   methods:{
     scrollUp(){
       document.getElementById("main").scrollTop = 0;
+      document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
   },

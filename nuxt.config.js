@@ -79,11 +79,21 @@ module.exports = {
                     exclude: /(node_modules)/
                 })
             }
-        }
+        },
+        postcss: {
+            plugins: {
+              'postcss-preset-env': {
+                autoprefixer: {
+                  grid: true
+                }
+              }
+            }
+          },
     },
-
+    
     modules: [
-        '@nuxtjs/style-resources'
+        '@nuxtjs/style-resources',
+        // 'nuxt-polyfill',
     ],
 
     styleResources: {

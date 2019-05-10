@@ -5,7 +5,9 @@
 <template>
   <nav class="header">
     <div class="header-container">
-      <img class="header-logo" :src="img" alt="Blackrubystrudio-logo" @click="goHome()">
+      <nuxt-link to="/">
+        <img class="header-logo" :src="img" alt="Blackrubystrudio-logo">
+      </nuxt-link>
       <div class="header-content-group">
       <li class="header-about"><nuxt-link to="/about"  :style="color">about</nuxt-link></li>
       <li class="header-contact"><nuxt-link to="/contact"  :style="color">contact</nuxt-link></li>
@@ -93,13 +95,19 @@ export default {
 
 .header-content-group{
   @extend %hf-content-group;
+  width: 1070px;
   justify-self: end;
   align-self: center;
   line-height: 20px;
+  @include xl{
+    width: 850px;
+  }
   @include lg{
+    width: 640px;
     font-size: 15px;
   }
   @include md{
+    width: 440px;
     font-size: 13px;
     line-height: 15px;
   }

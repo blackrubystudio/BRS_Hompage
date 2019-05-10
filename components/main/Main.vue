@@ -35,6 +35,7 @@ export default {}
   "t1 t1"
   "st t2";
   top: 100px;
+  grid-template-columns: 400px 600px;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
   height: 600px;

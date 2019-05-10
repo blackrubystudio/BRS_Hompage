@@ -26,7 +26,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-
 .footer{
   @extend %background;
   position: relative;
@@ -43,10 +42,8 @@ export default {}
     height: 100px;
   }
 }
-
 .footer-container{
   @extend %hf-container;
-
   @include xl{
     width: 1000px;
   }
@@ -60,7 +57,6 @@ export default {}
     width: 100%;
   }
 }
-
 .footer-logo{
   @extend %hf-logo;
   @include lg{
@@ -73,45 +69,45 @@ export default {}
     padding-left: 20px;
     height: 40px;
   }
-
 }
-
 .footer-content-group{
   @extend %hf-content-group;
+   width: 1070px;
    align-self: end;
    font-size: 14px;
    height: 100%;
    padding-top: 25px;
-  
+  @include xl{
+    width: 850px;
+  }
   @include lg{
+    width: 640px;
     padding-top: 15px;
   }
   @include md{
+    width: 440px;
     font-size: 10px;
     padding-top: 15px;
   }
   @include sm{
+    width: 100%;
     padding-top: 17px;
     font-size: 8px;
     line-height: 7px;
     padding-right: 10px;
   }
 }
-
 .footer-content{
   font-family:  $font-footer;
   line-height: 5px;
   color: #FEFEFE;
   opacity: .7;
 }
-
 .footer-mail{
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: right;
-  // grid-template-columns: 150px 50px;
 }
-
 .mail{
   line-height: 25px;
   @include md{
@@ -121,7 +117,6 @@ export default {}
     line-height: 10px;
   }
 }
-
 .footer-icon{
   height: 20px;
   opacity: .9;
