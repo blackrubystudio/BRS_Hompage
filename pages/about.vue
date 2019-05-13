@@ -12,7 +12,7 @@
       <about-growth></about-growth>
       <!-- 4. Activity (Study, Python-Class, Weekly-Meeting) -->
       <common-activity class="about-study" :title=study.title :desc=study.desc :src=study.src :alt=study.alt></common-activity>
-      <common-activity class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity>
+      <common-activity-reverse class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity-reverse>
       <common-activity class="about-weekly" :title=weekly.title :desc=weekly.desc :src=weekly.src :alt=weekly.alt></common-activity>
 
       <common-activity class="about-study-mb" :title=study.title :desc=study.desc_mb :src=study.src :alt=study.alt></common-activity>
@@ -259,7 +259,13 @@ export default {
     }
   }
 
+  .about-activity-img{
+    // padding-left: 450px;
+    // margin-left: 20px;
+  }
+
   .about-activity-content{
+    grid-area: con;
     text-align: right !important;
   }
 

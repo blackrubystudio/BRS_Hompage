@@ -66,6 +66,7 @@ export default {
   top: 30vh;
   color: white;
   height: 500px; 
+  z-index: 100;
   @include xl{
     width: 1000px;
     grid-template-columns: 450px 450px;
@@ -93,7 +94,7 @@ export default {
   font-size: 70px;
   text-decoration: underline;
   text-underline-position: under;
-  z-index: 100;
+  // z-index: 100;
   @include xl{
     font-size: 60px;
     justify-self: end;
@@ -120,7 +121,7 @@ export default {
   margin-top: 20px;
   margin-right: 40px;
   line-height: 20px;
-  z-index: 100;
+  // z-index: 100;
   @include md{
     font-size: 12px;
     margin-right: 20px;
@@ -137,7 +138,6 @@ export default {
   height: 400px;
   width: 445px;
   margin-left: 74px;
-  z-index: 100;
   @include lg{
     width: 320px;
     height: 280px;
@@ -184,6 +184,7 @@ export default {
   left: 295px;
   width: 280px;
   height: 180px;
+  z-index: -1;
   @include lg{
     top: 100px;
     left: 250px;

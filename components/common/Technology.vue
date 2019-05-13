@@ -209,27 +209,6 @@ export default {
   }
 }
 
-.tech-container{
-  @extend %container;
-  grid-template-rows: 300px 300px 300px;
-  grid-gap: 50px;
-  top: 50px;
-  height: 1000px;
-  @include lg{
-    width: 760px;
-    grid-template-rows: 250px 250px 250px;
-    height: 850px;
-  }
-  @include md{
-    width: 550px;
-    grid-template-rows: 200px 200px 200px;
-  }
-  @include sm{
-    display: none;
-  }
-  
-}
-
 .tech-title{
   position: absolute;
   top: -100px;
@@ -248,6 +227,32 @@ export default {
     padding-right: 10px;
     font-size: 20px;
   }
+}
+
+.tech-container{
+  @extend %container;
+  grid-template-areas: 
+  "con1"
+  "con2"
+  "con3";
+  grid-gap: 50px;
+  top: 50px;
+  height: 1000px;
+  @include lg{
+    width: 760px;
+    height: 850px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    display: none;
+  }
+}
+
+.tech-container-1{
+  height: 300px;
+  grid-area: con1;
 }
 
 .tech-img-1{
@@ -281,14 +286,18 @@ export default {
   grid-template-areas:
   "tt11 tt12"
   "des1 des1";
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 724px 300px;
   grid-template-rows: 150px 150px;
   z-index: 100;
   @include lg{
+    grid-template-columns: 450px 310px;
     grid-template-rows: 120px 180px;
+    height: 250px;
   }
   @include md{
+    grid-template-columns: 310px 240px;
     width: 550px;
+    height: 200px
   }
 }
 
@@ -360,8 +369,8 @@ export default {
   border-image: linear-gradient(to right, white 140px, black 140px 540px);
   border-image-slice: 1;
   @include lg{
-    height: 100px;
-    left: 150px;
+    height: 90px;
+    left: 80px;
     width: 385px;
     border-image: linear-gradient(to right, white 100px, black 100px 385px);
     border-image-slice: 1;
@@ -369,7 +378,7 @@ export default {
   @include md{
     height: 95px;
     width: 300px;
-    left: 100px;
+    left: 25px;
     border-image: linear-gradient(to right, white 75px, black 75px 385px);
     border-image-slice: 1;
   }
@@ -380,7 +389,15 @@ export default {
 
 .tech-container-2{
   position: relative;
+  grid-area: con2;
   display: grid;
+  height: 300px;
+  @include lg{
+    height: 250px;
+  }
+  @include md{
+    height: 200px;
+  }
 }
 
 .tech-img-2{
@@ -416,13 +433,15 @@ export default {
   grid-template-areas:
   "tt21 tt22"
   "des2 des2";
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 430px 594px;
   grid-template-rows: 150px 150px;
   z-index: 100;
   @include lg{
-     grid-template-rows: 130px 150px;
+    grid-template-columns: 330px 430px;
+    grid-template-rows: 130px 150px;
   }
   @include md{
+    grid-template-columns: 230px 320px;
     grid-template-rows: 120px 120px;
     width: 550px;
   }
@@ -468,15 +487,15 @@ export default {
   border-image: linear-gradient(to right, black 0px 200px, white 200px 320px);
   border-image-slice: 1;
   @include lg{
-    height: 390px;
-    left: 350px;
+    height: 440px;
+    left: 340px;
     border-image: linear-gradient(to right, black 0px 180px, white 180px 320px);
     border-image-slice: 1;
   }
   @include md{
     width: 180px;
-    height: 330px;
-    left: 250px;
+    height: 450px;
+    left: 240px;
     border-image: linear-gradient(to right, black 0px 120px, white 120px 180px);
     border-image-slice: 1;
   }
@@ -508,7 +527,15 @@ export default {
 
 .tech-container-3{
   position: relative;
+  grid-area: con3;
   display: grid;
+  height: 300px;
+  @include lg{
+    height: 250px;
+  }
+  @include md{
+    height: 200px;
+  }
 }
 
 .tech-img-3{
@@ -542,9 +569,16 @@ export default {
   grid-template-areas:
   "tt31 tt32"
   "des3 b1";
-  grid-template-columns: 75% 25%;
   grid-template-rows: 130px 150px;
   z-index: 100;
+  grid-template-columns: 750px 274px;
+
+  @include lg{
+    grid-template-columns: 530px 230px;
+  }
+  @include md{
+    grid-template-columns: 410px 150px;
+  }
 }
 
 .tech-title-3-1{
@@ -605,16 +639,16 @@ export default {
   border-image: linear-gradient(to right, white 140px, black 140px 555px);
   border-image-slice: 1;
   @include lg{
-    height: 710px;
+    height: 765px;
     width: 430px;
-    left: 135px;
+    left: 100px;
     border-image: linear-gradient(to right, white 110px, black 110px 555px);
     border-image-slice: 1;
   }
   @include md{
-    height: 600px;
+    height: 740px;
     width: 300px;
-    left: 110px;
+    left: 100px;
     border-image: linear-gradient(to right, white 65px, black 65px 300px);
     border-image-slice: 1;
   }

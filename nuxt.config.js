@@ -68,8 +68,48 @@ module.exports = {
         ]
     },
     loading: { color: '#3B8070' },
-
+    loaders: [
+        //Babel 변환
+        {
+            test: /\.(js|jsx)$/,
+            include: [
+                /src\/js/,
+                /node_modules\/axios/
+            ],
+            loader: 'babel',
+            query: {
+                cacheDirectory: true,
+    
+                //plugins는 presets 보다 먼저 실행되며,
+                //plugins내의 순서는 처음 -> 나중으로 실행된다.
+                plugins: [
+                    // ['transform-class-properties'],
+                    // ['transform-object-rest-spread', { useBuiltIns: true }],
+                    ['transform-runtime'],
+                ],
+                
+                //presets내의 순서는 나중 -> 처음으로 실행된다.
+                presets: [
+                    ['env', {
+                        targets: {
+                            browsers: ['ie >= 8']
+                        },
+                        loose: true,
+                    }],
+                    // ['react'],
+                ],
+            }
+        },
+    ],
+    postLoaders: [
+        {
+            test: /\.js$/,
+            loader: 'es3ify-loader',
+        }
+    ],
     build: {
+
+    
         extend(config, { isDev, isClient }) {
             if (isDev && isClient) {
                 config.module.rules.push({
@@ -88,7 +128,7 @@ module.exports = {
                 }
               }
             }
-          },
+        },
     },
     
     modules: [
@@ -110,6 +150,5 @@ module.exports = {
     plugins: [
         { src: "~/plugins/globalComponent.js" },
         { src: "~/plugins/googleMap.js" },
-
     ]
 }

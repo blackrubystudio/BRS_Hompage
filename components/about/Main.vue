@@ -35,6 +35,7 @@ export default {}
   "tt1 tt2 bl3"
   "bl4 bl5 sub";
   grid-template-columns: 100px 450px 300px;
+  grid-template-rows: 120px 300px 180px;
   top: 100px;
   height: 600px;
 
@@ -45,12 +46,14 @@ export default {}
   @include lg{
     width: 760px;
     height: 550px;
-    grid-template-columns: 100px 450px 150px;
+    grid-template-columns: 100px 470px 150px;
+    grid-template-rows: 50px 350px 200px;
   }
   @include md{
     width: 550px;
     height: 450px;
-    grid-template-columns: 20px 360px 120px;
+    grid-template-columns: 20px 370px 125px;
+    grid-template-rows: 0px 300px 200px;
   }
   @include sm{
     width: 300px;

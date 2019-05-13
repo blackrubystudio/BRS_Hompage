@@ -15,6 +15,7 @@
   <div class="main-absolute">
     <div class="main-button-group">
       <button class="main-button" v-show='is_fanrep' @click="component = 'fanrep', is_fb5=true, is_fanrep=false , is_beamme= true">Fanrep.</button>
+      <button class="main-button" v-show='is_fanrep' v-on:click="test">Test</button>
       <button class="main-button" v-show='is_fb5' @click="component = 'findbig5', is_fb5=false, is_fanrep=true , is_beamme= true">FindBig5</button>
       <button class="main-button" v-show='is_beamme' @click="component = 'beamme', is_fb5=true, is_fanrep=true , is_beamme= false">BeamMe</button>
     </div>
@@ -58,12 +59,14 @@
  </div>
 </template>
 
-<script>
+<script type="text/javascript">
 import MainPage from "@/components/main/Main.vue";
 import FindBig5 from "@/components/main/FindBig5.vue";
 import Fanrep from "@/components/main/Fanrep.vue"
 import Beamme from "@/components/main/Beamme.vue"
+import 'babel-polyfill'
 
+console.log(21222222222222222)
 export default {
   components: {
     MainPage,
@@ -93,6 +96,11 @@ export default {
       document.getElementById("main").scrollTop = 0;
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+    },
+
+    test(){
+      alert('hello')
+      console.log(1)
     }
   },
 }

@@ -9,13 +9,13 @@
       <div class="fanrep-title-container">
         <div class="fanrep-title-main">
           <div class="fanrep-title-container-title-1">
-            <h1 class="fanrep-title-downfont">매</h1>
-            <h1 class="fanrep-title-space">일</h1>
-            <h1 class="fanrep-title-downfont">전해받는</h1>  
+            <h1 class="fanrep-title1 fanrep-title-downfont">매</h1>
+            <h1 class="fanrep-title2 fanrep-title-space">일</h1>
+            <h1 class="fanrep-title3 fanrep-title-downfont">전해받는</h1>  
           </div>
           <div class="fanrep-title-container-title-2">
-            <h1>내</h1>
-            <h1 class="fanrep-title-downfont">아이돌 소식</h1>
+            <h1 class="fanrep-title4">내</h1>
+            <h1 class="fanrep-title5 fanrep-title-downfont">아이돌 소식</h1>
           </div>
         </div>  
         <img  class="fanrep-title-img-mail" src="@/assets/img/fanrep/fanrep_mail.png" alt="fanrep-search">
@@ -143,13 +143,16 @@ export default {
  }
  @include sm{
    width: 300px;
-    margin-top: -70px;
+   margin-top: -70px;
  }
 }
 
 .fanrep-title-main{
   display: grid;
-  grid-template-rows: 30% 50%;
+  grid-template-areas:
+  "tit1"
+  "tit2";
+  grid-template-rows: 150px 350px;
   margin-left: 140px;
   font-size: 90px;
   @include lg{
@@ -186,23 +189,47 @@ h1{
 }
 
 .fanrep-title-container-title-1{
+  grid-area: tit1;
   display: grid;
+  grid-template-areas:
+  "a b c";
   grid-template-columns: 9% 12% 75%;
   grid-gap: 10px;
   @include sm{
-    z-index: 200;
     padding-left: 25px;
   }
 }
 
+.fanrep-title1 {
+  grid-area: a;
+}
+
+.fanrep-title2 {
+  grid-area: b;
+}
+
+.fanrep-title3 {
+  grid-area: c;
+}
+
 .fanrep-title-container-title-2{
+  grid-area: tit2;
   display: grid;
+  grid-template-areas: 
+  "d e";
   grid-template-columns: 10% 90%;
-  z-index: 100;
   @include sm{
     z-index: 300;
     padding-left: 25px;
   }
+}
+
+.fanrep-title4 {
+  grid-area: d;
+}
+
+.fanrep-title5 {
+  grid-area: e;
 }
 
 .fanrep-title-img-mail{
@@ -211,6 +238,7 @@ h1{
   top: 85px;
   left: 200px;
   transform: rotate(10deg);
+  z-index: -1;
   box-shadow: 0 20px 6px -6px rgba(0, 0, 0, 0.2);
   @include lg{
     height: 230px;
@@ -331,12 +359,12 @@ h1{
 }
 
 .fanrep-introduce-desc{
+  grid-area: desc;
   justify-self: start;
   text-align: right;
   font-size: 14px;
   line-height: 20px;
   margin-left: 50px;
-  z-index: 100;
   @include lg{
     margin-left: 0px;
   }

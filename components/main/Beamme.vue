@@ -9,9 +9,9 @@
       <div class="beamme-title-container">
         <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
         <div class="beamme-title-main">
-            <h1>언제</h1>
-            <h1>어디서든</h1>  
-            <h1 class="beamme-title-indexup">빠르게</h1>
+            <h1 class="beamme-title1">언제</h1>
+            <h1 class="beamme-title2">어디서든</h1>  
+            <h1 class="beamme-title3">빠르게</h1>
         </div>  
         <common-postit class="beamme-postit" :title=post.title :desc=post.desc></common-postit>
     </div>
@@ -123,6 +123,7 @@ export default {
 
 .beamme-title-container{
   @extend %project-title-container;
+  // grid-template-columns: 200px 200px;
   @include lg{
     width: 760px;
   }
@@ -137,6 +138,11 @@ export default {
 
 .beamme-title-main{
   display: grid;
+  grid-template-columns: 600px 400px;
+  grid-template-areas:
+  "a"
+  "b"
+  "c";
   grid-template-rows: 20% 20% 20%;
   justify-self: center;
   margin-top: 50px;
@@ -144,14 +150,17 @@ export default {
   font-size: 90px;
   text-align: right;
   @include lg{
+    grid-template-columns: 440px 320px;
     font-size: 80px;
     margin-right: 180px;
   }
   @include md{
+    grid-template-columns: 320px 230px;
     font-size: 60px;
     grid-template-rows: 14% 14% 14%;
   }
   @include sm{
+     grid-template-columns: 200px 100px;
     font-size: 40px;
     color: #FEFEFE;
     z-index: 100;
@@ -162,12 +171,23 @@ export default {
   }
 }
 
-h1{
-  font-family: $main-font;
+.beamme-title1{
+  padding: 20px 0;
+  grid-area: a;
 }
 
-.beamme-title-indexup{
-  z-index: 200;
+.beamme-title2{
+  padding: 20px 0;
+  grid-area: b;
+}
+
+.beamme-title3{
+  padding: 20px 0;
+  grid-area: c;
+}
+
+h1{
+  font-family: $main-font;
 }
 
 .beamme-title-img-wave{
@@ -175,7 +195,7 @@ h1{
   height: 200px;
   top: 200px;
   left: -50px;
-  z-index: 100;
+  z-index: -1;
   @include lg{
     height: 150px;
   }
@@ -184,6 +204,7 @@ h1{
     top: 180px;
   }
   @include sm{
+    z-index: 100;
     top: 80px;
     left: 0;
   }
