@@ -57,6 +57,7 @@
       <img src="@/assets/img/common/technology.png" alt="" class="tech-container-mobile-bg-img">
     </div>
   </div>
+
 </template>
 
 <script>
@@ -112,9 +113,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.desc-none{
-  display: none;
-}
+
 .animation-left-to-right{
   animation-name: left-to-right;
   animation-duration: 2s;
@@ -258,12 +257,15 @@ export default {
 .tech-img-1{
   position: absolute;
   top: -50px;
-  left: 0px;
+  // left: 0px;
+  left: 660px;
   height: 350px;
   width: 350px;
   border-radius: 50%;
   opacity: .5;
+  z-index: -1;
   @include lg{
+    left: 530px;
     height: 250px;
     width: 250px;
     animation-name: left-to-right-lg;
@@ -271,6 +273,7 @@ export default {
     animation-fill-mode: forwards;
   }
   @include md{
+    left: 370px;
     height: 180px;
     width: 180px;
     animation-name: left-to-right-md;
@@ -309,7 +312,6 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
-  z-index: 100;
   @include lg{
     margin-bottom: 30px;
     font-size: 70px;
@@ -326,7 +328,6 @@ export default {
   align-self: end;
   font-size: 90px;
   letter-spacing: -5px;
-   z-index: 100;
   @include lg{
     margin-bottom: 20px;
     font-size: 70px;
@@ -403,13 +404,15 @@ export default {
 .tech-img-2{
   position: absolute;
   top: -50px;
-  left: 660px;
+  // left: 660px;
+  left: 0;
   height: 350px;
   width: 350px;
   border-radius: 50%;
   opacity: .5;
+  z-index: -1;
   @include lg{
-    left: 530px;
+    // left: 530px;
     height: 250px;
     width: 250px;
     animation-name: right-to-left-lg;
@@ -417,7 +420,7 @@ export default {
     animation-fill-mode: forwards;
   }
   @include md{
-    left: 370px;
+    // left: 370px;
     height: 180px;
     width: 180px;
     animation-name: right-to-left-md;
@@ -454,7 +457,6 @@ export default {
   font-size: 90px;
   letter-spacing: -5px;
   align-self: center;
-  z-index: 100;
   @include lg{
     font-size: 70px;
   }
@@ -468,7 +470,6 @@ export default {
   font-family: $main-font;
   font-size: 90px;
   letter-spacing: -5px;
-  z-index: 100;
   @include lg{
     font-size: 70px;
   }
@@ -541,19 +542,23 @@ export default {
 .tech-img-3{
   position: absolute;
   top: -50px;
-  left: 0px;
+  // left: 0px;
+  left: 660px;
   height: 350px;
   width: 350px;
   border-radius: 50%;
   opacity: .5;
+  z-index: -1;
   @include lg{
+    left: 530px;
     height: 250px;
     width: 250px;
     animation-name: left-to-right-lg;
     animation-duration: 2s;
     animation-fill-mode: forwards;
   }
-    @include md{
+  @include md{
+    left: 370px;
     top: -20px;
     height: 180px;
     width: 180px;
@@ -571,7 +576,7 @@ export default {
   "des3 b1";
   grid-template-rows: 130px 150px;
   z-index: 100;
-  grid-template-columns: 750px 274px;
+  grid-template-columns: 620px 404px;
 
   @include lg{
     grid-template-columns: 530px 230px;
@@ -615,7 +620,7 @@ export default {
   grid-area: des3;
   justify-self: end;
   text-align: right;
-  margin-right: 80px;
+  margin-right: -20px;
   font-size: 14px;
   line-height: 20px;
   @include lg{
@@ -779,4 +784,12 @@ export default {
   margin-top: -400px;
   }
 }
+
 </style>
+  <!--[if IE]>
+    <style scoped>
+        .tech-container-mobile-img3 {
+            display:none;
+        }
+    </style>
+<![endif]-->

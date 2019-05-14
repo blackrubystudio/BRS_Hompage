@@ -15,19 +15,14 @@
   <div class="main-absolute">
     <div class="main-button-group">
       <nuxt-link to="/project/fanrep"><button class="main-button">Fanrep.</button></nuxt-link>
-      <nuxt-link to="/project/beamme"><button class="main-button">Beamme</button></nuxt-link>
-      <!-- <button class="main-button" v-show='is_fanrep' @click="component = 'fanrep', is_fb5=true, is_fanrep=false , is_beamme= true">Fanrep.</button>
-      <button class="main-button" v-show='is_fanrep' v-on:click="test">Test</button>
-      <button class="main-button" v-show='is_fb5' @click="component = 'findbig5', is_fb5=false, is_fanrep=true , is_beamme= true">FindBig5</button>
-      <button class="main-button" v-show='is_beamme' @click="component = 'beamme', is_fb5=true, is_fanrep=true , is_beamme= false">BeamMe</button> -->
+      <nuxt-link to="/"><button class="main-button">FindBig5</button></nuxt-link>
     </div>
     <div class="main-postit"></div>
   </div>
 
   <!-- 4. Project (Dynamic, FB5 Default) -->
     <transition name="fade">
-      <find-big5></find-big5>
-      <!-- <component :is="component" transition="fade" transition-mode="out-in"></component> -->
+      <beamme></beamme>
     </transition>
 
   <!-- 4.5 Scroll Up button -->
@@ -64,18 +59,13 @@
 
 <script type="text/babel">
 import MainPage from "@/components/main/Main.vue";
-import FindBig5 from "@/components/main/FindBig5.vue";
-// import Fanrep from "@/components/main/Fanrep.vue"
-// import Beamme from "@/components/main/Beamme.vue"
+import Beamme from "@/components/main/Beamme.vue"
 
 
 export default {
   components: {
     MainPage,
-    FindBig5,
-    // "findbig5" : FindBig5,
-    // "fanrep" : Fanrep,
-    // "beamme" : Beamme
+    Beamme,
   },
 
   data(){
@@ -86,11 +76,8 @@ export default {
       },
       color: "color: #212121",
       // Default Component(Dynamic Component)
-      // component: 'findbig5',
+      component: 'findbig5',
       isDropdown: false,
-      // is_fanrep: true,
-      // is_fb5: false,
-      // is_beamme: true,
     }
   },
 
@@ -184,7 +171,7 @@ export default {
 .main-postit{
   @extend %background;
   position: absolute;
-  background-image: url('../assets/img/background/background_3.png');
+  background-image: url('../../assets/img/background/background_3.png');
   top: -40px;
   right: 40px;
   width: 350px;

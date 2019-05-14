@@ -43,16 +43,17 @@ export default {}
 
   @include xl{
     width: 1000px;
+    grid-template-columns: 400px 600px;
   }
   @include lg{
     top: 50px;
     width: 760px;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 340px 420px;
   }
   @include md{
     top: 0;
     width: 550px;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 220px 330px;
   }
   @include sm{
     top: -100px;

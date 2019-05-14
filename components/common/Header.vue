@@ -111,6 +111,9 @@ export default {
     font-size: 13px;
     line-height: 15px;
   }
+  @include sm{
+    width: 100%;
+  }
 }
 
 .header-about{
@@ -130,10 +133,12 @@ export default {
 .header-menu{
   display: none;
   @include sm{
+   justify-self: end;
+   align-self: center;
     display: grid;
     height: 20px;
-    margin-bottom: 10px;
-    padding-right: 10px;
+    padding-left: 85%;
+    // padding-right: 10px;
   }
 }
 

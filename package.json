@@ -11,34 +11,23 @@
         "generate": "nuxt generate",
         "deploy": "npm run generate && aws s3 cp dist/ s3://blackruby.studio --recursive",
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-        "precommit": "npm run lint",
-        "browserslist": "browserslist"
+        "precommit": "npm run lint"
     },
-    "browserslist": [
-        "last 2 version",
-        "android >= 4.4",
-        "IE >= 10"
-    ],
     "dependencies": {
         "babel-polyfill": "^6.26.0",
-        "babel-runtime": "^6.26.0",
         "dotenv": "^7.0.0",
-        "es3ify-loader": "^0.2.0",
-        "event-source-polyfill": "^1.0.5",
         "intersection-observer": "^0.6.0",
         "node-sass": "^4.12.0",
         "nuxt": "^2.6.3",
-        "nuxt-polyfill": "^1.0.3",
         "postcss-hexrgba": "^1.0.1",
         "postcss-nested": "^4.1.2",
         "postcss-responsive-type": "^1.0.0",
         "postcss-url": "^8.0.0",
         "sass-loader": "^7.1.0",
-        "smoothscroll-polyfill": "^0.4.4",
-        "url-polyfill": "^1.1.5",
-        "vue2-google-maps": "^0.10.6"
+        "vue2-google-maps-fixed": "^0.9.6"
     },
     "devDependencies": {
+        "@babel/preset-env": "^7.4.4",
         "@nuxtjs/style-resources": "^0.1.2",
         "autoprefixer": "^9.5.1",
         "babel-eslint": "^10.0.1",

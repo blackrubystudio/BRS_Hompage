@@ -77,7 +77,7 @@ export default {}
   }
   @include sm{
     font-size: 14px;
-    padding-right: 100px;
+    padding-right: 130px;
   }
   }
 
@@ -91,7 +91,7 @@ export default {}
   }
   @include sm{
     font-size: 50px;
-    align-self: start;
+    align-self: center;
     width: 210px;
   }
 }

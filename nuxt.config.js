@@ -9,7 +9,8 @@ module.exports = {
         title: 'BLACKRUBY STUDIO',
         meta: [
             { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },          
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },     
+            { name: "X-UA-Compatible", content: 'IE=11' },     
             { hid: 'description', name: 'description', content: 'Black Ruby Studio Hompage' },
             {
                 name: "keywords",
@@ -61,55 +62,36 @@ module.exports = {
                 content: "https://s3.ap-northeast-2.amazonaws.com/blackruby.studio/img/blackrubystudio.png"
             }
         ],
-
+        script: [
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.js' }
+          ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
             { rel: "canonical", href: "https://blackruby.studio" },
         ]
     },
-    loading: { color: '#3B8070' },
-    loaders: [
-        //Babel 변환
-        {
-            test: /\.(js|jsx)$/,
-            include: [
-                /src\/js/,
-                /node_modules\/axios/
-            ],
-            loader: 'babel',
-            query: {
-                cacheDirectory: true,
-    
-                //plugins는 presets 보다 먼저 실행되며,
-                //plugins내의 순서는 처음 -> 나중으로 실행된다.
-                plugins: [
-                    // ['transform-class-properties'],
-                    // ['transform-object-rest-spread', { useBuiltIns: true }],
-                    ['transform-runtime'],
-                ],
-                
-                //presets내의 순서는 나중 -> 처음으로 실행된다.
-                presets: [
-                    ['env', {
-                        targets: {
-                            browsers: ['ie >= 8']
-                        },
-                        loose: true,
-                    }],
-                    // ['react'],
-                ],
-            }
-        },
-    ],
-    postLoaders: [
-        {
-            test: /\.js$/,
-            loader: 'es3ify-loader',
-        }
-    ],
-    build: {
+    presets: ['@babel/preset-env'],
 
-    
+    loading: { color: '#3B8070' },
+    // polyfill: {
+    //     features: [
+    //         {
+    //             require: 'url-polyfill'
+    //         },
+    //         {
+    //             require: 'intersection-observer',
+    //             detect: () => 'IntersectionObserver' in window,
+    //         },
+    //         {
+    //             require: 'smoothscroll-polyfill',
+    //             // Detection found in source: https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
+    //             detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
+    //             // Optional install function called client side after the package is required:
+    //             install: (smoothscroll) => smoothscroll.polyfill()
+    //         }
+    //     ]
+    // },
+    build: {
         extend(config, { isDev, isClient }) {
             if (isDev && isClient) {
                 config.module.rules.push({
