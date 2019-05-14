@@ -4,7 +4,7 @@
 <template>
   <div class="contactus">  
     <div class="contactus-container">
-      <div class="contactus-container-title">CONTACT US</div>
+      <div class="contactus-container-title"><img class="contactus-container-img" src="@/assets/img/fonts_img/contact/contactus.png" alt="blackrubystudio contactus" ></div>
       <div class="contactus-container-desc">
         블랙루비스튜디오<br>
         서울특별시 강남구 학동로 47길 6, 일우빌딩 3층<br>
@@ -91,14 +91,9 @@ export default {
   align-self: end;
   justify-self: start;
   font-family: $main-font;
-  font-size: 70px;
   text-decoration: underline;
   text-underline-position: under;
   // z-index: 100;
-  @include xl{
-    font-size: 60px;
-    justify-self: end;
-  }
   @include lg{
     font-size: 50px;
     justify-self: start;
@@ -111,6 +106,22 @@ export default {
   @include sm{
     font-size: 20px;
     padding-left: 0;
+  }
+}
+
+.contactus-container-img{
+  width: 460px;
+  @include xl{
+    width: 410px;
+  }
+  @include lg{
+    width: 320px;
+  }
+  @include md{
+    width: 230px;
+  }
+  @include sm{
+    width: 130px;
   }
 }
 
