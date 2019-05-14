@@ -6,7 +6,8 @@
     <div class="about-activity-container">
       <img class="about-activity-img" :src="src" :alt="alt">
       <div class="about-activity-content">
-        <div class="about-activity-title" v-html="title"></div>
+        <img class="about-activity-title"  :src="title_src1" :alt="title_alt1">
+        <img class="about-activity-title"  :src="title_src2" :alt="title_alt2">
         <div class="about-activity-desc" v-html="desc"></div>
       </div>
     </div>
@@ -15,7 +16,7 @@
 
 <script>
 export default {
-  props:["title", "desc", "src", "alt"]
+  props:["title_src1", "title_src2", "title_alt1", "title_alt2", "desc", "src", "alt"]
 }
 </script>
 
@@ -76,7 +77,7 @@ export default {
   position: relative;
   left: -130px;
   @include md{
-    font-size: 80px;
+    height: 80px;
     left: -110px;
   }
   @include sm{

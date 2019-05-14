@@ -4,7 +4,10 @@
   <div class="about-main">
     <div class="about-main-container">
       <h1 class="about-main-title-1">BLACKRUBYSTUDIO</h1>
-      <h1 class="about-main-title-2">블랙루비<br>스튜디오</h1>
+      <h1 class="about-main-title-2">
+        <img class="about-main-title-img1" src="@/assets/img/fonts_img/about/main1.png" alt="blackrubystudio main1"><br>
+        <img class="about-main-title-img2" src="@/assets/img/fonts_img/about/main2.png" alt="blackrubystudio main2">
+      </h1>
       <h3 class="about-main-subtitle"><div class="about-main-line"></div>팀과 함께<br>간단하고 효율적으로</h3>
     </div>
   </div>
@@ -58,7 +61,8 @@ export default {}
   @include sm{
     width: 300px;
     height: 350px;
-    grid-template-columns: 50px 220px 0px;
+    grid-template-columns: 70px 200px 0px;
+    grid-template-rows: 0px 200px 300px;
   }
 }
 
@@ -77,7 +81,7 @@ export default {}
   }
   @include sm{
     font-size: 14px;
-    padding-right: 130px;
+    padding-right: 90px;
   }
   }
 
@@ -86,13 +90,36 @@ export default {}
   grid-area: tt2;
   align-self: end;
   justify-self: end;
-  @include md{
-    font-size: 80px;
-  }
   @include sm{
-    font-size: 50px;
     align-self: center;
     width: 210px;
+  }
+}
+
+.about-main-title-img1,.about-main-title-img2{
+  @include lg{
+    width: 350px;
+    margin-right: 50px;
+  }
+  @include md{
+    width: 280px;
+    margin-right: 30px;
+     margin-bottom: -50px;
+  }
+  @include sm{
+    width: 200px;
+  }
+}
+
+.about-main-title-img1{
+  @include md{
+    margin-bottom: -50px;
+  }
+}
+
+.about-main-title-img1{
+  @include lg{
+    margin-top: 50px;
   }
 }
 

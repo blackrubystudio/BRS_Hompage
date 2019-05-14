@@ -11,13 +11,64 @@
       <!-- 3. Growth -->
       <about-growth></about-growth>
       <!-- 4. Activity (Study, Python-Class, Weekly-Meeting) -->
-      <common-activity class="about-study" :title=study.title :desc=study.desc :src=study.src :alt=study.alt></common-activity>
-      <common-activity-reverse class="about-python" :title=python.title :desc=python.desc :src=python.src :alt=python.alt></common-activity-reverse>
-      <common-activity class="about-weekly" :title=weekly.title :desc=weekly.desc :src=weekly.src :alt=weekly.alt></common-activity>
+      <common-activity 
+        class="about-study" 
+        :title_src1=study.title_src1 
+        :title_alt1=study.title_alt1 
+        :desc=study.desc 
+        :src=study.src 
+        :alt=study.alt>
+      </common-activity>
+      <common-activity-reverse 
+        class="about-python" 
+        :title_src1=python.title_src1 
+        :title_alt1=python.title_alt1 
+        :title_src2=python.title_src2 
+        :title_alt2=python.title_alt2 
+        :desc=python.desc 
+        :src=python.src 
+        :alt=python.alt>
+      </common-activity-reverse>
+      <common-activity 
+        class="about-weekly" 
+        :title_src1=weekly.title_src1 
+        :title_alt1=weekly.title_alt1 
+        :title_src2=weekly.title_src2 
+        :title_alt2=weekly.title_alt2 
+        :desc=weekly.desc 
+        :src=weekly.src 
+        :alt=weekly.alt>
+      </common-activity>
 
-      <common-activity class="about-study-mb" :title=study.title :desc=study.desc_mb :src=study.src :alt=study.alt></common-activity>
-      <common-activity class="about-python-mb" :title=python.title :desc=python.desc_mb :src=python.src :alt=python.alt></common-activity>
-      <common-activity class="about-weekly-mb" :title=weekly.title :desc=weekly.desc_mb :src=weekly.src :alt=weekly.alt></common-activity>
+
+      <common-activity 
+        class="about-study-mb"
+        :title_src1=study.title_src1 
+        :title_alt1=study.title_alt1 
+        :desc=study.desc 
+        :src=study.src 
+        :alt=study.alt>
+      </common-activity>
+      <common-activity-reverse 
+        class="about-python-mb"
+        :title_src1=python.title_src1 
+        :title_alt1=python.title_alt1 
+        :title_src2=python.title_src2 
+        :title_alt2=python.title_alt2 
+        :desc=python.desc 
+        :src=python.src 
+        :alt=python.alt>
+      </common-activity-reverse>
+      <common-activity 
+        class="about-weekly-mb"
+        :title_src1=weekly.title_src1 
+        :title_alt1=weekly.title_alt1 
+        :title_src2=weekly.title_src2 
+        :title_alt2=weekly.title_alt2 
+        :desc=weekly.desc 
+        :src=weekly.src 
+        :alt=weekly.alt>
+      </common-activity>
       <!-- <common-menumobile :color="color"></common-menumobile> -->
 
         <!-- 4.5 Scroll Up button -->
@@ -63,7 +114,9 @@ export default {
       // color: "color: #212121",
       // Activity component content
       study:{
-        title: "<span class='about-activity-white'>ST</span>UDY",
+        title_src1: require('@/assets/img/fonts_img/about/study.png'),
+        title_alt1: 'BlackrubyStudio About Study',
+        // title: "<img src='@/assets/img/font_img/about/study.png'>",
         desc:"<p><span class='about-activity-desc'>특기가 각기 다른 팀원들이</span><br>\
                  <span class='about-activity-desc-1'>자신이 자신있는 분야에 대해 강의를 진행합니다</span><br>\
                  <span class='about-activity-desc-2'>개발, 디자인, 스타트업, 경영, 교양 등 다양한 주제로</span><br>\
@@ -82,8 +135,10 @@ export default {
       },
 
       python:{
-        title: "PYTH<span class='about-activity-white'>ON</span>\
-                CLA<span class='about-activity-white'>SS</span>",
+        title_src1: require('@/assets/img/fonts_img/about/python.png'),
+        title_alt1: 'BlackrubyStudio About Python',
+        title_src2: require('@/assets/img/fonts_img/about/class.png'),
+        title_alt2: 'BlackrubyStudio About Class',
         desc: "<p><span class='about-activity-desc-1'>블랙루비 주관의 '재미그래밍'프로그램은</span><br>\
                   <span class='about-activity-desc-2'>개발에 관심있는 모든이와 함께 진행하는 열린 교육 프로그램으로</span><br>\
                   <span class='about-activity-desc-3'>기초 프로그패밍 공부를 통해 개발 전반에 대한 이해를 돕는</span><br>\
@@ -100,8 +155,10 @@ export default {
       },
 
       weekly:{
-        title: "<span class='about-activity-white'>WE</span>EKLY<br>\
-                <span class='about-activity-white'>ME</span>ETING",
+        title_src1: require('@/assets/img/fonts_img/about/weekly.png'),
+        title_alt1: 'BlackrubyStudio About Weekly',
+        title_src2: require('@/assets/img/fonts_img/about/meeting.png'),
+        title_alt2: 'BlackrubyStudio About Meeting',
         desc: "<p><span class='about-activity-desc'>회사의 상황을 전체 공유하고자 하는 목적으로</span><br>\
                   <span class='about-activity-desc-1'>회사 방향성에 대한 이해와 자신이 맡고 있지 않는 프로젝트에 대한</span><br>\
                   <span class='about-activity-desc-2'>이해를 높이기 위해 진행하고 있습니다</span><br><br>\
@@ -172,17 +229,6 @@ export default {
   100%{
     padding-top: 0px;
   }
-}
-
-.about-activity-white{
-  @extend %font-main;
-  color: #FEFEFE;
-  @include md{
-    font-size: 80px;
-  }  
-    @include sm{
-    font-size: 40px;
-  }  
 }
 
 .about-activity-desc{
