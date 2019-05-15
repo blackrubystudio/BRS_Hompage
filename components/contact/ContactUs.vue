@@ -16,7 +16,7 @@
           v-bind:clickable="true"
           v-bind:draggable="true"/>
       </GmapMap>
-       <!-- <div class="contactus-line"></div> -->
+       <img class="contacus-container-map" src="@/assets/img/contact/map.png" alt="">
        <div class="contactus-background"></div>
     </div>
   </div>
@@ -47,13 +47,6 @@ export default {
   position: relative;
   background-image: url('../../assets/img/background/background_2.png');
   height:100vh;
-  @include lg{
-    // height: 800px;
-    // margin-top: -430px;
-  }
-  @include md{
-    // height: 700px;
-  }
 }
 
 .contactus-container{
@@ -93,7 +86,6 @@ export default {
   font-family: $main-font;
   text-decoration: underline;
   text-underline-position: under;
-  // z-index: 100;
   @include lg{
     font-size: 50px;
     justify-self: start;
@@ -145,6 +137,7 @@ export default {
 }
 
 .contacus-container-map {
+  // display: none;
   grid-area: map;
   height: 400px;
   width: 445px;
@@ -166,26 +159,11 @@ export default {
   }
 }
 
-.contactus-line{
-  position: absolute;
-  top: -190px;
-  width: 10px;
-  height: 350px;
-  border-left: 0.5px solid #FEFEFE;
-  @include xl{
-    top: -200px;
-    height: 360px;
-    left: 55px;
-  }
-  @include lg{
-    left: 40px;
-    height: 350px;
-    top: -195px;
-  }
-  @include md{
-    left: 30px;
-    height: 290px;
-  }
+.contactus-map{
+  display: none;
+  grid-area: map;
+  height: 400px;
+  width: 445px;
 }
 
 .contactus-background{

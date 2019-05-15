@@ -10,8 +10,10 @@
         <div class="fb5-title-img">
         <img  class="fb5-title-img-search" src="@/assets/img/findbig5/findbig5_search.png" alt="FindBig5 쉽게 찾으세요">
         </div>
-        <h1 class="fb5-title-1">쉽게</h1>
-        <h1 class="fb5-title-2">찾으세요</h1>
+        <img class="fb5-title-1" src="@/assets/img/fonts_img/main/findbig5/fb51.png" alt="BlackRubyStudio Fb51">
+        <img class="fb5-title-2" src="@/assets/img/fonts_img/main/findbig5/fb52.png" alt="BlackRubyStudio Fb52">
+        <img class="fb5-title-1-mb" src="@/assets/img/fonts_img/main/findbig5/fb51_mb.png" alt="BlackRubyStudio Fb51">
+        <img class="fb5-title-2-mb" src="@/assets/img/fonts_img/main/findbig5/fb52_mb.png" alt="BlackRubyStudio Fb52">
         <p class="fb5-title-desc">
           오늘날 많은 정보들은 결정하고 판단하는 일을 복잡하게 만듭니다<br>
           진흙 속에서 진주를 찾았을 때에는 이미 온몸이 흙 투성이지요<br>
@@ -28,8 +30,8 @@
       <div class="fb5-introduce-container">
         <img class="fb5-introduce-background" src="@/assets/img/findbig5/findbig5_background.png" alt="FindBig5 배경라인">
         <div class="fb5-introduce-title">
-          <a href="https://www.findbig5.com" target="_blank" ><img class="fb5-introduce-img-logo" src="@/assets/img/findbig5/findbig5_logo.png" alt="FindBigFive 로고"></a>
-          <a class="fb5-introduce-button" href="https://www.findbig5.com" target="_blank" >자세히 보기</a>
+          <img class="fb5-introduce-img-logo" src="@/assets/img/findbig5/findbig5_logo.png" alt="FindBigFive 로고">
+          <div class="fb5-introduce-button"><a href="https://www.findbig5.com" target="_blank" >자세히 보기</a></div>
         </div>
         <div class="fb5-introduce-desc">
           <span>전 세계 언론사에서 IT 관련 정보를 실시간 수집하여</span><br>
@@ -52,6 +54,12 @@
       :title22 = tech.title22
       :title31 = tech.title31
       :title32 = tech.title32
+      :alt11 = tech.alt11
+      :alt12 = tech.alt12
+      :alt21 = tech.alt21
+      :alt22 = tech.alt22
+      :alt31 = tech.alt31
+      :alt32 = tech.alt32
       :title1_mobile = tech.title1_mobile
       :title2_mobile = tech.title2_mobile
       :title3_mobile = tech.title3_mobile
@@ -85,12 +93,18 @@ export default {
       },
 
       tech:{
-        title11: "자동 정보",
-        title12: "수집기",
-        title21: "검색",
-        title22: "엔진",
-        title31: "자연어처리",
-        title32: "AI",
+        title11: require("@/assets/img/fonts_img/main/findbig5/fb53.png"),
+        title12: require("@/assets/img/fonts_img/main/findbig5/fb54.png"),
+        title21: require("@/assets/img/fonts_img/main/findbig5/fb55.png"),
+        title22: require("@/assets/img/fonts_img/main/findbig5/fb56.png"),
+        title31: require("@/assets/img/fonts_img/main/findbig5/fb57.png"),
+        title32: require("@/assets/img/fonts_img/main/findbig5/fb58.png"),
+        alt11: 'BlackRubyStudio FindBig5 Tech1-1',
+        alt12: 'BlackRubyStudio FindBig5 Tech1-2',
+        alt21: 'BlackRubyStudio FindBig5 Tech2-1',
+        alt22: 'BlackRubyStudio FindBig5 Tech2-2',
+        alt31: 'BlackRubyStudio FindBig5 Tech3-1',
+        alt32: 'BlackRubyStudio FindBig5 Tech3-2',
         title1_mobile: '자동정보<br>수집기',
         title2_mobile: '검색<br>엔진',
         title3_mobile: '자연어<br>처리 AI',
@@ -118,7 +132,6 @@ export default {
         desc3_mobile: " 형태소 분석을 기반으로 하여 문서 내 중요단어 분석 뿐 아니라 문서의 역가중치를 계산하여 문서 간 중요도를 분석하는 엔진을 제공합니다\
                         토픽 추출의 정확도를 위하여 LDA와 LSI 두 모델을 결합한 튜닝모델을 활용하고 있습니다\
                         또한 기사 400자 요약 이내 요약기능으로 사용자에게 전문을 읽는 부담을 줄이고 있습니다",
-
       },
     }
   },
@@ -190,7 +203,7 @@ export default {
     margin-top: 55px;
   }
   @include sm{
-    margin-top: 18px;
+    margin-top: 32px;
     height: 150px;
     padding-left: 33px;
   }
@@ -198,47 +211,68 @@ export default {
 
 .fb5-title-1{
   grid-area: tl1;
-  font-family: $main-font;
-  font-size: 120px;
+  height: 120px;
+  width: 220px;
   align-self: center;
+  @include xl{
+    width: 183px;
+  }
   @include lg{
+    height: 100px;
     font-size: 100px;
   }
   @include md{
-    padding-top: 20px;
+    height: 80px;
+    width: 146px;
     font-size: 80px;
   }
   @include sm{
-    font-size: 55px;
-    color: #FEFEFE;
-    z-index: 100;
-
+    display: none;
   }
 }
+
+.fb5-title-1-mb{
+  display: none;
+    @include sm{
+    display: grid;
+    grid-area: tl1;
+    height: 55px;
+    margin-top: 55px;
+    z-index: 100;
+  }
+}
+
 
 .fb5-title-2{
   grid-area: tl2;
   justify-self: center;
   font-family: $main-font;
-  font-size: 120px;
+  height: 120px;
   margin-top: -10px;
   padding-right: 135px;
   margin-bottom: 100px;
   @include lg{
-    font-size: 100px;
+    height: 100px;
   }
   @include md{
-    font-size: 80px;
+    height: 80px;
   }
   @include sm{
-    font-size: 55px;
-    width: 100%;
-    padding-right: 0;
-    z-index: 300;
-    text-align: center;
-    color: #FEFEFE;
+    display: none;
   }
 }
+
+.fb5-title-2-mb{
+  display: none;
+    @include sm{
+    display: grid;
+    grid-area: tl2;
+    justify-self: center;
+    height: 55px;
+    z-index: 100;
+  }
+}
+
 
 .fb5-title-desc{
  grid-area: des;
@@ -301,7 +335,7 @@ export default {
   top: 37% !important;
   width: 720px !important;
   left: 42% !important;
-  z-index: 100;
+  z-index: -1;
   @include lg{
     width: 600px !important;
     left: 41.8% !important;

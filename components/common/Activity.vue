@@ -6,8 +6,10 @@
     <div class="about-activity-container">
       <img class="about-activity-img" :src="src" :alt="alt">
       <div class="about-activity-content">
-        <img class="about-activity-title"  :src="title_src1" :alt="title_alt1">
-        <img class="about-activity-title"  :src="title_src2" :alt="title_alt2">
+        <div class="about-activity-title">
+          <img class="about-activity-title-img"  :src="title_src1" :alt="title_alt1">
+          <img class="about-activity-title-img"  :src="title_src2" :alt="title_alt2">
+        </div>
         <div class="about-activity-desc" v-html="desc"></div>
       </div>
     </div>
@@ -52,7 +54,6 @@ export default {
   @include md{
     width: 550px;
     left: -10px;
-    // grid-template-columns: 50% 50%;
   }
   @include sm{
     width: 280px;
@@ -73,17 +74,24 @@ export default {
 }
 
 .about-activity-title{
-  @extend %font-main;
   position: relative;
   left: -130px;
   @include md{
-    height: 80px;
     left: -110px;
   }
   @include sm{
     // display: none;
-    font-size: 40px;
     left: -60px;
+  }
+}
+
+.about-activity-title-img{
+  height: 100px;
+  @include md{
+    height: 80px;
+  }
+  @include sm{
+    height: 40px;
   }
 }
 

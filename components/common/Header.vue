@@ -5,14 +5,16 @@
 <template>
   <nav class="header">
     <div class="header-container">
-      <nuxt-link to="/">
-        <img class="header-logo" :src="img" alt="Blackrubystrudio-logo">
-      </nuxt-link>
+      <div>
+        <a class="none"><nuxt-link to="/"  :style="color"></nuxt-link></a>
+        <nuxt-link to="/"><img class="header-logo" :src="img" alt="Blackrubystrudio-logo"></nuxt-link>
+      </div>
       <div class="header-content-group">
+      <li class="none"><nuxt-link to="/"  :style="color"></nuxt-link></li>
       <li class="header-about"><nuxt-link to="/about"  :style="color">about</nuxt-link></li>
       <li class="header-contact"><nuxt-link to="/contact"  :style="color">contact</nuxt-link></li>
-      <div>
-        <img class="header-menu" src="@/assets/img/header/menu.png" alt="블랙루비 홈페이지 메뉴" @click="isDropdown =! isDropdown">
+      <!-- <div class="header-menu">
+        <img class="header-menu-img" src="@/assets/img/header/menu.png" alt="블랙루비 홈페이지 메뉴" @click="isDropdown =! isDropdown">
         <transition name="header-transition">
           <div class="main-header-mobile-menu" v-if="isDropdown">
             <li class="main-header-mobile-main"><nuxt-link to="/" :style="color">main</nuxt-link></li>
@@ -20,7 +22,7 @@
             <li class="main-header-mobile-contact"><nuxt-link to="/contact" :style="color">contact</nuxt-link></li>
           </div>
         </transition>
-      </div>
+      </div> -->
       </div>
     </div>
   </nav>
@@ -37,7 +39,7 @@ export default {
   },
   data(){
     return{
-      isDropdown: false
+      isDropdown: true
     }
   },
 }
@@ -113,32 +115,37 @@ export default {
   }
   @include sm{
     width: 100%;
+    font-size: 10px;
+    line-height: 13px;
   }
 }
 
 .header-about{
   padding: 2px 0;
-  @include sm{
-    display: none;
-  }
+  // @include sm{
+  //   display: none;
+  // }
 }
 
 .header-contact{
   padding: 2px 0;
-  @include sm{
-    display: none;
-  }
+  // @include sm{
+  //   display: none;
+  // }
 }
 
 .header-menu{
   display: none;
   @include sm{
+    display: grid;
+  }
+}
+
+.header-menu-img{
+  @include sm{
    justify-self: end;
    align-self: center;
-    display: grid;
-    height: 20px;
-    padding-left: 85%;
-    // padding-right: 10px;
+   height: 20px;
   }
 }
 
@@ -157,13 +164,6 @@ export default {
   right: 20px;
   font-size: 11px;
   line-height: 15px;
-
-  // width: 60px;
-  // font-size: 10px;
-  // margin-left: 0px;
-  // list-style-type: none;
-  // line-height: 15px;
-  // margin-bottom: 5px;
   color: white;
 }
 </style>

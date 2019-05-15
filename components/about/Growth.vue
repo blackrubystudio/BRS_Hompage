@@ -6,7 +6,7 @@
     <div class="about-growth-container">
       <!-- Growth 왼쪽 시작 -->
       <div class="about-growth-left">
-          <h1 class="about-growth-left-title">동반</h1>
+          <div class="about-growth-left-title"><img class="about-growth-img" src="@/assets/img/fonts_img/about/main3.png" alt="BlackRubyStudio About Main3"></div>
           <div class="about-growth-left-content">
             <h3 class="about-growth-left-subtitle">GO-GROWTH</h3>
             <p class="about-growth-left-desc">기업의 성장 뿐 아니라<br>개인의 역량강화를<br>가장 중요한 성장지표로 삼고있기에<br><br>같이 성장할 수 있는 환경을 만들고자 합니다</p>
@@ -15,7 +15,7 @@
       <!-- // Growth 왼쪽 끝 -->
       <!-- Growth 오른쪽 시작 -->
       <div class="about-growth-right">
-        <h1 class="about-growth-right-title">성장</h1>
+        <div class="about-growth-right-title"><img class="about-growth-img" src="@/assets/img/fonts_img/about/main4.png" alt="BlackRubyStudio About Main4"></div>
         <div class="about-growth-right-content">
           <h3 class="about-growth-right-subtitle">EFFICIENTLY</h3>
           <p class="about-growth-right-desc">1인 생산성의 향상은<br>팀의 업무 분배능력과 효율성의<br>향상을 의미합니다<br><br>개개인의 강점을 살리는 업무 분배로<br>1인 생산성의 향상과<br>개인의 발전을 도모합니다</p>
@@ -78,7 +78,6 @@ export default {}
 }
 
 .about-growth-left-title{
-  @extend %font-main;
   position: relative;
   top: 200px;
   text-align: right;
@@ -86,15 +85,21 @@ export default {}
   @include lg{
     top: 150px;
   }
-  @include md{
-    font-size: 80px;
-  }
   @include sm{
     top: 80px;
-    font-size: 50px;
     right: -10px;
   }
 }
+
+.about-growth-img{
+  @include md{
+    height: 80px;
+  }
+  @include sm{
+    height: 50px;
+  }
+}
+
 
 .about-growth-left-content{
   position: relative;

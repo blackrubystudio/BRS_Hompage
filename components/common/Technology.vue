@@ -11,34 +11,31 @@
         <div class="tech-container-1">
           <img id="tech-img-1" class="tech-img-1" :src="img1" :alt="alt1">
           <div id="tech-text-1" class="tech-content-1">
-            <h1 class="tech-title-1-1" v-text="title11"></h1>
-            <h1 class="tech-title-1-2" v-text="title12"></h1>
+            <div class="tech-title-1-1"><img class="tech-title-line" :src="title11" :alt="alt11"></div>
+            <div class="tech-title-1-2"><img class="tech-title-noneline" :src="title12" :alt="alt12"></div>
             <div id="tech-desc-1" class="desc-none tech-desc-1"><span v-html="desc1"></span></div>
           </div>
         </div>
-        <div id="tech-line-1" class="tech-line-1"></div>
 
         <!-- Container2 -->
         <div class="tech-container-2">
           <div id="tech-text-2" class="tech-content-2">
-            <h1 class="tech-title-2-1" v-text="title21"></h1> 
-            <h1 class="tech-title-2-2" v-text="title22"></h1>
+            <div class="tech-title-2-1"><img class="tech-title-noneline" :src="title21" :alt="alt21"></div>
+            <div class="tech-title-2-2"><img class="tech-title-line" :src="title22" :alt="alt22"></div>
             <div id="tech-desc-2" class="desc-none tech-desc-2"><span v-html="desc2"></span></div>
           </div>
           <img id="tech-img-2" class="tech-img-2" :src="img2" :alt="alt2">
         </div>
-        <div class="tech-line-2"></div>
 
         <!-- Container3 -->
         <div class="tech-container-3">
           <img id="tech-img-3" class="tech-img-3" :src="img3" :alt="alt3">
           <div id="tech-text-3" class="tech-content-3">
-            <h1 class="tech-title-3-1" v-text="title31"></h1>
-            <h1 class="tech-title-3-2" v-text="title32"></h1>
+            <div class="tech-title-3-1"><img class="tech-title-line" :src="title31" :alt="alt31"></div>
+            <div class="tech-title-3-2"><img class="tech-title-noneline" :src="title32" :alt="alt32"></div>
             <div id="tech-desc-3" class="desc-none tech-desc-3"><span v-html="desc3"></span></div>
           </div>
         </div>
-        <div class="tech-line-3"></div>
     </div>
     <div class="tech-container-mobile">
       <div class="tech-container-mobile-title1" v-html="title1_mobile"></div>
@@ -62,7 +59,8 @@
 
 <script>
 export default {
-  props: ['title11', 'title12', 'title21', 'title22', 'title31', 'title32', 
+  props: ['title11', 'title12', 'title21', 'title22', 'title31', 'title32',
+          'alt11', 'alt12', 'alt21', 'alt22', 'alt31', 'alt32', 
           'img1', 'img2', 'img3', 'alt1', 'alt2', 'alt3', 'desc1', 'desc2', 'desc3',
           'title1_mobile', 'title2_mobile', 'title3_mobile',
           'desc1_mobile', 'desc2_mobile', 'desc3_mobile'],
@@ -249,9 +247,35 @@ export default {
   }
 }
 
+.tech-title-line{
+  height: 100px;
+  @include lg{
+    height: 70px;
+  }
+  @include md{
+    height: 50px;
+  }
+}
+
+.tech-title-noneline{
+  height: 90px;
+  @include lg{
+    height: 60px;
+  }
+  @include md{
+    height: 40px;
+  }
+}
+
 .tech-container-1{
   height: 300px;
   grid-area: con1;
+  @include lg{
+    height: 250px;
+  }
+  @include md{
+    height: 200px;
+  }
 }
 
 .tech-img-1{
@@ -293,12 +317,12 @@ export default {
   grid-template-rows: 150px 150px;
   z-index: 100;
   @include lg{
-    grid-template-columns: 450px 310px;
+    grid-template-columns: 520px 240px;
     grid-template-rows: 120px 180px;
     height: 250px;
   }
   @include md{
-    grid-template-columns: 310px 240px;
+    grid-template-columns: 380px 170px;
     width: 550px;
     height: 200px
   }
@@ -309,32 +333,24 @@ export default {
   justify-self: end;
   align-self: center;
   padding-right: 20px;
-  font-family: $main-font;
-  font-size: 90px;
+  margin-top: 20px;
   letter-spacing: -5px;
   @include lg{
-    margin-bottom: 30px;
-    font-size: 70px;
+    margin-top: 0px;
   }
   @include md{
-    font-size: 50px;
     margin-bottom: 0;
   }
 }
 
 .tech-title-1-2{
   grid-area: tt12;
-  font-family: $main-font;
   align-self: end;
-  font-size: 90px;
   letter-spacing: -5px;
   @include lg{
     margin-bottom: 20px;
-    font-size: 70px;
     z-index: 100;
-  }
-  @include md{
-    font-size: 50px;
+
   }
 }
 
@@ -361,32 +377,6 @@ export default {
   }
 }
 
-.tech-line-1{
-  @extend %tech-line;
-  position: absolute;
-  width: 540px;
-  height: 140px;
-  left: 200px;
-  border-image: linear-gradient(to right, white 140px, black 140px 540px);
-  border-image-slice: 1;
-  @include lg{
-    height: 90px;
-    left: 80px;
-    width: 385px;
-    border-image: linear-gradient(to right, white 100px, black 100px 385px);
-    border-image-slice: 1;
-  }
-  @include md{
-    height: 95px;
-    width: 300px;
-    left: 25px;
-    border-image: linear-gradient(to right, white 75px, black 75px 385px);
-    border-image-slice: 1;
-  }
-  @include mls{
-    display: none;
-  }
-}
 
 .tech-container-2{
   position: relative;
@@ -453,55 +443,19 @@ export default {
 .tech-title-2-1{
   grid-area: tt21;
   justify-self: end;
-  font-family: $main-font;
-  font-size: 90px;
   letter-spacing: -5px;
   align-self: center;
-  @include lg{
-    font-size: 70px;
-  }
-  @include md{
-    font-size: 50px;
-  }
 }
 
 .tech-title-2-2{
   grid-area: tt22;
-  font-family: $main-font;
-  font-size: 90px;
+  margin-left: 10px;
   letter-spacing: -5px;
   @include lg{
-    font-size: 70px;
+    margin-top: 10px;
   }
   @include md{
-    font-size: 50px;
-    padding-top: 15px;
-  }
-}
-
-.tech-line-2{
-  @extend %tech-line;
-  position: absolute;
-  width: 320px;
-  height: 460px;
-  left: 470px;
-  border-image: linear-gradient(to right, black 0px 200px, white 200px 320px);
-  border-image-slice: 1;
-  @include lg{
-    height: 440px;
-    left: 340px;
-    border-image: linear-gradient(to right, black 0px 180px, white 180px 320px);
-    border-image-slice: 1;
-  }
-  @include md{
-    width: 180px;
-    height: 450px;
-    left: 240px;
-    border-image: linear-gradient(to right, black 0px 120px, white 120px 180px);
-    border-image-slice: 1;
-  }
-  @include mls{
-    display: none;
+    margin-top: 20px;
   }
 }
 
@@ -590,29 +544,17 @@ export default {
   grid-area: tt31;
   justify-self: end;
   align-self: center;
-  font-family: $main-font;
-  font-size: 90px;
+  margin-right: 10px;
   letter-spacing: -5px;
-  @include lg{
-    font-size: 70px;
-  }
-  @include md{
-    font-size: 50px;
-  }
 }
 
 .tech-title-3-2{
   grid-area: tt32;
   align-self: end;
-  font-family: $main-font;
-  font-size: 90px;
   letter-spacing: -5px;
-  @include lg{
-    font-size: 70px;
-  }
+  margin-bottom: 10px;
   @include md{
-    font-size: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 }
 
@@ -632,33 +574,6 @@ export default {
     line-height: 15px;
     margin-right: 10px;
     margin-top: -15px;
-  }
-}
-
-.tech-line-3{
-  @extend %tech-line;
-  position: absolute;
-  width: 555px;
-  height: 835px;
-  left: 200px;
-  border-image: linear-gradient(to right, white 140px, black 140px 555px);
-  border-image-slice: 1;
-  @include lg{
-    height: 765px;
-    width: 430px;
-    left: 100px;
-    border-image: linear-gradient(to right, white 110px, black 110px 555px);
-    border-image-slice: 1;
-  }
-  @include md{
-    height: 740px;
-    width: 300px;
-    left: 100px;
-    border-image: linear-gradient(to right, white 65px, black 65px 300px);
-    border-image-slice: 1;
-  }
-  @include mls{
-    display: none;
   }
 }
 

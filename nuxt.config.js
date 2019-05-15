@@ -120,7 +120,7 @@ module.exports = {
 
     styleResources: {
         sass: [
-            '@assets/css/common.scss'
+            '@assets/css/common.scss',
         ]
     },
 

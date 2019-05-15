@@ -9,10 +9,15 @@
       <div class="beamme-title-container">
         <img class="beamme-title-img-wave" src="@/assets/img/beamme/beamme_wave.png" alt="빔미 역동성">
         <div class="beamme-title-main">
-            <h1 class="beamme-title1">언제</h1>
-            <h1 class="beamme-title2">어디서든</h1>  
-            <h1 class="beamme-title3">빠르게</h1>
+          <div class="beamme-title1"><img class="beamme-main-font-img" src="@/assets/img/fonts_img/main/beamme/beamme1.png" alt="BlackRubyStudio Beamme1"></div>
+          <div class="beamme-title2"><img class="beamme-main-font-img" src="@/assets/img/fonts_img/main/beamme/beamme2.png" alt="BlackRubyStudio Beamme1"></div>
+          <div class="beamme-title3"><img class="beamme-main-font-img" src="@/assets/img/fonts_img/main/beamme/beamme3.png" alt="BlackRubyStudio Beamme1"></div>
         </div>  
+        <div class="beamme-title-main-mb">
+          <div class="beamme-title1"><img class="beamme-main-font-img" src="@/assets/img/fonts_img/main/beamme/beamme1_mb.png" alt="BlackRubyStudio Beamme1"></div>
+          <div class="beamme-title2"><img class="beamme-main-font-img" src="@/assets/img/fonts_img/main/beamme/beamme2_mb.png" alt="BlackRubyStudio Beamme1"></div>
+          <div class="beamme-title3"><img class="beamme-main-font-img" src="@/assets/img/fonts_img/main/beamme/beamme3_mb.png" alt="BlackRubyStudio Beamme1"></div>
+        </div>
         <common-postit class="beamme-postit" :title=post.title :desc=post.desc></common-postit>
     </div>
     </section>
@@ -22,7 +27,7 @@
     <section class="beamme-introduce">
       <div class="beamme-introduce-container">
         <img class="beamme-introduce-img-icon" src="@/assets/img/beamme/beamme_icon.png" alt="빔미 아이콘" >
-        <img class="beamme-introduce-img-logo" src="@/assets/img/beamme/beamme_logo.png" alt="빔미 로고">
+        <div class="beamme-introduce-logo"><img class="beamme-introduce-img-logo" src="@/assets/img/beamme/beamme_logo.png" alt="빔미 로고"></div>
         <div class="beamme-introduce-desc">
           <p>
             클라우드 PC서비스를 통해<br>
@@ -33,7 +38,7 @@
             <a class="button beamme-introduce-button" href="https://beamme.io" target="_blank" >자세히 보기</a>
           </p>
         </div>
-        <img class="beamme-introduce-img-homepage" src="@/assets/img/beamme/beamme_homepage.png" alt="빔미 홈페이지">
+        <div class="beamme-introduce-homepage"><img class="beamme-introduce-img-homepage" src="@/assets/img/beamme/beamme_homepage.png" alt="빔미 홈페이지"></div>
       </div>
     </section>
     <!-- Section2. Introduce 끝 -->
@@ -47,6 +52,12 @@
       :title22 = tech.title22
       :title31 = tech.title31
       :title32 = tech.title32
+      :alt11 = tech.alt11
+      :alt12 = tech.alt12
+      :alt21 = tech.alt21
+      :alt22 = tech.alt22
+      :alt31 = tech.alt31
+      :alt32 = tech.alt32
       :title1_mobile = tech.title1_mobile
       :title2_mobile = tech.title2_mobile
       :title3_mobile = tech.title3_mobile
@@ -79,12 +90,18 @@ export default {
       },
 
       tech:{
-        title11: "클라우드",
-        title12: "PC",
-        title21: "모든",
-        title22: "디바이스",
-        title31: "다양한",
-        title32: "프로그램",
+        title11: require("@/assets/img/fonts_img/main/beamme/beamme4.png"),
+        title12: require("@/assets/img/fonts_img/main/beamme/beamme5.png"),
+        title21: require("@/assets/img/fonts_img/main/beamme/beamme6.png"),
+        title22: require("@/assets/img/fonts_img/main/beamme/beamme7.png"),
+        title31: require("@/assets/img/fonts_img/main/beamme/beamme8.png"),
+        title32: require("@/assets/img/fonts_img/main/beamme/beamme9.png"),
+        alt11: 'BlackRubyStudio Beamme Tech1-1',
+        alt12: 'BlackRubyStudio Beamme Tech1-2',
+        alt21: 'BlackRubyStudio Beamme Tech2-1',
+        alt22: 'BlackRubyStudio Beamme Tech2-2',
+        alt31: 'BlackRubyStudio Beamme Tech3-1',
+        alt32: 'BlackRubyStudio Beamme Tech3-2',
         title1_mobile: '클라우드<br>PC',
         title2_mobile: '모든<br>디바이스',
         title3_mobile: '다양한<br>프로그램',
@@ -147,47 +164,61 @@ export default {
   justify-self: center;
   margin-top: 50px;
   margin-right: 120px;
-  font-size: 90px;
   text-align: right;
   @include lg{
-    grid-template-columns: 440px 320px;
-    font-size: 80px;
-    margin-right: 180px;
+    grid-template-columns: 430px 290px;
+    margin-right: 190px;
   }
   @include md{
-    grid-template-columns: 320px 230px;
-    font-size: 60px;
+    grid-template-columns: 310px 240px;
     grid-template-rows: 14% 14% 14%;
   }
   @include sm{
-     grid-template-columns: 200px 100px;
-    font-size: 40px;
-    color: #FEFEFE;
-    z-index: 100;
-    width: 300px;
-    padding-right: 90px;
-    grid-template-rows: 9% 9% 9%;
-    margin-top: 10px;
+    display: none;
   }
 }
 
+.beamme-title-main-mb{
+  display: none;
+  @include sm{
+    display: grid;   
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+    justify-self: center;
+    grid-template-rows: 8% 8% 8%; 
+    z-index: 100;
+  }
+}
+
+
 .beamme-title1{
-  padding: 20px 0;
+  padding: 30px 0;
   grid-area: a;
 }
 
 .beamme-title2{
-  padding: 20px 0;
+  padding: 30px 0;
   grid-area: b;
 }
 
 .beamme-title3{
-  padding: 20px 0;
+  padding: 30px 0;
   grid-area: c;
 }
 
-h1{
-  font-family: $main-font;
+.beamme-main-font-img{
+  height: 90px;
+  @include lg{
+    height: 80px;
+  }
+  @include md{
+    height: 60px;
+  }
+  @include sm{
+    height: 40px;
+  }
 }
 
 .beamme-title-img-wave{
@@ -266,8 +297,11 @@ h1{
   }
 }
 
-.beamme-introduce-img-logo{
+.beamme-introduce-logo{
   grid-area: log;
+}
+
+.beamme-introduce-img-logo{
   margin-top: 80px;
   margin-left: 30px;
   height: 95px;
@@ -308,8 +342,12 @@ h1{
   }
 }
 
+.beamme-introduce-homepage{
+ grid-area: hom;
+ z-index: -1;
+}
+
 .beamme-introduce-img-homepage{
-  grid-area: hom;
   width: 700px;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
   @include lg{

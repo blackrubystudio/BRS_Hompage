@@ -9,13 +9,22 @@
       <div class="fanrep-title-container">
         <div class="fanrep-title-main">
           <div class="fanrep-title-container-title-1">
-            <h1 class="fanrep-title1 fanrep-title-downfont">매</h1>
-            <h1 class="fanrep-title2 fanrep-title-space">일</h1>
-            <h1 class="fanrep-title3 fanrep-title-downfont">전해받는</h1>  
+            <div class="fanrep-title1"><img class="fanrep-title-img fanrep-title-down" src="@/assets/img/fonts_img/main/fanrep/fanrep1.png" alt="BlackRubyStudio Fanrep1"></div>
+            <div class="fanrep-title2"><img class="fanrep-title-img" src="@/assets/img/fonts_img/main/fanrep/fanrep2.png" alt="BlackRubyStudio Fanrep2"></div>
+            <div class="fanrep-title3"><img class="fanrep-title-img fanrep-title-down" src="@/assets/img/fonts_img/main/fanrep/fanrep3.png" alt="BlackRubyStudio Fanrep3"></div>
+          </div>
+          <div class="fanrep-title-container-title-1-mb">
+            <div class="fanrep-title1"><img class="fanrep-title-img fanrep-title-down" src="@/assets/img/fonts_img/main/fanrep/fanrep1_mb.png" alt="BlackRubyStudio Fanrep1"></div>
+            <div class="fanrep-title2"><img class="fanrep-title-img" src="@/assets/img/fonts_img/main/fanrep/fanrep2_mb.png" alt="BlackRubyStudio Fanrep2"></div>
+            <div class="fanrep-title3"><img class="fanrep-title-img fanrep-title-down" src="@/assets/img/fonts_img/main/fanrep/fanrep3_mb.png" alt="BlackRubyStudio Fanrep3"></div>
           </div>
           <div class="fanrep-title-container-title-2">
-            <h1 class="fanrep-title4">내</h1>
-            <h1 class="fanrep-title5 fanrep-title-downfont">아이돌 소식</h1>
+            <div class="fanrep-title4"><img class="fanrep-title-img" src="@/assets/img/fonts_img/main/fanrep/fanrep4.png" alt="BlackRubyStudio Fanrep4"></div>
+            <div class="fanrep-title5"><img class="fanrep-title-img fanrep-title-down" src="@/assets/img/fonts_img/main/fanrep/fanrep5.png" alt="BlackRubyStudio Fanrep5"></div>
+          </div>
+          <div class="fanrep-title-container-title-2-mb">
+            <div class="fanrep-title4"><img class="fanrep-title-img" src="@/assets/img/fonts_img/main/fanrep/fanrep4_mb.png" alt="BlackRubyStudio Fanrep4"></div>
+            <div class="fanrep-title5"><img class="fanrep-title-img fanrep-title-down" src="@/assets/img/fonts_img/main/fanrep/fanrep5_mb.png" alt="BlackRubyStudio Fanrep5"></div>
           </div>
         </div>  
         <img  class="fanrep-title-img-mail" src="@/assets/img/fanrep/fanrep_mail.png" alt="fanrep-search">
@@ -27,11 +36,11 @@
     <!-- Section2. Introduce 시작 -->
     <section class="fanrep-introduce">
       <div class="fanrep-introduce-container">
-        <img class="fanrep-introduce-img-homepage1" src="@/assets/img/fanrep/fanrep_homepage1.png" alt="팬랩 랜딩페이지 메인">
-        <img class="fanrep-introduce-img-homepage2" src="@/assets/img/fanrep/fanrep_homepage2.png" alt="팬랩 랜딩페이지 서브">
+        <div class="fanrep-introduce-homepage1"><img class="fanrep-introduce-img-homepage1" src="@/assets/img/fanrep/fanrep_homepage1.png" alt="팬랩 랜딩페이지 메인"></div>
+        <div class="fanrep-introduce-homepage2"><img class="fanrep-introduce-img-homepage2" src="@/assets/img/fanrep/fanrep_homepage2.png" alt="팬랩 랜딩페이지 서브"></div>
         <img class="fanrep-introduce-img-homepage1-mobile" src="@/assets/img/fanrep/fanrep_homepage1_mobile.png" alt="팬랩 랜딩페이지 메인">
         <img class="fanrep-introduce-img-homepage2-mobile" src="@/assets/img/fanrep/fanrep_homepage2_mobile.png" alt="팬랩 랜딩페이지 서브">
-        <img class="fanrep-introduce-img-logo" src="@/assets/img/fanrep/fanrep_logo.png" alt="팬랩 로고">
+        <div class="fanrep-introduce-logo"><img class="fanrep-introduce-img-logo" src="@/assets/img/fanrep/fanrep_logo.png" alt="팬랩 로고"></div>
         <div class="fanrep-introduce-desc">
           <p>좋아하는 아이돌을 입력하기만 하면<br>
             매주 월요일, 당신이 좋아하는 아이돌의 스케쥴과<br>
@@ -40,7 +49,7 @@
           </p>
           <a class="button fanrep-introduce-button" href="https://fan-rep.com" target="_blank" >자세히 보기</a>
         </div>
-        <img class="fanrep-introduce-img-effect" src="@/assets/img/fanrep/fanrep_effect.png" alt="팬랩 효과">
+        <div class="fanrep-introduce-effect"><img class="fanrep-introduce-img-effect" src="@/assets/img/fanrep/fanrep_effect.png" alt="팬랩 효과"></div>
       </div>
     </section>
     <!-- Section2. Introduce 끝 -->
@@ -54,6 +63,12 @@
       :title22 = tech.title22
       :title31 = tech.title31
       :title32 = tech.title32
+      :alt11 = tech.alt11
+      :alt12 = tech.alt12
+      :alt21 = tech.alt21
+      :alt22 = tech.alt22
+      :alt31 = tech.alt31
+      :alt32 = tech.alt32
       :title1_mobile = tech.title1_mobile
       :title2_mobile = tech.title2_mobile
       :title3_mobile = tech.title3_mobile
@@ -87,12 +102,18 @@ export default {
       },
 
       tech:{
-        title11: "자동수집 및",
-        title12: "분류",
-        title21: "실시간",
-        title22: "컨텐츠 제공",
-        title31: "빅데이터",
-        title32: "분석",
+        title11: require("@/assets/img/fonts_img/main/fanrep/fanrep6.png"),
+        title12: require("@/assets/img/fonts_img/main/fanrep/fanrep7.png"),
+        title21: require("@/assets/img/fonts_img/main/fanrep/fanrep8.png"),
+        title22: require("@/assets/img/fonts_img/main/fanrep/fanrep9.png"),
+        title31: require("@/assets/img/fonts_img/main/fanrep/fanrep10.png"),
+        title32: require("@/assets/img/fonts_img/main/fanrep/fanrep11.png"),
+        alt11: 'BlackRubyStudio Fanrep Tech1-1',
+        alt12: 'BlackRubyStudio Fanrep Tech1-2',
+        alt21: 'BlackRubyStudio Fanrep Tech2-1',
+        alt22: 'BlackRubyStudio Fanrep Tech2-2',
+        alt31: 'BlackRubyStudio Fanrep Tech3-1',
+        alt32: 'BlackRubyStudio Fanrep Tech3-2',
         title1_mobile: '자동수집<br>및 분류',
         title2_mobile: '실시간<br>컨텐츠',
         title3_mobile: '빅데이터<br>분석',
@@ -116,7 +137,6 @@ export default {
                       정확한 스케쥴 컨텐츠를 팬들에게 실시간으로 제공하며 원하는 시간에 알림을 받아 볼 수 있도록 합니다",
         desc3_mobile:"빅데이터 대시보드와 이상 수치 알림 시스템을 구축하여 지속적으로 AI를 개선하고 더 좋은 스케쥴 컨텐츠를 제공하고자 합니다.\
                       축적된 팬들의 빅데이터를 분석하여 팬들에게 최적의 스케쥴을 제공하고자 합니다",
-
       },
     }
   }
@@ -154,38 +174,39 @@ export default {
   "tit2";
   grid-template-rows: 150px 350px;
   margin-left: 140px;
-  font-size: 90px;
   @include lg{
     margin-left: 20px;
-    font-size: 40px;
     letter-spacing: -5px;
+  }
+  @include md{
+    grid-template-rows: 100px 250px;
   }
   @include sm{
     letter-spacing: 0px;
     grid-template-rows: 15% 50%;
   }
-
 }
 
-h1{
-  font-family: $main-font;
+.fanrep-title-img{
+  height: 90px;
+  margin-right: 20px;
   @include lg{
-    font-size: 80px;
+    height: 80px;
   }
   @include md{
-    font-size: 60px;
+    height: 55px;
   }
   @include sm{
-    font-size: 40px;
-    color: #FEFEFE;
+    height: 40px;
   }
 }
 
-.fanrep-title-downfont{
-  padding-top: 30px;
-  @include sm{
-    padding-top: 15px;
-  }
+.fanrep-title-up{
+  margin-bottom: 30px;
+}
+
+.fanrep-title-down{
+  margin-top: 30px;
 }
 
 .fanrep-title-container-title-1{
@@ -193,10 +214,21 @@ h1{
   display: grid;
   grid-template-areas:
   "a b c";
-  grid-template-columns: 9% 12% 75%;
-  grid-gap: 10px;
+  grid-template-columns: 10% 12% 75%;
   @include sm{
+    display: none;
+  }
+}
+
+.fanrep-title-container-title-1-mb{
+  display: none;
+  @include sm{
+    display: grid;
+    grid-template-areas:
+    "a b c";
+    grid-template-columns: 10% 12% 75%;
     padding-left: 25px;
+    z-index: 100;
   }
 }
 
@@ -219,6 +251,16 @@ h1{
   "d e";
   grid-template-columns: 10% 90%;
   @include sm{
+    display: none;
+  }
+}
+.fanrep-title-container-title-2-mb{
+  display: none;
+  @include sm{
+    display: grid;
+    grid-template-areas: 
+    "d e";
+    grid-template-columns: 10% 90%;
     z-index: 300;
     padding-left: 25px;
   }
@@ -253,7 +295,7 @@ h1{
   @include sm{
     z-index: 200;
     height: 130px;
-    top: 40px;
+    top: 60px;
     padding-left: 25px;
   }
 }
@@ -290,8 +332,11 @@ h1{
   }
 }
 
-.fanrep-introduce-img-homepage1{
+.fanrep-introduce-homepage1{
   grid-area: hom1;
+}
+
+.fanrep-introduce-img-homepage1{
   width: 100%;
   margin-left: -50px;
   @include lg{
@@ -306,8 +351,11 @@ h1{
   }
 }
 
-.fanrep-introduce-img-homepage2{
+.fanrep-introduce-homepage2{
   grid-area: hom2;
+}
+
+.fanrep-introduce-img-homepage2{
   width: 90%;
   margin-left: -50px;
   @include sm{
@@ -336,8 +384,12 @@ h1{
   }
 }
 
-.fanrep-introduce-img-logo{
+.fanrep-introduce-logo{
   grid-area: logo;
+  z-index: -2;
+}
+
+.fanrep-introduce-img-logo{
   width: 270px;
   margin-left: 250px;
   margin-top: 20px;
@@ -388,6 +440,7 @@ p{
   }
 }
 
+
 .fanrep-introduce-button{
   @extend %main-project-button;
   font-size: 12px;
@@ -407,6 +460,7 @@ a{
   top: 20%;
   left: 65%;
   height: 350px;
+  z-index: -1;
   @include lg{
     height: 300px;
     left: 60%;
