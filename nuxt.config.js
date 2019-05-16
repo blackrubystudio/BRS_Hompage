@@ -73,24 +73,7 @@ module.exports = {
     presets: ['@babel/preset-env'],
 
     loading: { color: '#3B8070' },
-    // polyfill: {
-    //     features: [
-    //         {
-    //             require: 'url-polyfill'
-    //         },
-    //         {
-    //             require: 'intersection-observer',
-    //             detect: () => 'IntersectionObserver' in window,
-    //         },
-    //         {
-    //             require: 'smoothscroll-polyfill',
-    //             // Detection found in source: https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
-    //             detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
-    //             // Optional install function called client side after the package is required:
-    //             install: (smoothscroll) => smoothscroll.polyfill()
-    //         }
-    //     ]
-    // },
+
     build: {
         extend(config, { isDev, isClient }) {
             if (isDev && isClient) {

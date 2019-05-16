@@ -58,7 +58,7 @@ export default {
   @include sm{
     width: 280px;
     height: 200px;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
   }
 }
 
@@ -80,8 +80,9 @@ export default {
     left: -110px;
   }
   @include sm{
+    left: 60px;
     // display: none;
-    left: -60px;
+    // left: -60px;
   }
 }
 
@@ -106,7 +107,7 @@ export default {
   @include sm{
     // display: none;
     width: 180px;
-    left: 0px;
+    left: -20px;
     line-height: 7px;
     padding: 10px 0 10px 5px;
   }

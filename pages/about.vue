@@ -48,7 +48,7 @@
         :src=study.src 
         :alt=study.alt>
       </common-activity>
-      <common-activity 
+      <common-activity-reverse  
         class="about-python-mb" 
         :title_src1= python.title_src1
         :title_alt1= python.title_alt1
@@ -57,7 +57,7 @@
         :desc=python.desc_mb 
         :src=python.src 
         :alt=python.alt>
-      </common-activity>
+      </common-activity-reverse>
       <common-activity 
         class="about-weekly-mb" 
         :title_src1= weekly.title_src1
