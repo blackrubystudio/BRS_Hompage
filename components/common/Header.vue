@@ -5,24 +5,12 @@
 <template>
   <nav class="header">
     <div class="header-container">
-      <div>
-        <a class="none"><nuxt-link to="/"  :style="color"></nuxt-link></a>
-        <nuxt-link to="/"><img class="header-logo" :src="img" alt="Blackrubystrudio-logo"></nuxt-link>
-      </div>
+      <nuxt-link to="/">
+        <img class="header-logo" :src="img" alt="Blackrubystrudio-logo">
+      </nuxt-link>
       <div class="header-content-group">
-      <li class="none"><nuxt-link to="/"  :style="color"></nuxt-link></li>
       <li class="header-about"><nuxt-link to="/about"  :style="color">about</nuxt-link></li>
       <li class="header-contact"><nuxt-link to="/contact"  :style="color">contact</nuxt-link></li>
-      <!-- <div class="header-menu">
-        <img class="header-menu-img" src="@/assets/img/header/menu.png" alt="블랙루비 홈페이지 메뉴" @click="isDropdown =! isDropdown">
-        <transition name="header-transition">
-          <div class="main-header-mobile-menu" v-if="isDropdown">
-            <li class="main-header-mobile-main"><nuxt-link to="/" :style="color">main</nuxt-link></li>
-            <li class="main-header-mobile-about"><nuxt-link to="/about" :style="color">about</nuxt-link></li>
-            <li class="main-header-mobile-contact"><nuxt-link to="/contact" :style="color">contact</nuxt-link></li>
-          </div>
-        </transition>
-      </div> -->
       </div>
     </div>
   </nav>
@@ -39,7 +27,7 @@ export default {
   },
   data(){
     return{
-      isDropdown: true
+      isDropdown: false
     }
   },
 }
@@ -122,30 +110,21 @@ export default {
 
 .header-about{
   padding: 2px 0;
-  // @include sm{
-  //   display: none;
-  // }
 }
 
 .header-contact{
   padding: 2px 0;
-  // @include sm{
-  //   display: none;
-  // }
 }
 
 .header-menu{
   display: none;
   @include sm{
-    display: grid;
-  }
-}
-
-.header-menu-img{
-  @include sm{
    justify-self: end;
    align-self: center;
-   height: 20px;
+    display: grid;
+    height: 20px;
+    padding-left: 85%;
+    // padding-right: 10px;
   }
 }
 
