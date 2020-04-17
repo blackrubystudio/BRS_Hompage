@@ -1,0 +1,219 @@
+// Font
+$main-font: 'SCDream9';
+$main-button-font: 'SCDream4';
+$profile-name: "SCDream5";
+$profile-sub: "SCDream4";
+$about-sub: "NotoBlack";
+$font-footer:"SCDream5";
+$font-tech: "SCDream3";
+$font-contact-ceo: "SCDream1";
+// Screen Size (Media Query)
+$wide-width: 1300px;
+$desktop-width: 1023px;
+$tablet-width: 767px;
+$mobile-width: 565px;
+$mobile-landscape-screen: ( max-height: 500px) and ( min-width: 321px);
+// Component Height Definition
+$basic-height: 700px;
+// Font (main)
+%font-main {
+    font-family: $main-font;
+    font-size: 100px;
+}
+
+%font-postit-title {
+    font-family: "SCDream1";
+    font-size: 20px;
+}
+
+// Header & Footer 
+%hf-container {
+    display: grid;
+    grid-template-areas: "log con";
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+%hf-logo {
+    grid-area: log;
+    height: 80px;
+    cursor: pointer;
+    align-self: center;
+}
+
+%hf-content-group {
+    grid-area: con;
+    text-align: right;
+    list-style-type: none;
+}
+
+// Project (FB5, Celebee, BeamMe)
+%project-section-height {
+    position: relative;
+    height: 700px
+}
+
+%project-title-container {
+    position: relative;
+    display: grid;
+    width: 1024px;
+    margin: 0 auto;
+    top: 100px;
+    height: 500px;
+}
+
+%project-introduce-container {
+    position: relative;
+    display: grid;
+    width: 1024px;
+    margin: 0 auto;
+    top: 100px;
+    height: 600px;
+}
+
+// Connection(답을 찾다 & 기술혁신)
+%main-connection {
+    position: absolute;
+    width: 100%;
+}
+
+%main-connection-container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+%main-connection-content {
+    width: 70px;
+    height: 100%;
+    transform: rotate(90deg);
+    font-size: 14px;
+}
+
+%main-connection-line {
+    width: 50px;
+    margin-top: 50px;
+    transform: rotate(90deg);
+    border-bottom: 0.5px solid #212121;
+    opacity: .7;
+}
+
+%main-project-button {
+    width: 100px;
+    height: 25px;
+    line-height: 27px;
+    margin-bottom: 80px;
+    font-family: "SCDream2";
+    font-size: 15px;
+    border: 1px solid black;
+    background: none;
+    align-self: end;
+    text-align: center;
+    z-index: 100;
+}
+
+// Padding right (letter spacing)
+$num: 5;
+@while $num>0 {
+    %padding-right-#{$num} {
+        padding-right: 10px * $num;
+    }
+    $num: $num - 1;
+}
+
+// Padding left (letter spacing)
+$num: 4;
+@while $num>0 {
+    %padding-left-#{$num} {
+        padding-left: 10px * $num;
+    }
+    $num: $num - 1;
+}
+
+%background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%about-desc {
+    position: relative;
+    background: #FEFEFE;
+    line-height: 20px;
+    width: 500px;
+}
+
+// Setting Main Page
+%main-page {
+    background-image: url('../../assets/img/background/background_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    color: #FEFEFE;
+}
+
+// Default Conatainer
+%container {
+    position: relative;
+    display: grid;
+    width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+// Main Postit
+%postit {
+    position: absolute;
+    top: -160px;
+    left: 640px;
+    width: 350px;
+    height: 650px;
+}
+
+%tech-line {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid transparent;
+}
+
+// media queries in SCSS
+@mixin sm {
+    @media (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width: $wide-width) {
+        @content;
+    }
+}
+
+// Mobile landscape screen 모바일 가로 화면
+@mixin mls {
+    @media ( max-height: 500px) and ( min-width: 321px) {
+        @content;
+    }
+}
+
+// Custom devices
+@mixin rwd($width) {
+    @media (max-width: $width+"px") {
+        @content;
+    }
+}

@@ -1,102 +1,337 @@
+// Index 페이지
+// Header / Main / Project[FindBig5, DeokUs, Beamme] / Footer로 구성
+// Project는 Title / Introduce / Technology로 구성
+
 <template>
-  <section class="container">
-    <!--검은 배경의 첫 화면, 한문장으로 표현-->
-    <div class="section1">
-      <head-bar />
-      <sec1 />
-      <div class="btn">
-        <div class="celebeebtn">
-          <a href="/celebee">
-          Celebee
-          </a>
-        </div>
-        <div class="beammebtn">
-          <a href="/beamme">
-          Beam me
-          </a>
-        </div>
-      </div>
-    </div>
-    <!--FindBig5 -->
-    <div class="section2">
-      <find />
-    </div>
+<div id="main">
+<div>
+  <!-- 1. Header -->
+  <common-header :img=header.img :color=header.color></common-header>
+ 
+  <!-- 2. Main Page -->
+  <main-page></main-page>
 
-    <!--Tech + History-->
-    <div class="section3">
-      
-      <History />
+  <!-- 3. Button & PostIt IMG (Absolute) -->
+  <div class="main-absolute">
+    <div class="main-button-group">
+      <nuxt-link to="/project/fanrep"><button class="main-button">Fanrep.</button></nuxt-link>
+      <nuxt-link to="/project/beamme"><button class="main-button">Beamme</button></nuxt-link>
+      <!-- <button class="main-button" v-show='is_fanrep' @click="component = 'fanrep', is_fb5=true, is_fanrep=false , is_beamme= true">Fanrep.</button>
+      <button class="main-button" v-show='is_fanrep' v-on:click="test">Test</button>
+      <button class="main-button" v-show='is_fb5' @click="component = 'findbig5', is_fb5=false, is_fanrep=true , is_beamme= true">FindBig5</button>
+      <button class="main-button" v-show='is_beamme' @click="component = 'beamme', is_fb5=true, is_fanrep=true , is_beamme= false">BeamMe</button> -->
     </div>
+    <div class="main-postit"></div>
+  </div>
 
-    <!--footer-->
-    <div class="section4">
+  <!-- 4. Project (Dynamic, FB5 Default) -->
+    <transition name="fade">
+      <find-big5></find-big5>
+      <!-- <component :is="component" transition="fade" transition-mode="out-in"></component> -->
+    </transition>
+
+  <!-- 4.5 Scroll Up button -->
+  <div class="main-scrollup">
+    <img class="main-scrollup-button" src="@/assets/img/common/up_black.png" alt="스크롤 상단 버튼" @click="scrollUp()">
+  </div>
+  
+  <!-- <common-menumobile :color="color"></common-menumobile> -->
+
+  <!-- 5. Footer -->
+  <common-footer></common-footer>
+
+  <!-- 6. Connection -->
+  <!-- Connection1. 답을 찾다 시작 -->
+  <div class="main-connection1">
+    <div class="main-connection1-container">
+      <div class="main-connenction1-content">답을 찾다</div>
+      <div class="main-connection1-line"></div>
     </div>
-  </section>
+  </div>
+  <!-- // Connection1. 답을 찾다 끝 -->
+
+  <!-- Connection2. 기술 혁신 시작 -->
+  <div class="main-connection2">
+    <div class="main-connection2-container">
+      <div class="main-connenction2-content">기술 혁신</div>
+      <div class="main-connection2-line"></div>
+    </div>
+  </div>
+  <!-- // Connection2. 기술 혁신 끝 -->
+</div>
+ </div>
 </template>
 
-<script>
-import HeadBar from '~/components/HeadBar.vue';
-import Find from '~/components/Findbig5.vue';
-import Foot from '~/components/Footer.vue';
-import Tech from '~/components/Tech.vue';
-import Sec1 from '~/components/Section1.vue';
-import History from '~/components/History.vue';
+<script type="text/babel">
+import MainPage from "@/components/main/Main.vue";
+import FindBig5 from "@/components/main/FindBig5.vue";
+// import Fanrep from "@/components/main/Fanrep.vue"
+// import Beamme from "@/components/main/Beamme.vue"
+
 
 export default {
-  layout: 'default',
   components: {
-    HeadBar,
-    Find,
-    Tech,
-    History,
-    Foot,
-    Sec1,
-  }
+    MainPage,
+    FindBig5,
+    // "findbig5" : FindBig5,
+    // "fanrep" : Fanrep,
+    // "beamme" : Beamme
+  },
+
+  data(){
+    return{
+      header:{
+        img: require('@/assets/img/common/logo_name_white.svg'),
+        color: "color:#FEFEFE" 
+      },
+      color: "color: #212121",
+      // Default Component(Dynamic Component)
+      // component: 'findbig5',
+      isDropdown: false,
+      // is_fanrep: true,
+      // is_fb5: false,
+      // is_beamme: true,
+    }
+  },
+
+  methods:{
+    scrollUp(){
+      document.getElementById("main").scrollTop = 0;
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    },
+
+    test(){
+      alert('hello')
+      console.log(1)
+    }
+  },
 }
 </script>
 
-<style>
-.container {
+<style lang="scss" scoped>
+
+.main-absolute{
+  position: relative;
   margin: 0 auto;
-  min-height: 100vh;
+  width: 1024px;
+  height: 100%;
+
+  @include lg{
+    width: 760px;
+  }
+
+  @include md{
+    width: 550px;
+  }
+
+  @include sm{
+    width: 300px;
+  }
 }
 
-.section1 {
-  background-image: url('../assets/img/back1.png');
-  background-size: cover;
-  color: whitesmoke;
-  font-family: 'SCDream9';
-  font-size: 8vw;
-  width: 100vw;
-  height: 115vh;
-}
-
-.celebeebtn {
-  font-family: SCDream3;
-  text-align: center;
-  width: 8vw;
-  height: 6.5vh;
-  font-size: 1.5vw;
-  line-height: 3vw;
-  border: 3px solid gray;
-}
-
-.beammebtn {
-  font-family: SCDream3;
-  text-align: center;
-  width: 8vw;
-  font-size: 1.5vw;
-  line-height: 3vw;
-  border: 3px solid gray;
-}
-
-.btn {
+.main-button-group{
   position: absolute;
-  margin-top: -15vh;
-  margin-left: 61vw;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 2vw;
-  color: gray;
+  top: -100px;
+  right: 120px;
+  z-index: 100;
+  @include lg{
+    right: 50px;
+  }
+
+  @include md{
+    top: -80px;
+    right: 0px;
+  }
+
+  @include sm{
+    top: -70px;
+    right: 0;
+    left: 75px;
+  }
 }
+
+.main-button{
+  font-family: $main-button-font;
+  background: none;
+  color: #FEFEFE;
+  border: 1.5px solid #FEFEFE;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 10px;
+  width: 100px;
+  height: 40px;
+  line-height: 20px;
+  z-index: 100;
+  @include md{
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+    line-height: 10px;
+    border: 1px solid #FEFEFE;
+  }
+  @include sm{
+    font-size: 10px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    width: 60px;
+    height: 25px;
+    line-height: 15px;
+  }
+}
+
+.main-postit{
+  @extend %background;
+  position: absolute;
+  background-image: url('../assets/img/background/background_3.png');
+  top: -40px;
+  right: 40px;
+  width: 350px;
+  height: 645px;
+  box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  @include lg{
+    width: 300px;
+    right: 20px;
+  }
+  @include md{
+    width: 230px;
+    height: 550px;
+    right: 0px;
+  }
+  @include sm{
+    top: -30px;
+    left: 0;
+    width: 300px;
+    height: 450px;
+  }
+}
+
+// Transition For Dynamic component
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.main-scrollup{
+  height: 50px;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+  margin-bottom: 20px;
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    margin-bottom: 10px;
+    width: 550px;
+  }
+  @include sm{
+    display: none;
+  }
+}
+
+.main-scrollup-button{
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  animation-name: scrollup-button;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  @include lg{
+    width: 40px;
+  }
+  @include md{
+    width: 30px;
+  }
+}
+
+@keyframes scrollup-button{
+  0%{
+    padding-top: 0px;
+  }
+  50%{
+    padding-top: 5px;
+  }
+  100%{
+    padding-top: 0px;
+  }
+}
+
+.main-connection1{
+  @extend %main-connection;
+  top: 1400px;
+  @include lg{
+    top: 1300px;
+  }
+}
+
+.main-connection1-container{
+  @extend %main-connection-container;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    display: none;
+  }
+
+}
+
+.main-connenction1-content{
+  @extend %main-connection-content;
+}
+
+.main-connection1-line{
+  @extend %main-connection-line;
+  margin-left: 10px;
+  @include lg{
+    margin-top: 45px;
+    margin-left: 10px;
+  }
+}
+
+.main-connection2{
+  @extend %main-connection;
+  z-index: -10;
+  top: 1900px;
+}
+
+.main-connection2-container{
+  @extend %main-connection-container;
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    display: none;
+  }
+}
+
+.main-connenction2-content{
+  @extend %main-connection-content;
+  margin-top: 210px;
+  margin-left: 950px;
+  @include lg{
+    margin-top: 60px;
+    margin-left: 700px;
+  }
+}
+
+.main-connection2-line{
+  @extend %main-connection-line;
+  margin-left: 960px;
+  @include lg{
+    margin-left: 710px;
+  }
+}
+
 </style>
+

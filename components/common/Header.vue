@@ -1,0 +1,148 @@
+// Header: 모든 페이지에서 공통적으로 사용하는 Header 컴포넌트
+// 특징: Main 페이지와 About 페이지는 검은색 로고에 검은 글자, Contact 페이지는 흰 로고에 흰 글자
+// 따라서 로고 img와 글자 color를 props로 넘겨주어 각 페이지별로 설정하게 끔 코딩
+
+<template>
+  <nav class="header">
+    <div class="header-container">
+      <nuxt-link to="/">
+        <img class="header-logo" :src="img" alt="Blackrubystrudio-logo">
+      </nuxt-link>
+      <div class="header-content-group">
+      <li class="header-about"><nuxt-link to="/about"  :style="color">about</nuxt-link></li>
+      <li class="header-contact"><nuxt-link to="/contact"  :style="color">contact</nuxt-link></li>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  props: ['img', 'color'],
+  methods:{
+    goHome(){
+      // location.reload(true);
+      this.$router.push("/");
+    }
+  },
+  data(){
+    return{
+      isDropdown: false
+    }
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+
+.header{
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  @include lg{
+    top: 30px;
+  }
+
+  @include sm{
+    top: 0;
+    height: 40px;
+  }
+}
+
+.header-container{
+  @extend %hf-container;
+
+  @include xl{
+    width: 1000px;
+  }
+  @include lg{
+    width: 760px;
+  }
+  @include md{
+    width: 550px;
+  }
+  @include sm{
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+.header-logo{
+  @extend %hf-logo;
+  @include lg{
+    height: 70px;
+  }
+  @include md{
+    height: 60px;
+  }
+  @include sm{
+    padding-left: 20px;
+    height: 40px;
+  }
+}
+
+.header-content-group{
+  @extend %hf-content-group;
+  width: 1070px;
+  justify-self: end;
+  align-self: center;
+  line-height: 20px;
+  @include xl{
+    width: 850px;
+  }
+  @include lg{
+    width: 640px;
+    font-size: 15px;
+  }
+  @include md{
+    width: 440px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  @include sm{
+    width: 100%;
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+
+.header-about{
+  padding: 2px 0;
+}
+
+.header-contact{
+  padding: 2px 0;
+}
+
+.header-menu{
+  display: none;
+  @include sm{
+   justify-self: end;
+   align-self: center;
+    display: grid;
+    height: 20px;
+    padding-left: 85%;
+    // padding-right: 10px;
+  }
+}
+
+.header-transition-enter-active,
+.header-transition-leave-active {
+  transition: opacity 0.3s;
+}
+.header-transition-enter,
+.header-transition-leave-to {
+  opacity: 0;
+}
+
+.main-header-mobile-menu{
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  font-size: 11px;
+  line-height: 15px;
+  color: white;
+}
+</style>
